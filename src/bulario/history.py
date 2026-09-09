@@ -57,7 +57,7 @@ class History:
         return self.entries[-1] if self.entries else None
 
     def by_expediente(self, expediente: str) -> HistoryEntry | None:
-        """Entrada cujo expediente bate com o da API, comparando só dígitos ("0121761/25-8" == "0121761258")."""
+        """Entrada cujo expediente bate com o da API, só por dígitos ("0121761/25-8" == "0121761258")."""
         digits = re.sub(r"\D", "", expediente)
         for e in self.entries:
             if digits and re.sub(r"\D", "", e.expediente) == digits:
