@@ -53,11 +53,11 @@ class History:
 
     @property
     def latest(self) -> HistoryEntry | None:
-        """Última linha: a submissão que gerou este PDF (normalmente sem nº de expediente, ainda não atribuído)."""
+        """Última linha: a submissão que gerou este PDF (em geral ainda sem nº de expediente)."""
         return self.entries[-1] if self.entries else None
 
     def by_expediente(self, expediente: str) -> HistoryEntry | None:
-        """Entrada cujo nº de expediente bate com o da API (compara só os dígitos: "0121761/25-8" == "0121761258")."""
+        """Entrada cujo expediente bate com o da API, comparando só dígitos ("0121761/25-8" == "0121761258")."""
         digits = re.sub(r"\D", "", expediente)
         for e in self.entries:
             if digits and re.sub(r"\D", "", e.expediente) == digits:
