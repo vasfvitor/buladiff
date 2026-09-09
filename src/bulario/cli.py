@@ -1,4 +1,4 @@
-"""Linha de comando: bulario search | fetch | diff | sections."""
+"""Linha de comando: bulario search | feed | fetch | diff | sections | history."""
 
 from __future__ import annotations
 
@@ -6,6 +6,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from bulario import feed
 from bulario.api import Client
 from bulario.archive import fetch, local_versions
 from bulario.diff import diff_documents, render_html, summary
@@ -50,6 +51,18 @@ def cmd_diff(args: argparse.Namespace) -> None:
     print(summary(rows))
 
 
+def cmd_feed(args: argparse.Namespace) -> None:
+    feed.run(Path(args.data), desde=args.desde, ate=args.ate, download=args.baixar)
+
+
+def cmd_history(args: argparse.Namespace) -> None:
+    from bulario.history import read_history
+
+    for e in read_history(args.pdf).entries:
+        secoes = ", ".join(e.secoes) or "-"
+        print(f"{e.data:10}  {e.expediente:14}  {e.versoes:7}  seções: {secoes:14}  {e.itens[:70]}")
+
+
 def cmd_sections(args: argparse.Namespace) -> None:
     for i, d in enumerate(documents_from_pdf(args.pdf), 1):
         print(f"documento {i} ({d.tipo}) — {d.label}")
@@ -69,6 +82,12 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("--ate", default=None, help="até AAAA-MM-DD (padrão: hoje)")
     s.set_defaults(func=cmd_search)
 
+    fd = sub.add_parser("feed", help="bulas publicadas num período; --baixar arquiva as novas versões")
+    fd.add_argument("--desde", help="AAAA-MM-DD (padrão: onde a última execução parou, ou hoje)")
+    fd.add_argument("--ate", help="AAAA-MM-DD (padrão: hoje)")
+    fd.add_argument("--baixar", action="store_true")
+    fd.set_defaults(func=cmd_feed)
+
     f = sub.add_parser("fetch", help="baixa versões de bula de um registro")
     f.add_argument("registro", nargs="+", help="número de registro (9 dígitos)")
     f.add_argument("--all", action="store_true", help="todas as versões (padrão: as 2 mais recentes)")
@@ -83,6 +102,10 @@ def build_parser() -> argparse.ArgumentParser:
     d.add_argument("--html", help="grava relatório HTML neste caminho")
     d.add_argument("--sem-preambulo", action="store_true", help="ignora capa/preâmbulo")
     d.set_defaults(func=cmd_diff)
+
+    h = sub.add_parser("history", help="lê a tabela 'Histórico de Alteração da Bula' (extra: tables)")
+    h.add_argument("pdf")
+    h.set_defaults(func=cmd_history)
 
     x = sub.add_parser("sections", help="mostra a segmentação de um PDF")
     x.add_argument("pdf")

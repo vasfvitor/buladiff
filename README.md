@@ -15,12 +15,16 @@ uv run bulario search dipirona                 # registros, empresa, data da úl
 uv run bulario search --desde 2026-09-01       # tudo que foi publicado desde a data
 uv run bulario fetch 118190404                 # baixa as duas versões mais recentes
 uv run bulario fetch 118190404 --all           # todas as versões
+uv run bulario feed --desde 2026-09-01           # tudo que foi publicado no período
+uv run bulario feed --baixar                     # continua de onde parou e arquiva as versões novas
 uv run bulario diff --registro 118190404 --tipo vps --html diff.html
 uv run bulario diff antiga.pdf nova.pdf        # ou dois PDFs quaisquer
 uv run bulario sections a.pdf                  # mostra a segmentação (depuração)
+uv run bulario history a.pdf                   # lê a tabela "Histórico de Alteração da Bula"
 ```
 
-Só depende do Python 3.11+ e do `pdftotext` (pacote `poppler-utils`).
+Só depende do Python 3.11+ e do `pdftotext` (pacote `poppler-utils`). O comando `history`
+usa o extra `tables` (pdfplumber): `uv sync --extra tables`.
 Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.py <registros…>`.
 
 ## Estrutura
@@ -30,6 +34,10 @@ Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.
 - `bulario/extract.py`: texto → páginas → sem cabeçalho/rodapé → documentos → seções. Funções puras
   sobre listas de linhas, testáveis sem PDF.
 - `bulario/diff.py`: pareamento de documentos por semelhança, diff por palavra, resumo e HTML.
+- `bulario/feed.py`: publicações por período (`filter[periodoPublicacao…]`) e arquivo incremental,
+  com estado em `data/feed.json`.
+- `bulario/history.py`: tabela de histórico do PDF como dados (pdfplumber); casa entradas com o
+  expediente da API comparando só os dígitos.
 - `bulario/cli.py`: subcomandos.
 
 ## Como funciona
@@ -68,9 +76,17 @@ no fim do PDF. Casos que exigiram tratamento:
   (Kenvue): descartada.
 - Janssen não inclui a tabela de histórico.
 
+## Cruzamento com a tabela de histórico
+
+`scripts/validate.py` compara as seções que o diff detectou com as que a empresa declarou na
+linha da tabela correspondente ao expediente. É indicativo, não prova: a coluna "Itens de bula"
+mistura VP e VPS, várias empresas deixam a coluna vazia ou genérica ("Dizeres legais"), e a
+Janssen não inclui a tabela.
+
 ## O que ainda não faz
 
-- Não lê a tabela "Histórico de Alteração da Bula" (o `-layout` a embaralha;
-  precisa de extração de tabela).
 - Tabelas dentro das seções viram texto corrido e geram ruído no diff.
-- Não monitora: rode `fetch` de novo para ver se há versão nova.
+- Só rastreia o que aparece no bulário. Medicamentos notificados (Notifarmac) usam outro endpoint
+  (`/medicamento/{registro}/{5|9}/anexo`) e não têm histórico.
+- Não avisa ninguém. A ANVISA tem monitoramento oficial por email (`PUT /api/monitoramento`,
+  semanal ou mensal), sem diff.

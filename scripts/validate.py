@@ -10,6 +10,7 @@ from pathlib import Path
 from bulario.archive import fetch
 from bulario.diff import diff_documents, render_html, summary
 from bulario.extract import documents_from_pdf, has_history_table
+from bulario.history import read_history
 
 EXPECT = {
     "vp": {"1", "2", "3", "4", "5", "6", "7", "8", "9", "III"},
@@ -51,7 +52,17 @@ def main(registros: list[str]) -> None:
                     render_html(rows, f"{prod['nomeProduto']} {kind}")
                 )
                 row[f"diff_{kind}"] = summary(rows)
-                print(f"{reg} {kind:3} {row[f'diff_{kind}']}")
+                detectadas = sorted({r.secao for r in rows if r.alterada and r.secao != "I"})
+                # a última linha da tabela é a submissão que gerou o PDF (sem nº de expediente ainda)
+                entrada = read_history(pair[-1]).latest
+                declaradas = sorted(entrada.secoes) if entrada else []
+                row[f"declarado_{kind}"] = declaradas
+                bate = (
+                    "bate"
+                    if set(declaradas) == set(detectadas)
+                    else f"declarado={declaradas} detectado={detectadas}"
+                )
+                print(f"{reg} {kind:3} {row[f'diff_{kind}']}\n        tabela de histórico: {bate}")
         report.append(row)
     Path("data/validate-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=1))
 
