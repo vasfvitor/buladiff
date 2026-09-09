@@ -10,14 +10,27 @@ seção (as seções são as da RDC 47/2009: 4. Contraindicações,
 ## Uso
 
 ```sh
-python3 bulario.py search dipirona            # registros, empresa, data da última bula
-python3 bulario.py fetch 118190404            # baixa as duas versões mais recentes
-python3 bulario.py fetch 118190404 --all      # todas as versões
-python3 bulario.py diff a.pdf b.pdf saida.html
-python3 bulario.py sections a.pdf             # mostra a segmentação (depuração)
+uv sync                                        # ou: pip install -e .
+uv run bulario search dipirona                 # registros, empresa, data da última bula
+uv run bulario search --desde 2026-09-01       # tudo que foi publicado desde a data
+uv run bulario fetch 118190404                 # baixa as duas versões mais recentes
+uv run bulario fetch 118190404 --all           # todas as versões
+uv run bulario diff --registro 118190404 --tipo vps --html diff.html
+uv run bulario diff antiga.pdf nova.pdf        # ou dois PDFs quaisquer
+uv run bulario sections a.pdf                  # mostra a segmentação (depuração)
 ```
 
-Só depende do Python 3 e do `pdftotext` (pacote `poppler-utils`).
+Só depende do Python 3.11+ e do `pdftotext` (pacote `poppler-utils`).
+Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.py <registros…>`.
+
+## Estrutura
+
+- `bulario/api.py`: cliente HTTP (busca, histórico paginado, download de PDF, detalhe do produto).
+- `bulario/archive.py`: arquivo local em `data/<registro>/<data>_<expediente>_<vp|vps>.pdf`.
+- `bulario/extract.py`: texto → páginas → sem cabeçalho/rodapé → documentos → seções. Funções puras
+  sobre listas de linhas, testáveis sem PDF.
+- `bulario/diff.py`: pareamento de documentos por semelhança, diff por palavra, resumo e HTML.
+- `bulario/cli.py`: subcomandos.
 
 ## Como funciona
 
