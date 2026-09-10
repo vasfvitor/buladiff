@@ -16,7 +16,7 @@ const publicacoes = [...feed.publicacoes].sort((a, b) => b.data.localeCompare(a.
   </p>
 
   <h2>Últimas alterações</h2>
-  <p class="note">Cada número é uma seção da bula; clique para ir direto à mudança. <LegendaDeclarada /></p>
+  <p class="note">Números = seções da bula alteradas; <LegendaDeclarada /></p>
   <ol class="changes">
     {recentes.slice(0, 12).map((r) => (
       <li>
@@ -34,10 +34,7 @@ const publicacoes = [...feed.publicacoes].sort((a, b) => b.data.localeCompare(a.
   {publicacoes.length > 0 && (
     <>
       <h2>Publicadas no Bulário recentemente</h2>
-      <p class="note">
-        Tudo que entrou no Bulário Eletrônico{feed.ate ? ` até ${dataBR(feed.ate)}` : ""} — inclusive o que ainda
-        não está arquivado aqui (sem link).
-      </p>
+      <p class="note">Tudo que entrou no Bulário{feed.ate ? ` até ${dataBR(feed.ate)}` : ""}; sem link = ainda não arquivado aqui.</p>
       <ol class="changes compact">
         {publicacoes.map((p) => (
           <li>

@@ -9,8 +9,7 @@ const { page } = Astro.props;
 ---
 
 <Base title="Produtos">
-  <h1>Produtos acompanhados</h1>
-  <p class="muted">{page.total} produtos, ordenados pela última publicação de bula.</p>
+  <h1>Produtos acompanhados <span class="sub">{page.total}</span></h1>
   <p><input class="filter" type="search" id="filtro" placeholder="Filtrar por nome ou empresa" aria-label="Filtrar produtos" autocomplete="off" /></p>
   <div class="table-wrap">
     <table id="tabela-produtos">

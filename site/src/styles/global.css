@@ -111,8 +111,6 @@ ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 .resumo .row-igual td { color: var(--muted); }
 .doc-title { margin-top: 1.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--line); }
 .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
-.status-igual { color: var(--muted); }
-.status-alterada { color: var(--del-fg); font-weight: 600; }
 
 .pagination { display: flex; gap: 1rem; justify-content: center; margin: 1.5rem 0; }
 @media (max-width: 40rem) {

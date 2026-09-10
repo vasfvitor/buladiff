@@ -25,10 +25,7 @@ const SITUACAO_PADRAO = "Aditado ao processo"; // é a situação de quase toda 
     </p>
 
     <h2>Versões</h2>
-    <p class="note">
-      Da mais recente para a mais antiga. Em cada versão, as seções alteradas em relação à anterior — clique
-      no número para ir à mudança. <LegendaDeclarada />
-    </p>
+    <p class="note">Seções alteradas em relação à versão anterior; <LegendaDeclarada /></p>
     <ol class="timeline">
       {[...versoes].reverse().map((v) => {
         const lista = [...(chegando.get(v.expediente) ?? [])].sort((a, b) => ordemTipo(a) - ordemTipo(b));
