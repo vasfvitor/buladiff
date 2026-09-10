@@ -32,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-15T10:10:45.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30578931,
@@ -51,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-06-30T12:39:39.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30004812,
@@ -70,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-01-19T10:03:53.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 29717819,
@@ -89,8 +89,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2022-10-20T11:22:41.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 23648453,
@@ -108,8 +108,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-02-02T16:01:01.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
    "totalElements": 5,
@@ -137,8 +137,190 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-12-15T10:10:45.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "butilbrometo de escopolamina",
+  "classesTerapeuticas": [
+   "ANTIESPASMODICOS E ANTICOLINERGICOS GASTRINTESTINAIS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 12/11/2012",
+  "dataVencimentoRegistro": "2029-07-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "10 MG/ML SOL GOT OR CT FR GOT VD AMB X 10 ML + SER DOS",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900018"
+   },
+   {
+    "apresentacao": "10 MG/ML SOL GOT OR CT FR GOT VD AMB X 20 ML + SER DOS",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900026"
+   },
+   {
+    "apresentacao": "20 MG SOL INJ CT 3 AMP VD TRANS X 1 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO",
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1781708900034"
+   },
+   {
+    "apresentacao": "20 MG SOL INJ CT 5 AMP VD TRANS X 1 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO",
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1781708900042"
+   },
+   {
+    "apresentacao": "20 MG SOL INJ CT 6 AMP VD TRANS  X 1 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO",
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1781708900050"
+   },
+   {
+    "apresentacao": "20 MG SOL INJ CT 25 AMP VD TRANS  X 1 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO",
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1781708900069"
+   },
+   {
+    "apresentacao": "20 MG SOL INJ CT 50 AMP VD TRANS  X 1 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO",
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1781708900077"
+   },
+   {
+    "apresentacao": "10 MG DRG CT BL AL PLAS PVC/PVDC OPC X 4",
+    "formasFarmaceuticas": [
+     "DRAGEA SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900085"
+   },
+   {
+    "apresentacao": "10 MG DRG CT BL AL PLAS PVC/PVDC OPC X 8",
+    "formasFarmaceuticas": [
+     "DRAGEA SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900093"
+   },
+   {
+    "apresentacao": "10 MG DRG CT BL AL PLAS PVC/PVDC OPC X 16",
+    "formasFarmaceuticas": [
+     "DRAGEA SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900107"
+   },
+   {
+    "apresentacao": "10 MG DRG CT BL AL PLAS PVC/PVDC OPC X 20",
+    "formasFarmaceuticas": [
+     "DRAGEA SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900115"
+   },
+   {
+    "apresentacao": "10 MG/ML SOL GOT OR CT FR GOT VD AMB X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900123"
+   },
+   {
+    "apresentacao": "10 MG/ML SOL GOT OR CT FR GOT VD AMB X 20 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708900131"
+   }
+  ]
  }
 }

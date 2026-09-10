@@ -32,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-01-28T15:13:10.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 29992789,
@@ -51,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-01-16T15:07:56.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
    "totalElements": 2,
@@ -80,8 +80,59 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-01-28T15:13:10.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "risperidona",
+  "classesTerapeuticas": [
+   "NEUROLEPTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "RISPERDAL",
+  "dataVencimentoRegistro": "2028-11-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "1 MG/ML SOL OR CT FR VD AMB X 30 ML + SER PLAS DOSAD",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1181904040011"
+   },
+   {
+    "apresentacao": "1 MG/ML SOL OR CT FR VD AMB X 50 ML + SER PLAS DOSAD",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1181904040028"
+   },
+   {
+    "apresentacao": "1 MG/ML SOL OR CT FR VD AMB X 100 ML + SER PLAS DOSAD",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1181904040036"
+   }
+  ]
  }
 }

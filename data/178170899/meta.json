@@ -32,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-03T16:24:56.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 30100050,
@@ -51,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-03T16:24:56.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 30100050,
@@ -70,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-02-16T16:12:36.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 25258021,
@@ -89,15 +89,15 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-06-14T07:26:17.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     }
    ],
    "totalElements": 4,
    "totalPages": 1,
    "last": true,
-   "numberOfElements": 4,
    "first": true,
+   "numberOfElements": 4,
    "sort": null,
    "number": 0,
    "size": 10
@@ -118,8 +118,449 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-12-03T16:24:56.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "ultimaSitVal": true,
-   "histSitVal": true
+   "histSitVal": true,
+   "ultimaSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "cafeína anidra, dipirona monoidratada, dipirona, mucato de isometepteno, cafeína, cloridrato de isometepteno",
+  "classesTerapeuticas": [
+   "ANALGESICOS NAO NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2029-09-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "30 MG/ML + 300 MG/ML + 50 MG/ML SOL OR CT FR GOT PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990017"
+   },
+   {
+    "apresentacao": "30 MG/ML + 300 MG/ML + 50 MG/ML SOL OR CT FR GOT PLAS OPC X 15 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990025"
+   },
+   {
+    "apresentacao": "30 MG/ML + 300 MG/ML + 50 MG/ML SOL OR DISPLAY DE CARTOLINA 20 FR GOT PLAS OPC X 15 ML (EMB MULT)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990033"
+   },
+   {
+    "apresentacao": "30 MG/ML + 300 MG/ML + 50 MG/ML SOL OR CT FR GOT PLAS OPC X 20 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990041"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 4",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990051"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990068"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990076"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990084"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV LT BL AL PLAS TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990092"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV DISPLAY DE CARTOLINA BL AL PLAS TRANS X 30 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990106"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV LT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990114"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV LT BL AL PLAS TRANS X 40",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990122"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV  CT BL AL PLAS TRANS X 60 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990130"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 80 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990149"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV DISPLAY DE CARTOLINA BL AL PLAS TRANS X 100 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990157"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 120 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990165"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 150 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990173"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV DISPLAY DE CARTOLINA BL AL PLAS TRANS X 200 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990181"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 208 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990191"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV CT BL AL PLAS TRANS X 240 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990203"
+   },
+   {
+    "apresentacao": "(30 + 300 + 30 ) MG COM REV DISPLAY DE CARTOLINA BL AL PLAS TRANS X 500 (EMB MULT)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990211"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL AL X 8",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990221"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL AL X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990238"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL AL X 16",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990246"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL AL X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990254"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL AL X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990262"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL AL X 100",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990270"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL PLAS PVC/PCTFE TRANS X 8",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990289"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL PLAS PVC/PCTFE TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990297"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL PLAS PVC/PCTFE TRANS X 16",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990300"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL PLAS PVC/PCTFE TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990319"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL PLAS PVC/PCTFE TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990327"
+   },
+   {
+    "apresentacao": "(600 + 60 + 60) MG COM REV CT BL AL PLAS PVC/PCTFE TRANS X 100",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781708990335"
+   }
+  ]
  }
 }

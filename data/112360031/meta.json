@@ -32,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-10-24T11:02:40.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33014356,
@@ -51,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-12-20T12:23:52.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30699682,
@@ -70,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-08-01T18:20:54.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30631260,
@@ -89,8 +89,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-07-14T12:36:42.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 26805784,
@@ -108,8 +108,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-10-15T15:28:59.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 24234098,
@@ -127,8 +127,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-03-22T22:40:17.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 20806015,
@@ -146,8 +146,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2020-06-05T22:08:16.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 17116709,
@@ -165,8 +165,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2018-10-15T16:31:46.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 16616684,
@@ -184,8 +184,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2018-06-13T13:48:41.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 16476326,
@@ -203,8 +203,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2018-04-24T12:50:42.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 16476326,
+     "expediente": "0320926181",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2018-04-24T12:50:42.000-0300",
+     "ultDtSitDocumento": "2018-04-24T12:50:42.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2018-04-24T12:50:03.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2018-04-24T12:50:42.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2018-04-24T12:50:42.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 16266719,
@@ -222,8 +241,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2018-02-05T16:57:33.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 14450464,
@@ -241,8 +260,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-03-31T17:18:12.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 14450253,
@@ -260,8 +279,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-03-31T16:24:50.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 14206897,
@@ -279,8 +298,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-02-16T10:48:23.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 13184360,
@@ -298,8 +317,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-02-14T15:32:55.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 14069376,
@@ -317,8 +336,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-02-14T15:20:17.000-0200",
      "situacaoAtual": "Não anuído",
-     "histSitVal": true,
-     "ultimaSitVal": false
+     "ultimaSitVal": false,
+     "histSitVal": true
     },
     {
      "idDocumento": 14074777,
@@ -336,8 +355,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-01-24T16:14:03.000-0200",
      "situacaoAtual": "Não anuído",
-     "histSitVal": true,
-     "ultimaSitVal": false
+     "ultimaSitVal": false,
+     "histSitVal": true
     },
     {
      "idDocumento": 14069376,
@@ -355,8 +374,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-01-23T18:19:58.000-0200",
      "situacaoAtual": "Não anuído",
-     "histSitVal": true,
-     "ultimaSitVal": false
+     "ultimaSitVal": false,
+     "histSitVal": true
     },
     {
      "idDocumento": 13184360,
@@ -374,27 +393,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2016-06-06T13:21:56.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 11716358,
-     "expediente": "0237403150",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2015-03-18T09:57:12.000-0300",
-     "ultDtSitDocumento": "2015-03-18T09:57:12.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2015-03-18T09:56:34.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2015-03-18T09:57:12.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2015-03-18T09:57:12.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 11351959,
@@ -460,8 +460,553 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-10-24T11:02:40.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "risperidona",
+  "classesTerapeuticas": [
+   "NEUROLEPTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA 1 MG/ML SOL OR; 500 &#956;g, 1 MG, 2 MG, 3 MG COM REV DESDE 12/11/2012",
+  "dataVencimentoRegistro": "2029-03-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "1 MG COM REV CT BL AL PLAS TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310028"
+   },
+   {
+    "apresentacao": "2 MG COM REV CT BL AL PLAS TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310044"
+   },
+   {
+    "apresentacao": "3 MG COM REV CT BL AL PLAS TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310079"
+   },
+   {
+    "apresentacao": "1 MG/ML SOL ORAL CT FR VD AMB X 100 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310133"
+   },
+   {
+    "apresentacao": "1 MG/ML SOL ORAL CT FR VD AMB X 30 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310141"
+   },
+   {
+    "apresentacao": "500 MCG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310303"
+   },
+   {
+    "apresentacao": "25 MG PO INJ IM CT FA VD TRANS + DIL SER VD X 2 ML + 1 AGU + 1 DISPOSITIVO",
+    "formasFarmaceuticas": [
+     "Suspensão Injetável de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310338"
+   },
+   {
+    "apresentacao": "37,5 MG PO INJ IM CT FA VD TRANS + DIL SER VD X 2 ML + 1 AGU + 1 DISPOSITIVO",
+    "formasFarmaceuticas": [
+     "Suspensão Injetável de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310346"
+   },
+   {
+    "apresentacao": "50 MG PO INJ IM CT FA VD TRANS + DIL SER VD X 2 ML + 1 AGU + 1 DISPOSITIVO",
+    "formasFarmaceuticas": [
+     "Suspensão Injetável de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310354"
+   },
+   {
+    "apresentacao": "25 MG PO INJ IM CT FA VD TRANS + DIL SER VD TRANS X 2 ML + 2 AGU + 1 ADAPT",
+    "formasFarmaceuticas": [
+     "Suspensão Injetável de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310397"
+   },
+   {
+    "apresentacao": "37,5 MG PO INJ IM CT FA VD TRANS + DIL SER VD TRANS X 2 ML + 2 AGU + 1 ADAPT",
+    "formasFarmaceuticas": [
+     "Suspensão Injetável de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310400"
+   },
+   {
+    "apresentacao": "50 MG PO INJ IM CT FA VD TRANS + DIL SER VD TRANS X 2 ML + 2 AGU + 1 ADAPT",
+    "formasFarmaceuticas": [
+     "Suspensão Injetável de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310419"
+   },
+   {
+    "apresentacao": "1 MG COM REV CT BL AL PLAS INC X 6",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "IMPLANTE OSSEO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310011"
+   },
+   {
+    "apresentacao": "1 MG COM REV CT BL AL PLAS INC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310036"
+   },
+   {
+    "apresentacao": "2 MG COM REV CT BL AL PLAS INC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310052"
+   },
+   {
+    "apresentacao": "2 MG COM REV CT BL AL PLAS INC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310060"
+   },
+   {
+    "apresentacao": "3 MG COM REV CT BL AL PLAS INC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310087"
+   },
+   {
+    "apresentacao": "3 MG COM REV CT BL AL PLAS INC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310095"
+   },
+   {
+    "apresentacao": "4 MG COM REV CT BL AL PLAS INC X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310109"
+   },
+   {
+    "apresentacao": "4 MG COM REV CT BL AL PLAS INC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310117"
+   },
+   {
+    "apresentacao": "4 MG COM REV CT BL AL PLAS INC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310125"
+   },
+   {
+    "apresentacao": "25 MG PO INJ IM CT FA VD INC + DIL SER VD INC X 2 ML + 3 AGU",
+    "formasFarmaceuticas": [
+     "PO INJETAVEL + SOLUCAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310151"
+   },
+   {
+    "apresentacao": "37,5 MG PO INJ IM CT FA VD INC + DIL SER VD INC X 2 ML + 3 AGU",
+    "formasFarmaceuticas": [
+     "PO INJETAVEL + SOLUCAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310168"
+   },
+   {
+    "apresentacao": "50 MG PO INJ IM CT FA VD INC + DIL SER VD INC X 2 ML + 3 AGU",
+    "formasFarmaceuticas": [
+     "PO INJETAVEL + SOLUCAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310176"
+   },
+   {
+    "apresentacao": "0,5 MG COM ORODISP CT BL AL/AL X 28",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310184"
+   },
+   {
+    "apresentacao": "0,5 MG COM ORODISP CT BL AL/AL X 56",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310192"
+   },
+   {
+    "apresentacao": "1,0 MG COM ORODISP CT BL AL/AL X 28",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310206"
+   },
+   {
+    "apresentacao": "1,0 MG COM ORODISP CT BL AL/AL X 56",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310214"
+   },
+   {
+    "apresentacao": "2,0 MG COM ORODISP CT BL AL/AL X 28",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310222"
+   },
+   {
+    "apresentacao": "2,0 MG COM ORODISP CT BL AL/AL X 56",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310230"
+   },
+   {
+    "apresentacao": "250 MCG COM REV CT BL AL PLAS INC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310249"
+   },
+   {
+    "apresentacao": "500 MCG COM REV CT BL AL PLAS INC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310152"
+   },
+   {
+    "apresentacao": "0,5 MG COM ORODISP CT BL AL/AL X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310265"
+   },
+   {
+    "apresentacao": "2,0 MG COM ORODISP CT BL AL/AL X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310273"
+   },
+   {
+    "apresentacao": "1,0 MG COM ORODISP CT BL AL/AL X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO ORODISPERSIVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310281"
+   },
+   {
+    "apresentacao": "250 MCG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310291"
+   },
+   {
+    "apresentacao": "1 MG COM REV CT BL AL PLAS INC X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310311"
+   },
+   {
+    "apresentacao": "2 MG COM REV CT BL AL PLAS INC X10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL 1"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1123600310321"
+   },
+   {
+    "apresentacao": "25 MG PO INJ IM CT FA VD TRANS + DIL SER VD TRANS X 2 ML + 2 AGU + 1 DISPOSITIVO",
+    "formasFarmaceuticas": [
+     "PO INJETAVEL + SOLUCAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310362"
+   },
+   {
+    "apresentacao": "37,5 MG PO INJ IM CT FA VD TRANS + DIL SER VD TRANS X 2 ML + 2 AGU + 1 DISPOSITIVO",
+    "formasFarmaceuticas": [
+     "PO INJETAVEL + SOLUCAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310370"
+   },
+   {
+    "apresentacao": "50 MG PO INJ IM CT FA VD TRANS + DIL SER VD TRANS X 2 ML + 2 AGU + 1 DISPOSITIVO",
+    "formasFarmaceuticas": [
+     "PO INJETAVEL + SOLUCAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1123600310389"
+   }
+  ]
  }
 }

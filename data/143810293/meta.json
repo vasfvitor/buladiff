@@ -32,8 +32,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2026-03-20T16:51:58.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 33554421,
+     "expediente": "0535155255",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-04-22T08:41:32.000-0300",
+     "ultDtSitDocumento": "2025-04-22T08:41:32.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-04-22T08:41:31.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-04-22T08:41:32.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-03-20T16:51:58.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 33554421,
@@ -51,27 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-04-22T08:41:32.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
-    },
-    {
-     "idDocumento": 30211029,
-     "expediente": "0283914238",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2023-03-21T16:16:33.000-0300",
-     "ultDtSitDocumento": "2023-03-21T16:16:33.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2023-03-21T16:16:31.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2023-03-21T16:16:33.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2025-04-22T08:41:32.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 31837126,
@@ -89,27 +89,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-04-22T09:41:35.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
-    },
-    {
-     "idDocumento": 30211029,
-     "expediente": "0283914238",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2023-03-21T16:16:33.000-0300",
-     "ultDtSitDocumento": "2023-03-21T16:16:33.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2023-03-21T16:16:31.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2023-03-21T16:16:33.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2024-04-22T09:41:35.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 30211029,
@@ -127,15 +108,15 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-03-21T16:16:33.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     }
    ],
-   "totalElements": 6,
+   "totalElements": 5,
    "totalPages": 1,
    "last": true,
+   "numberOfElements": 5,
    "first": true,
-   "numberOfElements": 6,
    "sort": null,
    "number": 0,
    "size": 10
@@ -156,8 +137,137 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2026-03-20T16:51:58.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "ultimaSitVal": true,
-   "histSitVal": true
+   "histSitVal": true,
+   "ultimaSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "dipirona monoidratada",
+  "classesTerapeuticas": [
+   "ANALGESICOS NAO NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "NOVALGINA",
+  "dataVencimentoRegistro": "2033-02-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 4",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930013"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 8",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930021"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 10",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930031"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 20",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930048"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 100",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930056"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 200",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930064"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 300",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930072"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 400",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930080"
+   },
+   {
+    "apresentacao": "1 G COM CT BL AL PLAS PVC/PE/PVDC OPC X 500",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1438102930099"
+   }
+  ]
  }
 }

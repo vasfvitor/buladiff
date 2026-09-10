@@ -2,7 +2,7 @@
  "registro": "117660036",
  "expediente": "4353548208",
  "data": "2020-12-09",
- "situacao": "Aditado ao processo",
+ "situacao": "",
  "tipo": "vps",
  "pdf_sha256": "cb0c835f47940d5d6a6036780896de218ec6212a4e0690f6fceb365175b731e1",
  "paginas": 52,
@@ -92,5 +92,7 @@
    "apresentacoes": "0,25mg e 0,5 mg x 1,5 mL 1,0 mg x 3,0 mL",
    "aprovacao": "-"
   }
- ]
+ ],
+ "marcado": false,
+ "documentos_linhas": []
 }

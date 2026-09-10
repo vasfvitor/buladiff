@@ -32,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2026-07-20T13:31:43.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 34582077,
@@ -51,8 +51,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-17T17:08:15.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 26207721,
+     "expediente": "3379836214",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2021-08-27T13:07:37.000-0300",
+     "ultDtSitDocumento": "2021-08-27T13:07:37.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2021-08-27T13:07:36.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2021-08-27T13:07:37.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-17T17:08:15.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 32946728,
@@ -70,8 +89,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-12-06T14:48:34.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 26207721,
+     "expediente": "3379836214",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2021-08-27T13:07:37.000-0300",
+     "ultDtSitDocumento": "2021-08-27T13:07:37.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2021-08-27T13:07:36.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2021-08-27T13:07:37.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2024-12-06T14:48:34.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 29066345,
@@ -89,8 +127,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2022-04-26T11:28:19.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 26207721,
+     "expediente": "3379836214",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2021-08-27T13:07:37.000-0300",
+     "ultDtSitDocumento": "2021-08-27T13:07:37.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2021-08-27T13:07:36.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2021-08-27T13:07:37.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2022-04-26T11:28:19.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 26207721,
@@ -108,8 +165,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-08-27T13:07:37.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 24620406,
@@ -127,8 +184,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-04-23T15:21:21.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 24467231,
@@ -146,33 +203,14 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-04-11T14:22:27.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
-    },
-    {
-     "idDocumento": 16083369,
-     "expediente": "2228466174",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2017-11-23T12:21:51.000-0200",
-     "ultDtSitDocumento": "2017-11-23T12:21:51.000-0200",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2017-11-23T12:18:22.000-0200",
-     "historicoCod": 43,
-     "historicoDtSit": "2017-11-23T12:21:51.000-0200",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2017-11-23T12:21:51.000-0200",
-     "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     }
    ],
-   "last": true,
-   "totalElements": 8,
-   "totalPages": 1,
-   "numberOfElements": 8,
+   "totalElements": 11,
+   "totalPages": 2,
+   "last": false,
+   "numberOfElements": 10,
    "first": true,
    "sort": null,
    "number": 0,
@@ -194,8 +232,332 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2026-07-20T13:31:43.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "ultimaSitVal": true,
-   "histSitVal": true
+   "histSitVal": true,
+   "ultimaSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "omeprazol",
+  "classesTerapeuticas": [
+   "ANTIULCEROSOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "Peprazol",
+  "dataVencimentoRegistro": "2028-11-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160011"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 350",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160021"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 7",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160038"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160046"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 28",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160054"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 350",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160062"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 7",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160070"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS  X 350",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160089"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 30 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160097"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160100"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 90 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160119"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 30 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160127"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160135"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 90 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160143"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 30 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160151"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160161"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 90 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160178"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 7",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160186"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 28",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160194"
+   },
+   {
+    "apresentacao": "10 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 56",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160208"
+   },
+   {
+    "apresentacao": "20 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 56",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160216"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160224"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 28",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160232"
+   },
+   {
+    "apresentacao": "40 MG CAP DURA LIB RETARD CT BL AL PLAS PVC TRANS X 56",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1023506160240"
+   }
+  ]
  }
 }

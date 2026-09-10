@@ -2,7 +2,7 @@
  "registro": "102350532",
  "expediente": "0626475141",
  "data": "2014-08-01",
- "situacao": "Aditado ao processo",
+ "situacao": "",
  "tipo": "vps",
  "pdf_sha256": "ff96c1ee0d7a9975da3b9369e9cd2628ef28e89e003aef76ed90cbe60be0a6e0",
  "paginas": 11,
@@ -43,5 +43,7 @@
    "apresentacoes": "",
    "aprovacao": ""
   }
- ]
+ ],
+ "marcado": false,
+ "documentos_linhas": []
 }

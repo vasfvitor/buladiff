@@ -32,27 +32,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-18T11:36:17.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
-     "idDocumento": 28356910,
-     "expediente": "0649606221",
+     "idDocumento": 33480209,
+     "expediente": "0457269251",
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2022-02-22T07:33:05.000-0300",
-     "ultDtSitDocumento": "2022-02-22T07:33:05.000-0300",
+     "priDtSitValDocumento": "2025-04-03T10:30:22.000-0300",
+     "ultDtSitDocumento": "2025-04-03T10:30:22.000-0300",
      "ultimaSituacaoDocumento": 43,
      "nuTransacao": null,
-     "dtTransacao": "2022-02-22T07:34:33.000-0300",
+     "dtTransacao": "2025-04-03T10:30:20.000-0300",
      "historicoCod": 43,
-     "historicoDtSit": "2022-02-22T07:33:05.000-0300",
+     "historicoDtSit": "2025-04-03T10:30:22.000-0300",
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-18T11:36:17.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33783120,
@@ -70,27 +70,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-06-09T12:46:22.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
-     "idDocumento": 28356910,
-     "expediente": "0649606221",
+     "idDocumento": 33480209,
+     "expediente": "0457269251",
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2022-02-22T07:33:05.000-0300",
-     "ultDtSitDocumento": "2022-02-22T07:33:05.000-0300",
+     "priDtSitValDocumento": "2025-04-03T10:30:22.000-0300",
+     "ultDtSitDocumento": "2025-04-03T10:30:22.000-0300",
      "ultimaSituacaoDocumento": 43,
      "nuTransacao": null,
-     "dtTransacao": "2022-02-22T07:34:33.000-0300",
+     "dtTransacao": "2025-04-03T10:30:20.000-0300",
      "historicoCod": 43,
-     "historicoDtSit": "2022-02-22T07:33:05.000-0300",
+     "historicoDtSit": "2025-04-03T10:30:22.000-0300",
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-06-09T12:46:22.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33480209,
@@ -108,27 +108,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-04-03T10:30:22.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 28356910,
-     "expediente": "0649606221",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2022-02-22T07:33:05.000-0300",
-     "ultDtSitDocumento": "2022-02-22T07:33:05.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2022-02-22T07:34:33.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2022-02-22T07:33:05.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2025-04-03T10:30:22.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 28356910,
@@ -146,8 +127,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2022-02-22T07:33:05.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 24591988,
+     "expediente": "1525938212",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2021-04-21T13:54:39.000-0300",
+     "ultDtSitDocumento": "2021-04-21T13:54:39.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2021-04-21T13:54:18.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2021-04-21T13:54:39.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2022-02-22T07:33:05.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 24591988,
@@ -165,8 +165,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-04-21T13:54:39.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 21752111,
@@ -184,8 +184,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2020-08-26T15:52:53.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 19321478,
@@ -203,27 +203,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2020-01-08T11:26:04.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 16604728,
-     "expediente": "0460541181",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2018-06-08T12:40:15.000-0300",
-     "ultDtSitDocumento": "2018-06-08T12:40:15.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2018-06-08T12:39:59.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2018-06-08T12:40:15.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2018-06-08T12:40:15.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 15237794,
@@ -241,8 +222,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-07-03T09:43:25.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 15225586,
@@ -260,8 +241,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-07-01T11:10:14.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 15225585,
@@ -279,8 +260,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2017-07-01T11:10:13.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 12499392,
@@ -298,8 +279,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2015-12-10T09:46:34.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 10201888,
@@ -317,16 +298,16 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2013-10-10T11:31:34.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
    "totalElements": 16,
    "totalPages": 2,
    "last": false,
-   "numberOfElements": 10,
-   "first": true,
    "sort": null,
+   "first": true,
+   "numberOfElements": 10,
    "number": 0,
    "size": 10
   },
@@ -346,8 +327,228 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-12-18T11:36:17.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "losartana potássica",
+  "classesTerapeuticas": [
+   "ANTI-HIPERTENSIVOS SIMPLES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "COZAAR",
+  "dataVencimentoRegistro": "2029-07-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 14",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110015"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 28",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110023"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110031"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110041"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 120 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110074"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110082"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS OPC X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110090"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS LEIT X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110058"
+   },
+   {
+    "apresentacao": "50 MG COM REV CT BL AL PLAS LEIT X 90 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110066"
+   },
+   {
+    "apresentacao": "100 MG COM REV CT BL AL PLAS OPC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110104"
+   },
+   {
+    "apresentacao": "100 MG COM REV CT BL AL PLAS OPC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110112"
+   },
+   {
+    "apresentacao": "100 MG COM REV CT BL AL PLAS OPC X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110120"
+   },
+   {
+    "apresentacao": "100 MG COM REV CT BL AL PLAS OPC X 120 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110139"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS OPC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110147"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS OPC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110155"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS OPC X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004309110163"
+   }
+  ]
  }
 }

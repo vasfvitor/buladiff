@@ -32,27 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-04-11T15:26:12.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 31776513,
-     "expediente": "0447369245",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2024-04-09T16:15:36.000-0300",
-     "ultDtSitDocumento": "2024-04-09T16:15:36.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2024-04-09T16:14:47.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2024-04-09T16:15:36.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2024-04-11T15:26:12.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31776513,
@@ -70,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-04-09T16:15:36.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31489906,
@@ -89,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-02-06T11:09:44.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31424735,
@@ -108,8 +89,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-01-19T16:08:55.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 31400602,
+     "expediente": "0049156241",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2024-01-15T15:23:07.000-0200",
+     "ultDtSitDocumento": "2024-01-15T15:23:07.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2024-01-15T15:23:03.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2024-01-15T15:23:07.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2024-01-19T16:08:55.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31400602,
@@ -127,8 +127,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-01-15T15:23:07.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
    "totalElements": 6,
@@ -156,8 +156,709 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2024-04-11T15:26:12.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "paracetamol",
+  "classesTerapeuticas": [
+   "ANALGESICOS NAO NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MED REF DESDE 26/08/2016 COM MAST 160MG; 12/11/2012 COM REV 500 E 650; COM REV GEL 500MG",
+  "dataVencimentoRegistro": "2028-02-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "500 MG COM REV GEL CT 2 ENV  KRAFT POLIET X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO GELATINIZADO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140054"
+   },
+   {
+    "apresentacao": "500 MG COM REV GEL CT BL AL PLAS INC X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO GELATINIZADO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140062"
+   },
+   {
+    "apresentacao": "650 MG COM REV CT 2 SACH AL POLIET X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140232"
+   },
+   {
+    "apresentacao": "650 MG COM REV CT 50 SACH AL POLIET X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140240"
+   },
+   {
+    "apresentacao": "160 MG COM MAST CT BL AL PLAS TRANS X 18",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO MASTIGAVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140410"
+   },
+   {
+    "apresentacao": "160 MG COM MAST CT BL AL PLAS TRANS X 24",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO MASTIGAVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140429"
+   },
+   {
+    "apresentacao": "160 MG COM MAST DISPLAY BLIS AL PLAS TRANS X 96",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO MASTIGAVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140437"
+   },
+   {
+    "apresentacao": "160 MG COM MAST DISPLAY  BL AL PLAS TRANS X 200",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO MASTIGAVEL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140445"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT  BL AL PVC TRANS X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140453"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140461"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 24",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140471"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 36",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140488"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 40",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140496"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 48",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140501"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140518"
+   },
+   {
+    "apresentacao": "650 MG COM REV LIB PROL CT BL AL PVC TRANS X 200",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140526"
+   },
+   {
+    "apresentacao": "32 MG/ML SUS OR CT FR PLAS TRANSL X 60 ML + COPO MEDIDA",
+    "formasFarmaceuticas": [
+     "SUSPENSAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140011"
+   },
+   {
+    "apresentacao": "32 MG/ML SUS OR CT FR PLAS TRANSL X 120 ML + COPO MEDIDA",
+    "formasFarmaceuticas": [
+     "SUSPENSAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140021"
+   },
+   {
+    "apresentacao": "100 MG/ML SUS OR CT FR PLAS TRANSL X 15 ML + SER DOS",
+    "formasFarmaceuticas": [
+     "SUSPENSAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140038"
+   },
+   {
+    "apresentacao": "200 MG/ML SOL OR CT FR PLAS OPC GOT X 15 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140046"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT 2 ENV PAP POLIET X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140070"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT 50 ENV PAP POLIET X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140089"
+   },
+   {
+    "apresentacao": "500 MG COM REV BL AL PVC X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140097"
+   },
+   {
+    "apresentacao": "500 MG COM REV BL AL PVC X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140100"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PVC X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140119"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PVC X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140127"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PVC X 16",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140135"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PVC X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140143"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT 5 BL AL PVC X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140151"
+   },
+   {
+    "apresentacao": "500 MG COM REV DISPLAY BL AL PVC X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140161"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PVC X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140178"
+   },
+   {
+    "apresentacao": "500 MG COM REV DISPLAY BL AL PVC X 180",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140186"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PVC X 200",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140194"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT FR PLAS OPC X 24",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140208"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT FR PLAS OPC X 36",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140216"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT FR PLAS OPC X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140224"
+   },
+   {
+    "apresentacao": "750 MG COM REV BL AL PLAS TRANS X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140259"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140267"
+   },
+   {
+    "apresentacao": "750 MG COM REV BL AL PLAS TRANS X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140275"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140283"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140291"
+   },
+   {
+    "apresentacao": "750 MG COM REV DISPLAY BL AL PLAS TRANS X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140305"
+   },
+   {
+    "apresentacao": "750 MG COM REV DISPLAY BL AL PLAS TRANS X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140313"
+   },
+   {
+    "apresentacao": "750 MG COM REV DISPLAY BL AL PLAS TRANS X 180",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140321"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 200",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140331"
+   },
+   {
+    "apresentacao": "750 MG COM REV  BL AL PLAS AMB X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140348"
+   },
+   {
+    "apresentacao": "750 MG COM REV  BL AL PLAS AMB X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140356"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS AMB X 4",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140364"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS AMB X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140372"
+   },
+   {
+    "apresentacao": "750 MG COM REV DISPLAY BL AL PLAS AMB X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140380"
+   },
+   {
+    "apresentacao": "750 MG COM REV DISPLAY BL AL PLAS AMB X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140399"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS AMB X 200",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140402"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1572112140534"
+   }
+  ]
  }
 }

@@ -32,27 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2026-03-27T15:06:04.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 34592130,
-     "expediente": "1627592253",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2025-12-19T12:02:52.000-0200",
-     "ultDtSitDocumento": "2025-12-19T12:02:52.000-0200",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2025-12-19T10:56:37.000-0200",
-     "historicoCod": 43,
-     "historicoDtSit": "2025-12-19T12:02:52.000-0200",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2026-03-27T15:06:04.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 34592130,
@@ -70,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-19T12:02:52.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 34516930,
@@ -89,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-01T10:02:15.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33111610,
@@ -108,8 +89,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-01T10:02:15.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33111610,
@@ -127,8 +108,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-01-16T12:13:55.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33005179,
@@ -146,27 +127,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-12-19T09:00:24.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 31336060,
-     "expediente": "1469356236",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2023-12-26T09:20:29.000-0200",
-     "ultDtSitDocumento": "2023-12-26T09:20:29.000-0200",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2023-12-26T09:19:51.000-0200",
-     "historicoCod": 43,
-     "historicoDtSit": "2023-12-26T09:20:29.000-0200",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2024-12-19T09:00:24.000-0200",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31901069,
@@ -184,8 +146,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-05-02T09:24:26.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31336060,
@@ -201,16 +163,16 @@
      "historicoCod": 43,
      "historicoDtSit": "2023-12-26T09:20:29.000-0200",
      "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2024-05-02T09:24:26.000-0300",
+     "dataPublicacao": "2023-12-26T09:20:29.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
-   "totalElements": 11,
-   "totalPages": 2,
-   "last": false,
-   "numberOfElements": 10,
+   "last": true,
+   "totalElements": 8,
+   "totalPages": 1,
+   "numberOfElements": 8,
    "first": true,
    "sort": null,
    "number": 0,
@@ -232,8 +194,367 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2026-03-27T15:06:04.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
+ },
+ "detalhe": {
+  "principioAtivo": "citrato de orfenadrina, dipirona monoidratada, cafeína anidra",
+  "classesTerapeuticas": [
+   "RELAXANTES MUSCULARES CENTRAIS-ASSOCIACOES MEDICAMENTOSAS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2035-03-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 144",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080019"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 288",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080027"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 192",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080035"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 480",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080043"
+   },
+   {
+    "apresentacao": "35 MG/ML + 300 MG/ML + 50 MG/ML SOL OR CT FR VD AMB X 20 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080051"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 240",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080061"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 24",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080078"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080086"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 8",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080094"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 220",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080108"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 36",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080116"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 360",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080124"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 600",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080132"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 300",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080140"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 350",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080159"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 400",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080167"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 450",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080175"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 500",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080183"
+   },
+   {
+    "apresentacao": "300 MG/ML + 35 MG/ML + 50 MG/ML SOL OR CT BG PLAS OPC GOT X 20 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080191"
+   },
+   {
+    "apresentacao": "300 MG + 35 MG + 50 MG COM CT BL AL PLAS  AMB X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080205"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080213"
+   },
+   {
+    "apresentacao": "35 MG + 300 MG + 50 MG COM CT BL AL PLAS  AMB X 140",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080221"
+   },
+   {
+    "apresentacao": "(600 + 70 + 100) MG COM CT BL AL PLAS PVC AMB X 8",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080231"
+   },
+   {
+    "apresentacao": "(600 + 70 + 100) MG COM CT BL AL PLAS PVC AMB X 10",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080248"
+   },
+   {
+    "apresentacao": "(600 + 70 + 100) MG COM CT BL AL PLAS PVC AMB X 16",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080256"
+   },
+   {
+    "apresentacao": "(600 + 70 + 100) MG COM CT BL AL PLAS PVC AMB X 20",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080264"
+   },
+   {
+    "apresentacao": "(600 + 70 + 100) MG COM CT BL AL PLAS PVC AMB X 80",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1862000080272"
+   }
+  ]
  }
 }
