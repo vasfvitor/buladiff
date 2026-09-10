@@ -1,0 +1,286 @@
+{
+ "ate": "2026-09-09",
+ "ultima_execucao": "2026-09-09T19:39:19",
+ "publicacoes": [
+  {
+   "registro": "110630163",
+   "id_produto": 3565885,
+   "nome": "BIO-MANGUINHOS ADALIMUMABE",
+   "empresa": "FUNDAÇÃO OSWALDO CRUZ",
+   "cnpj": "33781055000135",
+   "expediente": "0928949265",
+   "data": "2026-09-08",
+   "processo": "25351362783202287"
+  },
+  {
+   "registro": "186100021",
+   "id_produto": 3951910,
+   "nome": "CIALIS",
+   "empresa": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+   "cnpj": "10555143000113",
+   "expediente": "0929854268",
+   "data": "2026-09-08",
+   "processo": "25351014697202694"
+  },
+  {
+   "registro": "104971403",
+   "id_produto": 866648,
+   "nome": "CLORIDRATO DE ONDANSENTRONA",
+   "empresa": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A",
+   "cnpj": "60665981000118",
+   "expediente": "0927291266",
+   "data": "2026-09-08",
+   "processo": "25351676469201259"
+  },
+  {
+   "registro": "121100481",
+   "id_produto": 1924271,
+   "nome": "COMIRNATY",
+   "empresa": "PFIZER BRASIL LTDA",
+   "cnpj": "61072393000133",
+   "expediente": "0930792262",
+   "data": "2026-09-08",
+   "processo": "25351023179202157"
+  },
+  {
+   "registro": "150920002",
+   "id_produto": 3914598,
+   "nome": "EZ-DMSA",
+   "empresa": "ECKERT & ZIEGLER BRASIL COMERCIAL LTDA",
+   "cnpj": "02887124000247",
+   "expediente": "0929099265",
+   "data": "2026-09-08",
+   "processo": "25351090621202584"
+  },
+  {
+   "registro": "150920003",
+   "id_produto": 3862841,
+   "nome": "EZ-ECD",
+   "empresa": "ECKERT & ZIEGLER BRASIL COMERCIAL LTDA",
+   "cnpj": "02887124000247",
+   "expediente": "0929702263",
+   "data": "2026-09-08",
+   "processo": "25351108781202597"
+  },
+  {
+   "registro": "150920004",
+   "id_produto": 3870866,
+   "nome": "EZ-MDP",
+   "empresa": "ECKERT & ZIEGLER BRASIL COMERCIAL LTDA",
+   "cnpj": "02887124000247",
+   "expediente": "0929710266",
+   "data": "2026-09-08",
+   "processo": "25351130604202597"
+  },
+  {
+   "registro": "150920005",
+   "id_produto": 3902352,
+   "nome": "EZ-MIBI",
+   "empresa": "ECKERT & ZIEGLER BRASIL COMERCIAL LTDA",
+   "cnpj": "02887124000247",
+   "expediente": "0929049268",
+   "data": "2026-09-08",
+   "processo": "25351093578202517"
+  },
+  {
+   "registro": "126270028",
+   "id_produto": 3817827,
+   "nome": "FRUZAQLA",
+   "empresa": "TAKEDA FARMACEUTICA BRASIL LTDA",
+   "cnpj": "11635171000103",
+   "expediente": "0928991261",
+   "data": "2026-09-08",
+   "processo": "25351071806202590"
+  },
+  {
+   "registro": "102351164",
+   "id_produto": 1114669,
+   "nome": "GLIMATIN",
+   "empresa": "EMS S/A",
+   "cnpj": "57507378000365",
+   "expediente": "0929137264",
+   "data": "2026-09-08",
+   "processo": "25351466483201547"
+  },
+  {
+   "registro": "155840672",
+   "id_produto": 3672971,
+   "nome": "HYVORA",
+   "empresa": "BRAINFARMA INDÚSTRIA QUÍMICA E FARMACÊUTICA S.A",
+   "cnpj": "05161069000110",
+   "expediente": "0928964264",
+   "data": "2026-09-08",
+   "processo": "25351526416202307"
+  },
+  {
+   "registro": "102351080",
+   "id_produto": 770558,
+   "nome": "MESILATO DE IMATINIBE",
+   "empresa": "EMS S/A",
+   "cnpj": "57507378000365",
+   "expediente": "0929100263",
+   "data": "2026-09-08",
+   "processo": "25351433461201141"
+  },
+  {
+   "registro": "104070104",
+   "id_produto": 807234,
+   "nome": "MESILATO DE IMATINIBE",
+   "empresa": "INSTITUTO VITAL BRAZIL S/A",
+   "cnpj": "30064034000100",
+   "expediente": "0927650266",
+   "data": "2026-09-08",
+   "processo": "25351033697201217"
+  },
+  {
+   "registro": "104971407",
+   "id_produto": 1095000,
+   "nome": "ONDSET INJ",
+   "empresa": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A",
+   "cnpj": "60665981000118",
+   "expediente": "0927356261",
+   "data": "2026-09-08",
+   "processo": "25351003402201394"
+  },
+  {
+   "registro": "102350496",
+   "id_produto": 345421,
+   "nome": "PENTOXIFILINA",
+   "empresa": "EMS S/A",
+   "cnpj": "57507378000365",
+   "expediente": "0929208269",
+   "data": "2026-09-08",
+   "processo": "253510243410068"
+  },
+  {
+   "registro": "112360028",
+   "id_produto": 5171,
+   "nome": "SPORANOX",
+   "empresa": "JANSSEN-CILAG FARMACÊUTICA LTDA",
+   "cnpj": "51780468000187",
+   "expediente": "0927397269",
+   "data": "2026-09-08",
+   "processo": "2500001100987"
+  },
+  {
+   "registro": "122140018",
+   "id_produto": 5872,
+   "nome": "TECNOMET",
+   "empresa": "ADIUM S.A.",
+   "cnpj": "55980684000127",
+   "expediente": "0928729265",
+   "data": "2026-09-08",
+   "processo": "2599202079773"
+  },
+  {
+   "registro": "112363440",
+   "id_produto": 3188629,
+   "nome": "TECVAYLI",
+   "empresa": "JANSSEN-CILAG FARMACÊUTICA LTDA",
+   "cnpj": "51780468000187",
+   "expediente": "0927389266",
+   "data": "2026-09-08",
+   "processo": "25351125921202249"
+  },
+  {
+   "registro": "102440025",
+   "id_produto": 3776590,
+   "nome": "TEPEZZA",
+   "empresa": "AMGEN BIOTECNOLOGIA DO BRASIL LTDA.",
+   "cnpj": "18774815000193",
+   "expediente": "0929946260",
+   "data": "2026-09-08",
+   "processo": "25351432408202473"
+  },
+  {
+   "registro": "103720307",
+   "id_produto": 2525916,
+   "nome": "TYNNA",
+   "empresa": "SUPERA FARMA LABORATÓRIOS S.A",
+   "cnpj": "43312503000105",
+   "expediente": "0929914261",
+   "data": "2026-09-08",
+   "processo": "25351322772202183"
+  },
+  {
+   "registro": "104971459",
+   "id_produto": 1459055,
+   "nome": "UNIREZ",
+   "empresa": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A",
+   "cnpj": "60665981000118",
+   "expediente": "0927376261",
+   "data": "2026-09-08",
+   "processo": "25351878395202051"
+  },
+  {
+   "registro": "109740110",
+   "id_produto": 5559,
+   "nome": "VASOPRIL PLUS",
+   "empresa": "BIOLAB SANUS FARMACÊUTICA LTDA",
+   "cnpj": "49475833000106",
+   "expediente": "0929619269",
+   "data": "2026-09-08",
+   "processo": "250000215519913"
+  },
+  {
+   "registro": "177170012",
+   "id_produto": 3666672,
+   "nome": "VYLOY",
+   "empresa": "ASTELLAS FARMA BRASIL IMPORTAÇÃO E DISTRIBUIÇÃO DE MEDICAMENTOS LTDA.",
+   "cnpj": "07768134000104",
+   "expediente": "0928010261",
+   "data": "2026-09-08",
+   "processo": "25351740787202391"
+  },
+  {
+   "registro": "121100430",
+   "id_produto": 1180340,
+   "nome": "ZYVOX",
+   "empresa": "PFIZER BRASIL LTDA",
+   "cnpj": "61072393000133",
+   "expediente": "0927435268",
+   "data": "2026-09-08",
+   "processo": "25351099761201776"
+  },
+  {
+   "registro": "105831043",
+   "id_produto": 3697045,
+   "nome": "bilastina",
+   "empresa": "GERMED FARMACEUTICA LTDA",
+   "cnpj": "45992062000165",
+   "expediente": "0928153266",
+   "data": "2026-09-08",
+   "processo": "25351959029202426"
+  },
+  {
+   "registro": "102351262",
+   "id_produto": 1179585,
+   "nome": "bilastina",
+   "empresa": "EMS S/A",
+   "cnpj": "57507378000365",
+   "expediente": "0928005267",
+   "data": "2026-09-08",
+   "processo": "25351368593201731"
+  },
+  {
+   "registro": "109740268",
+   "id_produto": 1271407,
+   "nome": "maleato de enalapril + hidroclorotiazida",
+   "empresa": "BIOLAB SANUS FARMACÊUTICA LTDA",
+   "cnpj": "49475833000106",
+   "expediente": "0929724267",
+   "data": "2026-09-08",
+   "processo": "25351114934201814"
+  },
+  {
+   "registro": "105830907",
+   "id_produto": 1181000,
+   "nome": "pentoxifilina",
+   "empresa": "GERMED FARMACEUTICA LTDA",
+   "cnpj": "45992062000165",
+   "expediente": "0929500261",
+   "data": "2026-09-08",
+   "processo": "25351365181201714"
+  }
+ ]
+}

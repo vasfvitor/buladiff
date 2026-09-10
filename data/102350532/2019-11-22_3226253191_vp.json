@@ -1,0 +1,75 @@
+{
+ "registro": "102350532",
+ "expediente": "3226253191",
+ "data": "2019-11-22",
+ "situacao": "Petição encerrada",
+ "tipo": "vp",
+ "pdf_sha256": "b0734ffef63163469b839d0d224cb7d4bb68705af4ee3e073f8eee86eb54fe05",
+ "paginas": 9,
+ "documentos": [],
+ "historico_tabela": [
+  {
+   "data": "23/07/2013",
+   "expediente": "0597768/13-1",
+   "assunto": "(10459) – GENÉRICO – Inclusão Inicial de Texto de Bula",
+   "itens": "Não houve alteração no texto de bula. Submissão eletrônica apenas para disponibilização do texto de bula no Bulário eletrônico da ANVISA.",
+   "versoes": "(VP/VP S)",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  },
+  {
+   "data": "27/8/2014",
+   "expediente": "0712731/14-6",
+   "assunto": "(10452) – GENÉRICO – Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "Quais os males que este medicamento pode me causar? Interações medicamentosas Reações adversas",
+   "versoes": "(VP/VP S)",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  },
+  {
+   "data": "26/10/2016",
+   "expediente": "2427462/16-3",
+   "assunto": "(10452) – GENÉRICO – Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "- identificação do medicamento - como este medicamento funciona - onde, como e por quanto tempo possoguardar este medicamento?",
+   "versoes": "(VP/VP S)",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  },
+  {
+   "data": "22/08/2017",
+   "expediente": "1778113/17-2",
+   "assunto": "(10452) – GENÉRICO – Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "8. Quais os males que este medicamento pode me causar? 6. Interações medicamentosas 9. Reações adversas",
+   "versoes": "VP VPS",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  },
+  {
+   "data": "13/12/2017",
+   "expediente": "2282106/17-6",
+   "assunto": "(10452) – GENÉRICO – Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "4. O que devo saber antes de usar este medicamento? 8. Quais os males que este medicamento pode me causar? 5. Advertências e precauções 9. Reações adversas",
+   "versoes": "VP VPS",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  },
+  {
+   "data": "21/12/2018",
+   "expediente": "1204003/18-7",
+   "assunto": "(10452) – GENÉRICO – Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "1. PARA QUE ESTE MEDICAMENTO É INDICADO? 2. COMO ESTE MEDICAMENTO FUNCIONA? 4. O QUE DEVO SABER ANTES DE USAR ESTE MEDICAMENTO? 5. ONDE, COMO E POR QUANTO TEMPO POSSO GUARDAR ESTE MEDICAMENTO? - Identificação do medicamento -Interações Medicamentosas Dizeres Legais 5.ADVERTÊNCIAS E PRECAUÇÕES 6.INTERAÇÕES MEDICAMENTOSAS 7.CUIDADOS DE ARMAZENAMENTO DO MEDICAMENTO 8.POSOLOGIA E MODO DE USAR 9.REAÇÕES ADVERSAS Dizeres Legais",
+   "versoes": "VP / VPS",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  },
+  {
+   "data": "22/11/2019",
+   "expediente": "-",
+   "assunto": "(10452) – GENÉRICO – Notificação de Alteração de Texto de Bula –RDC 60/12",
+   "itens": "5.ONDE, COMO E POR QUANTO TEMPO POSSO GUARDAR ESTE MEDICAMENTO? 8.QUAIS OS MALES QUE ESTE MEDICAMENTO PODE ME CAUSAR?",
+   "versoes": "VP",
+   "apresentacoes": "Comprimidos Revestidos. Caixas com 12 e 18 comprimidos revestidos. Embalagem fracionável com 30 e 42 comprimidos.",
+   "aprovacao": "N/A"
+  }
+ ]
+}

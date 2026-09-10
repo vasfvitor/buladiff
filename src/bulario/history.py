@@ -9,7 +9,7 @@ Requer o extra `tables` (pdfplumber).
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 from bulario.extract import HISTORY_RE
@@ -45,6 +45,9 @@ class HistoryEntry:
         """Identificadores de seção citados em `itens` ("4", "5", "III"...), na ordem, sem repetição."""
         found = [a or b.upper() or ("III" if c else "") for a, b, c in SECTION_RE.findall(self.itens)]
         return list(dict.fromkeys(f for f in found if f))
+
+    def to_dict(self) -> dict:
+        return asdict(self)
 
 
 @dataclass

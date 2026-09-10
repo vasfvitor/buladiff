@@ -47,6 +47,13 @@ class Document:
     def tamanho(self) -> int:
         return sum(len(v) for v in self.secoes.values())
 
+    def to_dict(self) -> dict:
+        return {"tipo": self.tipo, "secoes": dict(self.secoes)}
+
+    @classmethod
+    def from_dict(cls, d: dict) -> Document:
+        return cls(secoes=dict(d["secoes"]), tipo=d.get("tipo", "?"))
+
 
 def is_heading(line: str) -> bool:
     return bool(

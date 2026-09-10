@@ -1,0 +1,12 @@
+# Lista curada: registros com histórico completo no arquivo. Um por linha; # inicia comentário.
+118190404  # risperidona 1 mg/mL — Multilab (genérico)
+112360031  # Risperdal — Janssen (referência; sem tabela de histórico no PDF)
+157211214  # Tylenol — Kenvue
+143810293  # dipirona — Cimed
+117660036  # Ozempic — Novo Nordisk (biológico, várias apresentações)
+186200008  # Dorflex / Dorflex Max — Opella
+100430911  # losartana potássica — Eurofarma
+102350532  # amoxicilina + clavulanato — EMS
+102350616  # omeprazol — EMS
+178170899  # Neosaldina — Cosmed
+178170890  # Buscopan — Cosmed (3 apresentações no mesmo PDF)

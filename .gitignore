@@ -1,3 +1,9 @@
-data/
+data/**/*.pdf
 __pycache__/
 .venv/
+site/src/data/
+site/node_modules/
+site/dist/
+site/.astro/
+data/validate-report.json
+data/**/diff-*.html
