@@ -56,8 +56,11 @@ pnpm site:dev                               # http://localhost:4321/buladiff/
 pnpm site:build                             # site/dist/
 ```
 
-O fluxo diário (`.github/workflows/daily.yml`) roda `feed --baixar` e `fetch --curados`, commita o que
-mudou em `data/`, exporta, constrói e publica no GitHub Pages. O repositório não guarda PDF: só o texto
+O site é publicado no GitHub Pages pelo workflow `.github/workflows/daily.yml` a cada push em `main`.
+O Cloudflare da ANVISA bloqueia os runners do GitHub, então a coleta roda na sua máquina:
+`scripts/coleta-local.sh` (para o cron) faz `feed --baixar` e `fetch --curados`, commita `data/` e dá
+push, o que dispara o deploy. O cron diário do workflow ainda tenta coletar no runner e, se a API não
+responder, só republica o que já está commitado. O repositório não guarda PDF: só o texto
 extraído por versão (`data/<registro>/<data>_<expediente>_<vp|vps>.json`) e o hash do PDF original.
 
 ## Como funciona
