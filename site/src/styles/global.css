@@ -108,8 +108,8 @@ a.badge:hover, a.badge:focus-visible { background: var(--chip-hover); border-col
 .diff p { max-width: 100%; }
 .diff del { background: var(--del-bg); color: var(--del-fg); text-decoration: line-through; text-decoration-thickness: 1px; padding: 0 0.1em; }
 .diff ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; padding: 0 0.1em; }
-.diff section { scroll-margin-top: 1rem; }
-.diff section:target h3 { background: var(--declared-bg); border-left: 3px solid var(--declared); padding-left: 0.5rem; }
+.diff h3[id] { scroll-margin-top: 1rem; }
+.diff h3:target { background: var(--declared-bg); border-left: 3px solid var(--declared); padding-left: 0.5rem; }
 .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
 .legend del { background: var(--del-bg); color: var(--del-fg); }
 .legend ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
