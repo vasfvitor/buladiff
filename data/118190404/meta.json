@@ -32,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-01-28T15:13:10.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 29992789,
@@ -51,13 +51,13 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-01-16T15:07:56.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     }
    ],
-   "last": true,
    "totalElements": 2,
    "totalPages": 1,
+   "last": true,
    "numberOfElements": 2,
    "first": true,
    "sort": null,
@@ -80,8 +80,8 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-01-28T15:13:10.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "ultimaSitVal": true,
-   "histSitVal": true
+   "histSitVal": true,
+   "ultimaSitVal": true
   }
  }
 }
