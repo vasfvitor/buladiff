@@ -1,8 +1,8 @@
 name: Atualizar arquivo e publicar site
 
-# Dois gatilhos: push em main (dados coletados localmente) publica; o cron diário tenta coletar no
-# runner e publica de qualquer jeito. A API da ANVISA (Cloudflare) costuma bloquear runners do GitHub;
-# nesse caso a coleta é pulada com aviso e o site sai do data/ commitado.
+# Dois gatilhos: push em main publica; o cron diário coleta e publica. A API da ANVISA (Cloudflare)
+# bloqueia os runners hospedados do GitHub, então o job `coletar` roda num runner self-hosted (IP
+# residencial ou VPS). Se a API não responder, a coleta é pulada com aviso e o site sai do data/ commitado.
 on:
   push:
     branches: [main]
@@ -28,11 +28,13 @@ concurrency:
 jobs:
   coletar:
     if: github.event_name != 'push'
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - run: sudo apt-get install -y --no-install-recommends poppler-utils
+      - name: Verificar poppler no runner
+        run: command -v pdftotext || { echo "::error::pdftotext não encontrado; instale poppler-utils no runner"; exit 1; }
       - run: uv sync --extra tables
 
       - name: Testar acesso à API da ANVISA
