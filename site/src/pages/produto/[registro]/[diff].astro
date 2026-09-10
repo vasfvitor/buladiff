@@ -18,7 +18,12 @@ const grupos = Array.from(new Set(diff.secoes.map((s) => s.documento))).map((doc
   secoes: diff.secoes.filter((s) => s.documento === documento),
 }));
 const multi = grupos.length > 1;
-const anchor = (g: { indice: number }, secao: string) => secaoId(diff.tipo, secao, g.indice);
+// A primeira apresentação em que a seção está alterada recebe o id simples (é para onde os chips apontam);
+// as seguintes recebem o sufixo -dN.
+const primeira = new Map<string, number>();
+for (const g of grupos) for (const s of g.secoes) if (s.alterada && !primeira.has(s.secao)) primeira.set(s.secao, g.indice);
+const anchor = (g: { indice: number }, secao: string) =>
+  secaoId(diff.tipo, secao, primeira.get(secao) === g.indice ? 1 : g.indice);
 ---
 
 <Base

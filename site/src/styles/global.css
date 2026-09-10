@@ -15,6 +15,7 @@
   --chip-hover: #dedbd2;
   --declared: #b7791f;
   --declared-bg: #fff6e0;
+  --target-bg: #e3eef2;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -34,6 +35,7 @@
     --chip-hover: #3a3f48;
     --declared: #e0a94a;
     --declared-bg: #3a2f14;
+    --target-bg: #1e2f36;
     color-scheme: dark;
   }
 }
@@ -53,6 +55,7 @@
   --chip-hover: #3a3f48;
   --declared: #e0a94a;
   --declared-bg: #3a2f14;
+  --target-bg: #1e2f36;
   color-scheme: dark;
 }
 
@@ -108,8 +111,9 @@ a.badge:hover, a.badge:focus-visible { background: var(--chip-hover); border-col
 .diff p { max-width: 100%; }
 .diff del { background: var(--del-bg); color: var(--del-fg); text-decoration: line-through; text-decoration-thickness: 1px; padding: 0 0.1em; }
 .diff ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; padding: 0 0.1em; }
-.diff h3[id] { scroll-margin-top: 1rem; }
-.diff h3:target { background: var(--declared-bg); border-left: 3px solid var(--declared); padding-left: 0.5rem; }
+.diff h3[id] { scroll-margin-top: 3rem; padding-left: 0.5rem; margin-left: -0.5rem; border-radius: 0.3rem; }
+/* "você está aqui": cor própria (não a âmbar de "declarada") e sem mudar a geometria */
+.diff h3:target { background: var(--target-bg); box-shadow: inset 3px 0 0 var(--accent); }
 .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
 .legend del { background: var(--del-bg); color: var(--del-fg); }
 .legend ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
