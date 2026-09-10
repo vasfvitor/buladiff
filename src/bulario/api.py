@@ -32,21 +32,33 @@ def _retry_after(e: urllib.error.HTTPError) -> float:
         return 0.0
 
 
+def _transitorio(e: Exception) -> bool:
+    """Vale a pena tentar de novo? Erro de rede, resposta truncada, 5xx ou 429; outros 4xx não."""
+    return not isinstance(e, urllib.error.HTTPError) or e.code >= 500 or e.code == 429
+
+
+def _espera(e: Exception, tentativa: int) -> float:
+    """Segundos antes da próxima tentativa: no 429, o que o servidor pedir (mínimo 10 s); senão 2, 4, 8…"""
+    if isinstance(e, urllib.error.HTTPError) and e.code == 429:
+        return max(_retry_after(e), 10)
+    return 2 ** (tentativa + 1)
+
+
 class Client:
     """Requisições com intervalo mínimo entre chamadas (padrão 1 s)."""
 
-    def __init__(self, base: str = BASE, delay: float = 1.0, timeout: float = 60.0, retries: int = 3):
-        self.base = base
+    def __init__(self, delay: float = 1.0, timeout: float = 60.0, retries: int = 3):
         self.delay = delay
         self.timeout = timeout
-        self.retries = retries  # tentativas extras em 5xx/429/erro de rede/resposta truncada (2s, 4s, 8s…)
+        self.retries = retries  # tentativas extras em 5xx/429/erro de rede/resposta truncada
         self._last = 0.0
 
     def _get(self, path: str, params: dict[str, Any] | None = None) -> bytes:
-        url = f"{self.base}/{path}"
+        """Falhas saem sempre como `urllib.error.URLError` (um `OSError`), inclusive resposta truncada."""
+        url = f"{BASE}/{path}"
         if params:
-            url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
-        for attempt in range(self.retries + 1):
+            url += "?" + urllib.parse.urlencode(params)
+        for tentativa in range(self.retries + 1):
             wait = self._last + self.delay - time.monotonic()
             if wait > 0:
                 time.sleep(wait)
@@ -54,21 +66,16 @@ class Client:
                 req = urllib.request.Request(url, headers=HEADERS)
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:
                     data = r.read()
+            except (urllib.error.URLError, TimeoutError, http.client.HTTPException) as e:
                 self._last = time.monotonic()
-                return data
-            except urllib.error.HTTPError as e:
-                self._last = time.monotonic()
-                if (e.code < 500 and e.code != 429) or attempt == self.retries:
+                if not _transitorio(e) or tentativa == self.retries:
+                    if isinstance(e, http.client.HTTPException):  # IncompleteRead: a ANVISA trunca às vezes
+                        raise urllib.error.URLError(e) from e
                     raise
-                if e.code == 429:  # limite de taxa: espera o que o servidor pedir, no mínimo 10 s
-                    time.sleep(max(_retry_after(e), 10))
-                    continue
-            except (urllib.error.URLError, TimeoutError, http.client.HTTPException):
-                # HTTPException cobre resposta truncada (IncompleteRead), que a ANVISA devolve às vezes
-                self._last = time.monotonic()
-                if attempt == self.retries:
-                    raise
-            time.sleep(2 ** (attempt + 1))
+                time.sleep(_espera(e, tentativa))
+                continue
+            self._last = time.monotonic()
+            return data
         raise AssertionError("unreachable")
 
     def get_json(self, path: str, params: dict[str, Any] | None = None) -> Any:
@@ -85,23 +92,29 @@ class Client:
         params = {"count": count, "page": page, **{f"filter[{k}]": v for k, v in filtro.items()}}
         return self.get_json("bulario", params)
 
-    def search_all(self, **filtro: str):
-        """Itera todos os resultados de uma busca."""
+    def search_pages(self, count: int = 200, **filtro: str):
+        """Itera as páginas de uma busca (cada uma um Spring Page)."""
         page = 1
         while True:
-            r = self.search(page=page, count=200, **filtro)
-            yield from r["content"]
+            r = self.search(page=page, count=count, **filtro)
+            yield r
             if r.get("last", True):
                 return
             page += 1
 
-    def historico(self, id_produto: int, all_pages: bool = True) -> dict:
+    def search_all(self, **filtro: str):
+        """Itera todos os resultados de uma busca."""
+        for r in self.search_pages(**filtro):
+            yield from r["content"]
+
+    def historico(self, id_produto: int, limit: int | None = None) -> dict:
         """GET /bulario/{idProduto}: {registroProduto, nomeProduto, bulaAtual, historico: Page}.
-        Cada item do histórico tem expediente, dataPublicacao, idBulaPaciente, idBulaProfissional."""
-        h = self.get_json(f"bulario/{id_produto}")
-        if all_pages:
+        Cada item do histórico tem expediente, dataPublicacao, idBulaPaciente, idBulaProfissional.
+        Vem do mais recente para o mais antigo; `limit` pega só os N primeiros, `None` pega todos."""
+        h = self.get_json(f"bulario/{id_produto}", {"count": limit or 500})
+        if limit is None:
             for page in range(2, h["historico"]["totalPages"] + 1):
-                more = self.get_json(f"bulario/{id_produto}", {"page": page})
+                more = self.get_json(f"bulario/{id_produto}", {"page": page, "count": 500})
                 h["historico"]["content"] += more["historico"]["content"]
         return h
 

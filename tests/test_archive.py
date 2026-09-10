@@ -48,13 +48,12 @@ def test_local_versions_from_json(tmp_path: Path):
     out.mkdir()
     for exp, data in (("0046116231", "2023-01-16"), ("0121761258", "2025-01-28")):
         for tipo in ("vp", "vps"):
-            item = {"dataPublicacao": data + "T15:13:10.000-0200", "expediente": exp}
-            make_vt(exp, data, tipo).save(version_path(out, item, tipo))
+            make_vt(exp, data, tipo).save(version_path(out, data, exp, tipo))
     (out / "meta.json").write_text("{}")
     vs = local_versions("118190404", tmp_path)
     assert [v.expediente for v in vs] == ["0046116231", "0121761258"]
     assert set(vs[0].textos) == {"vp", "vps"}
-    assert vs[1].load("vps").tipo == "vps"
+    assert VersionText.load(vs[1].textos["vps"]).tipo == "vps"
     assert registros(tmp_path) == ["118190404"]
 
 

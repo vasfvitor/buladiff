@@ -61,3 +61,16 @@ def test_retries_on_truncated_response():
     with mock.patch("urllib.request.urlopen", side_effect=[truncated, ok]) as m, mock.patch("time.sleep"):
         assert Client(delay=0).download_bula("id") == b"%PDF"
         assert m.call_count == 2
+
+
+def test_truncated_response_becomes_urlerror_after_retries():
+    import http.client
+
+    truncated = mock.MagicMock()
+    truncated.__enter__.return_value.read.side_effect = http.client.IncompleteRead(b"")
+    with mock.patch("urllib.request.urlopen", return_value=truncated), mock.patch("time.sleep"):
+        try:
+            Client(delay=0, retries=1).download_bula("id")
+            raise AssertionError("deveria falhar")
+        except urllib.error.URLError as e:  # OSError: quem chama trata como qualquer erro de rede
+            assert isinstance(e.reason, http.client.IncompleteRead)

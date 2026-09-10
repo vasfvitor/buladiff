@@ -15,6 +15,7 @@ from pathlib import Path
 
 from bulario.api import Client
 from bulario.extract import Document, extract_documents, pdf_pages
+from bulario.history import HistoryEntry, read_history
 
 KINDS = (("vp", "idBulaPaciente"), ("vps", "idBulaProfissional"))
 META = "meta.json"
@@ -46,8 +47,6 @@ class VersionText:
     @property
     def declarado(self) -> list[str]:
         """Seções declaradas na última linha da tabela de histórico (a submissão que gerou este PDF)."""
-        from bulario.history import HistoryEntry
-
         if not self.historico_tabela:
             return []
         return HistoryEntry(**self.historico_tabela[-1]).secoes
@@ -77,30 +76,33 @@ class VersionText:
 class Version:
     expediente: str
     data: str  # AAAA-MM-DD
-    situacao: str
     textos: dict[str, Path]  # "vp"/"vps" -> caminho do JSON
 
-    def load(self, kind: str) -> VersionText:
-        return VersionText.load(self.textos[kind])
+
+def version_path(root: Path, data: str, expediente: str, kind: str, suffix: str = ".json") -> Path:
+    return root / f"{data}_{expediente}_{kind}{suffix}"
 
 
-def version_path(root: Path, item: dict, kind: str, suffix: str = ".json") -> Path:
-    return root / f"{item['dataPublicacao'][:10]}_{item['expediente']}_{kind}{suffix}"
+def version_parts(path: Path) -> tuple[str, str, str]:
+    """(data, expediente, tipo) do nome de um arquivo de versão; o inverso de `version_path`."""
+    data, expediente, kind = path.stem.rsplit("_", 2)
+    return data, expediente, kind
 
 
-def extract_pdf(pdf: Path, registro: str, item: dict, kind: str) -> VersionText:
+def extract_pdf(
+    pdf: Path, registro: str, kind: str, expediente: str, data: str, situacao: str = ""
+) -> VersionText:
     """Extrai documentos e tabela de histórico de um PDF já em disco."""
-    from bulario.history import read_history
-
-    marcados, linhas = extract_documents(pdf)
+    pages = pdf_pages(pdf)
+    marcados, linhas = extract_documents(pdf, pages)
     return VersionText(
         registro=registro,
-        expediente=item["expediente"],
-        data=item["dataPublicacao"][:10],
-        situacao=item.get("descSituacao", ""),
+        expediente=expediente,
+        data=data,
+        situacao=situacao,
         tipo=kind,
         pdf_sha256=hashlib.sha256(pdf.read_bytes()).hexdigest(),
-        paginas=len(pdf_pages(pdf)),
+        paginas=len(pages),
         documentos=marcados or linhas,
         historico_tabela=[e.to_dict() for e in read_history(pdf).entries],
         marcado=bool(marcados),
@@ -167,7 +169,6 @@ def fetch(
     latest: int | None = 2,
     keep_pdf: bool = False,
     log=print,
-    workers: int = 2,
 ) -> tuple[dict, list[Version]]:
     """Arquiva as versões de bula de um registro como JSON. `latest=None` pega todas. Idempotente.
 
@@ -181,56 +182,60 @@ def fetch(
     prod = found[0]
     out = root / registro
     out.mkdir(parents=True, exist_ok=True)
-    hist = client.historico(prod["idProduto"], all_pages=latest is None)
+
+    def historico() -> dict:
+        return client.historico(prod["idProduto"], limit=latest)
+
+    hist = historico()
     try:
         detalhe = resumo_detalhe(client.produto(prod["idProduto"]))
-    except urllib.error.HTTPError as e:  # o detalhe é complemento; o histórico é o que importa
-        log(f"  detalhe do produto indisponível (HTTP {e.code})")
-        detalhe = (load_meta(registro, root) or {}).get("detalhe", {})
+    except OSError as e:  # o detalhe é complemento; o histórico é o que importa
+        log(f"  detalhe do produto indisponível ({e})")
+        detalhe = load_meta(registro, root).get("detalhe", {})
     meta = {"produto": prod, "historico": hist, "detalhe": detalhe}
     (out / META).write_text(json.dumps(strip_tokens(meta), ensure_ascii=False, indent=1))
-    items = sorted(hist["historico"]["content"], key=lambda v: v["dataPublicacao"], reverse=True)
-    if latest is not None:
-        items = items[:latest]
+    items = sorted(hist["historico"]["content"], key=lambda v: v["dataPublicacao"], reverse=True)[:latest]
     log(f"{prod['nomeProduto']} — {prod['razaoSocial']} — {hist['historico']['totalElements']} versões")
     ids = _ids_by_document(hist)
 
     def download(item: dict, key: str) -> bytes:
-        try:
-            return client.download_bula(ids[(item["idDocumento"], key)])
-        except urllib.error.HTTPError as e:
-            if e.code not in EXPIRED:
-                raise
-            log("  ids expiraram; consultando o histórico de novo")
-            ids.update(_ids_by_document(client.historico(prod["idProduto"], all_pages=latest is None)))
-            return client.download_bula(ids[(item["idDocumento"], key)])
+        for renovado in (False, True):
+            try:
+                return client.download_bula(ids[(item["idDocumento"], key)])
+            except urllib.error.HTTPError as e:
+                if renovado or e.code not in EXPIRED:
+                    raise
+                log("  ids expiraram; consultando o histórico de novo")
+                ids.update(_ids_by_document(historico()))
+        raise AssertionError("unreachable")
 
-    def extract_and_save(pdf: Path, item: dict, kind: str, dest: Path, downloaded: bool) -> str:
-        extract_pdf(pdf, registro, item, kind).save(dest)
+    def extract_and_save(pdf: Path, v: Version, kind: str, situacao: str, downloaded: bool) -> str:
+        dest = v.textos[kind]
+        extract_pdf(pdf, registro, kind, v.expediente, v.data, situacao).save(dest)
         if not keep_pdf:
             pdf.unlink()
         return f"  {dest.name}  {'baixado' if downloaded else 'convertido'}"
 
     versions = []
     pending: list[Future[str]] = []
-    with ThreadPoolExecutor(max_workers=workers) as pool:
+    with ThreadPoolExecutor(max_workers=2) as pool:
         for item in items:
-            textos = {}
+            v = Version(item["expediente"], item["dataPublicacao"][:10], {})
             for kind, key in KINDS:
                 if not item.get(key):
-                    log(f"  {item['expediente']} sem {kind}")
+                    log(f"  {v.expediente} sem {kind}")
                     continue
-                dest = version_path(out, item, kind)
-                if not dest.exists():
-                    pdf = version_path(out, item, kind, ".pdf")
-                    downloaded = not pdf.exists()
-                    if downloaded:
-                        pdf.write_bytes(download(item, key))
-                    pending.append(pool.submit(extract_and_save, pdf, item, kind, dest, downloaded))
-                textos[kind] = dest
-            versions.append(
-                Version(item["expediente"], item["dataPublicacao"][:10], item["descSituacao"], textos)
-            )
+                dest = v.textos[kind] = version_path(out, v.data, v.expediente, kind)
+                if dest.exists():
+                    continue
+                pdf = version_path(out, v.data, v.expediente, kind, ".pdf")
+                downloaded = not pdf.exists()
+                if downloaded:
+                    pdf.write_bytes(download(item, key))
+                pending.append(
+                    pool.submit(extract_and_save, pdf, v, kind, item.get("descSituacao", ""), downloaded)
+                )
+            versions.append(v)
         for fut in pending:
             log(fut.result())  # propaga erro de extração, se houver
     return prod, versions
@@ -240,21 +245,14 @@ def reextract(registro: str, root: Path = Path("data"), force: bool = False, log
     """Refaz os JSON a partir dos PDFs guardados em data/<registro>/ (`fetch --keep-pdf`), sem a API.
     Só os que faltam, ou todos com `force`. Devolve quantos foram extraídos."""
     out = root / registro
-    situacoes = {
-        h["expediente"]: h.get("descSituacao", "")
-        for h in (load_meta(registro, root) or {})
-        .get("historico", {})
-        .get("historico", {})
-        .get("content", [])
-    }
+    situacao = situacoes(load_meta(registro, root))
     n = 0
     for pdf in sorted(out.glob("*_*_*.pdf")):
-        data, exp, kind = pdf.stem.rsplit("_", 2)
+        data, exp, kind = version_parts(pdf)
         dest = pdf.with_suffix(".json")
         if dest.exists() and not force:
             continue
-        item = {"expediente": exp, "dataPublicacao": data, "descSituacao": situacoes.get(exp, "")}
-        extract_pdf(pdf, registro, item, kind).save(dest)
+        extract_pdf(pdf, registro, kind, exp, data, situacao.get(exp, "")).save(dest)
         log(f"  {dest.name}  convertido")
         n += 1
     return n
@@ -265,14 +263,21 @@ def local_versions(registro: str, root: Path = Path("data")) -> list[Version]:
     out = root / registro
     by_key: dict[tuple[str, str], dict[str, Path]] = {}
     for f in sorted(out.glob("*_*_*.json")):
-        data, exp, kind = f.stem.rsplit("_", 2)
+        data, exp, kind = version_parts(f)
         by_key.setdefault((data, exp), {})[kind] = f
-    return [Version(exp, data, "", textos) for (data, exp), textos in sorted(by_key.items())]
+    return [Version(exp, data, textos) for (data, exp), textos in sorted(by_key.items())]
 
 
-def load_meta(registro: str, root: Path = Path("data")) -> dict | None:
+def load_meta(registro: str, root: Path = Path("data")) -> dict:
+    """meta.json do registro; `{}` se ainda não foi arquivado."""
     f = root / registro / META
-    return json.loads(f.read_text()) if f.exists() else None
+    return json.loads(f.read_text()) if f.exists() else {}
+
+
+def situacoes(meta: dict) -> dict[str, str]:
+    """expediente -> situação ("Aditado ao processo"…), do histórico da API guardado no meta.json."""
+    content = meta.get("historico", {}).get("historico", {}).get("content", [])
+    return {h["expediente"]: h.get("descSituacao", "") for h in content}
 
 
 def registros(root: Path = Path("data")) -> list[str]:

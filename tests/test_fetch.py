@@ -39,7 +39,7 @@ class FakeClient:
     def search(self, **_):
         return {"content": [PROD]}
 
-    def historico(self, id_produto, all_pages=True):
+    def historico(self, id_produto, limit=None):
         self.geracao += 1
         self.historicos += 1
         t = f"t{self.geracao}"
@@ -64,17 +64,11 @@ class FakeClient:
         return b"%PDF-fake " + id_bula.encode()
 
 
-def fake_extract(pdf: Path, registro: str, it: dict, kind: str) -> VersionText:
+def fake_extract(
+    pdf: Path, registro: str, kind: str, expediente: str, data: str, situacao: str = ""
+) -> VersionText:
     return VersionText(
-        registro,
-        it["expediente"],
-        it["dataPublicacao"][:10],
-        it.get("descSituacao", ""),
-        kind,
-        "sha",
-        1,
-        [Document({"1": pdf.name}, kind)],
-        [],
+        registro, expediente, data, situacao, kind, "sha", 1, [Document({"1": pdf.name}, kind)]
     )
 
 

@@ -13,7 +13,7 @@ import json
 from pathlib import Path
 
 from bulario import catalogo
-from bulario.archive import VersionText, load_meta, local_versions, registros
+from bulario.archive import VersionText, load_meta, local_versions, registros, situacoes
 from bulario.diff import SectionDiff, diff_documents
 from bulario.feed import load_state
 
@@ -89,7 +89,7 @@ def product_entry(registro: str, root: Path, diffs: list[dict]) -> dict | None:
 def product_diffs(registro: str, root: Path) -> tuple[list[dict], list[dict]]:
     """(versoes, diffs). Versões: uma por expediente (a API relista o mesmo expediente em datas
     novas). Diffs: entre versões de conteúdo distinto (mesmo hash de PDF = republicação)."""
-    meta = load_meta(registro, root) or {}
+    meta = load_meta(registro, root)
     versions = local_versions(registro, root)
     # primeira ocorrência de cada (expediente, tipo): a relistagem do mesmo expediente repete o PDF com
     # data nova, e a data que interessa é a da publicação original
@@ -97,10 +97,7 @@ def product_diffs(registro: str, root: Path) -> tuple[list[dict], list[dict]]:
     for v in versions:
         for kind, f in v.textos.items():
             loaded.setdefault((v.expediente, kind), VersionText.load(f))
-    situacoes = {
-        h["expediente"]: h.get("descSituacao", "")
-        for h in meta.get("historico", {}).get("historico", {}).get("content", [])
-    }
+    situacao = situacoes(meta)
     versoes: list[dict] = []
     por_expediente: dict[str, dict] = {}
     hashes: set[str] = set()
@@ -114,7 +111,7 @@ def product_diffs(registro: str, root: Path) -> tuple[list[dict], list[dict]]:
                 "expediente": v.expediente,
                 "data": v.data,
                 "republicada": [],
-                "situacao": situacoes.get(v.expediente, ""),
+                "situacao": situacao.get(v.expediente, ""),
                 "declarado": {vt.tipo: vt.declarado for vt in textos},
                 # expediente novo com os mesmos PDFs de antes: não gera diff
                 "repetida": bool(textos) and all(vt.pdf_sha256 in hashes for vt in textos),

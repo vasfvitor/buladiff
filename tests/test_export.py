@@ -27,11 +27,10 @@ def make_archive(root: Path) -> None:
         ("0200000000", "2026-01-10", "indicado para dor e febre", "c"),
         ("0121761258", "2026-03-27", "indicado para febre", "b"),  # relistagem do mesmo PDF, não adjacente
     ):
-        item = {"dataPublicacao": data + "T00:00:00", "expediente": exp}
         vt = VersionText(
             "118190404", exp, data, "", "vp", sha, 1, [Document({"1": texto, "2": "igual"}, "vp")], []
         )
-        vt.save(version_path(out, item, "vp"))
+        vt.save(version_path(out, data, exp, "vp"))
 
 
 def test_export_produces_list_and_detail(tmp_path: Path):

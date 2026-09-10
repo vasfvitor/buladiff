@@ -1,6 +1,7 @@
 import json
 
 from bulario import catalogo
+from bulario.api import Client
 
 ITEM = {
     "idProduto": 3561242,
@@ -12,7 +13,9 @@ ITEM = {
 }
 
 
-class FakeClient:
+class FakeClient(Client):
+    """Só a busca é falsa; a paginação (`search_pages`) é a do cliente de verdade."""
+
     def __init__(self):
         self.calls = []
 

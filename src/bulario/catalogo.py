@@ -21,9 +21,7 @@ POR_PAGINA = 1000
 def baixar(client: Client, log=print) -> list[dict]:
     """Todos os produtos, ordenados por nome e registro."""
     produtos: list[dict] = []
-    page = 1
-    while True:
-        r = client.search(page=page, count=POR_PAGINA, nomeProduto="")
+    for page, r in enumerate(client.search_pages(count=POR_PAGINA, nomeProduto=""), 1):
         produtos += [
             {
                 "registro": p["numeroRegistro"],
@@ -36,15 +34,12 @@ def baixar(client: Client, log=print) -> list[dict]:
             for p in r["content"]
         ]
         log(f"  página {page}/{r.get('totalPages', '?')}: {len(produtos)} produtos")
-        if r.get("last", True):
-            break
-        page += 1
     return sorted(produtos, key=lambda p: (p["nome"].lower(), p["registro"]))
 
 
-def salvar(root: Path, produtos: list[dict], hoje: str | None = None) -> None:
+def salvar(root: Path, produtos: list[dict]) -> None:
     root.mkdir(parents=True, exist_ok=True)
-    estado = {"atualizado": hoje or dt.date.today().isoformat(), "produtos": produtos}
+    estado = {"atualizado": dt.date.today().isoformat(), "produtos": produtos}
     (root / ARQUIVO).write_text(json.dumps(estado, ensure_ascii=False, indent=0))
 
 

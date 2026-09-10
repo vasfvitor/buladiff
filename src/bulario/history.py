@@ -12,7 +12,7 @@ import re
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
-from bulario.extract import HISTORY_RE
+from bulario.extract import HISTORY_RE, pdftotext
 
 COLUMNS = (
     "data",
@@ -104,15 +104,21 @@ def normalize_rows(rows: list[list[str | None]]) -> list[HistoryEntry]:
 
 
 def read_history(pdf: Path | str) -> History:
-    """Extrai a tabela de histórico com pdfplumber (páginas a partir do título, até o fim do documento)."""
-    import pdfplumber  # extra `tables`
+    """Extrai a tabela de histórico com pdfplumber (páginas a partir do título, até o fim do documento).
 
+    As páginas do histórico são localizadas no texto do pdftotext: extrair texto página a página com o
+    pdfplumber é o que mais custa na extração, e só as últimas páginas interessam."""
+    import pdfplumber
+
+    textos = [re.sub(r"\s+", " ", t) for t in pdftotext(pdf)]
+    inicio = next((i for i, t in enumerate(textos) if HISTORY_RE.search(t)), None)
+    if inicio is None:
+        return History()
     rows: list[list[str | None]] = []
     with pdfplumber.open(str(pdf)) as doc:
         in_table = False
-        for page in doc.pages:
-            text = page.extract_text() or ""
-            if HISTORY_RE.search(text):
+        for i, page in enumerate(doc.pages[inicio:], inicio):
+            if i < len(textos) and HISTORY_RE.search(textos[i]):
                 in_table = True
             if not in_table:
                 continue

@@ -88,13 +88,18 @@ def split_heading(block: str) -> list[str]:
     return [block]
 
 
+def pdftotext(pdf: Path | str) -> list[str]:
+    """Texto bruto de cada página (`pdftotext -layout`), na numeração do PDF (páginas vazias incluídas)."""
+    raw = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, check=True).stdout
+    pages = raw.decode("utf-8", "replace").split("\f")
+    return pages[:-1]  # cada página termina em \f; o que sobra depois do último não é página
+
+
 def pdf_pages(pdf: Path | str) -> list[list[str]]:
     """Páginas como listas de linhas normalizadas (espaços colapsados, vazias removidas)."""
-    raw = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, check=True).stdout
-    text = raw.decode("utf-8", "replace")
     return [
         [re.sub(r"\s+", " ", ln).strip() for ln in page.split("\n") if ln.strip()]
-        for page in text.split("\f")
+        for page in pdftotext(pdf)
         if page.strip()
     ]
 
@@ -197,25 +202,24 @@ def split_documents(lines: list[str], min_size: int = 1000, sep: str = " ") -> l
     return b.build(min_size, sep)
 
 
-def documents_from_lines(pdf: Path | str) -> list[Document]:
-    """Caminho por linhas: pdftotext -layout sem cabeçalho/rodapé; sem parágrafos."""
-    return split_documents([ln for p in strip_running(pdf_pages(pdf)) for ln in p])
+def documents_from_lines(pages: list[list[str]]) -> list[Document]:
+    """Caminho por linhas: páginas do `pdf_pages` sem cabeçalho/rodapé; sem parágrafos."""
+    return split_documents([ln for p in strip_running(pages) for ln in p])
 
 
-def extract_documents(pdf: Path | str) -> tuple[list[Document], list[Document]]:
+def extract_documents(
+    pdf: Path | str, pages: list[list[str]] | None = None
+) -> tuple[list[Document], list[Document]]:
     """(documentos pela árvore de estrutura, documentos por linhas). A primeira lista fica vazia se o
     PDF não é marcado ou se a árvore não rende nenhuma bula; a segunda existe sempre, para comparar
-    com versões sem marcação."""
+    com versões sem marcação. `pages` evita rodar o pdftotext de novo quando quem chama já o rodou."""
     from bulario.tagged import tagged_blocks
 
     blocks = tagged_blocks(pdf)
-    return (split_documents(blocks, sep=PARAGRAFO) if blocks else []), documents_from_lines(pdf)
+    linhas = documents_from_lines(pages if pages is not None else pdf_pages(pdf))
+    return (split_documents(blocks, sep=PARAGRAFO) if blocks else []), linhas
 
 
 def documents_from_pdf(pdf: Path | str) -> list[Document]:
     marcados, linhas = extract_documents(pdf)
     return marcados or linhas
-
-
-def has_history_table(pdf: Path | str) -> bool:
-    return any(HISTORY_RE.search(ln) for p in pdf_pages(pdf) for ln in p)

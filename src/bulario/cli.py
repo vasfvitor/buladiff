@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import argparse
-import http.client
+import datetime as dt
 import sys
 from pathlib import Path
 
@@ -23,7 +23,7 @@ def cmd_search(args: argparse.Namespace) -> None:
         filtro["cnpj"] = cnpj
     if args.desde:
         filtro["periodoPublicacaoInicial"] = args.desde
-        filtro["periodoPublicacaoFinal"] = args.ate
+        filtro["periodoPublicacaoFinal"] = args.ate or dt.date.today().isoformat()
     for p in Client().search_all(**filtro):
         print(
             f"{p['numeroRegistro']}  {p['nomeProduto'][:32]:32}  {p['razaoSocial'][:40]:40}  {p['data'][:10]}"
@@ -31,15 +31,15 @@ def cmd_search(args: argparse.Namespace) -> None:
 
 
 def cmd_fetch(args: argparse.Namespace) -> None:
-    registros = list(args.registro)
+    alvos = list(args.registro)
     if args.curados:
-        registros += read_curated(Path(args.curados))
+        alvos += read_curated(Path(args.curados))
+    latest = None if (args.all or args.curados) else args.latest
     falhas = 0
-    for registro in registros:
+    for registro in alvos:
         try:
-            latest = None if (args.all or args.curados) else args.latest
             fetch(registro, Path(args.data), latest=latest, keep_pdf=args.keep_pdf)
-        except (LookupError, OSError, http.client.HTTPException) as e:  # OSError cobre HTTPError/URLError
+        except (LookupError, OSError) as e:  # o cliente converte toda falha de rede em OSError
             falhas += 1
             print(f"erro em {registro}: {e}", file=sys.stderr)
     if falhas:
@@ -54,8 +54,10 @@ def cmd_diff(args: argparse.Namespace) -> None:
                 f"menos de duas versões {args.tipo} em {args.data}/{args.registro}; rode `bulario fetch`"
             )
         a, b = versions[-2].textos[args.tipo], versions[-1].textos[args.tipo]
-    else:
+    elif args.a and args.b:
         a, b = Path(args.a), Path(args.b)
+    else:
+        sys.exit("informe dois PDFs ou --registro")
     rows = diff_documents(load_documents(a), load_documents(b), skip_preamble=args.sem_preambulo)
     if args.html:
         Path(args.html).write_text(render_html(rows, f"{a.name} → {b.name}"))
@@ -117,7 +119,7 @@ def build_parser() -> argparse.ArgumentParser:
     s.add_argument("nome", nargs="?", help="nome do produto")
     s.add_argument("--cnpj", help="14 dígitos, com ou sem pontuação (todos os produtos da empresa)")
     s.add_argument("--desde", help="publicadas a partir de AAAA-MM-DD")
-    s.add_argument("--ate", default=None, help="até AAAA-MM-DD (padrão: hoje)")
+    s.add_argument("--ate", help="até AAAA-MM-DD (padrão: hoje)")
     s.set_defaults(func=cmd_search)
 
     fd = sub.add_parser("feed", help="bulas publicadas num período; --baixar arquiva as novas versões")
@@ -167,12 +169,6 @@ def build_parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> None:
     args = build_parser().parse_args(argv)
-    if args.cmd == "search" and args.desde and not args.ate:
-        import datetime
-
-        args.ate = datetime.date.today().isoformat()
-    if args.cmd == "diff" and not args.registro and not (args.a and args.b):
-        sys.exit("informe dois PDFs ou --registro")
     args.func(args)
 
 
