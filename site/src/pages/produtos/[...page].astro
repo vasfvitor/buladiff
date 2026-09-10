@@ -1,0 +1,38 @@
+---
+import type { GetStaticPaths } from "astro";
+import Base from "../../layouts/Base.astro";
+import { produtos, dataBR, url, formatCnpj } from "../../lib/data";
+
+export const getStaticPaths = (({ paginate }) => paginate(produtos, { pageSize: 100 })) satisfies GetStaticPaths;
+const { page } = Astro.props;
+---
+
+<Base title="Produtos">
+  <h1>Produtos acompanhados</h1>
+  <p class="muted">{page.total} produtos, ordenados pela última publicação de bula.</p>
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr><th>Produto</th><th>Empresa</th><th>Registro</th><th>Versões</th><th>Última bula</th></tr>
+      </thead>
+      <tbody>
+        {page.data.map((p) => (
+          <tr>
+            <td><a href={url(`/produto/${p.registro}/`)}>{p.nome}</a></td>
+            <td>{p.empresa} <span class="muted" style="font-size:.8rem">{formatCnpj(p.cnpj)}</span></td>
+            <td class="num">{p.registro}</td>
+            <td class="num">{p.n_versoes}</td>
+            <td class="num">{dataBR(p.ultima_publicacao)}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  {(page.url.prev || page.url.next) && (
+    <nav class="pagination">
+      {page.url.prev && <a href={page.url.prev}>← Anteriores</a>}
+      <span class="muted">página {page.currentPage} de {page.lastPage}</span>
+      {page.url.next && <a href={page.url.next}>Próximos →</a>}
+    </nav>
+  )}
+</Base>

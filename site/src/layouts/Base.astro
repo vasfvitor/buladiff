@@ -1,0 +1,49 @@
+---
+import Search from "astro-pagefind/components/Search.astro";
+import { url } from "../lib/data";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = "O que mudou em cada versão de bula publicada no Bulário Eletrônico da ANVISA." } =
+  Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} · bulario</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href={url("/favicon.svg")} type="image/svg+xml" />
+    <link rel="sitemap" href={url("/sitemap-index.xml")} />
+  </head>
+  <body>
+    <header class="site">
+      <div class="inner">
+        <a class="brand" href={url("/")}>bulario</a>
+        <nav>
+          <a href={url("/produtos/")}>Produtos</a>
+          <a href={url("/sobre/")}>Sobre</a>
+        </nav>
+        <div class="search">
+          <Search
+            id="search"
+            className="pagefind-ui"
+            uiOptions={{ showImages: false, translations: { placeholder: "Buscar medicamento ou empresa", zero_results: "Nada encontrado para [SEARCH_TERM]" } }}
+          />
+        </div>
+      </div>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site">
+      Dados do <a href="https://consultas.anvisa.gov.br/#/bulario/">Bulário Eletrônico da ANVISA</a>, extraídos
+      automaticamente. Ferramenta independente, sem vínculo com a ANVISA. Confira sempre a bula oficial.
+    </footer>
+  </body>
+</html>

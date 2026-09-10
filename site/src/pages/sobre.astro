@@ -1,0 +1,43 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Sobre">
+  <h1>Sobre</h1>
+  <p class="lead">
+    Toda bula aprovada pela ANVISA é publicada no <a href="https://consultas.anvisa.gov.br/#/bulario/">Bulário
+    Eletrônico</a> como PDF, e cada nova versão substitui a anterior na consulta. As versões antigas continuam
+    disponíveis no histórico do produto, mas comparar duas delas é trabalho manual. Este site faz essa comparação.
+  </p>
+
+  <h2>Como funciona</h2>
+  <p>
+    Um processo diário consulta o Bulário, baixa o PDF de cada nova versão, extrai o texto e o divide nas seções
+    previstas na RDC 47/2009 (bula do paciente: 9 perguntas; bula do profissional: 10 itens). O diff é feito
+    palavra a palavra dentro de cada seção. Guardamos só o texto extraído e o hash do PDF; os PDFs ficam na ANVISA.
+  </p>
+  <p>
+    A maioria das empresas inclui no fim da bula uma tabela "Histórico de Alteração da Bula" dizendo quais itens
+    mudaram. Quando existe, mostramos o que foi declarado ao lado do que foi detectado, com contorno nas seções
+    declaradas. Não é uma verificação: a tabela mistura bula do paciente e do profissional, e várias empresas a
+    preenchem de forma genérica ou não a incluem.
+  </p>
+
+  <h2>Limitações</h2>
+  <p>
+    O texto vem de extração automática de PDF. Tabelas dentro das seções (posologia, resultados de eficácia)
+    viram texto corrido e podem aparecer como alteradas sem mudança real; cabeçalhos e rodapés repetidos são
+    removidos por heurística. Produtos com várias apresentações no mesmo PDF são separados e pareados por
+    semelhança de texto. Em caso de dúvida, a fonte é sempre o PDF oficial.
+  </p>
+  <p>
+    A API usada é a mesma que a página do Bulário usa no navegador; não é documentada pela ANVISA e pode mudar sem
+    aviso. Este projeto não tem vínculo com a ANVISA.
+  </p>
+
+  <h2>Código e dados</h2>
+  <p>
+    Código aberto, incluindo o arquivo em JSON de todas as versões, no repositório do projeto. A lista de
+    produtos acompanhados cresce com o que é publicado no Bulário e com uma lista curada inicial.
+  </p>
+</Base>

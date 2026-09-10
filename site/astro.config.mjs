@@ -1,5 +1,14 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
+import pagefind from "astro-pagefind";
 
-// https://astro.build/config
-export default defineConfig({});
+// Ajuste `site`/`base` ao publicar: GitHub Pages de projeto serve em https://<user>.github.io/bulario/.
+export default defineConfig({
+  site: process.env.SITE_URL ?? "https://example.github.io",
+  base: process.env.SITE_BASE ?? "/bulario",
+  output: "static",
+  trailingSlash: "always",
+  build: { format: "directory" },
+  integrations: [sitemap(), pagefind()],
+});

@@ -1,0 +1,95 @@
+name: Atualizar arquivo e publicar site
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # 06h em Brasília
+  workflow_dispatch:
+    inputs:
+      pular_coleta:
+        description: "Só exportar e publicar (não consultar a ANVISA)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  coletar:
+    runs-on: ubuntu-latest
+    outputs:
+      mudou: ${{ steps.commit.outputs.mudou }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: sudo apt-get install -y --no-install-recommends poppler-utils
+      - run: uv sync --extra tables
+
+      - name: Testar acesso à API da ANVISA
+        if: ${{ !inputs.pular_coleta }}
+        run: |
+          code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
+            -H 'Authorization: Guest' -H 'Referer: https://consultas.anvisa.gov.br/' \
+            -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) Chrome/128.0' \
+            'https://consultas.anvisa.gov.br/api/consulta/bulario?count=1&page=1&filter%5BnumeroRegistro%5D=118190404')
+          echo "HTTP $code"
+          if [ "$code" != "200" ]; then
+            echo "::error::A API da ANVISA respondeu $code a partir do runner (Cloudflare?). Rode feed/fetch localmente e use pular_coleta=true."
+            exit 1
+          fi
+
+      - name: Feed e lista curada
+        if: ${{ !inputs.pular_coleta }}
+        run: |
+          uv run bulario feed --baixar
+          uv run bulario fetch --curados
+
+      - name: Commitar dados
+        id: commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "mudou=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Arquivo: $(date -u +%Y-%m-%d)"
+            git push
+            echo "mudou=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  publicar:
+    needs: coletar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - run: git pull --ff-only
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: uv run bulario export --out site/src/data
+      - name: Build
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io
+          SITE_BASE: /${{ github.event.repository.name }}
+        run: pnpm -C site build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/dist
+      - id: deploy
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,25 @@
+---
+// Lista de seções como "badges"; as declaradas pela empresa na tabela de histórico ganham contorno.
+import { nomeSecao } from "../lib/data";
+
+interface Props {
+  tipo: string;
+  secoes: string[];
+  declaradas?: string[];
+}
+const { tipo, secoes, declaradas = [] } = Astro.props;
+const ordem = (s: string) => (/^\d+$/.test(s) ? Number(s) : s === "I" ? 0 : s === "II" ? 0.5 : 99);
+const lista = [...secoes].sort((a, b) => ordem(a) - ordem(b));
+---
+
+{lista.length === 0 ? (
+  <span class="muted">sem alterações</span>
+) : (
+  <span class="badges">
+    {lista.map((s) => (
+      <span class:list={["badge", { declared: declaradas.includes(s) }]} title={nomeSecao(tipo, s)}>
+        {s}
+      </span>
+    ))}
+  </span>
+)}

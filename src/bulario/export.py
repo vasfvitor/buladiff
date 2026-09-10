@@ -38,38 +38,45 @@ def product_entry(registro: str, root: Path) -> dict | None:
 
 
 def product_detail(registro: str, root: Path) -> dict:
+    """Versões (uma por expediente; a API relista o mesmo expediente em datas novas) e diffs entre
+    versões de conteúdo distinto (mesmo hash de PDF = republicação, sem diff)."""
     meta = load_meta(registro, root) or {}
     versions = local_versions(registro, root)
     loaded = {(v.expediente, kind): VersionText.load(f) for v in versions for kind, f in v.textos.items()}
-    versoes = []
+    situacoes = {
+        h["expediente"]: h.get("descSituacao", "")
+        for h in meta.get("historico", {}).get("historico", {}).get("content", [])
+    }
+    versoes: list[dict] = []
+    por_expediente: dict[str, dict] = {}
     for v in versions:
-        declarado = {kind: loaded[(v.expediente, kind)].declarado for kind in v.textos}
-        situacao = next(
-            (
-                h["descSituacao"]
-                for h in meta.get("historico", {}).get("historico", {}).get("content", [])
-                if h["expediente"] == v.expediente
-            ),
-            "",
-        )
+        if v.expediente in por_expediente:
+            por_expediente[v.expediente]["republicada"].append(v.data)
+            continue
+        por_expediente[v.expediente] = {}
         versoes.append(
             {
                 "expediente": v.expediente,
                 "data": v.data,
-                "situacao": situacao,
+                "republicada": [],
+                "situacao": situacoes.get(v.expediente, ""),
                 "tipos": sorted(v.textos),
-                "declarado": declarado,
+                "declarado": {kind: loaded[(v.expediente, kind)].declarado for kind in v.textos},
             }
         )
+        por_expediente[v.expediente] = versoes[-1]
     diffs = []
     for kind in ("vp", "vps"):
-        chain = [v for v in versions if kind in v.textos]
+        chain: list[VersionText] = []
+        vistos: set[str] = set()
+        for v in versions:
+            if kind in v.textos:
+                vt = loaded[(v.expediente, kind)]
+                if vt.pdf_sha256 not in vistos:  # PDF já visto = relistagem, não é versão nova
+                    vistos.add(vt.pdf_sha256)
+                    chain.append(vt)
         for old, new in zip(chain, chain[1:], strict=False):
-            rows = diff_documents(
-                loaded[(old.expediente, kind)].documentos,
-                loaded[(new.expediente, kind)].documentos,
-                skip_preamble=True,
-            )
+            rows = diff_documents(old.documentos, new.documentos, skip_preamble=True)
             diffs.append(
                 {
                     "de": old.expediente,
@@ -79,7 +86,7 @@ def product_detail(registro: str, root: Path) -> dict:
                     "tipo": kind,
                     "resumo": summary(rows),
                     "alteradas": sorted({r.secao for r in rows if r.alterada}, key=lambda s: (len(s), s)),
-                    "declarado": loaded[(new.expediente, kind)].declarado,
+                    "declarado": new.declarado,
                     "secoes": [asdict(r) | {"alterada": r.alterada} for r in rows],
                 }
             )

@@ -30,7 +30,8 @@ Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.
 ## Estrutura
 
 - `bulario/api.py`: cliente HTTP (busca, histórico paginado, download de PDF, detalhe do produto).
-- `bulario/archive.py`: arquivo local em `data/<registro>/<data>_<expediente>_<vp|vps>.pdf`.
+- `bulario/archive.py`: arquivo local em JSON — `VersionText` com seções, tabela de histórico e hash do
+  PDF; o PDF é baixado, extraído e descartado.
 - `bulario/extract.py`: texto → páginas → sem cabeçalho/rodapé → documentos → seções. Funções puras
   sobre listas de linhas, testáveis sem PDF.
 - `bulario/diff.py`: pareamento de documentos por semelhança, diff por palavra, resumo e HTML.
@@ -38,7 +39,26 @@ Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.
   com estado em `data/feed.json`.
 - `bulario/history.py`: tabela de histórico do PDF como dados (pdfplumber); casa entradas com o
   expediente da API comparando só os dígitos.
+- `bulario/export.py`: gera os JSON do site (`produtos.json` e `produtos/<registro>.json` com versões e diffs).
+- `registros.txt`: lista curada de registros com histórico completo.
+- `site/`: o site em Astro (pnpm); lê `site/src/data/`, gerado e fora do git.
 - `bulario/cli.py`: subcomandos.
+
+## Site
+
+`site/` é um site estático em Astro que lê os JSON gerados por `bulario export` e publica, para cada
+produto, a linha do tempo de versões e o diff por seção entre versões consecutivas, com busca (Pagefind).
+
+```sh
+uv run bulario export --out site/src/data   # gera os dados do site a partir de data/
+pnpm install
+pnpm site:dev                               # http://localhost:4321/bulario/
+pnpm site:build                             # site/dist/
+```
+
+O fluxo diário (`.github/workflows/daily.yml`) roda `feed --baixar` e `fetch --curados`, commita o que
+mudou em `data/`, exporta, constrói e publica no GitHub Pages. O repositório não guarda PDF: só o texto
+extraído por versão (`data/<registro>/<data>_<expediente>_<vp|vps>.json`) e o hash do PDF original.
 
 ## Como funciona
 

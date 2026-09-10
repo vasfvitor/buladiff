@@ -1,0 +1,58 @@
+---
+import Base from "../../../layouts/Base.astro";
+import Secoes from "../../../components/Secoes.astro";
+import { produtos, detalhe, dataBR, url, diffSlug, anvisaUrl, formatCnpj, TIPO_NOME } from "../../../lib/data";
+
+export function getStaticPaths() {
+  return produtos.map((p) => ({ params: { registro: p.registro } }));
+}
+const { registro } = Astro.params;
+const d = detalhe(registro!)!;
+const { meta, versoes, diffs } = d;
+// diffs que chegam em cada versão (a versão "para")
+const chegando = (exp: string) => diffs.filter((x) => x.para === exp);
+---
+
+<Base title={meta.nome} description={`Histórico de versões e alterações da bula de ${meta.nome} (${meta.empresa}).`}>
+  <article data-pagefind-body>
+    <h1>{meta.nome}</h1>
+    <p class="muted" data-pagefind-meta="empresa">
+      {meta.empresa} · CNPJ {formatCnpj(meta.cnpj)} · registro {meta.registro}
+      · <a href={anvisaUrl(meta.idProduto)} rel="noopener">ver no Bulário da ANVISA</a>
+    </p>
+
+    <h2>Versões</h2>
+    <p class="note">
+      Da mais recente para a mais antiga. Em cada versão, as seções alteradas em relação à anterior; com
+      contorno, as que a própria empresa declarou na tabela de histórico da bula.
+    </p>
+    <ol class="timeline">
+      {[...versoes].reverse().map((v) => (
+        <li>
+          <div class="when">{dataBR(v.data)}</div>
+          <div>
+            <div>
+              expediente <strong>{v.expediente}</strong>
+              {v.situacao && <span class="muted"> · {v.situacao}</span>}
+              {v.republicada.length > 0 && (
+                <span class="muted"> · relistada em {v.republicada.map(dataBR).join(", ")}</span>
+              )}
+            </div>
+            {chegando(v.expediente).length === 0 ? (
+              <div class="muted" style="font-size:.9rem">primeira versão arquivada</div>
+            ) : (
+              <div class="links">
+                {chegando(v.expediente).map((x) => (
+                  <span>
+                    <a href={url(`/produto/${meta.registro}/${diffSlug(x)}/`)}>{TIPO_NOME[x.tipo]}</a>:
+                    <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} />
+                  </span>
+                ))}
+              </div>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </article>
+</Base>

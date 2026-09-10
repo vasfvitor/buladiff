@@ -1,0 +1,70 @@
+---
+import Base from "../../../layouts/Base.astro";
+import Secoes from "../../../components/Secoes.astro";
+import { todosDetalhes, dataBR, url, diffSlug, nomeSecao, anvisaUrl, TIPO_NOME } from "../../../lib/data";
+
+export function getStaticPaths() {
+  return todosDetalhes().flatMap((d) =>
+    d.diffs.map((diff) => ({ params: { registro: d.meta.registro, diff: diffSlug(diff) }, props: { meta: d.meta, diff } })),
+  );
+}
+const { meta, diff } = Astro.props;
+const alteradas = diff.secoes.filter((s) => s.alterada);
+const multi = diff.secoes.some((s) => s.documento);
+const titulo = (s: { documento: string; secao: string }) =>
+  (multi ? `${s.documento} — ` : "") + nomeSecao(diff.tipo, s.secao);
+---
+
+<Base
+  title={`${meta.nome} — ${TIPO_NOME[diff.tipo]} ${dataBR(diff.de_data)} → ${dataBR(diff.para_data)}`}
+  description={`Diferenças na ${TIPO_NOME[diff.tipo].toLowerCase()} de ${meta.nome} entre ${dataBR(diff.de_data)} e ${dataBR(diff.para_data)}.`}
+>
+  <p class="muted"><a href={url(`/produto/${meta.registro}/`)}>{meta.nome}</a> · {meta.empresa}</p>
+  <h1>{TIPO_NOME[diff.tipo]}: {dataBR(diff.de_data)} → {dataBR(diff.para_data)}</h1>
+  <p class="muted">
+    expediente {diff.de} → {diff.para} ·
+    <a href={anvisaUrl(meta.idProduto)} rel="noopener">PDFs no Bulário da ANVISA</a>
+  </p>
+
+  <div class="card">
+    <div><strong>Seções alteradas:</strong> <Secoes tipo={diff.tipo} secoes={diff.alteradas} declaradas={diff.declarado} /></div>
+    <div style="margin-top:.4rem">
+      <strong>Declaradas pela empresa:</strong>{" "}
+      {diff.declarado.length ? <Secoes tipo={diff.tipo} secoes={diff.declarado} declaradas={diff.declarado} /> : <span class="muted">tabela de histórico ausente ou sem itens</span>}
+    </div>
+  </div>
+
+  <h2>Resumo</h2>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Seção</th><th>Status</th><th>Palavras alteradas</th><th>Semelhança</th></tr></thead>
+      <tbody>
+        {diff.secoes.map((s) => (
+          <tr>
+            <td>{s.alterada ? <a href={`#${diff.tipo}-${s.documento}-${s.secao}`.replace(/[^\w-]+/g, "_")}>{titulo(s)}</a> : titulo(s)}</td>
+            <td class={s.alterada ? "status-alterada" : "status-igual"}>{s.alterada ? "alterada" : "igual"}</td>
+            <td class="num">{s.palavras || ""}</td>
+            <td class="num">{Math.round(s.ratio * 100)}%</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <h2>Alterações</h2>
+  <p class="legend"><span><del style="background:var(--del-bg);color:var(--del-fg)">removido</del></span><span><ins style="background:var(--ins-bg);color:var(--ins-fg);text-decoration:none">adicionado</ins></span></p>
+  <div class="diff">
+    {alteradas.map((s) => (
+      <section>
+        <h3 id={`${diff.tipo}-${s.documento}-${s.secao}`.replace(/[^\w-]+/g, "_")}>
+          {titulo(s)} <span class="muted" style="font-weight:normal;font-size:.85rem">{s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
+        </h3>
+        <p set:html={s.html} />
+      </section>
+    ))}
+  </div>
+  <p class="note">
+    O texto vem do PDF oficial via extração automática; tabelas e quebras de página podem gerar diferenças
+    que não existem na bula impressa. Em caso de dúvida, consulte o PDF no Bulário.
+  </p>
+</Base>

@@ -1,0 +1,11 @@
+{
+  "name": "bulario-monorepo",
+  "private": true,
+  "scripts": {
+    "export": "uv run bulario export --out site/src/data",
+    "site:dev": "pnpm -C site dev",
+    "site:build": "pnpm -C site build",
+    "site:preview": "pnpm -C site preview"
+  },
+  "packageManager": "pnpm@10.22.0"
+}
