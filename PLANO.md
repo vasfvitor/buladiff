@@ -71,6 +71,8 @@ e o site mostra parágrafos; tabelas param de inflar o diff.
 
 ### 5. Depois (não começar antes de 2–4)
 
+- Tabelas de verdade no site: hoje cada `TR` vira linhas visuais e o diff mostra texto corrido. Renderizar como
+  `<table>` nas seções onde as bulas mais mudam (posologia, reações adversas). Anotado em 2026-09-10.
 - Monitoramento oficial por email (`PUT /api/monitoramento`) com o email do Vitor.
 - Testar outras nuvens contra o Cloudflare (Worker, Oracle, Fly).
 - Lighthouse/axe no site.
