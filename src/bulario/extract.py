@@ -1,8 +1,9 @@
 """Extração de texto e segmentação de bulas em documentos e seções.
 
-Pipeline: pdftotext -layout → páginas de linhas → remoção de cabeçalho/rodapé →
-divisão em documentos (um PDF pode trazer uma bula por apresentação) → seções da RDC 47.
-As funções sobre listas de linhas são puras, para teste sem PDF.
+Pipeline: blocos de texto (parágrafos pela árvore de estrutura do PDF, módulo `tagged`; ou, se o PDF
+não é marcado, linhas do pdftotext -layout sem cabeçalho/rodapé) → divisão em documentos (um PDF pode
+trazer uma bula por apresentação) → seções da RDC 47. As funções sobre listas de blocos são puras,
+para teste sem PDF.
 """
 
 from __future__ import annotations
@@ -69,6 +70,24 @@ def is_heading(line: str) -> bool:
     )
 
 
+LOWER_RE = re.compile(r"[a-zçáéíóúâêôãõ]")
+
+
+def split_heading(block: str) -> list[str]:
+    """Separa um título colado ao texto que o segue ("1. INDICAÇÕES Hipertensão" → duas partes).
+    O título é o trecho em maiúsculas até a primeira palavra com minúscula; só vale se for um título."""
+    if is_heading(block):
+        return [block]
+    words = block.split(" ")
+    for i, w in enumerate(words):
+        if LOWER_RE.search(w):
+            head = " ".join(words[:i]).rstrip(" -–:")
+            if i and (NUM_RE.match(head) or ROMAN_RE.match(head)):
+                return [head, block[len(head) :].strip()]
+            break
+    return [block]
+
+
 def pdf_pages(pdf: Path | str) -> list[list[str]]:
     """Páginas como listas de linhas normalizadas (espaços colapsados, vazias removidas)."""
     raw = subprocess.run(["pdftotext", "-layout", str(pdf), "-"], capture_output=True, check=True).stdout
@@ -116,19 +135,23 @@ class _Builder:
         self.tipo = ["?"]
         self.sec: str | None = PREAMBLE
         self.ended = False
+        self.titulo = False  # a linha anterior era um título numerado
         self.docs.append((self.cur, self.tipo))
 
     def open(self, sec: str) -> None:
         self.sec = sec
         self.cur.setdefault(sec, [])
 
-    def build(self, min_size: int) -> list[Document]:
-        result = [Document({k: " ".join(v) for k, v in secs.items()}, t[0]) for secs, t in self.docs]
+    def build(self, min_size: int, sep: str) -> list[Document]:
+        result = [Document({k: sep.join(v) for k, v in secs.items()}, t[0]) for secs, t in self.docs]
         return [d for d in result if d.ordenado and d.tamanho > min_size]
 
 
-def split_documents(lines: list[str], min_size: int = 1000) -> list[Document]:
-    """Divide linhas em documentos e seções.
+PARAGRAFO = "\n\n"  # separador de parágrafos dentro de uma seção (blocos de PDF marcado)
+
+
+def split_documents(lines: list[str], min_size: int = 1000, sep: str = " ") -> list[Document]:
+    """Divide linhas (ou blocos: `sep=PARAGRAFO`) em documentos e seções.
 
     Regras: 'IDENTIFICAÇÃO DO MEDICAMENTO' (com ou sem 'I -') abre documento; 'APRESENTAÇÕES' depois de
     seções numeradas também (bula sem a linha de identificação); a tabela 'Histórico de alteração' encerra
@@ -136,7 +159,7 @@ def split_documents(lines: list[str], min_size: int = 1000) -> list[Document]:
     seções fora de ordem ou muito curtos são descartados (fragmentos de capa ou tabela).
     """
     b = _Builder()
-    for ln in lines:
+    for ln in (part for block in lines for part in split_heading(block)):
         if HISTORY_RE.search(ln):
             b.sec, b.ended = None, True
             continue
@@ -164,14 +187,34 @@ def split_documents(lines: list[str], min_size: int = 1000) -> list[Document]:
             if b.tipo[0] == "?":
                 b.tipo[0] = "vp" if "?" in ln else "vps"
             b.open(m.group(1))
+            b.titulo = True
             continue
+        if b.titulo and len(ln) <= 40 and not LOWER_RE.search(ln):
+            continue  # resto de um título que quebrou de linha ("…ESQUECER DE USAR ESTE" / "MEDICAMENTO?")
+        b.titulo = False
         if b.sec is not None:
             b.cur[b.sec].append(ln)
-    return b.build(min_size)
+    return b.build(min_size, sep)
+
+
+def documents_from_lines(pdf: Path | str) -> list[Document]:
+    """Caminho por linhas: pdftotext -layout sem cabeçalho/rodapé; sem parágrafos."""
+    return split_documents([ln for p in strip_running(pdf_pages(pdf)) for ln in p])
+
+
+def extract_documents(pdf: Path | str) -> tuple[list[Document], list[Document]]:
+    """(documentos pela árvore de estrutura, documentos por linhas). A primeira lista fica vazia se o
+    PDF não é marcado ou se a árvore não rende nenhuma bula; a segunda existe sempre, para comparar
+    com versões sem marcação."""
+    from bulario.tagged import tagged_blocks
+
+    blocks = tagged_blocks(pdf)
+    return (split_documents(blocks, sep=PARAGRAFO) if blocks else []), documents_from_lines(pdf)
 
 
 def documents_from_pdf(pdf: Path | str) -> list[Document]:
-    return split_documents([ln for p in strip_running(pdf_pages(pdf)) for ln in p])
+    marcados, linhas = extract_documents(pdf)
+    return marcados or linhas
 
 
 def has_history_table(pdf: Path | str) -> bool:

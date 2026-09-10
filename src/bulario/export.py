@@ -4,6 +4,7 @@
 <out>/produtos/<registro>.json meta, versões e diffs (por apresentação, com âncoras e "declarada")
 <out>/recentes.json            últimos diffs, projetados (para a página inicial)
 <out>/feed.json                publicações recentes, com `arquivado` (se o registro está no site)
+<out>/catalogo.json            todos os produtos do Bulário (de data/catalogo.json), com `arquivado`
 """
 
 from __future__ import annotations
@@ -11,6 +12,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
+from bulario import catalogo
 from bulario.archive import VersionText, load_meta, local_versions, registros
 from bulario.diff import SectionDiff, diff_documents
 from bulario.feed import load_state
@@ -64,13 +66,20 @@ def product_entry(registro: str, root: Path, diffs: list[dict]) -> dict | None:
     meta = load_meta(registro, root)
     if not meta:
         return None
-    prod = meta["produto"]
+    prod, det = meta["produto"], meta.get("detalhe") or {}
     return {
         "registro": registro,
         "idProduto": prod["idProduto"],
         "nome": prod["nomeProduto"],
         "empresa": prod["razaoSocial"],
         "cnpj": prod["cnpj"],
+        "principio_ativo": det.get("principioAtivo", ""),
+        "classes": det.get("classesTerapeuticas", []),
+        "categoria": det.get("categoriaRegulatoria", ""),
+        "referencia": det.get("medicamentoReferencia", ""),
+        "apresentacoes": [
+            ap["apresentacao"] for ap in det.get("apresentacoes", []) if ap.get("apresentacao")
+        ],
         "ultima_publicacao": prod["data"][:10],
         "n_versoes": len(local_versions(registro, root)),
         "diffs": [d["slug"] for d in diffs],
@@ -94,19 +103,24 @@ def product_diffs(registro: str, root: Path) -> tuple[list[dict], list[dict]]:
     }
     versoes: list[dict] = []
     por_expediente: dict[str, dict] = {}
+    hashes: set[str] = set()
     for v in versions:
         if v.expediente in por_expediente:
             por_expediente[v.expediente]["republicada"].append(v.data)
             continue
+        textos = [loaded[(v.expediente, kind)] for kind in v.textos]
         versoes.append(
             {
                 "expediente": v.expediente,
                 "data": v.data,
                 "republicada": [],
                 "situacao": situacoes.get(v.expediente, ""),
-                "declarado": {kind: loaded[(v.expediente, kind)].declarado for kind in v.textos},
+                "declarado": {vt.tipo: vt.declarado for vt in textos},
+                # expediente novo com os mesmos PDFs de antes: não gera diff
+                "repetida": bool(textos) and all(vt.pdf_sha256 in hashes for vt in textos),
             }
         )
+        hashes.update(vt.pdf_sha256 for vt in textos)
         por_expediente[v.expediente] = versoes[-1]
     diffs = []
     for kind in ("vp", "vps"):
@@ -119,7 +133,7 @@ def product_diffs(registro: str, root: Path) -> tuple[list[dict], list[dict]]:
                     vistos.add(vt.pdf_sha256)
                     chain.append(vt)
         for old, new in zip(chain, chain[1:], strict=False):
-            rows = diff_documents(old.documentos, new.documentos, skip_preamble=True)
+            rows = diff_documents(old.comparavel(new), new.comparavel(old), skip_preamble=True)
             diffs.append(
                 {
                     "slug": diff_slug(old.expediente, new.expediente, kind),
@@ -130,6 +144,7 @@ def product_diffs(registro: str, root: Path) -> tuple[list[dict], list[dict]]:
                     "tipo": kind,
                     "alteradas": ordenar_secoes(r.secao for r in rows if r.alterada),
                     "declarado": ordenar_secoes(new.declarado),
+                    "marcado": old.marcado and new.marcado,  # parágrafos preservados nas duas versões
                     "documentos": documentos_view(rows, kind, new.declarado),
                 }
             )
@@ -177,5 +192,11 @@ def export(root: Path, out: Path, log=print) -> int:
         ],
     }
     (out / "feed.json").write_text(json.dumps(feed, ensure_ascii=False, indent=1))
+    cat = catalogo.carregar(root)
+    catalogo_site = {
+        "atualizado": cat["atualizado"],
+        "produtos": [p | {"arquivado": p["registro"] in arquivados} for p in cat["produtos"]],
+    }
+    (out / "catalogo.json").write_text(json.dumps(catalogo_site, ensure_ascii=False))
     log(f"{len(produtos)} produtos exportados para {out}")
     return len(produtos)

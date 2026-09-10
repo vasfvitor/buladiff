@@ -45,6 +45,7 @@ def test_export_produces_list_and_detail(tmp_path: Path):
     assert [v["expediente"] for v in detail["versoes"]] == ["0046116231", "0121761258", "0200000000"]
     assert detail["versoes"][1]["situacao"] == "Aditado ao processo"
     assert detail["versoes"][1]["republicada"] == ["2026-03-27"]
+    assert [v["repetida"] for v in detail["versoes"]] == [False, False, False]
     d, d2 = detail["diffs"]  # a relistagem não gera diff
     assert d["tipo"] == "vp" and d["de"] == "0046116231" and d["para"] == "0121761258"
     assert d2["de"] == "0121761258" and d2["para"] == "0200000000"
@@ -53,6 +54,8 @@ def test_export_produces_list_and_detail(tmp_path: Path):
     assert doc["indice"] == 1
     secao1 = next(s for s in doc["secoes"] if s["secao"] == "1")
     assert secao1["alterada"] and secao1["ancora"] == "sec-vp-1" and "<ins>febre</ins>" in secao1["html"]
+    cat = json.loads((tmp_path / "out" / "catalogo.json").read_text())
+    assert cat == {"atualizado": None, "produtos": []}  # sem data/catalogo.json
     recentes = json.loads((tmp_path / "out" / "recentes.json").read_text())
     assert [r["slug"] for r in recentes] == ["0121761258-0200000000-vp", "0046116231-0121761258-vp"]
     assert "html" not in json.dumps(recentes)

@@ -1,14 +1,15 @@
-"""Linha de comando: bulario search | feed | fetch | diff | sections | history | export."""
+"""Linha de comando: search | feed | fetch | reextract | catalogo | diff | sections | history | export."""
 
 from __future__ import annotations
 
 import argparse
+import http.client
 import sys
 from pathlib import Path
 
-from bulario import feed
+from bulario import catalogo, feed
 from bulario.api import Client
-from bulario.archive import VersionText, fetch, local_versions, read_curated
+from bulario.archive import VersionText, fetch, local_versions, read_curated, reextract, registros
 from bulario.diff import diff_documents, render_html, summary
 from bulario.extract import documents_from_pdf
 
@@ -16,7 +17,10 @@ from bulario.extract import documents_from_pdf
 def cmd_search(args: argparse.Namespace) -> None:
     filtro = {"nomeProduto": args.nome} if args.nome else {}
     if args.cnpj:
-        filtro["cnpj"] = args.cnpj
+        cnpj = "".join(c for c in args.cnpj if c.isdigit())
+        if len(cnpj) != 14:
+            sys.exit("--cnpj precisa dos 14 dígitos (a API não aceita CNPJ parcial)")
+        filtro["cnpj"] = cnpj
     if args.desde:
         filtro["periodoPublicacaoInicial"] = args.desde
         filtro["periodoPublicacaoFinal"] = args.ate
@@ -35,7 +39,7 @@ def cmd_fetch(args: argparse.Namespace) -> None:
         try:
             latest = None if (args.all or args.curados) else args.latest
             fetch(registro, Path(args.data), latest=latest, keep_pdf=args.keep_pdf)
-        except (LookupError, OSError) as e:  # OSError cobre HTTPError/URLError
+        except (LookupError, OSError, http.client.HTTPException) as e:  # OSError cobre HTTPError/URLError
             falhas += 1
             print(f"erro em {registro}: {e}", file=sys.stderr)
     if falhas:
@@ -61,6 +65,19 @@ def cmd_diff(args: argparse.Namespace) -> None:
 
 def cmd_feed(args: argparse.Namespace) -> None:
     feed.run(Path(args.data), desde=args.desde, ate=args.ate, download=args.baixar)
+
+
+def cmd_reextract(args: argparse.Namespace) -> None:
+    root = Path(args.data)
+    total = 0
+    for registro in args.registro or registros(root):
+        print(registro)
+        total += reextract(registro, root, force=args.force)
+    print(f"{total} versões extraídas dos PDFs locais")
+
+
+def cmd_catalogo(args: argparse.Namespace) -> None:
+    catalogo.run(Path(args.data))
 
 
 def cmd_history(args: argparse.Namespace) -> None:
@@ -98,7 +115,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     s = sub.add_parser("search", help="busca produtos no bulário")
     s.add_argument("nome", nargs="?", help="nome do produto")
-    s.add_argument("--cnpj")
+    s.add_argument("--cnpj", help="14 dígitos, com ou sem pontuação (todos os produtos da empresa)")
     s.add_argument("--desde", help="publicadas a partir de AAAA-MM-DD")
     s.add_argument("--ate", default=None, help="até AAAA-MM-DD (padrão: hoje)")
     s.set_defaults(func=cmd_search)
@@ -117,6 +134,14 @@ def build_parser() -> argparse.ArgumentParser:
     f.add_argument("--keep-pdf", action="store_true", help="mantém o PDF ao lado do JSON")
     f.set_defaults(func=cmd_fetch)
 
+    r = sub.add_parser("reextract", help="refaz os JSON a partir dos PDFs locais (de `fetch --keep-pdf`)")
+    r.add_argument("registro", nargs="*", help="padrão: todos os registros em data/")
+    r.add_argument("--force", action="store_true", help="refaz também os JSON que já existem")
+    r.set_defaults(func=cmd_reextract)
+
+    c = sub.add_parser("catalogo", help="lista todos os produtos do bulário em data/catalogo.json")
+    c.set_defaults(func=cmd_catalogo)
+
     d = sub.add_parser("diff", help="diff por seção entre duas versões")
     d.add_argument("a", nargs="?", help="PDF ou JSON antigo")
     d.add_argument("b", nargs="?", help="PDF ou JSON novo")
@@ -126,7 +151,7 @@ def build_parser() -> argparse.ArgumentParser:
     d.add_argument("--sem-preambulo", action="store_true", help="ignora capa/preâmbulo")
     d.set_defaults(func=cmd_diff)
 
-    h = sub.add_parser("history", help="lê a tabela 'Histórico de Alteração da Bula' (extra: tables)")
+    h = sub.add_parser("history", help="lê a tabela 'Histórico de Alteração da Bula'")
     h.add_argument("pdf")
     h.set_defaults(func=cmd_history)
 

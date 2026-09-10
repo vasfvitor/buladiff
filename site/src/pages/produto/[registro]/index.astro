@@ -23,6 +23,22 @@ const SITUACAO_PADRAO = "Aditado ao processo"; // é a situação de quase toda 
       {meta.empresa} · CNPJ {formatCnpj(meta.cnpj)} · registro {meta.registro}
       · <a href={anvisaUrl(meta.idProduto)} rel="noopener">ver no Bulário da ANVISA</a>
     </p>
+    {meta.principio_ativo && (
+      <p class="muted" data-pagefind-meta="principio_ativo">
+        {meta.principio_ativo.toLowerCase()}
+        {meta.categoria && <span> · {meta.categoria.toLowerCase()}</span>}
+        {meta.referencia && meta.referencia.toUpperCase() !== meta.nome.toUpperCase() && (
+          <span> · referência: {meta.referencia}</span>
+        )}
+        {meta.classes.length > 0 && <span> · {meta.classes.map((c) => c.toLowerCase()).join(", ")}</span>}
+      </p>
+    )}
+    {meta.apresentacoes.length > 0 && (
+      <details class="apresentacoes">
+        <summary class="sub">{meta.apresentacoes.length} {meta.apresentacoes.length === 1 ? "apresentação registrada" : "apresentações registradas"}</summary>
+        <ul class="sub">{meta.apresentacoes.map((a) => <li>{a}</li>)}</ul>
+      </details>
+    )}
 
     <h2>Versões</h2>
     <p class="note">Seções alteradas em relação à versão anterior; <LegendaDeclarada /></p>
@@ -39,7 +55,7 @@ const SITUACAO_PADRAO = "Aditado ao processo"; // é a situação de quase toda 
                 {v.republicada.length > 0 && <span> · relistada em {v.republicada.map(dataBR).join(", ")}</span>}
               </div>
               {lista.length === 0 ? (
-                <div class="muted">primeira versão arquivada</div>
+                <div class="muted">{v.repetida ? "mesmos PDFs da versão anterior" : "primeira versão arquivada"}</div>
               ) : (
                 <div class="bulas">
                   {lista.map((x) => (

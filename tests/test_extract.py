@@ -89,3 +89,39 @@ def test_label_uses_apresentacoes_text():
     d = Document({"I": ident}, "vp")
     assert d.label == "Comprimidos 600 mg + 70 mg: embalagens com 8"
     assert Document({"(preâmbulo)": "capa simples"}, "vp").label == "capa simples"
+
+
+def test_split_heading_separates_title_glued_to_text():
+    from bulario.extract import split_heading
+
+    assert split_heading("1. INDICAÇÕES Hipertensão arterial") == ["1. INDICAÇÕES", "Hipertensão arterial"]
+    assert split_heading("6. COMO DEVO USAR ESTE MEDICAMENTO? - Adultos") == [
+        "6. COMO DEVO USAR ESTE MEDICAMENTO?",
+        "- Adultos",
+    ]
+    assert split_heading("4. CONTRAINDICAÇÕES") == ["4. CONTRAINDICAÇÕES"]
+    assert split_heading("ATENÇÃO: contém lactose") == ["ATENÇÃO: contém lactose"]
+    assert split_heading("10 mg por dia") == ["10 mg por dia"]
+
+
+def test_blocks_keep_paragraphs():
+    from bulario.extract import PARAGRAFO
+
+    blocks = VP[:6] + ["Primeiro parágrafo. " * 20, "Segundo parágrafo. " * 20] + VP[7:]
+    (d,) = split_documents(blocks, sep=PARAGRAFO)
+    assert d.secoes["1"].count(PARAGRAFO) == 1
+    assert d.secoes["1"].startswith("Primeiro") and "\n\nSegundo" in d.secoes["1"]
+
+
+def test_uppercase_heading_continuation_line_is_dropped():
+    lines = VP[:5] + [
+        "1. PARA QUE ESTE MEDICAMENTO É INDICADO?",
+        "Indicado para dor. " * 30,
+        "7. O QUE DEVO FAZER QUANDO EU ME ESQUECER DE USAR ESTE",
+        "MEDICAMENTO?",
+        "Tome assim que lembrar. " * 30,
+        "III – DIZERES LEGAIS:",
+        "Registro 1.2345.6789 " * 10,
+    ]
+    (d,) = split_documents(lines)
+    assert d.secoes["7"].startswith("Tome assim")

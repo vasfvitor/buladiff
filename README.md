@@ -13,18 +13,20 @@ seção (as seções são as da RDC 47/2009: 4. Contraindicações,
 uv sync                                        # ou: pip install -e .
 uv run bulario search dipirona                 # registros, empresa, data da última bula
 uv run bulario search --desde 2026-09-01       # tudo que foi publicado desde a data
+uv run bulario search --cnpj 92.265.552/0009-05  # todos os produtos de uma empresa (14 dígitos)
 uv run bulario fetch 118190404                 # baixa as duas versões mais recentes
 uv run bulario fetch 118190404 --all           # todas as versões
 uv run bulario feed --desde 2026-09-01           # tudo que foi publicado no período
 uv run bulario feed --baixar                     # continua de onde parou e arquiva as versões novas
+uv run bulario catalogo                          # todos os produtos do bulário em data/catalogo.json
 uv run bulario diff --registro 118190404 --tipo vps --html diff.html
 uv run bulario diff antiga.pdf nova.pdf        # ou dois PDFs quaisquer
 uv run bulario sections a.pdf                  # mostra a segmentação (depuração)
 uv run bulario history a.pdf                   # lê a tabela "Histórico de Alteração da Bula"
 ```
 
-Só depende do Python 3.11+ e do `pdftotext` (pacote `poppler-utils`). O comando `history`
-usa o extra `tables` (pdfplumber): `uv sync --extra tables`.
+Depende do Python 3.11+, do pdfplumber (instalado pelo `uv sync`) e do `pdftotext` (pacote
+`poppler-utils`), usado só nos PDFs sem marcação de estrutura.
 Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.py <registros…>`.
 
 ## Estrutura
@@ -32,11 +34,15 @@ Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.
 - `bulario/api.py`: cliente HTTP (busca, histórico paginado, download de PDF, detalhe do produto).
 - `bulario/archive.py`: arquivo local em JSON — `VersionText` com seções, tabela de histórico e hash do
   PDF; o PDF é baixado, extraído e descartado.
-- `bulario/extract.py`: texto → páginas → sem cabeçalho/rodapé → documentos → seções. Funções puras
-  sobre listas de linhas, testáveis sem PDF.
+- `bulario/tagged.py`: parágrafos, títulos e linhas de tabela pela árvore de estrutura do PDF
+  ("Tagged PDF"), na ordem do conteúdo; cabeçalho e rodapé ficam fora da árvore.
+- `bulario/extract.py`: blocos (ou, sem marcação, linhas do pdftotext sem cabeçalho/rodapé) →
+  documentos → seções. Funções puras sobre listas de blocos, testáveis sem PDF.
 - `bulario/diff.py`: pareamento de documentos por semelhança, diff por palavra, resumo e HTML.
 - `bulario/feed.py`: publicações por período (`filter[periodoPublicacao…]`) e arquivo incremental,
   com estado em `data/feed.json`.
+- `bulario/catalogo.py`: o bulário inteiro (busca com nome vazio, 1.000 por página) em
+  `data/catalogo.json`; o site usa para a página de catálogo.
 - `bulario/history.py`: tabela de histórico do PDF como dados (pdfplumber); casa entradas com o
   expediente da API comparando só os dígitos.
 - `bulario/export.py`: gera os JSON do site (`produtos.json` e `produtos/<registro>.json` com versões e diffs).
@@ -70,9 +76,12 @@ extraído por versão (`data/<registro>/<data>_<expediente>_<vp|vps>.json`) e o 
    expediente com `idBulaPaciente` e `idBulaProfissional`, 10 por página.
 3. `GET /api/consulta/medicamentos/arquivo/bula/parecer/{id}/?Authorization=`
    devolve o PDF.
-4. `pdftotext -layout`, remoção de cabeçalho e rodapé repetidos por página,
+4. Extração do texto pela árvore de estrutura do PDF (parágrafos e células de
+   tabela inteiras; 9 dos 11 PDFs validados têm essa marcação) ou, sem ela,
+   `pdftotext -layout` com remoção de cabeçalho e rodapé repetidos por página;
    divisão em bulas (um PDF pode trazer uma bula por apresentação), divisão
-   em seções, e diff por palavra dentro de cada seção.
+   em seções, e diff por palavra dentro de cada seção, com os parágrafos
+   preservados.
 
 ## Avisos
 
@@ -108,7 +117,9 @@ Janssen não inclui a tabela.
 
 ## O que ainda não faz
 
-- Tabelas dentro das seções viram texto corrido e geram ruído no diff.
+- Em PDFs sem marcação de estrutura (Janssen, Boehringer, e as versões mais antigas de vários
+  produtos), o texto vem linha a linha: sem parágrafos, e tabelas viram texto corrido que gera ruído
+  no diff. Quando só uma das duas versões é marcada, o diff usa a extração por linhas nas duas.
 - Só rastreia o que aparece no bulário. Medicamentos notificados (Notifarmac) usam outro endpoint
   (`/medicamento/{registro}/{5|9}/anexo`) e não têm histórico.
 - Não avisa ninguém. A ANVISA tem monitoramento oficial por email (`PUT /api/monitoramento`,

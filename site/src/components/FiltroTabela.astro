@@ -1,0 +1,29 @@
+---
+// Campo que filtra as linhas de uma tabela pelo texto em `data-texto` (já em minúsculas).
+interface Props {
+  tabela: string; // id da tabela
+  placeholder: string;
+}
+const { tabela, placeholder } = Astro.props;
+---
+
+<p><input class="filter" type="search" placeholder={placeholder} aria-label={placeholder} autocomplete="off" data-tabela={tabela} /></p>
+<p class="muted" hidden data-vazio={tabela}>Nenhum item corresponde ao filtro nesta página.</p>
+
+<script>
+  for (const input of document.querySelectorAll<HTMLInputElement>("input[data-tabela]")) {
+    const id = input.dataset.tabela!;
+    const rows = Array.from(document.querySelectorAll<HTMLTableRowElement>(`#${id} tbody tr`));
+    const empty = document.querySelector<HTMLElement>(`[data-vazio="${id}"]`);
+    input.addEventListener("input", () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const r of rows) {
+        const ok = !q || (r.dataset.texto ?? "").includes(q);
+        r.hidden = !ok;
+        if (ok) shown++;
+      }
+      if (empty) empty.hidden = shown > 0;
+    });
+  }
+</script>

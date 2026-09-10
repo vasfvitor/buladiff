@@ -88,5 +88,9 @@ const totalAlteradas = docs.reduce((n, d) => n + d.alteradas.length, 0);
       </div>
     </>
   ))}
-  <p class="note">Texto extraído automaticamente do PDF; tabelas e quebras de página podem gerar diferenças que não existem na bula. Na dúvida, o PDF no Bulário é a fonte.</p>
+  <p class="note">
+    {diff.marcado
+      ? "Texto extraído da estrutura do PDF (parágrafos e células de tabela); ainda assim, na dúvida, o PDF no Bulário é a fonte."
+      : "PDF sem marcação de estrutura: o texto foi extraído linha a linha, sem parágrafos, e quebras de página ou tabelas podem gerar diferenças que não existem na bula. Na dúvida, o PDF no Bulário é a fonte."}
+  </p>
 </Base>

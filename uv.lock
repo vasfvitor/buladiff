@@ -6,9 +6,7 @@ requires-python = ">=3.11"
 name = "bulario"
 version = "0.1.0"
 source = { editable = "." }
-
-[package.optional-dependencies]
-tables = [
+dependencies = [
     { name = "pdfplumber" },
 ]
 
@@ -19,8 +17,7 @@ dev = [
 ]
 
 [package.metadata]
-requires-dist = [{ name = "pdfplumber", marker = "extra == 'tables'", specifier = ">=0.11.10" }]
-provides-extras = ["tables"]
+requires-dist = [{ name = "pdfplumber", specifier = ">=0.11.10" }]
 
 [package.metadata.requires-dev]
 dev = [

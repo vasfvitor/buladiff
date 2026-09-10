@@ -49,3 +49,15 @@ def test_retries_on_429_with_retry_after():
         assert Client(delay=0).get_json("bulario/1") == {"a": 1}
         assert m.call_count == 2
         assert 10 in [c.args[0] for c in sleep.call_args_list]  # mínimo de 10 s mesmo com Retry-After menor
+
+
+def test_retries_on_truncated_response():
+    import http.client
+
+    ok = mock.MagicMock()
+    ok.__enter__.return_value.read.return_value = b"%PDF"
+    truncated = mock.MagicMock()
+    truncated.__enter__.return_value.read.side_effect = http.client.IncompleteRead(b"")
+    with mock.patch("urllib.request.urlopen", side_effect=[truncated, ok]) as m, mock.patch("time.sleep"):
+        assert Client(delay=0).download_bula("id") == b"%PDF"
+        assert m.call_count == 2

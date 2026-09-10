@@ -1,0 +1,17 @@
+---
+import Base from "../../layouts/Base.astro";
+import LetrasCatalogo from "../../components/LetrasCatalogo.astro";
+import { catalogo, produtos } from "../../lib/data";
+import { dataBR, produtoUrl } from "../../lib/format";
+
+const total = catalogo.produtos.length;
+---
+
+<Base title="Catálogo" description="Todos os produtos com bula no Bulário Eletrônico da ANVISA, por letra inicial.">
+  <h1>Catálogo do Bulário <span class="sub">{total.toLocaleString("pt-BR")}</span></h1>
+  <p class="lead">
+    Todos os produtos com bula publicada no Bulário Eletrônico da ANVISA{catalogo.atualizado && ` em ${dataBR(catalogo.atualizado)}`}.
+    Os <a href={produtoUrl("")}>{produtos.length} acompanhados</a> aqui têm link para o histórico e os diffs; os demais levam ao Bulário.
+  </p>
+  <LetrasCatalogo />
+</Base>

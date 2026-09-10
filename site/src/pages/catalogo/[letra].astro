@@ -1,0 +1,47 @@
+---
+import Base from "../../layouts/Base.astro";
+import LetrasCatalogo from "../../components/LetrasCatalogo.astro";
+import FiltroTabela from "../../components/FiltroTabela.astro";
+import { catalogo, letraCatalogo, type ItemCatalogo } from "../../lib/data";
+import { dataBR, produtoUrl, anvisaUrl } from "../../lib/format";
+
+export function getStaticPaths() {
+  const porLetra = new Map<string, ItemCatalogo[]>();
+  for (const p of catalogo.produtos) {
+    const l = letraCatalogo(p.nome);
+    porLetra.set(l, [...(porLetra.get(l) ?? []), p]);
+  }
+  return [...porLetra].map(([letra, itens]) => ({ params: { letra: letra.toLowerCase() }, props: { letra, itens } }));
+}
+const { letra, itens } = Astro.props as { letra: string; itens: ItemCatalogo[] };
+---
+
+<Base title={`Catálogo: ${letra}`} description={`Produtos do Bulário da ANVISA que começam com ${letra}.`}>
+  <h1>Catálogo: {letra} <span class="sub">{itens.length}</span></h1>
+  <LetrasCatalogo atual={letra} />
+  <FiltroTabela tabela="tabela-catalogo" placeholder="Filtrar por nome ou empresa" />
+  <div class="table-wrap">
+    <table id="tabela-catalogo">
+      <thead>
+        <tr><th>Produto</th><th>Empresa</th><th class="hide-narrow">Registro</th><th class="num">Última bula</th></tr>
+      </thead>
+      <tbody>
+        {itens.map((p) => (
+          <tr data-texto={`${p.nome} ${p.empresa}`.toLowerCase()}>
+            <td>
+              {p.arquivado ? (
+                <a href={produtoUrl(p.registro)}>{p.nome}</a>
+              ) : (
+                <a href={anvisaUrl(p.idProduto)} rel="noopener" class="externo">{p.nome}</a>
+              )}
+            </td>
+            <td>{p.empresa}</td>
+            <td class="num hide-narrow">{p.registro}</td>
+            <td class="num">{p.data ? dataBR(p.data) : ""}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+  <p class="note">Produtos acompanhados abrem o histórico aqui; os demais abrem a página do produto no Bulário da ANVISA.</p>
+</Base>

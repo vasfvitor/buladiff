@@ -100,6 +100,7 @@ del { background: var(--del-bg); color: var(--del-fg); }
 ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 .diff del { text-decoration: line-through; text-decoration-thickness: 1px; padding: 0 0.1em; }
 .diff ins { padding: 0 0.1em; }
+.diff .pbr { display: block; height: 0.7em; }
 .diff h3[id] { scroll-margin-top: 3rem; padding-left: 0.5rem; margin-left: -0.5rem; border-radius: 0.3rem; }
 /* "você está aqui": cor própria (não a âmbar de "declarada") e sem mudar a geometria */
 .diff h3:target { background: var(--target-bg); box-shadow: inset 3px 0 0 var(--accent); }
@@ -113,6 +114,11 @@ ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
 
 .pagination { display: flex; gap: 1rem; justify-content: center; margin: 1.5rem 0; }
+.letras { display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.75rem 0 1rem; }
+.letras a, .letras span { min-width: 1.8rem; padding: 0.15rem 0.35rem; text-align: center; border-radius: 0.35rem; text-decoration: none; }
+.letras a { background: var(--chip-bg); }
+.letras a:hover { background: var(--line); }
+.letras [aria-current] { background: var(--accent); color: var(--bg); font-weight: 600; }
 @media (max-width: 40rem) {
   .timeline li { grid-template-columns: 1fr; }
   table { font-size: 0.9rem; }

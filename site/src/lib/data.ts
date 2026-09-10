@@ -4,6 +4,7 @@
 import produtosJson from "../data/produtos.json";
 import recentesJson from "../data/recentes.json";
 import feedJson from "../data/feed.json";
+import catalogoJson from "../data/catalogo.json";
 
 export interface Produto {
   registro: string;
@@ -11,6 +12,11 @@ export interface Produto {
   nome: string;
   empresa: string;
   cnpj: string;
+  principio_ativo: string;
+  classes: string[]; // classes terapêuticas
+  categoria: string; // categoria regulatória (Genérico, Similar, Novo…)
+  referencia: string; // medicamento de referência
+  apresentacoes: string[];
   ultima_publicacao: string;
   n_versoes: number;
   diffs: string[]; // slugs
@@ -22,6 +28,7 @@ export interface Versao {
   republicada: string[];
   situacao: string;
   declarado: Record<string, string[]>;
+  repetida: boolean; // mesmos PDFs de uma versão anterior (expediente novo, texto igual)
 }
 
 export interface SecaoDiff {
@@ -50,6 +57,7 @@ export interface Diff {
   tipo: "vp" | "vps";
   alteradas: string[];
   declarado: string[];
+  marcado: boolean; // as duas versões vieram de PDF marcado (parágrafos preservados)
   documentos: DocumentoDiff[];
 }
 
@@ -82,6 +90,23 @@ export interface Publicacao {
 export const produtos = produtosJson as Produto[];
 export const recentes = recentesJson as Recente[];
 export const feed = feedJson as { ate: string | null; publicacoes: Publicacao[] };
+
+export interface ItemCatalogo {
+  registro: string;
+  idProduto: number;
+  nome: string;
+  empresa: string;
+  cnpj: string;
+  data: string; // última bula publicada
+  arquivado: boolean;
+}
+export const catalogo = catalogoJson as { atualizado: string | null; produtos: ItemCatalogo[] };
+
+/** Letra inicial usada para dividir o catálogo em páginas ("0-9" para o que não começa com letra). */
+export function letraCatalogo(nome: string): string {
+  const c = nome.trim().charAt(0).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toUpperCase();
+  return /[A-Z]/.test(c) ? c : "0-9";
+}
 
 const detalhes = import.meta.glob<{ default: Detalhe }>("../data/produtos/*.json");
 

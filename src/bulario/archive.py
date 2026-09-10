@@ -14,7 +14,7 @@ from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 from bulario.api import Client
-from bulario.extract import Document, documents_from_pdf, pdf_pages
+from bulario.extract import Document, extract_documents, pdf_pages
 
 KINDS = (("vp", "idBulaPaciente"), ("vps", "idBulaProfissional"))
 META = "meta.json"
@@ -33,6 +33,15 @@ class VersionText:
     paginas: int
     documentos: list[Document] = field(default_factory=list)
     historico_tabela: list[dict] = field(default_factory=list)  # HistoryEntry.to_dict()
+    marcado: bool = False  # `documentos` veio da árvore de estrutura do PDF (parágrafos preservados)
+    documentos_linhas: list[Document] = field(default_factory=list)  # extração por linhas, se marcado
+
+    def comparavel(self, other: VersionText) -> list[Document]:
+        """Documentos para comparar com `other`: a mesma extração dos dois lados. Se só um é marcado,
+        usa-se a extração por linhas nos dois; misturar as duas enche o diff de diferenças falsas."""
+        if self.marcado and not other.marcado and self.documentos_linhas:
+            return self.documentos_linhas
+        return self.documentos
 
     @property
     def declarado(self) -> list[str]:
@@ -46,12 +55,14 @@ class VersionText:
     def to_dict(self) -> dict:
         d = asdict(self)
         d["documentos"] = [doc.to_dict() for doc in self.documentos]
+        d["documentos_linhas"] = [doc.to_dict() for doc in self.documentos_linhas]
         return d
 
     @classmethod
     def from_dict(cls, d: dict) -> VersionText:
         d = dict(d)
         d["documentos"] = [Document.from_dict(x) for x in d.get("documentos", [])]
+        d["documentos_linhas"] = [Document.from_dict(x) for x in d.get("documentos_linhas", [])]
         return cls(**d)
 
     def save(self, path: Path) -> None:
@@ -79,12 +90,9 @@ def version_path(root: Path, item: dict, kind: str, suffix: str = ".json") -> Pa
 
 def extract_pdf(pdf: Path, registro: str, item: dict, kind: str) -> VersionText:
     """Extrai documentos e tabela de histórico de um PDF já em disco."""
-    try:
-        from bulario.history import read_history
+    from bulario.history import read_history
 
-        tabela = [e.to_dict() for e in read_history(pdf).entries]
-    except ImportError:  # extra `tables` ausente
-        tabela = []
+    marcados, linhas = extract_documents(pdf)
     return VersionText(
         registro=registro,
         expediente=item["expediente"],
@@ -93,8 +101,10 @@ def extract_pdf(pdf: Path, registro: str, item: dict, kind: str) -> VersionText:
         tipo=kind,
         pdf_sha256=hashlib.sha256(pdf.read_bytes()).hexdigest(),
         paginas=len(pdf_pages(pdf)),
-        documentos=documents_from_pdf(pdf),
-        historico_tabela=tabela,
+        documentos=marcados or linhas,
+        historico_tabela=[e.to_dict() for e in read_history(pdf).entries],
+        marcado=bool(marcados),
+        documentos_linhas=linhas if marcados else [],
     )
 
 
@@ -116,6 +126,28 @@ def strip_tokens(obj):
 
 
 EXPIRED = {400, 401, 403}  # respostas do download quando o id JWT (5 min) expirou
+
+
+def resumo_detalhe(d: dict) -> dict:
+    """O que o site usa do detalhe do produto (`/medicamento/produtos/codigo/{id}`), sem os ids de bula."""
+    return {
+        "principioAtivo": d.get("principioAtivo") or "",
+        "classesTerapeuticas": d.get("classesTerapeuticas") or [],
+        "atcs": d.get("atcs") or [],
+        "categoriaRegulatoria": d.get("categoriaRegulatoria") or "",
+        "medicamentoReferencia": d.get("medicamentoReferencia") or "",
+        "dataVencimentoRegistro": (d.get("dataVencimentoRegistro") or "")[:10],
+        "apresentacoes": [
+            {
+                "apresentacao": (ap.get("apresentacao") or "").strip(),
+                "formasFarmaceuticas": ap.get("formasFarmaceuticas") or [],
+                "viasAdministracao": ap.get("viasAdministracao") or [],
+                "restricaoPrescricao": ap.get("restricaoPrescricao") or [],
+                "registro": ap.get("registro") or "",
+            }
+            for ap in d.get("apresentacoes") or []
+        ],
+    }
 
 
 def _ids_by_document(hist: dict) -> dict[tuple[int, str], str]:
@@ -150,9 +182,13 @@ def fetch(
     out = root / registro
     out.mkdir(parents=True, exist_ok=True)
     hist = client.historico(prod["idProduto"], all_pages=latest is None)
-    (out / META).write_text(
-        json.dumps(strip_tokens({"produto": prod, "historico": hist}), ensure_ascii=False, indent=1)
-    )
+    try:
+        detalhe = resumo_detalhe(client.produto(prod["idProduto"]))
+    except urllib.error.HTTPError as e:  # o detalhe é complemento; o histórico é o que importa
+        log(f"  detalhe do produto indisponível (HTTP {e.code})")
+        detalhe = (load_meta(registro, root) or {}).get("detalhe", {})
+    meta = {"produto": prod, "historico": hist, "detalhe": detalhe}
+    (out / META).write_text(json.dumps(strip_tokens(meta), ensure_ascii=False, indent=1))
     items = sorted(hist["historico"]["content"], key=lambda v: v["dataPublicacao"], reverse=True)
     if latest is not None:
         items = items[:latest]
@@ -198,6 +234,30 @@ def fetch(
         for fut in pending:
             log(fut.result())  # propaga erro de extração, se houver
     return prod, versions
+
+
+def reextract(registro: str, root: Path = Path("data"), force: bool = False, log=print) -> int:
+    """Refaz os JSON a partir dos PDFs guardados em data/<registro>/ (`fetch --keep-pdf`), sem a API.
+    Só os que faltam, ou todos com `force`. Devolve quantos foram extraídos."""
+    out = root / registro
+    situacoes = {
+        h["expediente"]: h.get("descSituacao", "")
+        for h in (load_meta(registro, root) or {})
+        .get("historico", {})
+        .get("historico", {})
+        .get("content", [])
+    }
+    n = 0
+    for pdf in sorted(out.glob("*_*_*.pdf")):
+        data, exp, kind = pdf.stem.rsplit("_", 2)
+        dest = pdf.with_suffix(".json")
+        if dest.exists() and not force:
+            continue
+        item = {"expediente": exp, "dataPublicacao": data, "descSituacao": situacoes.get(exp, "")}
+        extract_pdf(pdf, registro, item, kind).save(dest)
+        log(f"  {dest.name}  convertido")
+        n += 1
+    return n
 
 
 def local_versions(registro: str, root: Path = Path("data")) -> list[Version]:

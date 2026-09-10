@@ -77,3 +77,7 @@ export function produtoUrl(registro: string): string {
 export function diffUrl(registro: string, slug: string): string {
   return url(`/produto/${registro}/${slug}/`);
 }
+
+export function catalogoUrl(letra?: string): string {
+  return letra ? url(`/catalogo/${letra.toLowerCase()}/`) : url("/catalogo/");
+}

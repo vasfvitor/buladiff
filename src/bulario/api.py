@@ -6,6 +6,7 @@ Os ids de PDF são JWT com ~5 minutos de validade: baixe logo depois de consulta
 
 from __future__ import annotations
 
+import http.client
 import json
 import time
 import urllib.error
@@ -38,7 +39,7 @@ class Client:
         self.base = base
         self.delay = delay
         self.timeout = timeout
-        self.retries = retries  # tentativas extras em 5xx/429/erro de rede, com espera 2s, 4s, 8s…
+        self.retries = retries  # tentativas extras em 5xx/429/erro de rede/resposta truncada (2s, 4s, 8s…)
         self._last = 0.0
 
     def _get(self, path: str, params: dict[str, Any] | None = None) -> bytes:
@@ -62,7 +63,8 @@ class Client:
                 if e.code == 429:  # limite de taxa: espera o que o servidor pedir, no mínimo 10 s
                     time.sleep(max(_retry_after(e), 10))
                     continue
-            except (urllib.error.URLError, TimeoutError):
+            except (urllib.error.URLError, TimeoutError, http.client.HTTPException):
+                # HTTPException cobre resposta truncada (IncompleteRead), que a ANVISA devolve às vezes
                 self._last = time.monotonic()
                 if attempt == self.retries:
                     raise

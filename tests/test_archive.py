@@ -63,3 +63,28 @@ def test_read_curated(tmp_path: Path):
     f.write_text("# comentário\n118190404  # risperidona\n\n112360031\n")
     assert read_curated(f) == ["118190404", "112360031"]
     assert read_curated(tmp_path / "nao-existe.txt") == []
+
+
+def test_comparavel_uses_line_extraction_against_unmarked_version():
+    from bulario.archive import VersionText
+    from bulario.extract import Document
+
+    marcada = VersionText(
+        "r",
+        "1",
+        "2025-01-01",
+        "",
+        "vp",
+        "x",
+        1,
+        [Document({"1": "a\n\nb"})],
+        [],
+        True,
+        [Document({"1": "a b"})],
+    )
+    linhas = VersionText("r", "2", "2025-02-01", "", "vp", "y", 1, [Document({"1": "a b c"})], [], False)
+    assert marcada.comparavel(linhas)[0].secoes["1"] == "a b"
+    assert marcada.comparavel(marcada)[0].secoes["1"] == "a\n\nb"
+    assert linhas.comparavel(marcada)[0].secoes["1"] == "a b c"
+    d = VersionText.from_dict(marcada.to_dict())
+    assert d.documentos_linhas[0].secoes == {"1": "a b"} and d.marcado

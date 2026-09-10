@@ -12,6 +12,10 @@ git pull --ff-only --quiet
 # a API da ANVISA dá 500 de vez em quando; o que baixou fica salvo e é commitado mesmo assim
 uv run bulario feed --baixar || echo "$(date -Is) aviso: feed falhou"
 uv run bulario fetch --curados || echo "$(date -Is) aviso: fetch --curados com erros"
+# catálogo inteiro (9 requisições) uma vez por semana
+if [ -z "$(find data/catalogo.json -mtime -6 2>/dev/null)" ]; then
+  uv run bulario catalogo || echo "$(date -Is) aviso: catalogo falhou"
+fi
 
 # feed.json muda todo dia (data de cobertura); só conta como mudança se houver versão nova ou meta alterado
 if git diff --quiet -- data ':!data/feed.json' && [ -z "$(git ls-files --others --exclude-standard data)" ]; then

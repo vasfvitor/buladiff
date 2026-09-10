@@ -76,7 +76,7 @@ jobs:
 
       - name: Sincronizar dependências
         if: ${{ steps.api.outputs.ok == 'true' }}
-        run: uv sync --locked --extra tables
+        run: uv sync --locked
 
       - name: Feed e lista curada
         if: ${{ steps.api.outputs.ok == 'true' }}

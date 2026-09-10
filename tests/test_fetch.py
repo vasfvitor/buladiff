@@ -1,3 +1,4 @@
+import json
 import urllib.error
 from pathlib import Path
 
@@ -49,6 +50,13 @@ class FakeClient:
             }
         }
 
+    def produto(self, id_produto):
+        return {
+            "principioAtivo": "risperidona",
+            "classesTerapeuticas": ["NEUROLEPTICOS"],
+            "apresentacoes": [],
+        }
+
     def download_bula(self, id_bula: str) -> bytes:
         self.downloads.append(id_bula)
         if not id_bula.startswith(f"t{self.geracao}-"):
@@ -61,7 +69,7 @@ def fake_extract(pdf: Path, registro: str, it: dict, kind: str) -> VersionText:
         registro,
         it["expediente"],
         it["dataPublicacao"][:10],
-        "",
+        it.get("descSituacao", ""),
         kind,
         "sha",
         1,
@@ -86,6 +94,8 @@ def test_fetch_extracts_in_threads_and_removes_pdfs(tmp_path: Path, monkeypatch)
     ]
     assert client.historicos == 1 and len(client.downloads) == 4
     assert sum("baixado" in line for line in logs) == 4
+    meta = json.loads((tmp_path / "118190404" / "meta.json").read_text())
+    assert meta["detalhe"]["principioAtivo"] == "risperidona" and meta["detalhe"]["apresentacoes"] == []
 
 
 def test_fetch_refreshes_expired_ids(tmp_path: Path, monkeypatch):
@@ -114,3 +124,17 @@ def test_fetch_idempotent(tmp_path: Path, monkeypatch):
     fetch("118190404", tmp_path, client=client, latest=None, log=lambda s: None)
     fetch("118190404", tmp_path, client=client, latest=None, log=lambda s: None)
     assert len(client.downloads) == 4  # segunda execução não baixa nada
+
+
+def test_reextract_rebuilds_json_from_local_pdfs(tmp_path: Path, monkeypatch):
+    from bulario.archive import reextract
+
+    monkeypatch.setattr(archive, "extract_pdf", fake_extract)
+    client = FakeClient()
+    fetch("118190404", tmp_path, client=client, latest=None, keep_pdf=True, log=lambda s: None)
+    (tmp_path / "118190404" / "2023-01-16_0046116231_vp.json").unlink()
+    assert reextract("118190404", tmp_path, log=lambda s: None) == 1
+    assert reextract("118190404", tmp_path, log=lambda s: None) == 0
+    assert reextract("118190404", tmp_path, force=True, log=lambda s: None) == 4
+    v = VersionText.load(tmp_path / "118190404" / "2023-01-16_0046116231_vp.json")
+    assert v.expediente == "0046116231" and v.data == "2023-01-16" and v.situacao == "Aditado ao processo"

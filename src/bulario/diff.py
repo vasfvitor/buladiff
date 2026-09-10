@@ -4,9 +4,10 @@ from __future__ import annotations
 
 import difflib
 import html
+import re
 from dataclasses import dataclass
 
-from bulario.extract import PREAMBLE, Document
+from bulario.extract import PARAGRAFO, PREAMBLE, Document
 
 
 @dataclass
@@ -25,31 +26,45 @@ class SectionDiff:
 
 
 CONTEXTO = 30  # palavras mantidas de cada lado de uma mudança na versão resumida
+QUEBRA = '<span class="pbr"></span>'  # quebra de parágrafo no HTML (display:block no CSS)
+TOKEN_RE = re.compile(r"\n\n|\S+")
+
+
+def tokens(texto: str) -> list[str]:
+    """Palavras e quebras de parágrafo (o token PARAGRAFO), para o diff alinhar parágrafos."""
+    return TOKEN_RE.findall(texto)
+
+
+def render(words: list[str]) -> str:
+    return " ".join(QUEBRA if w == PARAGRAFO else html.escape(w) for w in words)
 
 
 def word_diff(a: str, b: str, contexto: int = CONTEXTO) -> tuple[str, str, int, float]:
     """(html completo, html só com contexto, palavras alteradas, semelhança 0..1)."""
-    aw, bw = a.split(), b.split()
+    aw, bw = tokens(a), tokens(b)
     sm = difflib.SequenceMatcher(None, aw, bw, autojunk=False)
     full, short, changed = [], [], 0
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op == "equal":
             words = aw[i1:i2]
-            full.append(html.escape(" ".join(words)))
+            full.append(render(words))
             if len(words) > 2 * contexto + 10:
-                omitidas = len(words) - 2 * contexto
-                short.append(html.escape(" ".join(words[:contexto])))
+                omitidas = sum(w != PARAGRAFO for w in words[contexto:-contexto])
+                short.append(render(words[:contexto]))
                 short.append(f'<span class="omit">[… {omitidas} palavras iguais …]</span>')
-                short.append(html.escape(" ".join(words[-contexto:])))
+                short.append(render(words[-contexto:]))
             else:
                 short.append(full[-1])
             continue
-        changed += (i2 - i1) + (j2 - j1)
+        changed += sum(w != PARAGRAFO for w in aw[i1:i2] + bw[j1:j2])
         parts = []
-        if i2 > i1:
-            parts.append("<del>" + html.escape(" ".join(aw[i1:i2])) + "</del>")
-        if j2 > j1:
-            parts.append("<ins>" + html.escape(" ".join(bw[j1:j2])) + "</ins>")
+        if all(w == PARAGRAFO for w in aw[i1:i2] + bw[j1:j2]):  # só mudou a divisão em parágrafos
+            parts.append(render(bw[j1:j2] or aw[i1:i2][:1]))
+        else:
+            if i2 > i1:
+                parts.append("<del>" + render(aw[i1:i2]) + "</del>")
+            if j2 > j1:
+                parts.append("<ins>" + render(bw[j1:j2]) + "</ins>")
         full += parts
         short += parts
     return " ".join(full), " ".join(short), changed, sm.ratio()
@@ -116,6 +131,7 @@ CSS = (
     "del{background:#fdd}ins{background:#dfd;text-decoration:none}"
     "table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:2px 8px}"
     ".alterada{color:#b00;font-weight:bold}small{color:#666;font-weight:normal}"
+    ".pbr{display:block;height:.7em}"
 )
 
 

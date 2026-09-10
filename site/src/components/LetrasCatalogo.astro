@@ -1,0 +1,19 @@
+---
+// Navegação por letra inicial do catálogo.
+import { catalogo, letraCatalogo } from "../lib/data";
+import { catalogoUrl } from "../lib/format";
+
+interface Props {
+  atual?: string;
+}
+const { atual } = Astro.props;
+const contagem = new Map<string, number>();
+for (const p of catalogo.produtos) contagem.set(letraCatalogo(p.nome), (contagem.get(letraCatalogo(p.nome)) ?? 0) + 1);
+const letras = [...contagem.keys()].sort((a, b) => (a === "0-9" ? 1 : b === "0-9" ? -1 : a.localeCompare(b)));
+---
+
+<nav class="letras" aria-label="Letra inicial">
+  {letras.map((l) =>
+    l === atual ? <span aria-current="page">{l}</span> : <a href={catalogoUrl(l)} title={`${contagem.get(l)} produtos`}>{l}</a>
+  )}
+</nav>

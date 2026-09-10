@@ -39,3 +39,22 @@ def test_diff_documents_summary_and_html():
     assert summary(rows) == "1(2)"
     out = render_html(rows, "t")
     assert "<del>dor</del>" in out and "<ins>febre</ins>" in out
+
+
+def test_word_diff_keeps_paragraph_breaks():
+    from bulario.diff import QUEBRA
+
+    html, ctx, changed, _ = word_diff("a b\n\nc d", "a b\n\nc e")
+    assert html == f"a b {QUEBRA} c <del>d</del> <ins>e</ins>"
+    assert changed == 2  # a quebra não conta como palavra
+
+
+def test_word_diff_counts_words_not_breaks_in_omission():
+    same = "\n\n".join(f"w{i}" for i in range(100))  # 100 palavras, 99 quebras
+    _, ctx, changed, _ = word_diff(f"{same} velho", f"{same} novo", contexto=5)
+    assert changed == 2 and "[… 94 palavras iguais …]" in ctx
+
+
+def test_paragraph_only_changes_are_not_marked():
+    html, _, changed, _ = word_diff("a b c d", "a b\n\nc d")
+    assert changed == 0 and "<ins>" not in html and "<del>" not in html and "pbr" in html
