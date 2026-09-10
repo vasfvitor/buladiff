@@ -77,6 +77,7 @@ const anchor = (g: { indice: number }, secao: string) =>
         {g.secoes.filter((s) => s.alterada).map((s) => (
           <section>
             <h3 id={anchor(g, s.secao)}>
+              {multi && <span class="muted" style="font-weight:normal">Apresentação {g.indice} · </span>}
               {nomeSecao(diff.tipo, s.secao)}
               {diff.declarado.includes(s.secao) && <span class="badge declared" title="declarada pela empresa">{s.secao}</span>}
               <span class="muted" style="font-weight:normal;font-size:.85rem"> {s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
