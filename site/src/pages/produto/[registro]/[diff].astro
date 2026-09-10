@@ -36,7 +36,10 @@ const totalAlteradas = docs.reduce((n, d) => n + d.alteradas.length, 0);
   </div>
 
   <h2>Alterações</h2>
-  <p class="legend"><span><del>removido</del></span><span><ins>adicionado</ins></span></p>
+  <p class="legend">
+    <span><del>removido</del></span><span><ins>adicionado</ins></span>
+    <button type="button" class="modo-diff" id="modo-diff" aria-pressed="false" title="Versão antiga à esquerda, nova à direita">lado a lado</button>
+  </p>
   {totalAlteradas === 0 && <p class="muted">O texto extraído das duas versões é idêntico.</p>}
   <div class="diff">
     {docs.map((doc) => (
@@ -52,14 +55,14 @@ const totalAlteradas = docs.reduce((n, d) => n + d.alteradas.length, 0);
             </h3>
             {s.contexto ? (
               <div class="trecho">
-                <p class="contexto" set:html={s.contexto} />
+                <div class="texto contexto" set:html={s.contexto} />
                 <details>
                   <summary class="sub">ver a seção completa</summary>
-                  <p set:html={s.html} />
+                  <div class="texto" set:html={s.html} />
                 </details>
               </div>
             ) : (
-              <p set:html={s.html} />
+              <div class="texto" set:html={s.html} />
             )}
           </section>
         ))}
@@ -94,3 +97,70 @@ const totalAlteradas = docs.reduce((n, d) => n + d.alteradas.length, 0);
       : "PDF sem marcação de estrutura: o texto foi extraído linha a linha, sem parágrafos, e quebras de página ou tabelas podem gerar diferenças que não existem na bula. Na dúvida, o PDF no Bulário é a fonte."}
   </p>
 </Base>
+
+<script>
+  // Lado a lado: derivado do mesmo HTML do diff. À esquerda o texto sem <ins> (versão antiga), à direita
+  // sem <del> (versão nova), uma linha da grade por parágrafo. Em telas estreitas fica sempre unificado.
+  const KEY = "diff-modo";
+  const btn = document.getElementById("modo-diff") as HTMLButtonElement | null;
+  const textos = Array.from(document.querySelectorAll<HTMLElement>(".diff .texto"));
+  const original = new Map(textos.map((el) => [el, el.innerHTML]));
+  const estreito = matchMedia("(max-width: 48rem)");
+
+  function ladoALado(html: string): DocumentFragment {
+    const fonte = document.createElement("div");
+    fonte.innerHTML = html;
+    const paragrafos: Node[][] = [[]];
+    for (const n of Array.from(fonte.childNodes)) {
+      if (n instanceof HTMLElement && n.classList.contains("pbr")) paragrafos.push([]);
+      else paragrafos[paragrafos.length - 1].push(n);
+    }
+    const grade = document.createElement("div");
+    grade.className = "split";
+    for (const nos of paragrafos) {
+      for (const lado of ["old", "new"] as const) {
+        const celula = document.createElement("div");
+        celula.className = lado;
+        for (const n of nos) celula.appendChild(n.cloneNode(true));
+        celula.querySelectorAll(lado === "old" ? "ins" : "del").forEach((e) => e.remove());
+        if (!celula.textContent?.trim()) celula.classList.add("vazio");
+        grade.appendChild(celula);
+      }
+    }
+    const frag = document.createDocumentFragment();
+    frag.appendChild(grade);
+    return frag;
+  }
+
+  function aplicar(modo: "unificado" | "lado") {
+    const lado = modo === "lado" && !estreito.matches;
+    for (const el of textos) {
+      const html = original.get(el) ?? "";
+      el.replaceChildren(lado ? ladoALado(html) : document.createRange().createContextualFragment(html));
+      el.classList.toggle("lado", lado);
+    }
+    if (btn) {
+      btn.setAttribute("aria-pressed", String(modo === "lado"));
+      btn.textContent = modo === "lado" ? "unificado" : "lado a lado";
+    }
+  }
+
+  let modo: "unificado" | "lado" = "unificado";
+  const daUrl = new URLSearchParams(location.search).get("modo");
+  try {
+    if (daUrl === "lado" || (!daUrl && localStorage.getItem(KEY) === "lado")) modo = "lado";
+  } catch {
+    /* sem localStorage: fica unificado */
+  }
+  if (modo === "lado") aplicar(modo);
+  btn?.addEventListener("click", () => {
+    modo = modo === "lado" ? "unificado" : "lado";
+    aplicar(modo);
+    try {
+      localStorage.setItem(KEY, modo);
+    } catch {
+      /* ignora */
+    }
+  });
+  estreito.addEventListener("change", () => aplicar(modo));
+</script>

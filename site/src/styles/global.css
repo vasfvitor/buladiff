@@ -81,6 +81,8 @@ a.badge:hover, a.badge:focus-visible { background: var(--chip-hover); border-col
   .changes li, .changes.compact li { grid-template-columns: 1fr; gap: 0.2rem; }
   .changes .which { display: inline; }
   .hide-narrow { display: none !important; }
+  .modo-diff { display: none; }
+  .split { grid-template-columns: 1fr; }
 }
 
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 0.6rem; padding: 1rem 1.1rem; margin: 0.75rem 0; }
@@ -105,7 +107,16 @@ ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 /* "você está aqui": cor própria (não a âmbar de "declarada") e sem mudar a geometria */
 .diff h3:target { background: var(--target-bg); box-shadow: inset 3px 0 0 var(--accent); }
 .diff h3 .badge { margin-left: 0.4rem; vertical-align: middle; }
-.diff p { max-width: 78ch; }
+.diff .texto { max-width: 78ch; overflow-wrap: anywhere; }
+.diff .texto.lado { max-width: none; }
+.split { display: grid; grid-template-columns: 1fr 1fr; gap: 0.35em 1rem; }
+.split > div { padding: 0.1em 0.5em; border-left: 3px solid var(--line); }
+.split > .old:has(del) { border-left-color: var(--del-fg); }
+.split > .new:has(ins) { border-left-color: var(--ins-fg); }
+.split > .vazio { background: var(--chip-bg); border-left-color: transparent; }
+.modo-diff { margin-left: auto; font: inherit; font-size: 0.8rem; color: var(--muted); background: none; border: 1px solid var(--line); border-radius: 0.4rem; padding: 0.15rem 0.55rem; cursor: pointer; }
+.modo-diff:hover { background: var(--chip-bg); }
+.modo-diff[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
 .diff .omit { display: inline-block; margin: 0 0.3em; padding: 0 0.5em; color: var(--muted); background: var(--chip-bg); border-radius: 0.3rem; font-size: 0.85em; white-space: nowrap; }
 .diff .trecho summary { cursor: pointer; width: fit-content; margin: 0.25rem 0 0.5rem; }
 .diff .trecho:has(details[open]) .contexto { display: none; }
