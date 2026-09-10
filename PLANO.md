@@ -36,9 +36,10 @@ e o site mostra parágrafos; tabelas param de inflar o diff.
       ("1. INDICAÇÕES Hipertensão"). As 9 bulas marcadas dão as mesmas seções que o caminho por linhas.
 - [x] `diff.word_diff`: a quebra de parágrafo é um token; no HTML vira `<span class="pbr"></span>`.
 - [x] Site: regra `.pbr` no CSS; nota na página do diff diz se o texto veio da estrutura; testes.
-- [ ] Rebaixar os 11 registros (apagar os JSON e rodar `fetch --curados`), conferir os diffs conhecidos
-      (risperidona VPS: 4, 5, 7, III) e commitar `data/`. (Em andamento; a ANVISA devolve respostas
-      truncadas de vez em quando; agora o cliente tenta de novo.)
+- [x] Rebaixados os 11 registros com `fetch --curados --keep-pdf` (PDFs ficam locais, fora do git) e
+      reextraídos com `bulario reextract`; risperidona VPS dá 4, 5, 7, III (mais um `I` real, "+ 1
+      seringa dosadora"). O histórico da API oscila de um dia para o outro: versões que sumiram da
+      listagem foram restauradas do git; com os PDFs locais, `reextract` recupera as que já baixamos.
 - [x] Tabelas: o Word grava uma tabela inteira como uma linha só com células altas e parte a linha onde
       a página quebra; por célula o diff enchia de ruído. Cada `TR` vira linhas visuais (palavras
       agrupadas por posição vertical), como no pdftotext, o que é estável entre versões.
