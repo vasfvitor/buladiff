@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from typing import Any
@@ -26,24 +27,37 @@ HEADERS = {
 class Client:
     """Requisições com intervalo mínimo entre chamadas (padrão 1 s)."""
 
-    def __init__(self, base: str = BASE, delay: float = 1.0, timeout: float = 60.0):
+    def __init__(self, base: str = BASE, delay: float = 1.0, timeout: float = 60.0, retries: int = 3):
         self.base = base
         self.delay = delay
         self.timeout = timeout
+        self.retries = retries  # tentativas extras em 5xx/erro de rede, com espera 2s, 4s, 8s…
         self._last = 0.0
 
     def _get(self, path: str, params: dict[str, Any] | None = None) -> bytes:
         url = f"{self.base}/{path}"
         if params:
             url += ("&" if "?" in url else "?") + urllib.parse.urlencode(params)
-        wait = self._last + self.delay - time.monotonic()
-        if wait > 0:
-            time.sleep(wait)
-        req = urllib.request.Request(url, headers=HEADERS)
-        with urllib.request.urlopen(req, timeout=self.timeout) as r:
-            data = r.read()
-        self._last = time.monotonic()
-        return data
+        for attempt in range(self.retries + 1):
+            wait = self._last + self.delay - time.monotonic()
+            if wait > 0:
+                time.sleep(wait)
+            try:
+                req = urllib.request.Request(url, headers=HEADERS)
+                with urllib.request.urlopen(req, timeout=self.timeout) as r:
+                    data = r.read()
+                self._last = time.monotonic()
+                return data
+            except urllib.error.HTTPError as e:
+                self._last = time.monotonic()
+                if e.code < 500 or attempt == self.retries:
+                    raise
+            except (urllib.error.URLError, TimeoutError):
+                self._last = time.monotonic()
+                if attempt == self.retries:
+                    raise
+            time.sleep(2 ** (attempt + 1))
+        raise AssertionError("unreachable")
 
     def get_json(self, path: str, params: dict[str, Any] | None = None) -> Any:
         return json.loads(self._get(path, params))

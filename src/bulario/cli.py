@@ -30,12 +30,16 @@ def cmd_fetch(args: argparse.Namespace) -> None:
     registros = list(args.registro)
     if args.curados:
         registros += read_curated(Path(args.curados))
+    falhas = 0
     for registro in registros:
         try:
             latest = None if (args.all or args.curados) else args.latest
             fetch(registro, Path(args.data), latest=latest, keep_pdf=args.keep_pdf)
-        except LookupError as e:
-            print(e, file=sys.stderr)
+        except (LookupError, OSError) as e:  # OSError cobre HTTPError/URLError
+            falhas += 1
+            print(f"erro em {registro}: {e}", file=sys.stderr)
+    if falhas:
+        sys.exit(f"{falhas} registro(s) com erro; o que foi baixado ficou salvo — rode de novo mais tarde")
 
 
 def cmd_diff(args: argparse.Namespace) -> None:
