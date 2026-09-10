@@ -8,6 +8,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import urllib.error
+from concurrent.futures import Future, ThreadPoolExecutor
 from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
@@ -113,6 +115,19 @@ def strip_tokens(obj):
     return obj
 
 
+EXPIRED = {400, 401, 403}  # respostas do download quando o id JWT (5 min) expirou
+
+
+def _ids_by_document(hist: dict) -> dict[tuple[int, str], str]:
+    """(idDocumento, chave) -> id de download, a partir de uma resposta do histórico."""
+    return {
+        (item["idDocumento"], key): item[key]
+        for item in hist["historico"]["content"]
+        for _, key in KINDS
+        if item.get(key)
+    }
+
+
 def fetch(
     registro: str,
     root: Path = Path("data"),
@@ -120,8 +135,13 @@ def fetch(
     latest: int | None = 2,
     keep_pdf: bool = False,
     log=print,
+    workers: int = 2,
 ) -> tuple[dict, list[Version]]:
-    """Arquiva as versões de bula de um registro como JSON. `latest=None` pega todas. Idempotente."""
+    """Arquiva as versões de bula de um registro como JSON. `latest=None` pega todas. Idempotente.
+
+    Os downloads são sequenciais (1 req/s); a extração roda em threads para não gastar a janela de
+    5 minutos dos ids. Se um id expirar mesmo assim, o histórico é consultado de novo e o download repetido.
+    """
     client = client or Client()
     found = client.search(numeroRegistro=registro)["content"]
     if not found:
@@ -137,27 +157,46 @@ def fetch(
     if latest is not None:
         items = items[:latest]
     log(f"{prod['nomeProduto']} — {prod['razaoSocial']} — {hist['historico']['totalElements']} versões")
+    ids = _ids_by_document(hist)
+
+    def download(item: dict, key: str) -> bytes:
+        try:
+            return client.download_bula(ids[(item["idDocumento"], key)])
+        except urllib.error.HTTPError as e:
+            if e.code not in EXPIRED:
+                raise
+            log("  ids expiraram; consultando o histórico de novo")
+            ids.update(_ids_by_document(client.historico(prod["idProduto"], all_pages=latest is None)))
+            return client.download_bula(ids[(item["idDocumento"], key)])
+
+    def extract_and_save(pdf: Path, item: dict, kind: str, dest: Path, downloaded: bool) -> str:
+        extract_pdf(pdf, registro, item, kind).save(dest)
+        if not keep_pdf:
+            pdf.unlink()
+        return f"  {dest.name}  {'baixado' if downloaded else 'convertido'}"
+
     versions = []
-    for item in items:
-        textos = {}
-        for kind, key in KINDS:
-            if not item.get(key):
-                log(f"  {item['expediente']} sem {kind}")
-                continue
-            dest = version_path(out, item, kind)
-            if not dest.exists():
-                pdf = version_path(out, item, kind, ".pdf")
-                downloaded = not pdf.exists()
-                if downloaded:
-                    pdf.write_bytes(client.download_bula(item[key]))
-                extract_pdf(pdf, registro, item, kind).save(dest)
-                if not keep_pdf:
-                    pdf.unlink()
-                log(f"  {dest.name}  {'baixado' if downloaded else 'convertido'}")
-            textos[kind] = dest
-        versions.append(
-            Version(item["expediente"], item["dataPublicacao"][:10], item["descSituacao"], textos)
-        )
+    pending: list[Future[str]] = []
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        for item in items:
+            textos = {}
+            for kind, key in KINDS:
+                if not item.get(key):
+                    log(f"  {item['expediente']} sem {kind}")
+                    continue
+                dest = version_path(out, item, kind)
+                if not dest.exists():
+                    pdf = version_path(out, item, kind, ".pdf")
+                    downloaded = not pdf.exists()
+                    if downloaded:
+                        pdf.write_bytes(download(item, key))
+                    pending.append(pool.submit(extract_and_save, pdf, item, kind, dest, downloaded))
+                textos[kind] = dest
+            versions.append(
+                Version(item["expediente"], item["dataPublicacao"][:10], item["descSituacao"], textos)
+            )
+        for fut in pending:
+            log(fut.result())  # propaga erro de extração, se houver
     return prod, versions
 
 

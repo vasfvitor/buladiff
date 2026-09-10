@@ -36,3 +36,16 @@ def test_gives_up_after_retries():
         except urllib.error.HTTPError:
             pass
         assert m.call_count == 3
+
+
+def test_retries_on_429_with_retry_after():
+    ok = mock.MagicMock()
+    ok.__enter__.return_value.read.return_value = b'{"a": 1}'
+    err = urllib.error.HTTPError("http://x", 429, "slow down", {"Retry-After": "3"}, None)
+    with (
+        mock.patch("urllib.request.urlopen", side_effect=[err, ok]) as m,
+        mock.patch("time.sleep") as sleep,
+    ):
+        assert Client(delay=0).get_json("bulario/1") == {"a": 1}
+        assert m.call_count == 2
+        assert 10 in [c.args[0] for c in sleep.call_args_list]  # mínimo de 10 s mesmo com Retry-After menor

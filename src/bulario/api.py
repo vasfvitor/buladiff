@@ -24,6 +24,13 @@ HEADERS = {
 }
 
 
+def _retry_after(e: urllib.error.HTTPError) -> float:
+    try:
+        return float(e.headers.get("Retry-After", 0))
+    except (TypeError, ValueError):
+        return 0.0
+
+
 class Client:
     """Requisições com intervalo mínimo entre chamadas (padrão 1 s)."""
 
@@ -31,7 +38,7 @@ class Client:
         self.base = base
         self.delay = delay
         self.timeout = timeout
-        self.retries = retries  # tentativas extras em 5xx/erro de rede, com espera 2s, 4s, 8s…
+        self.retries = retries  # tentativas extras em 5xx/429/erro de rede, com espera 2s, 4s, 8s…
         self._last = 0.0
 
     def _get(self, path: str, params: dict[str, Any] | None = None) -> bytes:
@@ -50,8 +57,11 @@ class Client:
                 return data
             except urllib.error.HTTPError as e:
                 self._last = time.monotonic()
-                if e.code < 500 or attempt == self.retries:
+                if (e.code < 500 and e.code != 429) or attempt == self.retries:
                     raise
+                if e.code == 429:  # limite de taxa: espera o que o servidor pedir, no mínimo 10 s
+                    time.sleep(max(_retry_after(e), 10))
+                    continue
             except (urllib.error.URLError, TimeoutError):
                 self._last = time.monotonic()
                 if attempt == self.retries:
