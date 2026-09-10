@@ -1,4 +1,4 @@
-# Bulario
+# Buladiff
 
 Arquivo e diff de versões de bulas do Bulário Eletrônico da ANVISA.
 
@@ -52,7 +52,7 @@ produto, a linha do tempo de versões e o diff por seção entre versões consec
 ```sh
 uv run bulario export --out site/src/data   # gera os dados do site a partir de data/
 pnpm install
-pnpm site:dev                               # http://localhost:4321/bulario/
+pnpm site:dev                               # http://localhost:4321/buladiff/
 pnpm site:build                             # site/dist/
 ```
 

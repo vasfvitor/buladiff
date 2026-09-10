@@ -1,5 +1,5 @@
 {
-  "name": "bulario-monorepo",
+  "name": "buladiff",
   "private": true,
   "scripts": {
     "export": "uv run bulario export --out site/src/data",
