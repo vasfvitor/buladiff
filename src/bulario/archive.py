@@ -96,6 +96,23 @@ def extract_pdf(pdf: Path, registro: str, item: dict, kind: str) -> VersionText:
     )
 
 
+TOKEN_KEYS = {
+    "idBulaPaciente",
+    "idBulaProfissional",
+    "idBulaPacienteProtegido",
+    "idBulaProfissionalProtegido",
+}
+
+
+def strip_tokens(obj):
+    """Remove os ids de PDF (JWT que expira em 5 min) para o meta.json não mudar a cada execução."""
+    if isinstance(obj, dict):
+        return {k: strip_tokens(v) for k, v in obj.items() if k not in TOKEN_KEYS}
+    if isinstance(obj, list):
+        return [strip_tokens(v) for v in obj]
+    return obj
+
+
 def fetch(
     registro: str,
     root: Path = Path("data"),
@@ -113,7 +130,9 @@ def fetch(
     out = root / registro
     out.mkdir(parents=True, exist_ok=True)
     hist = client.historico(prod["idProduto"], all_pages=latest is None)
-    (out / META).write_text(json.dumps({"produto": prod, "historico": hist}, ensure_ascii=False, indent=1))
+    (out / META).write_text(
+        json.dumps(strip_tokens({"produto": prod, "historico": hist}), ensure_ascii=False, indent=1)
+    )
     items = sorted(hist["historico"]["content"], key=lambda v: v["dataPublicacao"], reverse=True)
     if latest is not None:
         items = items[:latest]

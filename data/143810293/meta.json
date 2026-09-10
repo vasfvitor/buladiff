@@ -9,8 +9,6 @@
   "numeroTransacao": "3813242026",
   "data": "2026-03-20T16:51:58.000-0300",
   "numProcesso": "25351644140202178",
-  "idBulaPacienteProtegido": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzNjQ0NDMyMyIsIm5iZiI6MTc4ODk5NzUzNiwiZXhwIjoxNzg4OTk3ODM2fQ.RRVTyF2-OQBmU86d3GBegwcHxicVfyVTknaCpNL_CzmFA2oSYJ_9Mh0VhjdXyByjgbwU3htnAMJOhlbVxfvMjw",
-  "idBulaProfissionalProtegido": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzNjQ0NDMyNCIsIm5iZiI6MTc4ODk5NzUzNiwiZXhwIjoxNzg4OTk3ODM2fQ.6ZBmB0Znq7GYsyfeFqabOs78ncpjoPVvpMwMEgCprhpvMDqapbdv3JJhlCUynZ_8BPGFzk9V9om6u_ra60oldQ",
   "dataAtualizacao": "2026-09-09T00:00:00.000-0300"
  },
  "historico": {
@@ -24,8 +22,6 @@
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "idBulaPaciente": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzNjQ0NDMyMyIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.RVrw4jD-5FZmmFQTgISe6JLrhLa1YSRC92zUuO-jGDYQ06L4OISV71vw-xXQ_mwiXkuCJMkjVitycyEw9kFvkg",
-     "idBulaProfissional": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzNjQ0NDMyNCIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.uUr34xaXgk-PIlZWN1CCVGQAQkQ2ueU4IBu6u6UP_XQtr5f8S5jlQCg0_Rndk3nhsUuDq-CT0TZPIUhStYpPfQ",
      "priDtSitValDocumento": "2026-03-20T16:51:58.000-0300",
      "ultDtSitDocumento": "2026-03-20T16:51:58.000-0300",
      "ultimaSituacaoDocumento": 43,
@@ -36,8 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2026-03-20T16:51:58.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 33554421,
@@ -45,8 +41,6 @@
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "idBulaPaciente": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyOTMyNzYyNCIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.T0GffRE5Bjz_xjkPJa49_UnBlFlwUaYF7OAHtrJ0dBHmwwzxi4Luj5JjpR4TtPsiw_RfURrkRtRfvZH6Q3Xxgg",
-     "idBulaProfissional": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyOTMyNzYyNSIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.6gKZHMkEivKeYrRZXwaOQQAnAp2OeT3pwWaY3MGi3lU9qjEpwHVAaFy54BOA7h8AuAv_L9U7tV0DkKx1mUKS4Q",
      "priDtSitValDocumento": "2025-04-22T08:41:32.000-0300",
      "ultDtSitDocumento": "2025-04-22T08:41:32.000-0300",
      "ultimaSituacaoDocumento": 43,
@@ -57,8 +51,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-04-22T08:41:32.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 31837126,
@@ -66,8 +60,6 @@
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "idBulaPaciente": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMzU2MjIzOCIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.KQwzAWfa5t9T_ASfSSV8wtYhxwgt-UAAIxFLxAKKI3K3vsppptjR6bas2B_5uAKCSDGeT1w-JqGXeeowoabEsg",
-     "idBulaProfissional": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMzU2MjIzOSIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.dE-4zjRlZkNelorWVc58SLr5-MIblihvYpZR_n3w7Tj7Pos14WOAAGIVCaNPFkSKMhF-82Mbv5NvO313DTSkpw",
      "priDtSitValDocumento": "2024-04-22T09:41:35.000-0300",
      "ultDtSitDocumento": "2024-04-22T09:41:35.000-0300",
      "ultimaSituacaoDocumento": 43,
@@ -78,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-04-22T08:41:32.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 31837126,
@@ -87,8 +79,6 @@
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "idBulaPaciente": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMzU2MjIzOCIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.KQwzAWfa5t9T_ASfSSV8wtYhxwgt-UAAIxFLxAKKI3K3vsppptjR6bas2B_5uAKCSDGeT1w-JqGXeeowoabEsg",
-     "idBulaProfissional": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIyMzU2MjIzOSIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.dE-4zjRlZkNelorWVc58SLr5-MIblihvYpZR_n3w7Tj7Pos14WOAAGIVCaNPFkSKMhF-82Mbv5NvO313DTSkpw",
      "priDtSitValDocumento": "2024-04-22T09:41:35.000-0300",
      "ultDtSitDocumento": "2024-04-22T09:41:35.000-0300",
      "ultimaSituacaoDocumento": 43,
@@ -99,8 +89,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-04-22T09:41:35.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     },
     {
      "idDocumento": 30211029,
@@ -108,8 +98,6 @@
      "idSituacao": 43,
      "numeroRegistro": null,
      "descSituacao": "Aditado ao processo",
-     "idBulaPaciente": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIxOTI0NTcyOSIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.fU-ixR_gi9HDmb65zmg0UHlUDhmlUebdrB6v5JCUKYQ3F5WQHr6ohzntJCVgXPgbBF4WqBpl541o2cAVs8DEyg",
-     "idBulaProfissional": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIxOTI0NTczMCIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.VXT3VLPWTg0oYHN_U-IA_8FEeQ6oCO2PMcQ87w9ijC0AfGx5iYgiuRrCb36p1gQMxZplU3TkSRD_2WYhMVUQIA",
      "priDtSitValDocumento": "2023-03-21T16:16:33.000-0300",
      "ultDtSitDocumento": "2023-03-21T16:16:33.000-0300",
      "ultimaSituacaoDocumento": 43,
@@ -120,13 +108,13 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-03-21T16:16:33.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "ultimaSitVal": true,
-     "histSitVal": true
+     "histSitVal": true,
+     "ultimaSitVal": true
     }
    ],
-   "last": true,
-   "totalElements": 5,
    "totalPages": 1,
+   "totalElements": 5,
+   "last": true,
    "numberOfElements": 5,
    "first": true,
    "sort": null,
@@ -139,8 +127,6 @@
    "idSituacao": 43,
    "numeroRegistro": null,
    "descSituacao": "Aditado ao processo",
-   "idBulaPaciente": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzNjQ0NDMyMyIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.RVrw4jD-5FZmmFQTgISe6JLrhLa1YSRC92zUuO-jGDYQ06L4OISV71vw-xXQ_mwiXkuCJMkjVitycyEw9kFvkg",
-   "idBulaProfissional": "eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiIzNjQ0NDMyNCIsIm5iZiI6MTc4ODk5NzUzOCwiZXhwIjoxNzg4OTk3ODM4fQ.uUr34xaXgk-PIlZWN1CCVGQAQkQ2ueU4IBu6u6UP_XQtr5f8S5jlQCg0_Rndk3nhsUuDq-CT0TZPIUhStYpPfQ",
    "priDtSitValDocumento": "2026-03-20T16:51:58.000-0300",
    "ultDtSitDocumento": "2026-03-20T16:51:58.000-0300",
    "ultimaSituacaoDocumento": 43,
@@ -151,8 +137,8 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2026-03-20T16:51:58.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "ultimaSitVal": true,
-   "histSitVal": true
+   "histSitVal": true,
+   "ultimaSitVal": true
   }
  }
 }
