@@ -11,24 +11,26 @@ const { page } = Astro.props;
 <Base title="Produtos">
   <h1>Produtos acompanhados</h1>
   <p class="muted">{page.total} produtos, ordenados pela última publicação de bula.</p>
+  <p><input class="filter" type="search" id="filtro" placeholder="Filtrar por nome ou empresa" aria-label="Filtrar produtos" autocomplete="off" /></p>
   <div class="table-wrap">
-    <table>
+    <table id="tabela-produtos">
       <thead>
-        <tr><th>Produto</th><th>Empresa</th><th>Registro</th><th>Versões</th><th>Última bula</th></tr>
+        <tr><th>Produto</th><th>Empresa</th><th class="hide-narrow">Registro</th><th class="num hide-narrow">Versões</th><th class="num">Última bula</th></tr>
       </thead>
       <tbody>
         {page.data.map((p) => (
-          <tr>
+          <tr data-texto={`${p.nome} ${p.empresa}`.toLowerCase()}>
             <td><a href={produtoUrl(p.registro)}>{p.nome}</a></td>
-            <td>{p.empresa} <span class="sub">{formatCnpj(p.cnpj)}</span></td>
-            <td class="num">{p.registro}</td>
-            <td class="num">{p.n_versoes}</td>
+            <td>{p.empresa} <span class="sub hide-narrow">{formatCnpj(p.cnpj)}</span></td>
+            <td class="num hide-narrow">{p.registro}</td>
+            <td class="num hide-narrow">{p.n_versoes}</td>
             <td class="num">{dataBR(p.ultima_publicacao)}</td>
           </tr>
         ))}
       </tbody>
     </table>
   </div>
+  <p class="muted" id="sem-resultado" hidden>Nenhum produto com esse nome nesta página.</p>
   {(page.url.prev || page.url.next) && (
     <nav class="pagination">
       {page.url.prev && <a href={page.url.prev}>← Anteriores</a>}
@@ -36,4 +38,19 @@ const { page } = Astro.props;
       {page.url.next && <a href={page.url.next}>Próximos →</a>}
     </nav>
   )}
+  <script>
+    const input = document.getElementById("filtro") as HTMLInputElement | null;
+    const rows = Array.from(document.querySelectorAll<HTMLTableRowElement>("#tabela-produtos tbody tr"));
+    const empty = document.getElementById("sem-resultado");
+    input?.addEventListener("input", () => {
+      const q = input.value.trim().toLowerCase();
+      let shown = 0;
+      for (const r of rows) {
+        const ok = !q || (r.dataset.texto ?? "").includes(q);
+        r.hidden = !ok;
+        if (ok) shown++;
+      }
+      if (empty) empty.hidden = shown > 0;
+    });
+  </script>
 </Base>

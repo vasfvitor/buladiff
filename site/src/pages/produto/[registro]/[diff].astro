@@ -13,6 +13,7 @@ const { meta, diffs } = await detalhe(Astro.params.registro!);
 const diff = diffs.find((d) => d.slug === Astro.params.diff)!;
 const multi = diff.documentos.length > 1;
 const docs = diff.documentos.map((doc) => ({ ...doc, alteradas: doc.secoes.filter((s) => s.alterada) }));
+const totalAlteradas = docs.reduce((n, d) => n + d.alteradas.length, 0);
 ---
 
 <Base
@@ -35,30 +36,12 @@ const docs = diff.documentos.map((doc) => ({ ...doc, alteradas: doc.secoes.filte
     {multi && <p class="note">Este PDF traz {docs.length} bulas (uma por apresentação); cada uma é comparada com a correspondente na versão anterior.</p>}
   </div>
 
-  <h2>Resumo</h2>
-  {docs.map((doc) => (
-    <>
-      {multi && <TituloApresentacao doc={doc} />}
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Seção</th><th>Status</th><th>Palavras alteradas</th><th>Semelhança</th></tr></thead>
-          <tbody>
-            {doc.secoes.map((s) => (
-              <tr>
-                <td>{s.alterada ? <a href={`#${s.ancora}`}>{nomeSecao(diff.tipo, s.secao)}</a> : nomeSecao(diff.tipo, s.secao)}</td>
-                <td class={s.alterada ? "status-alterada" : "status-igual"}>{s.alterada ? "alterada" : "igual"}</td>
-                <td class="num">{s.palavras || ""}</td>
-                <td class="num">{Math.round(s.ratio * 100)}%</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </>
-  ))}
-
   <h2>Alterações</h2>
-  <p class="legend"><span><del>removido</del></span><span><ins>adicionado</ins></span><LegendaDeclarada /></p>
+  <p class="legend">
+    <span><del>removido</del></span><span><ins>adicionado</ins></span><LegendaDeclarada />
+    <span class="muted">Mostramos o entorno de cada mudança; "ver a seção completa" abre o texto inteiro.</span>
+  </p>
+  {totalAlteradas === 0 && <p class="muted">O texto extraído das duas versões é idêntico.</p>}
   <div class="diff">
     {docs.map((doc) => (
       <>
@@ -71,13 +54,45 @@ const docs = diff.documentos.map((doc) => ({ ...doc, alteradas: doc.secoes.filte
               {s.declarada && <span class="badge declared" title="declarada pela empresa">{s.secao}</span>}
               <span class="sub"> {s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
             </h3>
-            <p set:html={s.html} />
+            {s.contexto ? (
+              <div class="trecho">
+                <p class="contexto" set:html={s.contexto} />
+                <details>
+                  <summary class="sub">ver a seção completa</summary>
+                  <p set:html={s.html} />
+                </details>
+              </div>
+            ) : (
+              <p set:html={s.html} />
+            )}
           </section>
         ))}
-        {doc.alteradas.length === 0 && <p class="muted">Sem alterações nesta apresentação.</p>}
+        {multi && doc.alteradas.length === 0 && <p class="muted">Sem alterações nesta apresentação.</p>}
       </>
     ))}
   </div>
+
+  <h2>Todas as seções</h2>
+  {docs.map((doc) => (
+    <>
+      {multi && <TituloApresentacao doc={doc} />}
+      <div class="table-wrap">
+        <table class="resumo">
+          <thead><tr><th>Seção</th><th>Status</th><th class="num">Palavras alteradas</th><th class="num hide-narrow">Semelhança</th></tr></thead>
+          <tbody>
+            {doc.secoes.map((s) => (
+              <tr class={s.alterada ? "" : "row-igual"}>
+                <td>{s.alterada ? <a href={`#${s.ancora}`}>{nomeSecao(diff.tipo, s.secao)}</a> : nomeSecao(diff.tipo, s.secao)}</td>
+                <td class={s.alterada ? "status-alterada" : "status-igual"}>{s.alterada ? "alterada" : "igual"}</td>
+                <td class="num">{s.palavras || ""}</td>
+                <td class="num hide-narrow">{Math.round(s.ratio * 100)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  ))}
   <p class="note">
     O texto vem do PDF oficial via extração automática; tabelas e quebras de página podem gerar diferenças
     que não existem na bula impressa. Em caso de dúvida, consulte o PDF no Bulário.

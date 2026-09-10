@@ -3,15 +3,17 @@ import Base from "../../../layouts/Base.astro";
 import Secoes from "../../../components/Secoes.astro";
 import LegendaDeclarada from "../../../components/LegendaDeclarada.astro";
 import { produtos, detalhe, type Diff } from "../../../lib/data";
-import { dataBR, diffUrl, anvisaUrl, formatCnpj, TIPO_NOME } from "../../../lib/format";
+import { dataBR, diffUrl, anvisaUrl, formatCnpj, TIPO_NOME, TIPO_CURTO } from "../../../lib/format";
 
 export function getStaticPaths() {
   return produtos.map((p) => ({ params: { registro: p.registro } }));
 }
 const { meta, versoes, diffs } = await detalhe(Astro.params.registro!);
-// diffs que chegam em cada versão (a versão "para")
+// diffs que chegam em cada versão (a versão "para"), na ordem paciente → profissional
 const chegando = new Map<string, Diff[]>();
 for (const d of diffs) chegando.set(d.para, [...(chegando.get(d.para) ?? []), d]);
+const ordemTipo = (d: Diff) => (d.tipo === "vp" ? 0 : 1);
+const SITUACAO_PADRAO = "Aditado ao processo"; // é a situação de quase toda versão; só vale mostrar as outras
 ---
 
 <Base title={meta.nome} description={`Histórico de versões e alterações da bula de ${meta.nome} (${meta.empresa}).`}>
@@ -28,32 +30,33 @@ for (const d of diffs) chegando.set(d.para, [...(chegando.get(d.para) ?? []), d]
       no número para ir à mudança. <LegendaDeclarada />
     </p>
     <ol class="timeline">
-      {[...versoes].reverse().map((v) => (
-        <li>
-          <div class="when">{dataBR(v.data)}</div>
-          <div>
+      {[...versoes].reverse().map((v) => {
+        const lista = [...(chegando.get(v.expediente) ?? [])].sort((a, b) => ordemTipo(a) - ordemTipo(b));
+        return (
+          <li>
+            <div class="when">{dataBR(v.data)}</div>
             <div>
-              expediente <strong>{v.expediente}</strong>
-              {v.situacao && <span class="muted"> · {v.situacao}</span>}
-              {v.republicada.length > 0 && (
-                <span class="muted"> · relistada em {v.republicada.map(dataBR).join(", ")}</span>
+              <div class="sub">
+                expediente {v.expediente}
+                {v.situacao && v.situacao !== SITUACAO_PADRAO && <span> · {v.situacao}</span>}
+                {v.republicada.length > 0 && <span> · relistada em {v.republicada.map(dataBR).join(", ")}</span>}
+              </div>
+              {lista.length === 0 ? (
+                <div class="muted">primeira versão arquivada</div>
+              ) : (
+                <div class="bulas">
+                  {lista.map((x) => (
+                    <div class="bula-row">
+                      <a class="bula-tipo" href={diffUrl(meta.registro, x.slug)} title={TIPO_NOME[x.tipo]}>{TIPO_CURTO[x.tipo]}</a>
+                      <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} href={diffUrl(meta.registro, x.slug)} />
+                    </div>
+                  ))}
+                </div>
               )}
             </div>
-            {(chegando.get(v.expediente) ?? []).length === 0 ? (
-              <div class="sub">primeira versão arquivada</div>
-            ) : (
-              <div class="links">
-                {chegando.get(v.expediente)!.map((x) => (
-                  <span>
-                    <a href={diffUrl(meta.registro, x.slug)}>{TIPO_NOME[x.tipo]}</a>:
-                    <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} href={diffUrl(meta.registro, x.slug)} />
-                  </span>
-                ))}
-              </div>
-            )}
-          </div>
-        </li>
-      ))}
+          </li>
+        );
+      })}
     </ol>
   </article>
 </Base>

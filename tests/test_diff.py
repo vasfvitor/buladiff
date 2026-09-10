@@ -3,9 +3,18 @@ from bulario.extract import Document
 
 
 def test_word_diff_marks_changes():
-    html, changed, ratio = word_diff("a b c", "a x c")
+    html, ctx, changed, ratio = word_diff("a b c", "a x c")
     assert "<del>b</del>" in html and "<ins>x</ins>" in html
+    assert ctx == html  # curto: sem omissão
     assert changed == 2 and 0 < ratio < 1
+
+
+def test_word_diff_context_elides_long_equal_runs():
+    same = " ".join(f"w{i}" for i in range(200))
+    html, ctx, changed, _ = word_diff(f"{same} velho {same}", f"{same} novo {same}", contexto=5)
+    assert changed == 2 and ctx != html
+    assert ctx.count("palavras iguais") == 2 and "w199 <del>velho</del> <ins>novo</ins> w0" in ctx
+    assert "w100" not in ctx
 
 
 def test_pair_documents_by_similarity_not_order():

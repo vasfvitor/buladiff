@@ -16,27 +16,43 @@ class SectionDiff:
     secao: str
     palavras: int  # palavras removidas + inseridas
     ratio: float  # semelhança 0..1
-    html: str  # texto com <del>/<ins>
+    html: str  # texto completo com <del>/<ins>
+    contexto: str = ""  # só o entorno das mudanças (trechos iguais longos viram uma marca de omissão)
 
     @property
     def alterada(self) -> bool:
         return self.palavras > 0
 
 
-def word_diff(a: str, b: str) -> tuple[str, int, float]:
+CONTEXTO = 30  # palavras mantidas de cada lado de uma mudança na versão resumida
+
+
+def word_diff(a: str, b: str, contexto: int = CONTEXTO) -> tuple[str, str, int, float]:
+    """(html completo, html só com contexto, palavras alteradas, semelhança 0..1)."""
     aw, bw = a.split(), b.split()
     sm = difflib.SequenceMatcher(None, aw, bw, autojunk=False)
-    out, changed = [], 0
+    full, short, changed = [], [], 0
     for op, i1, i2, j1, j2 in sm.get_opcodes():
         if op == "equal":
-            out.append(html.escape(" ".join(aw[i1:i2])))
+            words = aw[i1:i2]
+            full.append(html.escape(" ".join(words)))
+            if len(words) > 2 * contexto + 10:
+                omitidas = len(words) - 2 * contexto
+                short.append(html.escape(" ".join(words[:contexto])))
+                short.append(f'<span class="omit">[… {omitidas} palavras iguais …]</span>')
+                short.append(html.escape(" ".join(words[-contexto:])))
+            else:
+                short.append(full[-1])
             continue
         changed += (i2 - i1) + (j2 - j1)
+        parts = []
         if i2 > i1:
-            out.append("<del>" + html.escape(" ".join(aw[i1:i2])) + "</del>")
+            parts.append("<del>" + html.escape(" ".join(aw[i1:i2])) + "</del>")
         if j2 > j1:
-            out.append("<ins>" + html.escape(" ".join(bw[j1:j2])) + "</ins>")
-    return " ".join(out), changed, sm.ratio()
+            parts.append("<ins>" + html.escape(" ".join(bw[j1:j2])) + "</ins>")
+        full += parts
+        short += parts
+    return " ".join(full), " ".join(short), changed, sm.ratio()
 
 
 def pair_documents(da: list[Document], db: list[Document]) -> list[tuple[int | None, int | None]]:
@@ -79,8 +95,8 @@ def diff_documents(da: list[Document], db: list[Document], skip_preamble: bool =
             if a.get(k, "") == b.get(k, ""):
                 rows.append(SectionDiff(n, rotulo, k, 0, 1.0, ""))
             else:
-                h, ch, r = word_diff(a.get(k, ""), b.get(k, ""))
-                rows.append(SectionDiff(n, rotulo, k, ch, r, h))
+                h, ctx, ch, r = word_diff(a.get(k, ""), b.get(k, ""))
+                rows.append(SectionDiff(n, rotulo, k, ch, r, h, ctx if ctx != h else ""))
     return rows
 
 

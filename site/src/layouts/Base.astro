@@ -29,6 +29,7 @@ const { title, description = "O que mudou em cada versão de bula publicada no B
     </script>
   </head>
   <body>
+    <a class="skip" href="#conteudo">Ir para o conteúdo</a>
     <header class="site">
       <div class="inner">
         <a class="brand" href={url("/")}>buladiff</a>
@@ -36,6 +37,7 @@ const { title, description = "O que mudou em cada versão de bula publicada no B
           <a href={url("/produtos/")}>Produtos</a>
           <a href={url("/sobre/")}>Sobre</a>
         </nav>
+        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Tema claro/escuro"></button>
         <div class="search">
           <Search
             id="search"
@@ -43,10 +45,9 @@ const { title, description = "O que mudou em cada versão de bula publicada no B
             uiOptions={{ showImages: false, translations: { placeholder: "Buscar medicamento ou empresa", zero_results: "Nada encontrado para [SEARCH_TERM]" } }}
           />
         </div>
-        <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Alternar tema claro/escuro" title="Tema claro/escuro"></button>
       </div>
     </header>
-    <main>
+    <main id="conteudo">
       <slot />
     </main>
     <footer class="site">

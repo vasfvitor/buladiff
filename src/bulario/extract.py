@@ -41,7 +41,10 @@ class Document:
         _, sep, resto = texto.partition(APRESENTACOES)
         base = resto if sep else texto
         base = re.split(r"\b(USO |COMPOSIÇÃO)", base, maxsplit=1)[0]
-        return re.sub(r"\s+", " ", base).strip(" :.-")[:80]
+        base = re.sub(r"\s+", " ", base).strip(" :.-")
+        if len(base) > 70:  # corta em limite de palavra, sem deixar pontuação pendurada
+            base = base[:70].rsplit(" ", 1)[0].rstrip(" ,;:(-") + "…"
+        return base
 
     @property
     def ordenado(self) -> bool:

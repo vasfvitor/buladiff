@@ -4,6 +4,7 @@
 export const ANVISA_BULARIO = "https://consultas.anvisa.gov.br/#/bulario/";
 
 export const TIPO_NOME: Record<string, string> = { vp: "Bula do paciente", vps: "Bula do profissional" };
+export const TIPO_CURTO: Record<string, string> = { vp: "Paciente", vps: "Profissional" };
 
 const SECOES: Record<string, Record<string, string>> = {
   vp: {
@@ -68,8 +69,9 @@ export function url(path: string): string {
   return `${base}${path.startsWith("/") ? "" : "/"}${path}`;
 }
 
+/** Página do produto; sem registro, a lista de produtos. */
 export function produtoUrl(registro: string): string {
-  return url(`/produto/${registro}/`);
+  return registro ? url(`/produto/${registro}/`) : url("/produtos/");
 }
 
 export function diffUrl(registro: string, slug: string): string {

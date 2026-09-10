@@ -53,6 +53,7 @@ def documentos_view(rows: list[SectionDiff], tipo: str, declarado: list[str]) ->
                 "palavras": r.palavras,
                 "ratio": r.ratio,
                 "html": r.html,
+                "contexto": r.contexto,  # "" quando a seção é curta e o texto completo já é o contexto
                 "ancora": secao_id(tipo, r.secao, r.documento, primeira.get(r.secao) == r.documento),
             }
         )

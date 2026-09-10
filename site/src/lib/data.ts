@@ -31,6 +31,7 @@ export interface SecaoDiff {
   palavras: number;
   ratio: number;
   html: string;
+  contexto: string; // "" quando a seção é curta (html já é o contexto)
   ancora: string;
 }
 

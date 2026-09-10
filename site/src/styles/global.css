@@ -31,10 +31,17 @@ body { margin: 0; background: var(--bg); color: var(--fg); }
 a { color: var(--accent); }
 main { max-width: 60rem; margin: 0 auto; padding: 1.5rem 1rem 4rem; }
 header.site { border-bottom: 1px solid var(--line); background: var(--card); }
-header.site .inner { max-width: 60rem; margin: 0 auto; padding: 0.75rem 1rem; display: flex; gap: 1.25rem; align-items: center; flex-wrap: wrap; }
+header.site .inner { max-width: 60rem; margin: 0 auto; padding: 0.75rem 1rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; }
 header.site .brand { font-weight: 700; text-decoration: none; color: var(--fg); font-size: 1.1rem; }
 header.site nav a { margin-right: 1rem; text-decoration: none; }
-header.site .search { margin-left: auto; min-width: 16rem; flex: 1 1 16rem; }
+header.site .theme-toggle { margin-left: auto; order: 1; }
+header.site .search { order: 2; flex: 1 1 100%; }
+@media (min-width: 48rem) {
+  header.site .theme-toggle { order: 3; margin-left: 0; }
+  header.site .search { order: 2; flex: 1 1 16rem; margin-left: auto; max-width: 30rem; }
+}
+.skip { position: absolute; left: -999px; top: 0.5rem; background: var(--card); color: var(--fg); padding: 0.4rem 0.8rem; border-radius: 0.4rem; z-index: 10; }
+.skip:focus { left: 0.5rem; }
 footer.site { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding: 1.5rem 1rem; text-align: center; }
 
 .theme-toggle { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 0.5rem; padding: 0.3rem 0.55rem; cursor: pointer; font: inherit; font-size: 0.85rem; line-height: 1; }
@@ -62,13 +69,31 @@ a.badge:hover, a.badge:focus-visible { background: var(--chip-hover); border-col
 .badge.declared { border-color: var(--declared); background: var(--declared-bg); }
 .badge.declared::after { content: " ✓"; color: var(--declared); font-size: 0.7rem; }
 
+/* lista de alterações da home: grade no desktop, blocos no celular */
+.changes { list-style: none; padding: 0; margin: 0; }
+.changes li { display: grid; grid-template-columns: 6.5rem minmax(10rem, 1.4fr) 8.5rem 1fr; gap: 0.5rem 1rem; align-items: start; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
+.changes.compact li { grid-template-columns: 6.5rem 1fr auto; }
+.changes .when { font-variant-numeric: tabular-nums; color: var(--muted); white-space: nowrap; }
+.changes .what { display: flex; flex-direction: column; min-width: 0; }
+.changes .name { font-weight: 500; }
+.changes .which a { text-decoration: none; }
+@media (max-width: 48rem) {
+  .changes li, .changes.compact li { grid-template-columns: 1fr; gap: 0.2rem; }
+  .changes .which { display: inline; }
+  .hide-narrow { display: none !important; }
+}
+
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 0.6rem; padding: 1rem 1.1rem; margin: 0.75rem 0; }
 .card > * + * { margin-top: 0.5rem; }
 .card > .note { margin-bottom: 0; }
 .timeline { list-style: none; padding: 0; margin: 0; }
 .timeline li { display: grid; grid-template-columns: 7rem 1fr; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
 .timeline .when { font-variant-numeric: tabular-nums; color: var(--muted); }
-.timeline .links { margin-top: 0.25rem; display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.95rem; }
+.timeline .bulas { margin-top: 0.3rem; display: grid; gap: 0.3rem; }
+.bula-row { display: grid; grid-template-columns: 6.5rem 1fr; gap: 0.5rem; align-items: baseline; }
+.bula-tipo { text-decoration: none; font-weight: 500; }
+.bula-tipo:hover { text-decoration: underline; }
+.filter { width: 100%; max-width: 24rem; font: inherit; padding: 0.45rem 0.7rem; border: 1px solid var(--line); border-radius: 0.5rem; background: var(--card); color: var(--fg); }
 
 /* texto do diff e legenda usam as mesmas cores */
 del { background: var(--del-bg); color: var(--del-fg); }
@@ -79,6 +104,11 @@ ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 /* "você está aqui": cor própria (não a âmbar de "declarada") e sem mudar a geometria */
 .diff h3:target { background: var(--target-bg); box-shadow: inset 3px 0 0 var(--accent); }
 .diff h3 .badge { margin-left: 0.4rem; vertical-align: middle; }
+.diff p { max-width: 78ch; }
+.diff .omit { display: inline-block; margin: 0 0.3em; padding: 0 0.5em; color: var(--muted); background: var(--chip-bg); border-radius: 0.3rem; font-size: 0.85em; white-space: nowrap; }
+.diff .trecho summary { cursor: pointer; width: fit-content; margin: 0.25rem 0 0.5rem; }
+.diff .trecho:has(details[open]) .contexto { display: none; }
+.resumo .row-igual td { color: var(--muted); }
 .doc-title { margin-top: 1.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--line); }
 .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
 .status-igual { color: var(--muted); }
@@ -87,7 +117,8 @@ ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 .pagination { display: flex; gap: 1rem; justify-content: center; margin: 1.5rem 0; }
 @media (max-width: 40rem) {
   .timeline li { grid-template-columns: 1fr; }
-  header.site .search { min-width: 100%; }
+  table { font-size: 0.9rem; }
+  th, td { padding: 0.4rem 0.4rem; }
 }
 
 /* Pagefind segue o tema */
