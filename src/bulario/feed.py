@@ -82,7 +82,7 @@ def run(
                 fetch(registro, root, client=client, latest=2, log=lambda s: log("    " + s))
             except (LookupError, OSError) as e:
                 log(f"    erro em {registro}: {e}")
-    state.update({"ate": ate, "ultima_execucao": dt.datetime.now().isoformat(timespec="seconds")})
+    state["ate"] = ate
     historico = state.setdefault("publicacoes", [])
     known = {(h["registro"], h["expediente"]) for h in historico}
     historico.extend(asdict(p) for p in items if (p.registro, p.expediente) not in known)

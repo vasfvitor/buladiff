@@ -13,7 +13,8 @@ git pull --ff-only --quiet
 uv run bulario feed --baixar || echo "$(date -Is) aviso: feed falhou"
 uv run bulario fetch --curados || echo "$(date -Is) aviso: fetch --curados com erros"
 
-if git diff --quiet -- data && [ -z "$(git ls-files --others --exclude-standard data)" ]; then
+# feed.json muda todo dia (data de cobertura); só conta como mudança se houver versão nova ou meta alterado
+if git diff --quiet -- data ':!data/feed.json' && [ -z "$(git ls-files --others --exclude-standard data)" ]; then
   echo "$(date -Is) sem mudanças"
   exit 0
 fi
