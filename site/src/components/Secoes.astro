@@ -1,25 +1,32 @@
 ---
-// Lista de seções como "badges"; as declaradas pela empresa na tabela de histórico ganham contorno.
-import { nomeSecao } from "../lib/data";
+// Chips de seção. Com `href`, cada chip leva à seção correspondente na página do diff.
+// As seções declaradas pela empresa na tabela de histórico ganham a marca ✓ (borda âmbar).
+import { nomeSecao, secaoId } from "../lib/data";
 
 interface Props {
   tipo: string;
   secoes: string[];
   declaradas?: string[];
+  href?: string; // página do diff; o chip vira link para a âncora da seção
 }
-const { tipo, secoes, declaradas = [] } = Astro.props;
+const { tipo, secoes, declaradas = [], href } = Astro.props;
 const ordem = (s: string) => (/^\d+$/.test(s) ? Number(s) : s === "I" ? 0 : s === "II" ? 0.5 : 99);
 const lista = [...secoes].sort((a, b) => ordem(a) - ordem(b));
+const title = (s: string) => nomeSecao(tipo, s) + (declaradas.includes(s) ? " — declarada pela empresa" : "");
 ---
 
 {lista.length === 0 ? (
   <span class="muted">sem alterações</span>
 ) : (
   <span class="badges">
-    {lista.map((s) => (
-      <span class:list={["badge", { declared: declaradas.includes(s) }]} title={nomeSecao(tipo, s)}>
-        {s}
-      </span>
-    ))}
+    {lista.map((s) =>
+      href !== undefined ? (
+        <a class:list={["badge", { declared: declaradas.includes(s) }]} href={`${href}#${secaoId(tipo, s)}`} title={title(s)}>
+          {s}
+        </a>
+      ) : (
+        <span class:list={["badge", { declared: declaradas.includes(s) }]} title={title(s)}>{s}</span>
+      ),
+    )}
   </span>
 )}

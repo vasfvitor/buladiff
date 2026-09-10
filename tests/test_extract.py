@@ -80,3 +80,14 @@ def test_strip_running_keeps_headings_that_repeat():
 def test_document_properties():
     d = Document({"(preâmbulo)": "", "1": "a", "2": "b"}, "vp")
     assert d.ordenado and d.tamanho == 2
+
+
+def test_label_uses_apresentacoes_text():
+    d = Document(
+        {
+            "I": "DORFLEX MAX® orfenadrina Opella APRESENTAÇÕES Comprimidos 600 mg + 70 mg: embalagens com 8 USO ORAL"
+        },
+        "vp",
+    )
+    assert d.label == "Comprimidos 600 mg + 70 mg: embalagens com 8"
+    assert Document({"(preâmbulo)": "capa simples"}, "vp").label == "capa simples"

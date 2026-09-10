@@ -23,8 +23,9 @@ const chegando = (exp: string) => diffs.filter((x) => x.para === exp);
 
     <h2>Versões</h2>
     <p class="note">
-      Da mais recente para a mais antiga. Em cada versão, as seções alteradas em relação à anterior; com
-      contorno, as que a própria empresa declarou na tabela de histórico da bula.
+      Da mais recente para a mais antiga. Em cada versão, as seções alteradas em relação à anterior — clique
+      no número para ir à mudança. <span class="badge declared">4</span> = declarada pela empresa na tabela
+      de histórico da bula.
     </p>
     <ol class="timeline">
       {[...versoes].reverse().map((v) => (
@@ -45,7 +46,7 @@ const chegando = (exp: string) => diffs.filter((x) => x.para === exp);
                 {chegando(v.expediente).map((x) => (
                   <span>
                     <a href={url(`/produto/${meta.registro}/${diffSlug(x)}/`)}>{TIPO_NOME[x.tipo]}</a>:
-                    <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} />
+                    <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} href={url(`/produto/${meta.registro}/${diffSlug(x)}/`)} />
                   </span>
                 ))}
               </div>

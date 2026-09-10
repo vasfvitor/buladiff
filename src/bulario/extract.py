@@ -36,7 +36,12 @@ class Document:
 
     @property
     def label(self) -> str:
-        return (self.secoes.get("I") or self.secoes.get(PREAMBLE) or "")[:60]
+        """Rótulo curto da apresentação: o texto após 'APRESENTAÇÕES' (ou o início da identificação)."""
+        texto = self.secoes.get("I") or self.secoes.get(PREAMBLE) or ""
+        _, sep, resto = texto.partition(APRESENTACOES)
+        base = resto if sep else texto
+        base = re.split(r"\b(USO |COMPOSIÇÃO)", base, maxsplit=1)[0]
+        return re.sub(r"\s+", " ", base).strip(" :.-")[:80]
 
     @property
     def ordenado(self) -> bool:

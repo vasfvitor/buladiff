@@ -124,6 +124,12 @@ export function url(path: string): string {
   return `${base}${path.startsWith("/") ? "" : "/"}${path}`;
 }
 
+/** id de âncora de uma seção na página do diff; `doc` > 1 para o 2º, 3º… documento do mesmo PDF. */
+export function secaoId(tipo: string, secao: string, doc = 1): string {
+  const base = `sec-${tipo}-${secao}`.replace(/[^\w-]+/g, "_");
+  return doc > 1 ? `${base}-d${doc}` : base;
+}
+
 export function diffSlug(d: Diff): string {
   return `${d.de}-${d.para}-${d.tipo}`;
 }

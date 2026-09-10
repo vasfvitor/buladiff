@@ -1,7 +1,7 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import Secoes from "../../../components/Secoes.astro";
-import { todosDetalhes, dataBR, url, diffSlug, nomeSecao, anvisaUrl, TIPO_NOME } from "../../../lib/data";
+import { todosDetalhes, dataBR, url, diffSlug, nomeSecao, secaoId, anvisaUrl, TIPO_NOME } from "../../../lib/data";
 
 export function getStaticPaths() {
   return todosDetalhes().flatMap((d) =>
@@ -9,10 +9,16 @@ export function getStaticPaths() {
   );
 }
 const { meta, diff } = Astro.props;
-const alteradas = diff.secoes.filter((s) => s.alterada);
-const multi = diff.secoes.some((s) => s.documento);
-const titulo = (s: { documento: string; secao: string }) =>
-  (multi ? `${s.documento} — ` : "") + nomeSecao(diff.tipo, s.secao);
+
+// Um PDF pode trazer várias bulas (uma por apresentação); agrupamos as seções por documento.
+const grupos = Array.from(new Set(diff.secoes.map((s) => s.documento))).map((documento, i) => ({
+  documento,
+  indice: i + 1,
+  rotulo: documento.replace(/^\d+:\s*/, ""),
+  secoes: diff.secoes.filter((s) => s.documento === documento),
+}));
+const multi = grupos.length > 1;
+const anchor = (g: { indice: number }, secao: string) => secaoId(diff.tipo, secao, g.indice);
 ---
 
 <Base
@@ -27,40 +33,54 @@ const titulo = (s: { documento: string; secao: string }) =>
   </p>
 
   <div class="card">
-    <div><strong>Seções alteradas:</strong> <Secoes tipo={diff.tipo} secoes={diff.alteradas} declaradas={diff.declarado} /></div>
+    <div><strong>Seções alteradas:</strong> <Secoes tipo={diff.tipo} secoes={diff.alteradas} declaradas={diff.declarado} href="" /></div>
     <div style="margin-top:.4rem">
       <strong>Declaradas pela empresa:</strong>{" "}
       {diff.declarado.length ? <Secoes tipo={diff.tipo} secoes={diff.declarado} declaradas={diff.declarado} /> : <span class="muted">tabela de histórico ausente ou sem itens</span>}
     </div>
+    {multi && <p class="note" style="margin:.6rem 0 0">Este PDF traz {grupos.length} bulas (uma por apresentação); cada uma é comparada com a correspondente na versão anterior.</p>}
   </div>
 
   <h2>Resumo</h2>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Seção</th><th>Status</th><th>Palavras alteradas</th><th>Semelhança</th></tr></thead>
-      <tbody>
-        {diff.secoes.map((s) => (
-          <tr>
-            <td>{s.alterada ? <a href={`#${diff.tipo}-${s.documento}-${s.secao}`.replace(/[^\w-]+/g, "_")}>{titulo(s)}</a> : titulo(s)}</td>
-            <td class={s.alterada ? "status-alterada" : "status-igual"}>{s.alterada ? "alterada" : "igual"}</td>
-            <td class="num">{s.palavras || ""}</td>
-            <td class="num">{Math.round(s.ratio * 100)}%</td>
-          </tr>
-        ))}
-      </tbody>
-    </table>
-  </div>
+  {grupos.map((g) => (
+    <>
+      {multi && <h3 class="doc-title">Apresentação {g.indice}: <span class="muted">{g.rotulo}</span></h3>}
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Seção</th><th>Status</th><th>Palavras alteradas</th><th>Semelhança</th></tr></thead>
+          <tbody>
+            {g.secoes.map((s) => (
+              <tr>
+                <td>{s.alterada ? <a href={`#${anchor(g, s.secao)}`}>{nomeSecao(diff.tipo, s.secao)}</a> : nomeSecao(diff.tipo, s.secao)}</td>
+                <td class={s.alterada ? "status-alterada" : "status-igual"}>{s.alterada ? "alterada" : "igual"}</td>
+                <td class="num">{s.palavras || ""}</td>
+                <td class="num">{Math.round(s.ratio * 100)}%</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  ))}
 
   <h2>Alterações</h2>
-  <p class="legend"><span><del style="background:var(--del-bg);color:var(--del-fg)">removido</del></span><span><ins style="background:var(--ins-bg);color:var(--ins-fg);text-decoration:none">adicionado</ins></span></p>
+  <p class="legend"><span><del>removido</del></span><span><ins>adicionado</ins></span><span><span class="badge declared">4</span> declarada pela empresa</span></p>
   <div class="diff">
-    {alteradas.map((s) => (
-      <section>
-        <h3 id={`${diff.tipo}-${s.documento}-${s.secao}`.replace(/[^\w-]+/g, "_")}>
-          {titulo(s)} <span class="muted" style="font-weight:normal;font-size:.85rem">{s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
-        </h3>
-        <p set:html={s.html} />
-      </section>
+    {grupos.map((g) => (
+      <>
+        {multi && <h3 class="doc-title">Apresentação {g.indice}: <span class="muted">{g.rotulo}</span></h3>}
+        {g.secoes.filter((s) => s.alterada).map((s) => (
+          <section>
+            <h3 id={anchor(g, s.secao)}>
+              {nomeSecao(diff.tipo, s.secao)}
+              {diff.declarado.includes(s.secao) && <span class="badge declared" title="declarada pela empresa">{s.secao}</span>}
+              <span class="muted" style="font-weight:normal;font-size:.85rem"> {s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
+            </h3>
+            <p set:html={s.html} />
+          </section>
+        ))}
+        {g.secoes.every((s) => !s.alterada) && <p class="muted">Sem alterações nesta apresentação.</p>}
+      </>
     ))}
   </div>
   <p class="note">
