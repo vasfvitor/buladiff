@@ -1,0 +1,9 @@
+---
+// Explica o chip com ✓ uma única vez, com o mesmo texto em todas as páginas.
+interface Props {
+  prefixo?: string;
+}
+const { prefixo = "" } = Astro.props;
+---
+
+<span>{prefixo}<span class="badge declared">4</span> = declarada pela empresa na tabela de histórico da bula.</span>

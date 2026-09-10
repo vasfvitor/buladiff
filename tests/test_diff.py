@@ -26,6 +26,7 @@ def test_diff_documents_summary_and_html():
     new = [Document({"(preâmbulo)": "capa v2", "1": "indicado para febre", "2": "igual"}, "vp")]
     rows = diff_documents(old, new, skip_preamble=True)
     assert [r.secao for r in rows] == ["1", "2"]
+    assert rows[0].documento == 1 and rows[0].rotulo == "capa"
     assert summary(rows) == "1(2)"
     out = render_html(rows, "t")
     assert "<del>dor</del>" in out and "<ins>febre</ins>" in out

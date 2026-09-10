@@ -11,7 +11,8 @@ from bulario.extract import PREAMBLE, Document
 
 @dataclass
 class SectionDiff:
-    documento: str  # rótulo do documento ("" se o PDF tem um só)
+    documento: int  # índice (1..n) da bula/apresentação dentro do PDF
+    rotulo: str  # rótulo curto da apresentação (Document.label)
     secao: str
     palavras: int  # palavras removidas + inseridas
     ratio: float  # semelhança 0..1
@@ -66,29 +67,31 @@ def pair_documents(da: list[Document], db: list[Document]) -> list[tuple[int | N
 
 
 def diff_documents(da: list[Document], db: list[Document], skip_preamble: bool = False) -> list[SectionDiff]:
+    """Uma linha por seção de cada par de documentos; `documento` numera os pares de 1 em diante."""
     rows = []
-    multi = max(len(da), len(db)) > 1
     for n, (i, j) in enumerate(pair_documents(da, db), 1):
         a = da[i].secoes if i is not None else {}
         b = db[j].secoes if j is not None else {}
-        label = f"{n}: {(da[i] if i is not None else db[j]).label}" if multi else ""
+        rotulo = (da[i] if i is not None else db[j]).label
         for k in dict.fromkeys(list(a) + list(b)):
             if skip_preamble and k == PREAMBLE:
                 continue
             if a.get(k, "") == b.get(k, ""):
-                rows.append(SectionDiff(label, k, 0, 1.0, ""))
+                rows.append(SectionDiff(n, rotulo, k, 0, 1.0, ""))
             else:
                 h, ch, r = word_diff(a.get(k, ""), b.get(k, ""))
-                rows.append(SectionDiff(label, k, ch, r, h))
+                rows.append(SectionDiff(n, rotulo, k, ch, r, h))
     return rows
 
 
 def summary(rows: list[SectionDiff]) -> str:
-    """Resumo curto: seções alteradas com contagem de palavras, por documento."""
+    """Resumo curto: seções alteradas com contagem de palavras, por apresentação (se houver mais de uma)."""
+    docs = dict.fromkeys((r.documento, r.rotulo) for r in rows)
     out = []
-    for label in dict.fromkeys(r.documento for r in rows):
-        changed = [f"{r.secao}({r.palavras})" for r in rows if r.documento == label and r.alterada]
-        out.append((f"[{label}] " if label else "") + (" ".join(changed) or "sem alterações"))
+    for n, rotulo in docs:
+        changed = [f"{r.secao}({r.palavras})" for r in rows if r.documento == n and r.alterada]
+        prefix = f"[{n}: {rotulo}] " if len(docs) > 1 else ""
+        out.append(prefix + (" ".join(changed) or "sem alterações"))
     return "\n".join(out)
 
 
@@ -101,8 +104,10 @@ CSS = (
 
 
 def render_html(rows: list[SectionDiff], title: str, subtitle: str = "") -> str:
+    multi = len({r.documento for r in rows}) > 1
+
     def name(r: SectionDiff) -> str:
-        return html.escape(f"[{r.documento}] {r.secao}" if r.documento else r.secao)
+        return html.escape(f"[{r.documento}: {r.rotulo}] {r.secao}" if multi else r.secao)
 
     table = "".join(
         f"<tr><td>{name(r)}</td><td class={'alterada' if r.alterada else 'igual'}>"

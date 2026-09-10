@@ -1,0 +1,10 @@
+---
+import type { DocumentoDiff } from "../lib/data";
+
+interface Props {
+  doc: DocumentoDiff;
+}
+const { doc } = Astro.props;
+---
+
+<h3 class="doc-title">Apresentação {doc.indice}: <span class="muted">{doc.rotulo}</span></h3>

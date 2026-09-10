@@ -1,63 +1,29 @@
-/* Tema: claro por padrão; escuro por prefers-color-scheme ou por data-theme="dark" (alternador no cabeçalho). */
+/* Tema: cada token é escrito uma vez com light-dark(); o que muda entre temas é só o color-scheme,
+   definido pelo sistema (prefers-color-scheme) ou pelo alternador (data-theme). */
 :root {
-  --bg: #fbfaf7;
-  --fg: #1d1d1b;
-  --muted: #5f5f5a;
-  --line: #e4e1d8;
-  --card: #ffffff;
-  --accent: #155e75;
-  --del-bg: #fde8e8;
-  --del-fg: #8a1c1c;
-  --ins-bg: #e3f5e6;
-  --ins-fg: #14532d;
-  --chip-bg: #edece7;
-  --chip-fg: #3a3a36;
-  --chip-hover: #dedbd2;
-  --declared: #b7791f;
-  --declared-bg: #fff6e0;
-  --target-bg: #e3eef2;
   color-scheme: light;
+  --bg: light-dark(#fbfaf7, #16181c);
+  --fg: light-dark(#1d1d1b, #e8e6e1);
+  --muted: light-dark(#5f5f5a, #a1a19a);
+  --line: light-dark(#e4e1d8, #2d3036);
+  --card: light-dark(#ffffff, #1e2126);
+  --accent: light-dark(#155e75, #67c3d8);
+  --del-bg: light-dark(#fde8e8, #4a1d1d);
+  --del-fg: light-dark(#8a1c1c, #ffb4b4);
+  --ins-bg: light-dark(#e3f5e6, #173a24);
+  --ins-fg: light-dark(#14532d, #a7e3b8);
+  --chip-bg: light-dark(#edece7, #2a2e35);
+  --chip-fg: light-dark(#3a3a36, #d6d4ce);
+  --chip-hover: light-dark(#dedbd2, #3a3f48);
+  --declared: light-dark(#b7791f, #e0a94a);
+  --declared-bg: light-dark(#fff6e0, #3a2f14);
+  --target-bg: light-dark(#e3eef2, #1e2f36);
+  --toggle-glyph: "☾";
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #16181c;
-    --fg: #e8e6e1;
-    --muted: #a1a19a;
-    --line: #2d3036;
-    --card: #1e2126;
-    --accent: #67c3d8;
-    --del-bg: #4a1d1d;
-    --del-fg: #ffb4b4;
-    --ins-bg: #173a24;
-    --ins-fg: #a7e3b8;
-    --chip-bg: #2a2e35;
-    --chip-fg: #d6d4ce;
-    --chip-hover: #3a3f48;
-    --declared: #e0a94a;
-    --declared-bg: #3a2f14;
-    --target-bg: #1e2f36;
-    color-scheme: dark;
-  }
+  :root:not([data-theme="light"]) { color-scheme: dark; --toggle-glyph: "☀"; }
 }
-:root[data-theme="dark"] {
-  --bg: #16181c;
-  --fg: #e8e6e1;
-  --muted: #a1a19a;
-  --line: #2d3036;
-  --card: #1e2126;
-  --accent: #67c3d8;
-  --del-bg: #4a1d1d;
-  --del-fg: #ffb4b4;
-  --ins-bg: #173a24;
-  --ins-fg: #a7e3b8;
-  --chip-bg: #2a2e35;
-  --chip-fg: #d6d4ce;
-  --chip-hover: #3a3f48;
-  --declared: #e0a94a;
-  --declared-bg: #3a2f14;
-  --target-bg: #1e2f36;
-  color-scheme: dark;
-}
+:root[data-theme="dark"] { color-scheme: dark; --toggle-glyph: "☀"; }
 
 * { box-sizing: border-box; }
 html { font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
@@ -71,21 +37,16 @@ header.site nav a { margin-right: 1rem; text-decoration: none; }
 header.site .search { margin-left: auto; min-width: 16rem; flex: 1 1 16rem; }
 footer.site { color: var(--muted); font-size: 0.85rem; border-top: 1px solid var(--line); padding: 1.5rem 1rem; text-align: center; }
 
-/* alternador de tema */
-.theme-toggle { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 0.5rem; padding: 0.3rem 0.55rem; cursor: pointer; font: inherit; font-size: 0.85rem; line-height: 1; display: inline-flex; align-items: center; gap: 0.35rem; }
+.theme-toggle { border: 1px solid var(--line); background: var(--card); color: var(--fg); border-radius: 0.5rem; padding: 0.3rem 0.55rem; cursor: pointer; font: inherit; font-size: 0.85rem; line-height: 1; }
+.theme-toggle::before { content: var(--toggle-glyph); }
 .theme-toggle:hover { background: var(--chip-bg); }
-.theme-toggle .when-dark { display: none; }
-:root[data-theme="dark"] .theme-toggle .when-dark { display: inline; }
-:root[data-theme="dark"] .theme-toggle .when-light { display: none; }
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) .theme-toggle .when-dark { display: inline; }
-  :root:not([data-theme="light"]) .theme-toggle .when-light { display: none; }
-}
 
 h1 { font-size: 1.6rem; line-height: 1.2; margin: 0 0 0.25rem; }
 h2 { font-size: 1.2rem; margin: 2rem 0 0.75rem; }
 h3 { font-size: 1rem; margin: 1.25rem 0 0.5rem; }
 .muted { color: var(--muted); }
+.sub { color: var(--muted); font-size: 0.85rem; font-weight: normal; }
+.note { font-size: 0.9rem; color: var(--muted); }
 .lead { font-size: 1.05rem; max-width: 44rem; }
 
 table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
@@ -100,28 +61,30 @@ td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: now
 a.badge:hover, a.badge:focus-visible { background: var(--chip-hover); border-color: var(--muted); }
 .badge.declared { border-color: var(--declared); background: var(--declared-bg); }
 .badge.declared::after { content: " ✓"; color: var(--declared); font-size: 0.7rem; }
-.badge.tipo { text-transform: uppercase; font-weight: 600; letter-spacing: 0.04em; }
 
 .card { background: var(--card); border: 1px solid var(--line); border-radius: 0.6rem; padding: 1rem 1.1rem; margin: 0.75rem 0; }
+.card > * + * { margin-top: 0.5rem; }
+.card > .note { margin-bottom: 0; }
 .timeline { list-style: none; padding: 0; margin: 0; }
 .timeline li { display: grid; grid-template-columns: 7rem 1fr; gap: 0.75rem; padding: 0.6rem 0; border-bottom: 1px solid var(--line); }
 .timeline .when { font-variant-numeric: tabular-nums; color: var(--muted); }
 .timeline .links { margin-top: 0.25rem; display: flex; gap: 1rem; flex-wrap: wrap; font-size: 0.95rem; }
 
-.diff p { max-width: 100%; }
-.diff del { background: var(--del-bg); color: var(--del-fg); text-decoration: line-through; text-decoration-thickness: 1px; padding: 0 0.1em; }
-.diff ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; padding: 0 0.1em; }
+/* texto do diff e legenda usam as mesmas cores */
+del { background: var(--del-bg); color: var(--del-fg); }
+ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
+.diff del { text-decoration: line-through; text-decoration-thickness: 1px; padding: 0 0.1em; }
+.diff ins { padding: 0 0.1em; }
 .diff h3[id] { scroll-margin-top: 3rem; padding-left: 0.5rem; margin-left: -0.5rem; border-radius: 0.3rem; }
 /* "você está aqui": cor própria (não a âmbar de "declarada") e sem mudar a geometria */
 .diff h3:target { background: var(--target-bg); box-shadow: inset 3px 0 0 var(--accent); }
+.diff h3 .badge { margin-left: 0.4rem; vertical-align: middle; }
+.doc-title { margin-top: 1.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--line); }
 .legend { display: flex; gap: 1.25rem; flex-wrap: wrap; font-size: 0.9rem; align-items: center; }
-.legend del { background: var(--del-bg); color: var(--del-fg); }
-.legend ins { background: var(--ins-bg); color: var(--ins-fg); text-decoration: none; }
 .status-igual { color: var(--muted); }
 .status-alterada { color: var(--del-fg); font-weight: 600; }
 
 .pagination { display: flex; gap: 1rem; justify-content: center; margin: 1.5rem 0; }
-.note { font-size: 0.9rem; color: var(--muted); }
 @media (max-width: 40rem) {
   .timeline li { grid-template-columns: 1fr; }
   header.site .search { min-width: 100%; }
@@ -139,7 +102,3 @@ a.badge:hover, a.badge:focus-visible { background: var(--chip-hover); border-col
   --pagefind-ui-border-radius: 0.5rem;
   --pagefind-ui-font: inherit;
 }
-
-/* diff de PDF com várias apresentações */
-.doc-title { margin-top: 1.75rem; padding-bottom: 0.3rem; border-bottom: 2px solid var(--line); }
-.diff h3 .badge { margin-left: 0.4rem; vertical-align: middle; }

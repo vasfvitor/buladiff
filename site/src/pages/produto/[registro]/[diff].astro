@@ -1,36 +1,25 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import Secoes from "../../../components/Secoes.astro";
-import { todosDetalhes, dataBR, url, diffSlug, nomeSecao, secaoId, anvisaUrl, TIPO_NOME } from "../../../lib/data";
+import LegendaDeclarada from "../../../components/LegendaDeclarada.astro";
+import TituloApresentacao from "../../../components/TituloApresentacao.astro";
+import { produtos, detalhe } from "../../../lib/data";
+import { dataBR, produtoUrl, nomeSecao, anvisaUrl, TIPO_NOME } from "../../../lib/format";
 
 export function getStaticPaths() {
-  return todosDetalhes().flatMap((d) =>
-    d.diffs.map((diff) => ({ params: { registro: d.meta.registro, diff: diffSlug(diff) }, props: { meta: d.meta, diff } })),
-  );
+  return produtos.flatMap((p) => p.diffs.map((slug) => ({ params: { registro: p.registro, diff: slug } })));
 }
-const { meta, diff } = Astro.props;
-
-// Um PDF pode trazer várias bulas (uma por apresentação); agrupamos as seções por documento.
-const grupos = Array.from(new Set(diff.secoes.map((s) => s.documento))).map((documento, i) => ({
-  documento,
-  indice: i + 1,
-  rotulo: documento.replace(/^\d+:\s*/, ""),
-  secoes: diff.secoes.filter((s) => s.documento === documento),
-}));
-const multi = grupos.length > 1;
-// A primeira apresentação em que a seção está alterada recebe o id simples (é para onde os chips apontam);
-// as seguintes recebem o sufixo -dN.
-const primeira = new Map<string, number>();
-for (const g of grupos) for (const s of g.secoes) if (s.alterada && !primeira.has(s.secao)) primeira.set(s.secao, g.indice);
-const anchor = (g: { indice: number }, secao: string) =>
-  secaoId(diff.tipo, secao, primeira.get(secao) === g.indice ? 1 : g.indice);
+const { meta, diffs } = await detalhe(Astro.params.registro!);
+const diff = diffs.find((d) => d.slug === Astro.params.diff)!;
+const multi = diff.documentos.length > 1;
+const docs = diff.documentos.map((doc) => ({ ...doc, alteradas: doc.secoes.filter((s) => s.alterada) }));
 ---
 
 <Base
   title={`${meta.nome} — ${TIPO_NOME[diff.tipo]} ${dataBR(diff.de_data)} → ${dataBR(diff.para_data)}`}
   description={`Diferenças na ${TIPO_NOME[diff.tipo].toLowerCase()} de ${meta.nome} entre ${dataBR(diff.de_data)} e ${dataBR(diff.para_data)}.`}
 >
-  <p class="muted"><a href={url(`/produto/${meta.registro}/`)}>{meta.nome}</a> · {meta.empresa}</p>
+  <p class="muted"><a href={produtoUrl(meta.registro)}>{meta.nome}</a> · {meta.empresa}</p>
   <h1>{TIPO_NOME[diff.tipo]}: {dataBR(diff.de_data)} → {dataBR(diff.para_data)}</h1>
   <p class="muted">
     expediente {diff.de} → {diff.para} ·
@@ -39,24 +28,24 @@ const anchor = (g: { indice: number }, secao: string) =>
 
   <div class="card">
     <div><strong>Seções alteradas:</strong> <Secoes tipo={diff.tipo} secoes={diff.alteradas} declaradas={diff.declarado} href="" /></div>
-    <div style="margin-top:.4rem">
+    <div>
       <strong>Declaradas pela empresa:</strong>{" "}
       {diff.declarado.length ? <Secoes tipo={diff.tipo} secoes={diff.declarado} declaradas={diff.declarado} /> : <span class="muted">tabela de histórico ausente ou sem itens</span>}
     </div>
-    {multi && <p class="note" style="margin:.6rem 0 0">Este PDF traz {grupos.length} bulas (uma por apresentação); cada uma é comparada com a correspondente na versão anterior.</p>}
+    {multi && <p class="note">Este PDF traz {docs.length} bulas (uma por apresentação); cada uma é comparada com a correspondente na versão anterior.</p>}
   </div>
 
   <h2>Resumo</h2>
-  {grupos.map((g) => (
+  {docs.map((doc) => (
     <>
-      {multi && <h3 class="doc-title">Apresentação {g.indice}: <span class="muted">{g.rotulo}</span></h3>}
+      {multi && <TituloApresentacao doc={doc} />}
       <div class="table-wrap">
         <table>
           <thead><tr><th>Seção</th><th>Status</th><th>Palavras alteradas</th><th>Semelhança</th></tr></thead>
           <tbody>
-            {g.secoes.map((s) => (
+            {doc.secoes.map((s) => (
               <tr>
-                <td>{s.alterada ? <a href={`#${anchor(g, s.secao)}`}>{nomeSecao(diff.tipo, s.secao)}</a> : nomeSecao(diff.tipo, s.secao)}</td>
+                <td>{s.alterada ? <a href={`#${s.ancora}`}>{nomeSecao(diff.tipo, s.secao)}</a> : nomeSecao(diff.tipo, s.secao)}</td>
                 <td class={s.alterada ? "status-alterada" : "status-igual"}>{s.alterada ? "alterada" : "igual"}</td>
                 <td class="num">{s.palavras || ""}</td>
                 <td class="num">{Math.round(s.ratio * 100)}%</td>
@@ -69,23 +58,23 @@ const anchor = (g: { indice: number }, secao: string) =>
   ))}
 
   <h2>Alterações</h2>
-  <p class="legend"><span><del>removido</del></span><span><ins>adicionado</ins></span><span><span class="badge declared">4</span> declarada pela empresa</span></p>
+  <p class="legend"><span><del>removido</del></span><span><ins>adicionado</ins></span><LegendaDeclarada /></p>
   <div class="diff">
-    {grupos.map((g) => (
+    {docs.map((doc) => (
       <>
-        {multi && <h3 class="doc-title">Apresentação {g.indice}: <span class="muted">{g.rotulo}</span></h3>}
-        {g.secoes.filter((s) => s.alterada).map((s) => (
+        {multi && <TituloApresentacao doc={doc} />}
+        {doc.alteradas.map((s) => (
           <section>
-            <h3 id={anchor(g, s.secao)}>
-              {multi && <span class="muted" style="font-weight:normal">Apresentação {g.indice} · </span>}
+            <h3 id={s.ancora}>
+              {multi && <span class="sub">Apresentação {doc.indice} · </span>}
               {nomeSecao(diff.tipo, s.secao)}
-              {diff.declarado.includes(s.secao) && <span class="badge declared" title="declarada pela empresa">{s.secao}</span>}
-              <span class="muted" style="font-weight:normal;font-size:.85rem"> {s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
+              {s.declarada && <span class="badge declared" title="declarada pela empresa">{s.secao}</span>}
+              <span class="sub"> {s.palavras} palavras · semelhança {Math.round(s.ratio * 100)}%</span>
             </h3>
             <p set:html={s.html} />
           </section>
         ))}
-        {g.secoes.every((s) => !s.alterada) && <p class="muted">Sem alterações nesta apresentação.</p>}
+        {doc.alteradas.length === 0 && <p class="muted">Sem alterações nesta apresentação.</p>}
       </>
     ))}
   </div>

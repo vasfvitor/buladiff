@@ -1,5 +1,8 @@
-// Carrega os JSON gerados por `bulario export --out site/src/data`.
+// Dados gerados por `bulario export --out site/src/data`. Os arquivos leves (lista de produtos,
+// recentes, feed) são carregados de imediato; o detalhe de cada produto (com o texto dos diffs, MBs)
+// só quando a página daquele produto é gerada.
 import produtosJson from "../data/produtos.json";
+import recentesJson from "../data/recentes.json";
 import feedJson from "../data/feed.json";
 
 export interface Produto {
@@ -8,40 +11,45 @@ export interface Produto {
   nome: string;
   empresa: string;
   cnpj: string;
-  processo: string;
   ultima_publicacao: string;
   n_versoes: number;
-  tem_diff: boolean;
+  diffs: string[]; // slugs
 }
 
 export interface Versao {
   expediente: string;
   data: string;
-  situacao: string;
   republicada: string[];
-  tipos: string[];
+  situacao: string;
   declarado: Record<string, string[]>;
 }
 
 export interface SecaoDiff {
-  documento: string;
   secao: string;
+  alterada: boolean;
+  declarada: boolean;
   palavras: number;
   ratio: number;
   html: string;
-  alterada: boolean;
+  ancora: string;
+}
+
+export interface DocumentoDiff {
+  indice: number;
+  rotulo: string;
+  secoes: SecaoDiff[];
 }
 
 export interface Diff {
+  slug: string;
   de: string;
   para: string;
   de_data: string;
   para_data: string;
   tipo: "vp" | "vps";
-  resumo: string;
   alteradas: string[];
   declarado: string[];
-  secoes: SecaoDiff[];
+  documentos: DocumentoDiff[];
 }
 
 export interface Detalhe {
@@ -50,95 +58,34 @@ export interface Detalhe {
   diffs: Diff[];
 }
 
-export interface Publicacao {
+export interface Recente {
   registro: string;
-  id_produto: number;
   nome: string;
   empresa: string;
-  cnpj: string;
+  slug: string;
+  tipo: "vp" | "vps";
+  para_data: string;
+  alteradas: string[];
+  declarado: string[];
+}
+
+export interface Publicacao {
+  registro: string;
+  nome: string;
+  empresa: string;
   expediente: string;
   data: string;
-  processo: string;
+  arquivado: boolean;
 }
 
 export const produtos = produtosJson as Produto[];
-export const feed = feedJson as { ate?: string; ultima_execucao?: string; publicacoes: Publicacao[] };
+export const recentes = recentesJson as Recente[];
+export const feed = feedJson as { ate: string | null; publicacoes: Publicacao[] };
 
-const detalhes = import.meta.glob<Detalhe>("../data/produtos/*.json", { eager: true, import: "default" });
+const detalhes = import.meta.glob<{ default: Detalhe }>("../data/produtos/*.json");
 
-export function detalhe(registro: string): Detalhe | undefined {
-  return detalhes[`../data/produtos/${registro}.json`];
-}
-
-export function todosDetalhes(): Detalhe[] {
-  return Object.values(detalhes);
-}
-
-export const TIPO_NOME: Record<string, string> = { vp: "Bula do paciente", vps: "Bula do profissional" };
-
-export const SECOES: Record<string, Record<string, string>> = {
-  vp: {
-    I: "Identificação do medicamento",
-    II: "Informações ao paciente",
-    "1": "Para que este medicamento é indicado?",
-    "2": "Como este medicamento funciona?",
-    "3": "Quando não devo usar este medicamento?",
-    "4": "O que devo saber antes de usar este medicamento?",
-    "5": "Onde, como e por quanto tempo posso guardar este medicamento?",
-    "6": "Como devo usar este medicamento?",
-    "7": "O que devo fazer quando eu me esquecer de usar este medicamento?",
-    "8": "Quais os males que este medicamento pode me causar?",
-    "9": "O que fazer se alguém usar uma quantidade maior do que a indicada?",
-    III: "Dizeres legais",
-  },
-  vps: {
-    I: "Identificação do medicamento",
-    II: "Informações técnicas aos profissionais de saúde",
-    "1": "Indicações",
-    "2": "Resultados de eficácia",
-    "3": "Características farmacológicas",
-    "4": "Contraindicações",
-    "5": "Advertências e precauções",
-    "6": "Interações medicamentosas",
-    "7": "Cuidados de armazenamento do medicamento",
-    "8": "Posologia e modo de usar",
-    "9": "Reações adversas",
-    "10": "Superdose",
-    III: "Dizeres legais",
-  },
-};
-
-export function nomeSecao(tipo: string, secao: string): string {
-  const titulo = SECOES[tipo]?.[secao];
-  if (!titulo) return secao;
-  return /^\d+$/.test(secao) ? `${secao}. ${titulo}` : `${secao} – ${titulo}`;
-}
-
-export function dataBR(iso: string): string {
-  const [a, m, d] = iso.slice(0, 10).split("-");
-  return `${d}/${m}/${a}`;
-}
-
-export function url(path: string): string {
-  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
-  return `${base}${path.startsWith("/") ? "" : "/"}${path}`;
-}
-
-/** id de âncora de uma seção na página do diff; `doc` > 1 para o 2º, 3º… documento do mesmo PDF. */
-export function secaoId(tipo: string, secao: string, doc = 1): string {
-  const base = `sec-${tipo}-${secao}`.replace(/[^\w-]+/g, "_");
-  return doc > 1 ? `${base}-d${doc}` : base;
-}
-
-export function diffSlug(d: Diff): string {
-  return `${d.de}-${d.para}-${d.tipo}`;
-}
-
-export function anvisaUrl(idProduto: number): string {
-  return `https://consultas.anvisa.gov.br/#/bulario/detalhe/${idProduto}`;
-}
-
-export function formatCnpj(cnpj: string): string {
-  const d = cnpj.padStart(14, "0");
-  return `${d.slice(0, 2)}.${d.slice(2, 5)}.${d.slice(5, 8)}/${d.slice(8, 12)}-${d.slice(12)}`;
+export async function detalhe(registro: string): Promise<Detalhe> {
+  const load = detalhes[`../data/produtos/${registro}.json`];
+  if (!load) throw new Error(`produto ${registro} não exportado`);
+  return (await load()).default;
 }

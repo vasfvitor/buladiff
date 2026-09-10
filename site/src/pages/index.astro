@@ -1,14 +1,11 @@
 ---
 import Base from "../layouts/Base.astro";
 import Secoes from "../components/Secoes.astro";
-import { produtos, feed, todosDetalhes, dataBR, url, diffSlug, TIPO_NOME } from "../lib/data";
+import LegendaDeclarada from "../components/LegendaDeclarada.astro";
+import { produtos, recentes, feed } from "../lib/data";
+import { dataBR, produtoUrl, diffUrl, TIPO_NOME } from "../lib/format";
 
-const recentes = todosDetalhes()
-  .flatMap((d) => d.diffs.map((diff) => ({ produto: d.meta, diff })))
-  .sort((a, b) => b.diff.para_data.localeCompare(a.diff.para_data))
-  .slice(0, 12);
 const publicacoes = [...feed.publicacoes].sort((a, b) => b.data.localeCompare(a.data)).slice(0, 20);
-const monitorados = new Set(produtos.map((p) => p.registro));
 ---
 
 <Base title="Início">
@@ -19,22 +16,22 @@ const monitorados = new Set(produtos.map((p) => p.registro));
   </p>
 
   <h2>Últimas alterações</h2>
-  <p class="note">Cada número é uma seção da bula; clique para ir direto à mudança. <span class="badge declared">4</span> = a empresa declarou a alteração na tabela de histórico da bula.</p>
+  <p class="note">Cada número é uma seção da bula; clique para ir direto à mudança. <LegendaDeclarada /></p>
   <div class="table-wrap">
     <table>
       <thead>
         <tr><th>Publicada em</th><th>Produto</th><th>Bula</th><th>Seções alteradas</th></tr>
       </thead>
       <tbody>
-        {recentes.map(({ produto, diff }) => (
+        {recentes.slice(0, 12).map((r) => (
           <tr>
-            <td class="num">{dataBR(diff.para_data)}</td>
+            <td class="num">{dataBR(r.para_data)}</td>
             <td>
-              <a href={url(`/produto/${produto.registro}/`)}>{produto.nome}</a>
-              <div class="muted" style="font-size:.85rem">{produto.empresa}</div>
+              <a href={produtoUrl(r.registro)}>{r.nome}</a>
+              <div class="sub">{r.empresa}</div>
             </td>
-            <td><a href={url(`/produto/${produto.registro}/${diffSlug(diff)}/`)}>{TIPO_NOME[diff.tipo]}</a></td>
-            <td><Secoes tipo={diff.tipo} secoes={diff.alteradas} declaradas={diff.declarado} href={url(`/produto/${produto.registro}/${diffSlug(diff)}/`)} /></td>
+            <td><a href={diffUrl(r.registro, r.slug)}>{TIPO_NOME[r.tipo]}</a></td>
+            <td><Secoes tipo={r.tipo} secoes={r.alteradas} declaradas={r.declarado} href={diffUrl(r.registro, r.slug)} /></td>
           </tr>
         ))}
       </tbody>
@@ -55,7 +52,7 @@ const monitorados = new Set(produtos.map((p) => p.registro));
             {publicacoes.map((p) => (
               <tr>
                 <td class="num">{dataBR(p.data)}</td>
-                <td>{monitorados.has(p.registro) ? <a href={url(`/produto/${p.registro}/`)}>{p.nome}</a> : p.nome}</td>
+                <td>{p.arquivado ? <a href={produtoUrl(p.registro)}>{p.nome}</a> : p.nome}</td>
                 <td>{p.empresa}</td>
                 <td class="num">{p.expediente}</td>
               </tr>

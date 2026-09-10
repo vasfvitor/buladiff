@@ -39,7 +39,8 @@ def test_export_produces_list_and_detail(tmp_path: Path):
     n = export(tmp_path / "data", tmp_path / "out", log=lambda s: None)
     assert n == 1
     produtos = json.loads((tmp_path / "out" / "produtos.json").read_text())
-    assert produtos[0]["nome"] == "risperidona" and produtos[0]["tem_diff"] and produtos[0]["n_versoes"] == 4
+    assert produtos[0]["nome"] == "risperidona" and produtos[0]["n_versoes"] == 4
+    assert produtos[0]["diffs"] == ["0046116231-0121761258-vp", "0121761258-0200000000-vp"]
     detail = json.loads((tmp_path / "out" / "produtos" / "118190404.json").read_text())
     assert [v["expediente"] for v in detail["versoes"]] == ["0046116231", "0121761258", "0200000000"]
     assert detail["versoes"][1]["situacao"] == "Aditado ao processo"
@@ -47,6 +48,28 @@ def test_export_produces_list_and_detail(tmp_path: Path):
     d, d2 = detail["diffs"]  # a relistagem não gera diff
     assert d["tipo"] == "vp" and d["de"] == "0046116231" and d["para"] == "0121761258"
     assert d2["de"] == "0121761258" and d2["para"] == "0200000000"
-    assert d["alteradas"] == ["1"] and d["resumo"] == "1(2)"
-    assert any("<ins>febre</ins>" in s["html"] for s in d["secoes"])
-    assert (tmp_path / "out" / "feed.json").exists()
+    assert d["alteradas"] == ["1"]
+    (doc,) = d["documentos"]
+    assert doc["indice"] == 1
+    secao1 = next(s for s in doc["secoes"] if s["secao"] == "1")
+    assert secao1["alterada"] and secao1["ancora"] == "sec-vp-1" and "<ins>febre</ins>" in secao1["html"]
+    recentes = json.loads((tmp_path / "out" / "recentes.json").read_text())
+    assert [r["slug"] for r in recentes] == ["0121761258-0200000000-vp", "0046116231-0121761258-vp"]
+    assert "html" not in json.dumps(recentes)
+    feed = json.loads((tmp_path / "out" / "feed.json").read_text())
+    assert feed["publicacoes"] == []
+
+
+def test_ordenar_secoes_and_anchors():
+    from bulario.diff import SectionDiff
+    from bulario.export import documentos_view, ordenar_secoes
+
+    assert ordenar_secoes(["III", "10", "2", "I", "1"]) == ["I", "1", "2", "10", "III"]
+    rows = [
+        SectionDiff(1, "a", "4", 0, 1.0, ""),  # não alterada no doc 1
+        SectionDiff(2, "b", "4", 5, 0.9, "x"),  # 1ª alteração da seção 4: id simples
+        SectionDiff(3, "c", "4", 5, 0.9, "y"),
+    ]
+    docs = documentos_view(rows, "vp", ["4"])
+    assert [d["secoes"][0]["ancora"] for d in docs] == ["sec-vp-4-d1", "sec-vp-4", "sec-vp-4-d3"]
+    assert all(d["secoes"][0]["declarada"] for d in docs)

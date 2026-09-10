@@ -1,7 +1,8 @@
 ---
 import type { GetStaticPaths } from "astro";
 import Base from "../../layouts/Base.astro";
-import { produtos, dataBR, url, formatCnpj } from "../../lib/data";
+import { produtos } from "../../lib/data";
+import { dataBR, produtoUrl, formatCnpj } from "../../lib/format";
 
 export const getStaticPaths = (({ paginate }) => paginate(produtos, { pageSize: 100 })) satisfies GetStaticPaths;
 const { page } = Astro.props;
@@ -18,8 +19,8 @@ const { page } = Astro.props;
       <tbody>
         {page.data.map((p) => (
           <tr>
-            <td><a href={url(`/produto/${p.registro}/`)}>{p.nome}</a></td>
-            <td>{p.empresa} <span class="muted" style="font-size:.8rem">{formatCnpj(p.cnpj)}</span></td>
+            <td><a href={produtoUrl(p.registro)}>{p.nome}</a></td>
+            <td>{p.empresa} <span class="sub">{formatCnpj(p.cnpj)}</span></td>
             <td class="num">{p.registro}</td>
             <td class="num">{p.n_versoes}</td>
             <td class="num">{dataBR(p.ultima_publicacao)}</td>

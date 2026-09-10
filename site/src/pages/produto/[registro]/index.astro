@@ -1,16 +1,17 @@
 ---
 import Base from "../../../layouts/Base.astro";
 import Secoes from "../../../components/Secoes.astro";
-import { produtos, detalhe, dataBR, url, diffSlug, anvisaUrl, formatCnpj, TIPO_NOME } from "../../../lib/data";
+import LegendaDeclarada from "../../../components/LegendaDeclarada.astro";
+import { produtos, detalhe, type Diff } from "../../../lib/data";
+import { dataBR, diffUrl, anvisaUrl, formatCnpj, TIPO_NOME } from "../../../lib/format";
 
 export function getStaticPaths() {
   return produtos.map((p) => ({ params: { registro: p.registro } }));
 }
-const { registro } = Astro.params;
-const d = detalhe(registro!)!;
-const { meta, versoes, diffs } = d;
+const { meta, versoes, diffs } = await detalhe(Astro.params.registro!);
 // diffs que chegam em cada versão (a versão "para")
-const chegando = (exp: string) => diffs.filter((x) => x.para === exp);
+const chegando = new Map<string, Diff[]>();
+for (const d of diffs) chegando.set(d.para, [...(chegando.get(d.para) ?? []), d]);
 ---
 
 <Base title={meta.nome} description={`Histórico de versões e alterações da bula de ${meta.nome} (${meta.empresa}).`}>
@@ -24,8 +25,7 @@ const chegando = (exp: string) => diffs.filter((x) => x.para === exp);
     <h2>Versões</h2>
     <p class="note">
       Da mais recente para a mais antiga. Em cada versão, as seções alteradas em relação à anterior — clique
-      no número para ir à mudança. <span class="badge declared">4</span> = declarada pela empresa na tabela
-      de histórico da bula.
+      no número para ir à mudança. <LegendaDeclarada />
     </p>
     <ol class="timeline">
       {[...versoes].reverse().map((v) => (
@@ -39,14 +39,14 @@ const chegando = (exp: string) => diffs.filter((x) => x.para === exp);
                 <span class="muted"> · relistada em {v.republicada.map(dataBR).join(", ")}</span>
               )}
             </div>
-            {chegando(v.expediente).length === 0 ? (
-              <div class="muted" style="font-size:.9rem">primeira versão arquivada</div>
+            {(chegando.get(v.expediente) ?? []).length === 0 ? (
+              <div class="sub">primeira versão arquivada</div>
             ) : (
               <div class="links">
-                {chegando(v.expediente).map((x) => (
+                {chegando.get(v.expediente)!.map((x) => (
                   <span>
-                    <a href={url(`/produto/${meta.registro}/${diffSlug(x)}/`)}>{TIPO_NOME[x.tipo]}</a>:
-                    <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} href={url(`/produto/${meta.registro}/${diffSlug(x)}/`)} />
+                    <a href={diffUrl(meta.registro, x.slug)}>{TIPO_NOME[x.tipo]}</a>:
+                    <Secoes tipo={x.tipo} secoes={x.alteradas} declaradas={x.declarado} href={diffUrl(meta.registro, x.slug)} />
                   </span>
                 ))}
               </div>
