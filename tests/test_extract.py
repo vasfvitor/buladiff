@@ -83,11 +83,9 @@ def test_document_properties():
 
 
 def test_label_uses_apresentacoes_text():
-    d = Document(
-        {
-            "I": "DORFLEX MAX® orfenadrina Opella APRESENTAÇÕES Comprimidos 600 mg + 70 mg: embalagens com 8 USO ORAL"
-        },
-        "vp",
+    ident = (
+        "DORFLEX MAX® orfenadrina Opella APRESENTAÇÕES Comprimidos 600 mg + 70 mg: embalagens com 8 USO ORAL"
     )
+    d = Document({"I": ident}, "vp")
     assert d.label == "Comprimidos 600 mg + 70 mg: embalagens com 8"
     assert Document({"(preâmbulo)": "capa simples"}, "vp").label == "capa simples"
