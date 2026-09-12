@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
-# Coleta diária na sua máquina (o runner do GitHub é bloqueado pelo Cloudflare da ANVISA).
+# Coleta na sua máquina (o runner do GitHub é bloqueado pelo Cloudflare da ANVISA).
 # Roda feed + lista curada, commita o que mudou em data/ e faz push; o push dispara o deploy do site.
 #
-# Cron (06h, todo dia):  0 6 * * *  /home/uitor/code/bulario/scripts/coleta-local.sh >> ~/.local/state/buladiff-coleta.log 2>&1
+# Com o proxy (worker/ e os segredos BULARIO_PROXY_*), o cron do workflow coleta às 06h de Brasília e
+# este script vira reserva manual: não o agende no mesmo horário, ou os dois commits colidem.
+# Sem o proxy, cron (06h, todo dia):
+#   0 6 * * *  /home/uitor/code/bulario/scripts/coleta-local.sh >> ~/.local/state/buladiff-coleta.log 2>&1
 set -euo pipefail
 
 cd "$(dirname "$0")/.."
@@ -25,5 +28,6 @@ fi
 
 git add data
 git commit -q -m "Arquivo: $(date +%Y-%m-%d)"
+git pull --rebase --quiet  # se o runner também empurrou hoje
 git push --quiet
 echo "$(date -Is) publicado: $(git rev-parse --short HEAD)"

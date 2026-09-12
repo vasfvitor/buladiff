@@ -4,6 +4,7 @@ name: Atualizar arquivo e publicar site
 # runner e publica de qualquer jeito. A API da ANVISA (Cloudflare) bloqueia os runners do GitHub;
 # com os segredos BULARIO_PROXY_URL e BULARIO_PROXY_KEY a coleta passa pelo Worker em worker/.
 # Sem eles (ou se o proxy falhar) a coleta é pulada com aviso e o site sai do data/ commitado.
+# Com o proxy, este cron é a coleta principal: não agende scripts/coleta-local.sh no mesmo horário.
 on:
   push:
     branches: [main]
@@ -35,6 +36,10 @@ jobs:
     timeout-minutes: 30
     permissions:
       contents: write # único job que commita e empurra data/
+    env:
+      # Vazios sem os segredos: o cliente vai direto na ANVISA (e o runner é bloqueado).
+      BULARIO_PROXY_URL: ${{ secrets.BULARIO_PROXY_URL }}
+      BULARIO_PROXY_KEY: ${{ secrets.BULARIO_PROXY_KEY }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
@@ -48,9 +53,11 @@ jobs:
         env:
           # Em env, nunca interpolado direto no shell.
           API_PATH: "/api/consulta/bulario?count=1&page=1&filter%5BnumeroRegistro%5D=118190404"
-          BULARIO_PROXY_URL: ${{ secrets.BULARIO_PROXY_URL }}
-          BULARIO_PROXY_KEY: ${{ secrets.BULARIO_PROXY_KEY }}
         run: |
+          if [ -n "$BULARIO_PROXY_URL" ] && [ -z "$BULARIO_PROXY_KEY" ]; then
+            echo "::error::BULARIO_PROXY_URL definido sem BULARIO_PROXY_KEY"
+            exit 1
+          fi
           if [ -n "$BULARIO_PROXY_URL" ]; then
             origem="proxy"
             code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
@@ -65,9 +72,12 @@ jobs:
           echo "HTTP $code ($origem)"
           if [ "$code" = "200" ]; then
             echo "ok=true" >> "$GITHUB_OUTPUT"
+          elif [ "$origem" = "proxy" ]; then
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+            echo "::warning::O proxy respondeu '$code'; coleta pulada. Confira o Worker e os segredos BULARIO_PROXY_*."
           else
             echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::API da ANVISA respondeu '$code' via $origem; coleta pulada. Rode scripts/coleta-local.sh na sua máquina."
+            echo "::warning::A API da ANVISA respondeu '$code' a partir do runner; coleta pulada. Configure o proxy (worker/) ou rode scripts/coleta-local.sh."
           fi
 
       - name: Instalar uv
@@ -90,9 +100,6 @@ jobs:
 
       - name: Feed e lista curada
         if: ${{ steps.api.outputs.ok == 'true' }}
-        env:
-          BULARIO_PROXY_URL: ${{ secrets.BULARIO_PROXY_URL }}
-          BULARIO_PROXY_KEY: ${{ secrets.BULARIO_PROXY_KEY }}
         run: |
           uv run bulario feed --baixar
           uv run bulario fetch --curados
@@ -103,7 +110,11 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data
-          git diff --cached --quiet || { git commit -m "Arquivo: $(date -u +%Y-%m-%d)"; git push; }
+          git diff --cached --quiet && exit 0
+          git commit -m "Arquivo: $(date -u +%Y-%m-%d)"
+          # se a coleta local também empurrou hoje, rebase em vez de falhar por non-fast-forward
+          git pull --rebase --quiet origin main
+          git push
 
   publicar:
     needs: coletar
@@ -140,7 +151,7 @@ jobs:
           cache: pnpm
           cache-dependency-path: pnpm-lock.yaml
 
-      - run: pnpm install --frozen-lockfile
+      - run: pnpm install --frozen-lockfile --filter site # só o site; o worker/ não é usado aqui
 
       - name: Configurar Pages
         id: pages

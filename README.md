@@ -78,12 +78,17 @@ dia; a coleta usa algumas centenas).
 ```sh
 pnpm -C worker exec wrangler login            # abre o navegador uma vez
 pnpm -C worker exec wrangler deploy           # imprime a URL *.workers.dev
-openssl rand -hex 32 | pnpm -C worker exec wrangler secret put PROXY_KEY
+key=$(openssl rand -hex 32)                   # guarde: vai também para o GitHub
+printf %s "$key" | pnpm -C worker exec wrangler secret put PROXY_KEY
+gh secret set BULARIO_PROXY_URL --body https://buladiff-proxy.<conta>.workers.dev
+printf %s "$key" | gh secret set BULARIO_PROXY_KEY
 ```
 
-Depois, no repositório do GitHub, os segredos `BULARIO_PROXY_URL` (a URL impressa pelo deploy) e
-`BULARIO_PROXY_KEY` (o mesmo valor do `PROXY_KEY`). Com eles o workflow coleta pelo proxy; sem eles,
-tenta direto e cai no comportamento acima. As mesmas variáveis de ambiente valem para o cliente local. O repositório não guarda PDF: só o texto
+Com os dois segredos o cron do workflow coleta pelo proxy e passa a ser a coleta principal: tire
+`scripts/coleta-local.sh` do cron da sua máquina (ele fica como reserva manual). Sem os segredos, o
+workflow tenta direto e cai no comportamento acima. As mesmas variáveis de ambiente valem para o
+cliente local. Os headers que a ANVISA exige estão copiados em `worker/src/index.js`; um teste confere
+que batem com os do cliente. O repositório não guarda PDF: só o texto
 extraído por versão (`data/<registro>/<data>_<expediente>_<vp|vps>.json`) e o hash do PDF original.
 
 ## Como funciona

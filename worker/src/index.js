@@ -37,7 +37,13 @@ export default {
     if (!url.pathname.startsWith("/api/consulta/")) {
       return new Response("not found", { status: 404 });
     }
-    const upstream = await fetch(UPSTREAM + url.pathname + url.search, { headers: HEADERS });
+    let upstream;
+    try {
+      upstream = await fetch(UPSTREAM + url.pathname + url.search, { headers: HEADERS });
+    } catch (e) {
+      // falha de rede até a ANVISA: 502 explícito em vez do erro 1101 do Worker
+      return new Response(`upstream unreachable: ${e.message}`, { status: 502 });
+    }
     const headers = new Headers();
     for (const name of PASSTHROUGH) {
       const value = upstream.headers.get(name);

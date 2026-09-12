@@ -98,3 +98,14 @@ def test_without_proxy_env_goes_to_anvisa(monkeypatch):
     req = m.call_args.args[0]
     assert req.full_url == "https://consultas.anvisa.gov.br/api/consulta/bulario/1"
     assert req.get_header("X-proxy-key") is None
+
+
+def test_worker_headers_match_client():
+    """worker/src/index.js copia HEADERS; se o cliente mudar, o Worker tem que mudar junto."""
+    from pathlib import Path
+
+    from bulario.api import HEADERS
+
+    src = (Path(__file__).parents[1] / "worker" / "src" / "index.js").read_text()
+    for value in HEADERS.values():
+        assert value in src, f"worker/src/index.js sem o header {value!r}"
