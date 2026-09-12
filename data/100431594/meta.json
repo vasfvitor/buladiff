@@ -1,0 +1,145 @@
+{
+ "produto": {
+  "idProduto": 3991369,
+  "numeroRegistro": "100431594",
+  "nomeProduto": "GLIF MET",
+  "expediente": "0939694263",
+  "razaoSocial": "EUROFARMA LABORATORIOS S.A.",
+  "cnpj": "61190096000192",
+  "numeroTransacao": "12202682026",
+  "data": "2026-09-10T14:26:57.000-0300",
+  "numProcesso": "25351094559202681",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100431594",
+  "nomeProduto": "GLIF MET",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539221,
+     "expediente": "0939694263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T14:26:57.000-0300",
+     "ultDtSitDocumento": "2026-09-10T14:26:57.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T14:26:55.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T14:26:57.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T14:26:57.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "last": true,
+   "totalElements": 1,
+   "totalPages": 1,
+   "sort": null,
+   "first": true,
+   "numberOfElements": 1,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539221,
+   "expediente": "0939694263",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T14:26:57.000-0300",
+   "ultDtSitDocumento": "2026-09-10T14:26:57.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T14:26:55.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T14:26:57.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T14:26:57.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de metformina, dapagliflozina",
+  "classesTerapeuticas": [
+   "ANTIDIABETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "XIGDUO XR",
+  "dataVencimentoRegistro": "2036-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "(5 + 1000) MG COM REV LIB MOD CT BL AL AL X 14",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Modificada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004315940016"
+   },
+   {
+    "apresentacao": "(5 + 1000) MG COM REV LIB MOD CT BL AL AL X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Modificada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004315940024"
+   },
+   {
+    "apresentacao": "(5 + 1000) MG COM REV LIB MOD CT BL AL AL X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Modificada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004315940032"
+   },
+   {
+    "apresentacao": "(10 + 1000) MG COM REV LIB MOD CT BL AL AL X 14",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Modificada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004315940040"
+   },
+   {
+    "apresentacao": "(10 + 1000) MG COM REV LIB MOD CT BL AL AL X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Modificada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004315940059"
+   }
+  ]
+ }
+}

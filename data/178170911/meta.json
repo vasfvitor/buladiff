@@ -1,0 +1,464 @@
+{
+ "produto": {
+  "idProduto": 2228932,
+  "numeroRegistro": "178170911",
+  "nomeProduto": "EPAREMA",
+  "expediente": "0938293265",
+  "razaoSocial": "COSMED INDUSTRIA DE COSMETICOS E MEDICAMENTOS S.A.",
+  "cnpj": "61082426000207",
+  "numeroTransacao": "12182082026",
+  "data": "2026-09-10T10:31:47.000-0300",
+  "numProcesso": "25351109957202102",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "178170911",
+  "nomeProduto": "EPAREMA",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35537864,
+     "expediente": "0938293265",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T10:31:47.000-0300",
+     "ultDtSitDocumento": "2026-09-10T10:31:47.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T10:31:44.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T10:31:47.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T10:31:47.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 34557781,
+     "expediente": "1590458257",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-12-11T16:05:47.000-0200",
+     "ultDtSitDocumento": "2025-12-11T16:05:47.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-12-11T16:05:45.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-12-11T16:05:47.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-11T16:05:47.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "last": false,
+   "totalPages": 3,
+   "totalElements": 5,
+   "sort": null,
+   "first": true,
+   "numberOfElements": 2,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35537864,
+   "expediente": "0938293265",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T10:31:47.000-0300",
+   "ultDtSitDocumento": "2026-09-10T10:31:47.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T10:31:44.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T10:31:47.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T10:31:47.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "rheum palmatum l., frangula purshiana (dc.) a. gray , peumus boldus molina",
+  "classesTerapeuticas": [
+   "FITOTERAPICO COMPOSTO",
+   "COLAGOGOS E COLERETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Fitoterápico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2029-10-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 10 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110071"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 12 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110088"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 36 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110096"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 60 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110101"
+   },
+   {
+    "apresentacao": "206 MG/ML SOL OR CT FR PLAS OPC X 200 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110118"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 12 FLAC PLAS OPC X 10 ML (GUARANÁ)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110126"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 36 FLAC PLAS OPC X 10 ML (GUARANÁ)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110134"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 60 FLAC PLAS OPC X 10 ML (GUARANÁ)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110142"
+   },
+   {
+    "apresentacao": "206 MG/ML SOL OR CT FR PLAS OPC X 200 ML (GUARANÁ)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110150"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 12 FLAC PLAS OPC X 10 ML (LARANJA)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110169"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 36 FLAC PLAS OPC X 10 ML (LARANJA)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110177"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 60 FLAC PLAS OPC X 10 ML (LARANJA)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110185"
+   },
+   {
+    "apresentacao": "206 MG/ML SOL OR CT FR PLAS OPC X 200 ML (LARANJA)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110193"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 04 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110207"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 05 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110215"
+   },
+   {
+    "apresentacao": "103 MG/ML SOL OR CT 06 FLAC PLAS OPC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110223"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 4",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110231"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110241"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110258"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110266"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 120",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110274"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 300",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110282"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110010"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC TRANS X 120",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110029"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC TRANS X 300",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110037"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC TRANS X 4",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110045"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT  BL AL PLAS PVC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110053"
+   },
+   {
+    "apresentacao": "125 MG COM REV CT BL AL PLAS PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1781709110061"
+   }
+  ]
+ }
+}

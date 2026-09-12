@@ -1,0 +1,203 @@
+{
+ "produto": {
+  "idProduto": 1299184,
+  "numeroRegistro": "167730615",
+  "nomeProduto": "besilato de anlodipino",
+  "expediente": "0937964263",
+  "razaoSocial": "LEGRAND PHARMA INDÚSTRIA FARMACÊUTICA LTDA",
+  "cnpj": "05044984000126",
+  "numeroTransacao": "12176442026",
+  "data": "2026-09-10T09:29:53.000-0300",
+  "numProcesso": "25351775064201846",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "167730615",
+  "nomeProduto": "besilato de anlodipino",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35537528,
+     "expediente": "0937964263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T09:29:53.000-0300",
+     "ultDtSitDocumento": "2026-09-10T09:29:53.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T09:29:49.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T09:29:53.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T09:29:53.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 35403619,
+     "expediente": "0801505267",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-08-07T13:32:20.000-0300",
+     "ultDtSitDocumento": "2026-08-07T13:32:20.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-08-07T13:32:17.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-08-07T13:32:20.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-08-07T13:32:20.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "last": false,
+   "totalPages": 4,
+   "totalElements": 8,
+   "sort": null,
+   "first": true,
+   "numberOfElements": 2,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35537528,
+   "expediente": "0937964263",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T09:29:53.000-0300",
+   "ultDtSitDocumento": "2026-09-10T09:29:53.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T09:29:49.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T09:29:53.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T09:29:53.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "besilato de anlodipino",
+  "classesTerapeuticas": [
+   "ANTI-HIPERTENSIVOS SIMPLES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "NORVASC",
+  "dataVencimentoRegistro": "2029-01-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "5 MG COM CT BL AL PLAS LAR X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150011"
+   },
+   {
+    "apresentacao": "5 MG COM CT BL AL PLAS LAR X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150028"
+   },
+   {
+    "apresentacao": "10 MG COM CT BL AL PLAS LAR X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150036"
+   },
+   {
+    "apresentacao": "10 MG COM CT BL AL PLAS LAR X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150044"
+   },
+   {
+    "apresentacao": "5 MG COM CT BL AL PLAS LAR X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150052"
+   },
+   {
+    "apresentacao": "5 MG COM CT BL AL PLAS LAR X 90 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150060"
+   },
+   {
+    "apresentacao": "10 MG COM CT BL AL PLAS LAR X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150079"
+   },
+   {
+    "apresentacao": "10 MG COM CT BL AL PLAS LAR X 90 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1677306150087"
+   }
+  ]
+ }
+}

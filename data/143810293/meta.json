@@ -9,7 +9,7 @@
   "numeroTransacao": "3813242026",
   "data": "2026-03-20T16:51:58.000-0300",
   "numProcesso": "25351644140202178",
-  "dataAtualizacao": "2026-09-10T00:00:00.000-0300"
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
  },
  "historico": {
   "registroProduto": "143810293",
@@ -32,27 +32,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2026-03-20T16:51:58.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
-    },
-    {
-     "idDocumento": 33554421,
-     "expediente": "0535155255",
-     "idSituacao": 43,
-     "numeroRegistro": null,
-     "descSituacao": "Aditado ao processo",
-     "priDtSitValDocumento": "2025-04-22T08:41:32.000-0300",
-     "ultDtSitDocumento": "2025-04-22T08:41:32.000-0300",
-     "ultimaSituacaoDocumento": 43,
-     "nuTransacao": null,
-     "dtTransacao": "2025-04-22T08:41:31.000-0300",
-     "historicoCod": 43,
-     "historicoDtSit": "2025-04-22T08:41:32.000-0300",
-     "descHistSituacao": "Aditado ao processo",
-     "dataPublicacao": "2026-03-20T16:51:58.000-0300",
-     "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 33554421,
@@ -70,8 +51,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-04-22T08:41:32.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 31837126,
+     "expediente": "0511103247",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2024-04-22T09:41:35.000-0300",
+     "ultDtSitDocumento": "2024-04-22T09:41:35.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2024-04-22T09:41:31.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2024-04-22T09:41:35.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-04-22T08:41:32.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 31837126,
@@ -89,8 +89,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2024-04-22T09:41:35.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30211029,
@@ -108,8 +108,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-03-21T16:16:33.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
    "totalElements": 5,
@@ -119,7 +119,7 @@
    "first": true,
    "sort": null,
    "number": 0,
-   "size": 10
+   "size": 500
   },
   "bulaAtual": {
    "idDocumento": 34890383,
@@ -137,8 +137,8 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2026-03-20T16:51:58.000-0300",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
  },
  "detalhe": {

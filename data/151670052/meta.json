@@ -1,0 +1,296 @@
+{
+ "produto": {
+  "idProduto": 1220143,
+  "numeroRegistro": "151670052",
+  "nomeProduto": "mirtazapina",
+  "expediente": "0939853264",
+  "razaoSocial": "AUROBINDO PHARMA INDÚSTRIA FARMACÊUTICA LIMITADA",
+  "cnpj": "04301884000175",
+  "numeroTransacao": "12205722026",
+  "data": "2026-09-10T14:54:35.000-0300",
+  "numProcesso": "25351189260201276",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "151670052",
+  "nomeProduto": "mirtazapina",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539389,
+     "expediente": "0939853264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T14:54:35.000-0300",
+     "ultDtSitDocumento": "2026-09-10T14:54:35.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T14:54:32.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T14:54:35.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T14:54:35.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 28888965,
+     "expediente": "1666508225",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2022-04-08T11:35:46.000-0300",
+     "ultDtSitDocumento": "2022-04-08T11:35:46.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2022-04-08T11:37:08.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2022-04-08T11:35:46.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2022-04-08T11:35:46.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 6,
+   "totalPages": 3,
+   "last": false,
+   "first": true,
+   "numberOfElements": 2,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539389,
+   "expediente": "0939853264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T14:54:35.000-0300",
+   "ultDtSitDocumento": "2026-09-10T14:54:35.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T14:54:32.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T14:54:35.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T14:54:35.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "mirtazapina",
+  "classesTerapeuticas": [
+   "ANTIDEPRESSIVOS"
+  ],
+  "atcs": [
+   "N06A"
+  ],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "mirtazapina (Sandoz do Brasil Indústria Farmacêutica LTDA. ms: 1.0047.0462)",
+  "dataVencimentoRegistro": "2029-06-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520019"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520027"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 28",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520035"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 70",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520043"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 140",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520051"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 210",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520061"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 280",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520078"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520086"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520094"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 28",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520108"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 70",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520116"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 140",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520124"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 210",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520132"
+   },
+   {
+    "apresentacao": "45 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 280",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520140"
+   },
+   {
+    "apresentacao": "30 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1516700520159"
+   }
+  ]
+ }
+}

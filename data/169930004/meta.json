@@ -1,0 +1,190 @@
+{
+ "produto": {
+  "idProduto": 902763,
+  "numeroRegistro": "169930004",
+  "nomeProduto": "TECFIDERA",
+  "expediente": "0940198266",
+  "razaoSocial": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+  "cnpj": "07986222000174",
+  "numeroTransacao": "12207652026",
+  "data": "2026-09-10T15:12:56.000-0300",
+  "numProcesso": "25351186118201351",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "169930004",
+  "nomeProduto": "TECFIDERA",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539701,
+     "expediente": "0940198266",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T15:12:56.000-0300",
+     "ultDtSitDocumento": "2026-09-10T15:12:56.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T15:12:53.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T15:12:56.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T15:12:56.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 33836834,
+     "expediente": "0829935258",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-06-24T12:14:39.000-0300",
+     "ultDtSitDocumento": "2025-06-24T12:14:39.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-06-24T12:14:37.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-06-24T12:14:39.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-06-24T12:14:39.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 26,
+   "totalPages": 13,
+   "last": false,
+   "sort": null,
+   "numberOfElements": 2,
+   "first": true,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539701,
+   "expediente": "0940198266",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T15:12:56.000-0300",
+   "ultDtSitDocumento": "2026-09-10T15:12:56.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T15:12:53.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T15:12:56.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T15:12:56.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "fumarato de dimetila",
+  "classesTerapeuticas": [
+   "OUTROS PRODUTOS COM ACAO IMUNOPROTETORA"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 11/05/2017",
+  "dataVencimentoRegistro": "2035-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "120 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 14",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040019"
+   },
+   {
+    "apresentacao": "120 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 28",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040027"
+   },
+   {
+    "apresentacao": "240 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 56",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040035"
+   },
+   {
+    "apresentacao": "240 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 112",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040043"
+   },
+   {
+    "apresentacao": "120 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 56",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040051"
+   },
+   {
+    "apresentacao": "120 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 112",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040061"
+   },
+   {
+    "apresentacao": "240 MG CAP DURA LIB RETARD CT BL AL PLAS OPC X 28",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300040078"
+   }
+  ]
+ }
+}

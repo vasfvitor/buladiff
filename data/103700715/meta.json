@@ -1,0 +1,177 @@
+{
+ "produto": {
+  "idProduto": 1237199,
+  "numeroRegistro": "103700715",
+  "nomeProduto": "cetoconazol",
+  "expediente": "0940727269",
+  "razaoSocial": "LABORATÓRIO TEUTO BRASILEIRO S/A",
+  "cnpj": "17159229000176",
+  "numeroTransacao": "12217712026",
+  "data": "2026-09-10T16:48:59.000-0300",
+  "numProcesso": "25351188536201745",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "103700715",
+  "nomeProduto": "cetoconazol",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35540211,
+     "expediente": "0940727269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T16:48:59.000-0300",
+     "ultDtSitDocumento": "2026-09-10T16:48:59.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T16:48:56.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T16:48:59.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T16:48:59.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 32914987,
+     "expediente": "1638986240",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2024-11-29T15:27:06.000-0200",
+     "ultDtSitDocumento": "2024-11-29T15:27:06.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2024-11-29T15:27:00.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2024-11-29T15:27:06.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T16:48:59.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 10,
+   "totalPages": 5,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35540211,
+   "expediente": "0940727269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T16:48:59.000-0300",
+   "ultDtSitDocumento": "2026-09-10T16:48:59.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T16:48:56.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T16:48:59.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T16:48:59.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cetoconazol",
+  "classesTerapeuticas": [
+   "ANTIMICOTICO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "NIZORAL",
+  "dataVencimentoRegistro": "2028-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "200 MG COM CT BL AL AL X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1037007150061"
+   },
+   {
+    "apresentacao": "200 MG COM CT BL AL AL X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1037007150071"
+   },
+   {
+    "apresentacao": "200 MG COM CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1037007150010"
+   },
+   {
+    "apresentacao": "200 MG COM CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1037007150029"
+   },
+   {
+    "apresentacao": "20 MG/ML XAMP CT FR PLAS OPC X 100 ML",
+    "formasFarmaceuticas": [
+     "SHAMPOO"
+    ],
+    "viasAdministracao": [
+     "TOPICO"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1037007150037"
+   },
+   {
+    "apresentacao": "20 MG/G CREM DERM CT BG AL X 30 G",
+    "formasFarmaceuticas": [
+     "CREME DERMATOLOGICO"
+    ],
+    "viasAdministracao": [
+     "TOPICA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sem Prescrição Médica"
+    ],
+    "registro": "1037007150045"
+   }
+  ]
+ }
+}

@@ -1,0 +1,119 @@
+{
+ "produto": {
+  "idProduto": 3847774,
+  "numeroRegistro": "101800418",
+  "nomeProduto": "NIVDIREC",
+  "expediente": "0938698265",
+  "razaoSocial": "BRISTOL-MYERS SQUIBB FARMACÊUTICA LTDA",
+  "cnpj": "56998982000107",
+  "numeroTransacao": "12188892026",
+  "data": "2026-09-10T11:31:37.000-0300",
+  "numProcesso": "25351079573202573",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "101800418",
+  "nomeProduto": "NIVDIREC",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35538257,
+     "expediente": "0938698265",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T11:31:37.000-0300",
+     "ultDtSitDocumento": "2026-09-10T11:31:37.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T11:31:34.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T11:31:37.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T11:31:37.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 1,
+   "totalPages": 1,
+   "last": true,
+   "first": true,
+   "numberOfElements": 1,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35538257,
+   "expediente": "0938698265",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T11:31:37.000-0300",
+   "ultDtSitDocumento": "2026-09-10T11:31:37.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T11:31:34.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T11:31:37.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T11:31:37.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "nivolumabe",
+  "classesTerapeuticas": [
+   "ANTINEOPLASICO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Biológico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2035-10-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "40 MG SOL INJ CT 1 FA VD INC X 4 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018004180011"
+   },
+   {
+    "apresentacao": "100 MG SOL INJ CT 1 FA VD INC X 10 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018004180028"
+   },
+   {
+    "apresentacao": "600 MG SOL INJ SC CT FA VD TRANS X 5 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018004180036"
+   }
+  ]
+ }
+}

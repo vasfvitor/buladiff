@@ -1,0 +1,125 @@
+{
+ "produto": {
+  "idProduto": 2762926,
+  "numeroRegistro": "121100488",
+  "nomeProduto": "GENRYZON",
+  "expediente": "0940202263",
+  "razaoSocial": "PFIZER BRASIL LTDA",
+  "cnpj": "61072393000133",
+  "numeroTransacao": "12207702026",
+  "data": "2026-09-10T15:14:20.000-0300",
+  "numProcesso": "25351577895202150",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "121100488",
+  "nomeProduto": "GENRYZON",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539707,
+     "expediente": "0940202263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T15:14:20.000-0300",
+     "ultDtSitDocumento": "2026-09-10T15:14:20.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T15:14:17.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T15:14:20.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T15:14:20.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34462252,
+     "expediente": "1489957251",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-11-12T14:39:30.000-0200",
+     "ultDtSitDocumento": "2025-11-12T14:39:30.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-11-12T14:39:28.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-11-12T14:39:30.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T15:14:20.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 18,
+   "totalPages": 9,
+   "last": false,
+   "first": true,
+   "numberOfElements": 2,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539707,
+   "expediente": "0940202263",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T15:14:20.000-0300",
+   "ultDtSitDocumento": "2026-09-10T15:14:20.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T15:14:17.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T15:14:20.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T15:14:20.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "somatrogona",
+  "classesTerapeuticas": [
+   "HORMONIO RECOMBINANTE DO CRESCIMENTO HUMANO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Biológico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2032-10-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "20 MG/ML SOL INJ SC CT 1 CAN APLIC X 1,2 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1211004880017"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ SC CT 1 CAN APLIC X 1,2 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1211004880025"
+   }
+  ]
+ }
+}

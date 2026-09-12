@@ -1,0 +1,158 @@
+{
+ "produto": {
+  "idProduto": 3663782,
+  "numeroRegistro": "104971576",
+  "nomeProduto": "ZOLPAZ",
+  "expediente": "0939579260",
+  "razaoSocial": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A",
+  "cnpj": "60665981000118",
+  "numeroTransacao": "12200142026",
+  "data": "2026-09-10T13:59:38.000-0300",
+  "numProcesso": "25351722543202327",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "104971576",
+  "nomeProduto": "ZOLPAZ",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539106,
+     "expediente": "0939579260",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T13:59:38.000-0300",
+     "ultDtSitDocumento": "2026-09-10T13:59:38.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T13:59:35.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T13:59:38.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T13:59:38.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 1,
+   "totalPages": 1,
+   "last": true,
+   "numberOfElements": 1,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539106,
+   "expediente": "0939579260",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T13:59:38.000-0300",
+   "ultDtSitDocumento": "2026-09-10T13:59:38.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T13:59:35.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T13:59:38.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T13:59:38.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "hemitartarato de zolpidem",
+  "classesTerapeuticas": [
+   "HIPNOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "STILNOX",
+  "dataVencimentoRegistro": "2036-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 7",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1049715760015"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1049715760023"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1049715760031"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1049715760041"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1049715760058"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 120",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1049715760066"
+   }
+  ]
+ }
+}

@@ -1,0 +1,177 @@
+{
+ "produto": {
+  "idProduto": 2104604,
+  "numeroRegistro": "100431330",
+  "nomeProduto": "SINCRO XR",
+  "expediente": "0940545268",
+  "razaoSocial": "EUROFARMA LABORATORIOS S.A.",
+  "cnpj": "61190096000192",
+  "numeroTransacao": "12214302026",
+  "data": "2026-09-10T16:13:41.000-0300",
+  "numProcesso": "25351987368202150",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100431330",
+  "nomeProduto": "SINCRO XR",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35540044,
+     "expediente": "0940545268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T16:13:41.000-0300",
+     "ultDtSitDocumento": "2026-09-10T16:13:41.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T16:13:38.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T16:13:41.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T16:13:41.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34593233,
+     "expediente": "1628788259",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-12-19T14:34:14.000-0200",
+     "ultDtSitDocumento": "2025-12-19T14:34:14.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-12-19T14:34:12.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-12-19T14:34:14.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T16:13:41.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 7,
+   "totalPages": 4,
+   "last": false,
+   "first": true,
+   "numberOfElements": 2,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35540044,
+   "expediente": "0940545268",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T16:13:41.000-0300",
+   "ultDtSitDocumento": "2026-09-10T16:13:41.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T16:13:38.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T16:13:41.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T16:13:41.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de paroxetina hemi-hidratado",
+  "classesTerapeuticas": [
+   "ANTIDEPRESSIVOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "PAXIL CR",
+  "dataVencimentoRegistro": "2031-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "12,5 MG COM LIB MOD CT BL AL PLAS PVC/PVDC/PCTFE TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Modificada "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1004313300011"
+   },
+   {
+    "apresentacao": "12,5 MG COM LIB MOD CT BL AL PLAS PVC/PVDC/PCTFE TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Modificada "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1004313300028"
+   },
+   {
+    "apresentacao": "12,5 MG COM LIB MOD CT BL AL PLAS PVC/PVDC/PCTFE TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Modificada "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1004313300036"
+   },
+   {
+    "apresentacao": "25 MG COM LIB MOD CT BL AL PLAS PVC/PVDC/PCTFE TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Modificada "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1004313300044"
+   },
+   {
+    "apresentacao": "25 MG COM LIB MOD CT BL AL PLAS PVC/PVDC/PCTFE TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Modificada "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1004313300052"
+   },
+   {
+    "apresentacao": "25 MG COM LIB MOD CT BL AL PLAS PVC/PVDC/PCTFE TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Modificada "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1004313300060"
+   }
+  ]
+ }
+}

@@ -1,0 +1,114 @@
+{
+ "produto": {
+  "idProduto": 1201444,
+  "numeroRegistro": "169930008",
+  "nomeProduto": "SPINRAZA",
+  "expediente": "0939651262",
+  "razaoSocial": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+  "cnpj": "07986222000174",
+  "numeroTransacao": "12201902026",
+  "data": "2026-09-10T14:19:53.000-0300",
+  "numProcesso": "25351233501201778",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "169930008",
+  "nomeProduto": "SPINRAZA",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539190,
+     "expediente": "0939651262",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T14:19:53.000-0300",
+     "ultDtSitDocumento": "2026-09-10T14:19:53.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T14:19:48.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T14:19:53.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T14:19:53.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34702079,
+     "expediente": "0081767269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-01-26T17:20:56.000-0200",
+     "ultDtSitDocumento": "2026-01-26T17:20:56.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-01-26T17:20:54.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-01-26T17:20:56.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-01-26T17:20:56.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 28,
+   "totalPages": 14,
+   "first": true,
+   "numberOfElements": 2,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539190,
+   "expediente": "0939651262",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T14:19:53.000-0300",
+   "ultDtSitDocumento": "2026-09-10T14:19:53.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T14:19:48.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T14:19:53.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T14:19:53.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "nusinersena",
+  "classesTerapeuticas": [
+   "OUTROS MEDICAMENTOS PARA TRANSTORNOS DO SISTEMA MÚSCULO-ESQUELÉTICO"
+  ],
+  "atcs": [
+   "M09AX"
+  ],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 07/12/2020",
+  "dataVencimentoRegistro": "2027-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "2,4 MG/ML SOL INJ IT CT FA VD TRANS X 5 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "INTRATECAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300080010"
+   }
+  ]
+ }
+}

@@ -1,5 +1,5 @@
 {
- "ate": "2026-09-10",
+ "ate": "2026-09-12",
  "publicacoes": [
   {
    "registro": "110630163",
@@ -280,6 +280,246 @@
    "expediente": "0929500261",
    "data": "2026-09-08",
    "processo": "25351365181201714"
+  },
+  {
+   "registro": "135690680",
+   "id_produto": 1121776,
+   "nome": "ANLO",
+   "empresa": "EMS SIGMA PHARMA LTDA",
+   "cnpj": "00923140000131",
+   "expediente": "0938101269",
+   "data": "2026-09-10",
+   "processo": "25351585152201424"
+  },
+  {
+   "registro": "118190274",
+   "id_produto": 3353764,
+   "nome": "ANLUSBED",
+   "empresa": "MULTILAB INDUSTRIA E COMERCIO DE PRODUTOS FARMACEUTICOS LTDA",
+   "cnpj": "92265552000905",
+   "expediente": "0938090267",
+   "data": "2026-09-10",
+   "processo": "25351062978202220"
+  },
+  {
+   "registro": "169930001",
+   "id_produto": 532604,
+   "nome": "Avonex",
+   "empresa": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+   "cnpj": "07986222000174",
+   "expediente": "0939445263",
+   "data": "2026-09-10",
+   "processo": "25351176509200758"
+  },
+  {
+   "registro": "102350536",
+   "id_produto": 137552,
+   "nome": "BESILATO DE ANLODIPINO",
+   "empresa": "EMS S/A",
+   "cnpj": "57507378000365",
+   "expediente": "0938143263",
+   "data": "2026-09-10",
+   "processo": "253510161220150"
+  },
+  {
+   "registro": "178170911",
+   "id_produto": 2228932,
+   "nome": "EPAREMA",
+   "empresa": "COSMED INDUSTRIA DE COSMETICOS E MEDICAMENTOS S.A.",
+   "cnpj": "61082426000207",
+   "expediente": "0938293265",
+   "data": "2026-09-10",
+   "processo": "25351109957202102"
+  },
+  {
+   "registro": "121100488",
+   "id_produto": 2762926,
+   "nome": "GENRYZON",
+   "empresa": "PFIZER BRASIL LTDA",
+   "cnpj": "61072393000133",
+   "expediente": "0940202263",
+   "data": "2026-09-10",
+   "processo": "25351577895202150"
+  },
+  {
+   "registro": "100431594",
+   "id_produto": 3991369,
+   "nome": "GLIF MET",
+   "empresa": "EUROFARMA LABORATORIOS S.A.",
+   "cnpj": "61190096000192",
+   "expediente": "0939694263",
+   "data": "2026-09-10",
+   "processo": "25351094559202681"
+  },
+  {
+   "registro": "101180622",
+   "id_produto": 1230233,
+   "nome": "INILOK",
+   "empresa": "APSEN FARMACEUTICA S/A",
+   "cnpj": "62462015000129",
+   "expediente": "0937240265",
+   "data": "2026-09-10",
+   "processo": "25351048042201818"
+  },
+  {
+   "registro": "103700092",
+   "id_produto": 1764,
+   "nome": "LOZAN",
+   "empresa": "LABORATÓRIO TEUTO BRASILEIRO S/A",
+   "cnpj": "17159229000176",
+   "expediente": "0940803267",
+   "data": "2026-09-10",
+   "processo": "250000003159611"
+  },
+  {
+   "registro": "101800418",
+   "id_produto": 3847774,
+   "nome": "NIVDIREC",
+   "empresa": "BRISTOL-MYERS SQUIBB FARMACÊUTICA LTDA",
+   "cnpj": "56998982000107",
+   "expediente": "0938698265",
+   "data": "2026-09-10",
+   "processo": "25351079573202573"
+  },
+  {
+   "registro": "100431268",
+   "id_produto": 1239737,
+   "nome": "Pondera XR",
+   "empresa": "EUROFARMA LABORATORIOS S.A.",
+   "cnpj": "61190096000192",
+   "expediente": "0940516268",
+   "data": "2026-09-10",
+   "processo": "25351137745201810"
+  },
+  {
+   "registro": "105831066",
+   "id_produto": 3987596,
+   "nome": "SEMACLIQUE",
+   "empresa": "GERMED FARMACEUTICA LTDA",
+   "cnpj": "45992062000165",
+   "expediente": "0939895269",
+   "data": "2026-09-10",
+   "processo": "25351122821202694"
+  },
+  {
+   "registro": "100431330",
+   "id_produto": 2104604,
+   "nome": "SINCRO XR",
+   "empresa": "EUROFARMA LABORATORIOS S.A.",
+   "cnpj": "61190096000192",
+   "expediente": "0940545268",
+   "data": "2026-09-10",
+   "processo": "25351987368202150"
+  },
+  {
+   "registro": "169930008",
+   "id_produto": 1201444,
+   "nome": "SPINRAZA",
+   "empresa": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+   "cnpj": "07986222000174",
+   "expediente": "0939651262",
+   "data": "2026-09-10",
+   "processo": "25351233501201778"
+  },
+  {
+   "registro": "169930004",
+   "id_produto": 902763,
+   "nome": "TECFIDERA",
+   "empresa": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+   "cnpj": "07986222000174",
+   "expediente": "0940198266",
+   "data": "2026-09-10",
+   "processo": "25351186118201351"
+  },
+  {
+   "registro": "169930002",
+   "id_produto": 533110,
+   "nome": "TYSABRI",
+   "empresa": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+   "cnpj": "07986222000174",
+   "expediente": "0942475267",
+   "data": "2026-09-10",
+   "processo": "25351216949200755"
+  },
+  {
+   "registro": "104971576",
+   "id_produto": 3663782,
+   "nome": "ZOLPAZ",
+   "empresa": "UNIÃO QUÍMICA FARMACÊUTICA NACIONAL S/A",
+   "cnpj": "60665981000118",
+   "expediente": "0939579260",
+   "data": "2026-09-10",
+   "processo": "25351722543202327"
+  },
+  {
+   "registro": "186100007",
+   "id_produto": 1138706,
+   "nome": "belarina",
+   "empresa": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+   "cnpj": "10555143000113",
+   "expediente": "0938786261",
+   "data": "2026-09-10",
+   "processo": "25351121998201494"
+  },
+  {
+   "registro": "167730615",
+   "id_produto": 1299184,
+   "nome": "besilato de anlodipino",
+   "empresa": "LEGRAND PHARMA INDÚSTRIA FARMACÊUTICA LTDA",
+   "cnpj": "05044984000126",
+   "expediente": "0937964263",
+   "data": "2026-09-10",
+   "processo": "25351775064201846"
+  },
+  {
+   "registro": "118190339",
+   "id_produto": 3350181,
+   "nome": "besilato de anlodipino",
+   "empresa": "MULTILAB INDUSTRIA E COMERCIO DE PRODUTOS FARMACEUTICOS LTDA",
+   "cnpj": "92265552000905",
+   "expediente": "0938045261",
+   "data": "2026-09-10",
+   "processo": "25351062995202267"
+  },
+  {
+   "registro": "105830950",
+   "id_produto": 1296209,
+   "nome": "besilato de anlodipino",
+   "empresa": "GERMED FARMACEUTICA LTDA",
+   "cnpj": "45992062000165",
+   "expediente": "0937991261",
+   "data": "2026-09-10",
+   "processo": "25351775063201800"
+  },
+  {
+   "registro": "103700715",
+   "id_produto": 1237199,
+   "nome": "cetoconazol",
+   "empresa": "LABORATÓRIO TEUTO BRASILEIRO S/A",
+   "cnpj": "17159229000176",
+   "expediente": "0940727269",
+   "data": "2026-09-10",
+   "processo": "25351188536201745"
+  },
+  {
+   "registro": "123520264",
+   "id_produto": 1402386,
+   "nome": "dicloridrato de pramipexol",
+   "empresa": "RANBAXY FARMACÊUTICA LTDA",
+   "cnpj": "73663650000190",
+   "expediente": "0939627264",
+   "data": "2026-09-10",
+   "processo": "25351261723201942"
+  },
+  {
+   "registro": "151670052",
+   "id_produto": 1220143,
+   "nome": "mirtazapina",
+   "empresa": "AUROBINDO PHARMA INDÚSTRIA FARMACÊUTICA LIMITADA",
+   "cnpj": "04301884000175",
+   "expediente": "0939853264",
+   "data": "2026-09-10",
+   "processo": "25351189260201276"
   }
  ]
 }

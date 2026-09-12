@@ -1,0 +1,125 @@
+{
+ "produto": {
+  "idProduto": 1138706,
+  "numeroRegistro": "186100007",
+  "nomeProduto": "belarina",
+  "expediente": "0938786261",
+  "razaoSocial": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+  "cnpj": "10555143000113",
+  "numeroTransacao": "12190492026",
+  "data": "2026-09-10T11:46:55.000-0300",
+  "numProcesso": "25351121998201494",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "186100007",
+  "nomeProduto": "belarina",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35538341,
+     "expediente": "0938786261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T11:46:55.000-0300",
+     "ultDtSitDocumento": "2026-09-10T11:46:55.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T11:46:53.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T11:46:55.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T11:46:55.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34472305,
+     "expediente": "1500518255",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-11-14T15:43:23.000-0200",
+     "ultDtSitDocumento": "2025-11-14T15:43:23.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-11-14T15:43:21.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-11-14T15:43:23.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-11-14T15:43:23.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 15,
+   "totalPages": 8,
+   "first": true,
+   "sort": null,
+   "numberOfElements": 2,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35538341,
+   "expediente": "0938786261",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T11:46:55.000-0300",
+   "ultDtSitDocumento": "2026-09-10T11:46:55.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T11:46:53.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T11:46:55.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T11:46:55.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "acetato de clormadinona, etinilestradiol",
+  "classesTerapeuticas": [
+   "ANTICONCEPCIONAIS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2026-12-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "2 MG + 0,02 MG COM REV CT BL CALEND AL PLAS TRANS X 24 + 4 PLACEBO",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1861000070015"
+   },
+   {
+    "apresentacao": "2 MG + 0,02 MG COM REV CT BL CALEND AL PLAS TRANS X 72 + 12 PLACEBO",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1861000070023"
+   }
+  ]
+ }
+}

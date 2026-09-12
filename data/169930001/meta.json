@@ -1,0 +1,138 @@
+{
+ "produto": {
+  "idProduto": 532604,
+  "numeroRegistro": "169930001",
+  "nomeProduto": "Avonex",
+  "expediente": "0939445263",
+  "razaoSocial": "BIOGEN BRASIL PRODUTOS FARMACEUTICOS LTDA",
+  "cnpj": "07986222000174",
+  "numeroTransacao": "12198042026",
+  "data": "2026-09-10T13:36:20.000-0300",
+  "numProcesso": "25351176509200758",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "169930001",
+  "nomeProduto": "Avonex",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35538989,
+     "expediente": "0939445263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T13:36:20.000-0300",
+     "ultDtSitDocumento": "2026-09-10T13:36:20.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T13:36:17.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T13:36:20.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T13:36:20.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 33796071,
+     "expediente": "0787326259",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-06-11T13:49:27.000-0300",
+     "ultDtSitDocumento": "2025-06-11T13:49:27.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-06-11T13:49:25.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-06-11T13:49:27.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T13:36:20.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 22,
+   "totalPages": 11,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35538989,
+   "expediente": "0939445263",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T13:36:20.000-0300",
+   "ultDtSitDocumento": "2026-09-10T13:36:20.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T13:36:17.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T13:36:20.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T13:36:20.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "betainterferona 1a",
+  "classesTerapeuticas": [
+   "OUTROS PRODUTOS COM ACAO IMUNOPROTETORA"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Biológico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2028-01-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "60 MCG/ML SOL INJ CT 4 CT C/ SER PREENCH X 0,5 ML EM APLIC + AGU + CAPA PROTETORA P/ DESCARTE",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300010039"
+   },
+   {
+    "apresentacao": "30 MCG/ML PO LIOF INJ CT 4 ENV C/ KIT FA BIO SET + SER DIL X 1 ML + AGU",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300010012"
+   },
+   {
+    "apresentacao": "60 MCG/ML SOL INJ CT 4 BL C/ SER PREENCH X 0,5 ML + AGU",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1699300010020"
+   }
+  ]
+ }
+}

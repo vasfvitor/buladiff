@@ -1,0 +1,132 @@
+{
+ "produto": {
+  "idProduto": 3987596,
+  "numeroRegistro": "105831066",
+  "nomeProduto": "SEMACLIQUE",
+  "expediente": "0939895269",
+  "razaoSocial": "GERMED FARMACEUTICA LTDA",
+  "cnpj": "45992062000165",
+  "numeroTransacao": "12206442026",
+  "data": "2026-09-10T15:01:16.000-0300",
+  "numProcesso": "25351122821202694",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "105831066",
+  "nomeProduto": "SEMACLIQUE",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539432,
+     "expediente": "0939895269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T15:01:16.000-0300",
+     "ultDtSitDocumento": "2026-09-10T15:01:16.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T15:01:12.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T15:01:16.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T15:01:16.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 1,
+   "totalPages": 1,
+   "last": true,
+   "numberOfElements": 1,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539432,
+   "expediente": "0939895269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T15:01:16.000-0300",
+   "ultDtSitDocumento": "2026-09-10T15:01:16.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T15:01:12.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T15:01:16.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T15:01:16.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "semaglutida",
+  "classesTerapeuticas": [
+   "ANTIDIABETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "OZIVY",
+  "dataVencimentoRegistro": "2036-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "1,34 MG/ML SOL INJ SC CT CAR VD TRANS X 1,5 ML +  CAN APLIC  + 6 AGU",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1058310660014"
+   },
+   {
+    "apresentacao": "1,34 MG/ML SOL INJ SC CT 2 CAR VD TRANS X 1,5 ML +  2 CAN APLIC  + 10 AGU",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1058310660022"
+   },
+   {
+    "apresentacao": "1,34 MG/ML SOL INJ SC CT CAR VD TRANS X 3 ML +  CAN APLIC  + 4 AGU",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1058310660030"
+   },
+   {
+    "apresentacao": "1,34 MG/ML SOL INJ SC CT 2 CAR VD TRANS X 3 ML + 2 CAN APLIC + 8 AGU",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1058310660049"
+   }
+  ]
+ }
+}

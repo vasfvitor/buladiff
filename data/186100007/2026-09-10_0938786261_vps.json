@@ -1,0 +1,104 @@
+{
+ "registro": "186100007",
+ "expediente": "0938786261",
+ "data": "2026-09-10",
+ "situacao": "Aditado ao processo",
+ "tipo": "vps",
+ "pdf_sha256": "c0233d8127bf2cbba80fb9d7490fb78916491a6bf069a7d2f60dff162c003b11",
+ "paginas": 33,
+ "documentos": [],
+ "historico_tabela": [
+  {
+   "data": "18/05/2017",
+   "expediente": "0929963/17-7",
+   "assunto": "Inclusão Inicial de Texto de Bula – RDC 60/12",
+   "itens": "N/A primeira bula",
+   "versoes": "N/A - primeira bula",
+   "apresentacoes": "2mg +0,02mg comprimidos x 24 + 4",
+   "aprovacao": "19/12/2016"
+  },
+  {
+   "data": "30/11/2018",
+   "expediente": "1132825/18-8",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "QUANDO NÃO DEVO USAR ESTE MEDICAMENTO? O QUE DEVO SABER ANTES DE USAR ESTE MEDICAMENTO? QUAIS OS MALES QUE ESTE MEDICAMENTO PODE ME CAUSAR? INFORMAÇÕES DE SEGURANÇA",
+   "versoes": "VP e VPS",
+   "apresentacoes": "2mg +0,02mg comprimidos x 24 + 4",
+   "aprovacao": "30/11/2018"
+  },
+  {
+   "data": "17/04/2019",
+   "expediente": "0346210/19-2",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "O QUE DEVO SABER ANTES DE USAR ESTE MEDICAMENTO?",
+   "versoes": "VP e VPS",
+   "apresentacoes": "2mg +0,02mg comprimidos x 24 + 4",
+   "aprovacao": "01/04/2019"
+  },
+  {
+   "data": "22/11/2019",
+   "expediente": "3224430/19-4",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "QUANDO NÃO DEVO USAR ESTE MEDICAMENTO? COMO DEVO USAR ESTE MEDICAMENTO? QUAIS OS MALES QUE ESTE MEDICAMENTO PODE ME CAUSAR?",
+   "versoes": "VP e VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 + 4",
+   "aprovacao": "22/11/2019"
+  },
+  {
+   "data": "23/02/2021",
+   "expediente": "0724543/21-2",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "REAÇÕES ADVERSAS",
+   "versoes": "VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 + 4",
+   "aprovacao": "23/02/2021"
+  },
+  {
+   "data": "29/04/2022",
+   "expediente": "2640223/22-4",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "ADVERTÊNCIAS E PRECAUÇÕES REAÇÕES ADVERSAS",
+   "versoes": "VP e VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 + 4",
+   "aprovacao": "29/04/2022"
+  },
+  {
+   "data": "11/11/2022",
+   "expediente": "4931456/22-7",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "CONTRAINDICAÇÕES ADVERTÊNCIAS E PRECAUÇÕES",
+   "versoes": "VP e VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 + 4",
+   "aprovacao": "11/11/2022"
+  },
+  {
+   "data": "12/01/2023",
+   "expediente": "0035707/23-1",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "VPS CONTRAINDICAÇÕES ADVERTÊNCIAS E PRECAUÇÕES INTERAÇÕES MEDICAMENTOSAS VP QUANDO NÃO DEVO USAR ESTE MEDICAMENTO? O QUE DEVO SABER ANTES DE USAR ESTE MEDICAMENTO?",
+   "versoes": "VP e VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 + 4",
+   "aprovacao": "0035707/23-1"
+  },
+  {
+   "data": "14/11/2025",
+   "expediente": "1500518/25-5",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "VPS ADVERTÊNCIAS E PRECAUÇÕES VP O QUE DEVO SABER ANTES DE USAR ESTE MEDICAMENTO?",
+   "versoes": "VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 + 4",
+   "aprovacao": "1500518255"
+  },
+  {
+   "data": "",
+   "expediente": "Gerado no momento do peticionamento",
+   "assunto": "Notificação de Alteração de Texto de Bula – RDC 60/12",
+   "itens": "VPS APRESENTAÇÕES COMPOSIÇÃO ADVERTÊNCIAS E PRECAUÇÕES CUIDADOS DE ARMAZENAMENTO DO MEDICAMENTO POSOLOGIA E MODO DE USAR VP APRESENTAÇÕES COMPOSIÇÃO COMO ESTE MEDICAMENTO FUNCIONA? ONDE, COMO E POR QUANTO TEMPO POSSO GUARDAR ESTE MEDICAMENTO? COMO DEVO USAR ESTE MEDICAMENTO? O QUE DEVO FAZER QUANDO EU ME ESQUECER DE USAR ESTE MEDICAMENTO?",
+   "versoes": "VPS e VPS",
+   "apresentacoes": "2mg + 0,02mg comprimidos x 24 +4",
+   "aprovacao": "NA"
+  }
+ ],
+ "marcado": false,
+ "documentos_linhas": []
+}

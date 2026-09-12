@@ -1,0 +1,268 @@
+{
+ "produto": {
+  "idProduto": 1402386,
+  "numeroRegistro": "123520264",
+  "nomeProduto": "dicloridrato de pramipexol",
+  "expediente": "0939627264",
+  "razaoSocial": "RANBAXY FARMACÊUTICA LTDA",
+  "cnpj": "73663650000190",
+  "numeroTransacao": "12201472026",
+  "data": "2026-09-10T14:12:02.000-0300",
+  "numProcesso": "25351261723201942",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "123520264",
+  "nomeProduto": "dicloridrato de pramipexol",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35539151,
+     "expediente": "0939627264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T14:12:02.000-0300",
+     "ultDtSitDocumento": "2026-09-10T14:12:02.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T14:11:59.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T14:12:02.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T14:12:02.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 1,
+   "totalPages": 1,
+   "last": true,
+   "numberOfElements": 1,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35539151,
+   "expediente": "0939627264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T14:12:02.000-0300",
+   "ultDtSitDocumento": "2026-09-10T14:12:02.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T14:11:59.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T14:12:02.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T14:12:02.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "dicloridrato de pramipexol",
+  "classesTerapeuticas": [
+   "ANTIPARKINSONIANOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "SIFROL",
+  "dataVencimentoRegistro": "2030-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "0,25 MG COM CT BL AL/AL X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640011"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL/AL X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640028"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL/AL X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640036"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL/AL X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640044"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL/AL X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640052"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL/AL X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640060"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL/AL X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640079"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL/AL X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640087"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL AL DESSEC X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640095"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL AL DESSEC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640109"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL AL DESSEC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640117"
+   },
+   {
+    "apresentacao": "0,25 MG COM CT BL AL AL DESSEC X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640125"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL AL DESSEC X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640133"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL AL DESSEC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640141"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL AL DESSEC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640151"
+   },
+   {
+    "apresentacao": "1,0 MG COM CT BL AL AL DESSEC X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1235202640168"
+   }
+  ]
+ }
+}

@@ -1,0 +1,242 @@
+{
+ "produto": {
+  "idProduto": 1230233,
+  "numeroRegistro": "101180622",
+  "nomeProduto": "INILOK",
+  "expediente": "0937240265",
+  "razaoSocial": "APSEN FARMACEUTICA S/A",
+  "cnpj": "62462015000129",
+  "numeroTransacao": "12169802026",
+  "data": "2026-09-10T07:29:44.000-0300",
+  "numProcesso": "25351048042201818",
+  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "101180622",
+  "nomeProduto": "INILOK",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35536823,
+     "expediente": "0937240265",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-10T07:29:44.000-0300",
+     "ultDtSitDocumento": "2026-09-10T07:29:44.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-10T07:29:42.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-10T07:29:44.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T07:29:44.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 33272596,
+     "expediente": "0236188259",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-02-19T13:04:36.000-0300",
+     "ultDtSitDocumento": "2025-02-19T13:04:36.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-02-19T13:04:26.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-02-19T13:04:36.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-10T07:29:44.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 14,
+   "totalPages": 7,
+   "first": true,
+   "numberOfElements": 2,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35536823,
+   "expediente": "0937240265",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-10T07:29:44.000-0300",
+   "ultDtSitDocumento": "2026-09-10T07:29:44.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-10T07:29:42.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-10T07:29:44.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-10T07:29:44.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "pantoprazol magnésico di-hidratado",
+  "classesTerapeuticas": [
+   "ANTIACIDOS E ANTIULCEROSOS SIMPLES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "Tecta",
+  "dataVencimentoRegistro": "2029-05-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 6",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220016"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220024"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220032"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220040"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 45",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220059"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220067"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 90",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220075"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 2",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220083"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 7",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220105"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 15",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220113"
+   },
+   {
+    "apresentacao": "40 MG COM REV LIB RETARD CT BL AL PLAS ACLAR/PVC TRANS X 28",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1011806220121"
+   }
+  ]
+ }
+}
