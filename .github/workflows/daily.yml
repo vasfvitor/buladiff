@@ -1,8 +1,9 @@
 name: Atualizar arquivo e publicar site
 
 # Dois gatilhos: push em main (dados coletados localmente) publica; o cron diário tenta coletar no
-# runner e publica de qualquer jeito. A API da ANVISA (Cloudflare) costuma bloquear runners do GitHub;
-# nesse caso a coleta é pulada com aviso e o site sai do data/ commitado.
+# runner e publica de qualquer jeito. A API da ANVISA (Cloudflare) bloqueia os runners do GitHub;
+# com os segredos BULARIO_PROXY_URL e BULARIO_PROXY_KEY a coleta passa pelo Worker em worker/.
+# Sem eles (ou se o proxy falhar) a coleta é pulada com aviso e o site sai do data/ commitado.
 on:
   push:
     branches: [main]
@@ -46,18 +47,27 @@ jobs:
         timeout-minutes: 2
         env:
           # Em env, nunca interpolado direto no shell.
-          API_URL: "https://consultas.anvisa.gov.br/api/consulta/bulario?count=1&page=1&filter%5BnumeroRegistro%5D=118190404"
+          API_PATH: "/api/consulta/bulario?count=1&page=1&filter%5BnumeroRegistro%5D=118190404"
+          BULARIO_PROXY_URL: ${{ secrets.BULARIO_PROXY_URL }}
+          BULARIO_PROXY_KEY: ${{ secrets.BULARIO_PROXY_KEY }}
         run: |
-          code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
-            -H 'Authorization: Guest' -H 'Referer: https://consultas.anvisa.gov.br/' \
-            -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) Chrome/128.0' \
-            "$API_URL" || true)
-          echo "HTTP $code"
+          if [ -n "$BULARIO_PROXY_URL" ]; then
+            origem="proxy"
+            code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
+              -H "X-Proxy-Key: $BULARIO_PROXY_KEY" "${BULARIO_PROXY_URL%/}$API_PATH" || true)
+          else
+            origem="runner"
+            code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
+              -H 'Authorization: Guest' -H 'Referer: https://consultas.anvisa.gov.br/' \
+              -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) Chrome/128.0' \
+              "https://consultas.anvisa.gov.br$API_PATH" || true)
+          fi
+          echo "HTTP $code ($origem)"
           if [ "$code" = "200" ]; then
             echo "ok=true" >> "$GITHUB_OUTPUT"
           else
             echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::API da ANVISA respondeu '$code' a partir do runner; coleta pulada. Rode scripts/coleta-local.sh na sua máquina."
+            echo "::warning::API da ANVISA respondeu '$code' via $origem; coleta pulada. Rode scripts/coleta-local.sh na sua máquina."
           fi
 
       - name: Instalar uv
@@ -80,6 +90,9 @@ jobs:
 
       - name: Feed e lista curada
         if: ${{ steps.api.outputs.ok == 'true' }}
+        env:
+          BULARIO_PROXY_URL: ${{ secrets.BULARIO_PROXY_URL }}
+          BULARIO_PROXY_KEY: ${{ secrets.BULARIO_PROXY_KEY }}
         run: |
           uv run bulario feed --baixar
           uv run bulario fetch --curados

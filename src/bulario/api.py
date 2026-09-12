@@ -2,12 +2,16 @@
 
 Não é documentada. Exige `Authorization: Guest` e headers de navegador (Cloudflare).
 Os ids de PDF são JWT com ~5 minutos de validade: baixe logo depois de consultar.
+
+Com `BULARIO_PROXY_URL` (e `BULARIO_PROXY_KEY`) as requisições passam pelo Worker em `worker/`,
+para redes que o Cloudflare da ANVISA bloqueia (os runners do GitHub).
 """
 
 from __future__ import annotations
 
 import http.client
 import json
+import os
 import time
 import urllib.error
 import urllib.parse
@@ -23,6 +27,14 @@ HEADERS = {
         "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0 Safari/537.36"
     ),
 }
+
+
+def _config() -> tuple[str, dict[str, str]]:
+    """Base e headers: direto na ANVISA ou, com BULARIO_PROXY_URL, pelo Worker."""
+    proxy = os.environ.get("BULARIO_PROXY_URL", "").rstrip("/")
+    if not proxy:
+        return BASE, HEADERS
+    return f"{proxy}/api/consulta", {**HEADERS, "X-Proxy-Key": os.environ.get("BULARIO_PROXY_KEY", "")}
 
 
 def _retry_after(e: urllib.error.HTTPError) -> float:
@@ -52,10 +64,11 @@ class Client:
         self.timeout = timeout
         self.retries = retries  # tentativas extras em 5xx/429/erro de rede/resposta truncada
         self._last = 0.0
+        self.base, self.headers = _config()
 
     def _get(self, path: str, params: dict[str, Any] | None = None) -> bytes:
         """Falhas saem sempre como `urllib.error.URLError` (um `OSError`), inclusive resposta truncada."""
-        url = f"{BASE}/{path}"
+        url = f"{self.base}/{path}"
         if params:
             url += "?" + urllib.parse.urlencode(params)
         for tentativa in range(self.retries + 1):
@@ -63,7 +76,7 @@ class Client:
             if wait > 0:
                 time.sleep(wait)
             try:
-                req = urllib.request.Request(url, headers=HEADERS)
+                req = urllib.request.Request(url, headers=self.headers)
                 with urllib.request.urlopen(req, timeout=self.timeout) as r:
                     data = r.read()
             except (urllib.error.URLError, TimeoutError, http.client.HTTPException) as e:

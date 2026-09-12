@@ -63,10 +63,27 @@ pnpm site:build                             # site/dist/
 ```
 
 O site é publicado no GitHub Pages pelo workflow `.github/workflows/daily.yml` a cada push em `main`.
-O Cloudflare da ANVISA bloqueia os runners do GitHub, então a coleta roda na sua máquina:
-`scripts/coleta-local.sh` (para o cron) faz `feed --baixar` e `fetch --curados`, commita `data/` e dá
-push, o que dispara o deploy. O cron diário do workflow ainda tenta coletar no runner e, se a API não
-responder, só republica o que já está commitado. O repositório não guarda PDF: só o texto
+O Cloudflare da ANVISA bloqueia os runners do GitHub (regra de origem: a mesma requisição passa de uma
+conexão doméstica), então a coleta roda na sua máquina: `scripts/coleta-local.sh` (para o cron) faz
+`feed --baixar` e `fetch --curados`, commita `data/` e dá push, o que dispara o deploy. O cron diário
+do workflow ainda tenta coletar no runner e, se a API não responder, só republica o que já está
+commitado.
+
+### Coleta no runner por um Worker da Cloudflare
+
+`worker/` é um proxy mínimo: `GET /api/consulta/...` sai por endereços da própria Cloudflare, que a
+ANVISA não bloqueia. Exige o header `X-Proxy-Key`. Cabe no plano gratuito (100 mil requisições por
+dia; a coleta usa algumas centenas).
+
+```sh
+pnpm -C worker exec wrangler login            # abre o navegador uma vez
+pnpm -C worker exec wrangler deploy           # imprime a URL *.workers.dev
+openssl rand -hex 32 | pnpm -C worker exec wrangler secret put PROXY_KEY
+```
+
+Depois, no repositório do GitHub, os segredos `BULARIO_PROXY_URL` (a URL impressa pelo deploy) e
+`BULARIO_PROXY_KEY` (o mesmo valor do `PROXY_KEY`). Com eles o workflow coleta pelo proxy; sem eles,
+tenta direto e cai no comportamento acima. As mesmas variáveis de ambiente valem para o cliente local. O repositório não guarda PDF: só o texto
 extraído por versão (`data/<registro>/<data>_<expediente>_<vp|vps>.json`) e o hash do PDF original.
 
 ## Como funciona

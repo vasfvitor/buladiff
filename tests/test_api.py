@@ -74,3 +74,27 @@ def test_truncated_response_becomes_urlerror_after_retries():
             raise AssertionError("deveria falhar")
         except urllib.error.URLError as e:  # OSError: quem chama trata como qualquer erro de rede
             assert isinstance(e.reason, http.client.IncompleteRead)
+
+
+def test_proxy_env_reroutes_and_sends_key(monkeypatch):
+    monkeypatch.setenv("BULARIO_PROXY_URL", "https://buladiff-proxy.example.workers.dev/")
+    monkeypatch.setenv("BULARIO_PROXY_KEY", "s3gredo")
+    ok = mock.MagicMock()
+    ok.__enter__.return_value.read.return_value = b'{"a": 1}'
+    with mock.patch("urllib.request.urlopen", return_value=ok) as m:
+        assert Client(delay=0).get_json("bulario/1") == {"a": 1}
+    req = m.call_args.args[0]
+    assert req.full_url == "https://buladiff-proxy.example.workers.dev/api/consulta/bulario/1"
+    assert req.get_header("X-proxy-key") == "s3gredo"
+    assert req.get_header("Authorization") == "Guest"
+
+
+def test_without_proxy_env_goes_to_anvisa(monkeypatch):
+    monkeypatch.delenv("BULARIO_PROXY_URL", raising=False)
+    ok = mock.MagicMock()
+    ok.__enter__.return_value.read.return_value = b"{}"
+    with mock.patch("urllib.request.urlopen", return_value=ok) as m:
+        Client(delay=0).get_json("bulario/1")
+    req = m.call_args.args[0]
+    assert req.full_url == "https://consultas.anvisa.gov.br/api/consulta/bulario/1"
+    assert req.get_header("X-proxy-key") is None

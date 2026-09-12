@@ -8,3 +8,4 @@ site/.astro/
 data/validate-report.json
 data/**/diff-*.html
 node_modules/
+worker/.wrangler/
