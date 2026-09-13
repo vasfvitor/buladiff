@@ -74,6 +74,25 @@
      "ultimaSitVal": true
     },
     {
+     "idDocumento": 24620406,
+     "expediente": "1558798213",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2021-04-23T15:21:21.000-0300",
+     "ultDtSitDocumento": "2021-04-23T15:21:21.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2021-04-23T15:20:53.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2021-04-23T15:21:21.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2024-12-06T14:48:34.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
      "idDocumento": 29066345,
      "expediente": "2535780224",
      "idSituacao": 43,
@@ -207,12 +226,12 @@
      "ultimaSitVal": true
     }
    ],
-   "totalElements": 10,
-   "totalPages": 1,
    "last": true,
+   "totalElements": 11,
+   "totalPages": 1,
    "sort": null,
-   "numberOfElements": 10,
    "first": true,
+   "numberOfElements": 11,
    "number": 0,
    "size": 500
   },
