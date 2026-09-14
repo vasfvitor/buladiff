@@ -9,7 +9,7 @@
   "numeroTransacao": "18041902025",
   "data": "2025-12-15T10:10:45.000-0200",
   "numProcesso": "25351898868202037",
-  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+  "dataAtualizacao": "2026-09-14T00:00:00.000-0300"
  },
  "historico": {
   "registroProduto": "178170890",
@@ -32,8 +32,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-15T10:10:45.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 30004812,
+     "expediente": "0057548234",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2023-01-19T10:03:53.000-0200",
+     "ultDtSitDocumento": "2023-01-19T10:03:53.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2023-01-19T10:05:14.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2023-01-19T10:03:53.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-15T10:10:45.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30578931,
@@ -51,8 +70,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-06-30T12:39:39.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 30004812,
+     "expediente": "0057548234",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2023-01-19T10:03:53.000-0200",
+     "ultDtSitDocumento": "2023-01-19T10:03:53.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2023-01-19T10:05:14.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2023-01-19T10:03:53.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2023-06-30T12:39:39.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30004812,
@@ -70,8 +108,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-01-19T10:03:53.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 29717819,
@@ -89,8 +127,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2022-10-20T11:22:41.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 23648453,
@@ -108,8 +146,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2022-10-20T11:22:41.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 23648453,
@@ -127,16 +165,16 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-02-02T16:01:01.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
-   "last": true,
-   "totalElements": 6,
+   "totalElements": 8,
    "totalPages": 1,
-   "sort": null,
+   "last": true,
+   "numberOfElements": 8,
    "first": true,
-   "numberOfElements": 6,
+   "sort": null,
    "number": 0,
    "size": 500
   },
@@ -156,8 +194,8 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-12-15T10:10:45.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
  },
  "detalhe": {

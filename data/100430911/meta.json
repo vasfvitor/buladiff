@@ -9,7 +9,7 @@
   "numeroTransacao": "18285792025",
   "data": "2025-12-18T11:36:17.000-0200",
   "numProcesso": "25351004069200495",
-  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+  "dataAtualizacao": "2026-09-14T00:00:00.000-0300"
  },
  "historico": {
   "registroProduto": "100430911",
@@ -36,6 +36,25 @@
      "histSitVal": true
     },
     {
+     "idDocumento": 33480209,
+     "expediente": "0457269251",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-04-03T10:30:22.000-0300",
+     "ultDtSitDocumento": "2025-04-03T10:30:22.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-04-03T10:30:20.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-04-03T10:30:22.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-18T11:36:17.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
      "idDocumento": 33783120,
      "expediente": "0773629254",
      "idSituacao": 43,
@@ -48,6 +67,25 @@
      "dtTransacao": "2025-06-09T12:46:20.000-0300",
      "historicoCod": 43,
      "historicoDtSit": "2025-06-09T12:46:22.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-06-09T12:46:22.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 33480209,
+     "expediente": "0457269251",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-04-03T10:30:22.000-0300",
+     "ultDtSitDocumento": "2025-04-03T10:30:22.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-04-03T10:30:20.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-04-03T10:30:22.000-0300",
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-06-09T12:46:22.000-0300",
      "situacaoAtual": "Aditado ao processo",
@@ -283,11 +321,11 @@
      "histSitVal": true
     }
    ],
-   "last": true,
-   "totalElements": 14,
+   "totalElements": 16,
    "totalPages": 1,
-   "numberOfElements": 14,
+   "last": true,
    "first": true,
+   "numberOfElements": 16,
    "sort": null,
    "number": 0,
    "size": 500

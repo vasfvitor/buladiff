@@ -9,7 +9,7 @@
   "numeroTransacao": "17476122025",
   "data": "2025-12-03T16:24:56.000-0200",
   "numProcesso": "25351110112202151",
-  "dataAtualizacao": "2026-09-11T00:00:00.000-0300"
+  "dataAtualizacao": "2026-09-14T00:00:00.000-0300"
  },
  "historico": {
   "registroProduto": "178170899",
@@ -32,8 +32,27 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2025-12-03T16:24:56.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 30100050,
+     "expediente": "0163914231",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2023-02-16T16:12:36.000-0200",
+     "ultDtSitDocumento": "2023-02-16T16:12:36.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2023-02-16T16:16:58.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2023-02-16T16:12:36.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-03T16:24:56.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 30100050,
@@ -51,8 +70,8 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2023-02-16T16:12:36.000-0200",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     },
     {
      "idDocumento": 25258021,
@@ -70,14 +89,14 @@
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2021-06-14T07:26:17.000-0300",
      "situacaoAtual": "Aditado ao processo",
-     "histSitVal": true,
-     "ultimaSitVal": true
+     "ultimaSitVal": true,
+     "histSitVal": true
     }
    ],
-   "totalElements": 3,
+   "totalElements": 4,
    "totalPages": 1,
    "last": true,
-   "numberOfElements": 3,
+   "numberOfElements": 4,
    "first": true,
    "sort": null,
    "number": 0,
@@ -99,8 +118,8 @@
    "descHistSituacao": "Aditado ao processo",
    "dataPublicacao": "2025-12-03T16:24:56.000-0200",
    "situacaoAtual": "Aditado ao processo",
-   "histSitVal": true,
-   "ultimaSitVal": true
+   "ultimaSitVal": true,
+   "histSitVal": true
   }
  },
  "detalhe": {
