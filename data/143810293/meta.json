@@ -9,7 +9,7 @@
   "numeroTransacao": "3813242026",
   "data": "2026-03-20T16:51:58.000-0300",
   "numProcesso": "25351644140202178",
-  "dataAtualizacao": "2026-09-14T00:00:00.000-0300"
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
  },
  "historico": {
   "registroProduto": "143810293",
@@ -29,6 +29,25 @@
      "dtTransacao": "2026-03-20T16:51:56.000-0300",
      "historicoCod": 43,
      "historicoDtSit": "2026-03-20T16:51:58.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-03-20T16:51:58.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 33554421,
+     "expediente": "0535155255",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-04-22T08:41:32.000-0300",
+     "ultDtSitDocumento": "2025-04-22T08:41:32.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-04-22T08:41:31.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-04-22T08:41:32.000-0300",
      "descHistSituacao": "Aditado ao processo",
      "dataPublicacao": "2026-03-20T16:51:58.000-0300",
      "situacaoAtual": "Aditado ao processo",
@@ -112,10 +131,10 @@
      "ultimaSitVal": true
     }
    ],
-   "totalElements": 5,
+   "totalElements": 6,
    "totalPages": 1,
    "last": true,
-   "numberOfElements": 5,
+   "numberOfElements": 6,
    "first": true,
    "sort": null,
    "number": 0,

@@ -1,0 +1,137 @@
+{
+ "produto": {
+  "idProduto": 1061075,
+  "numeroRegistro": "102980421",
+  "nomeProduto": "VORI",
+  "expediente": "0953537269",
+  "razaoSocial": "CRISTÁLIA PRODUTOS QUÍMICOS FARMACÊUTICOS LTDA.",
+  "cnpj": "44734671000151",
+  "numeroTransacao": "12364632026",
+  "data": "2026-09-14T15:20:04.000-0300",
+  "numProcesso": "25351421009201413",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "102980421",
+  "nomeProduto": "VORI",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552778,
+     "expediente": "0953537269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T15:20:04.000-0300",
+     "ultDtSitDocumento": "2026-09-14T15:20:04.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T15:20:01.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T15:20:04.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T15:20:04.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34169379,
+     "expediente": "1179603257",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-09-04T16:22:37.000-0300",
+     "ultDtSitDocumento": "2025-09-04T16:22:37.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-09-04T16:22:35.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-09-04T16:22:37.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T15:20:04.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 18,
+   "totalPages": 9,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552778,
+   "expediente": "0953537269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T15:20:04.000-0300",
+   "ultDtSitDocumento": "2026-09-14T15:20:04.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T15:20:01.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T15:20:04.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T15:20:04.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "voriconazol",
+  "classesTerapeuticas": [
+   "ANTIMICOTICOS SISTEMICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "VFEND",
+  "dataVencimentoRegistro": "2035-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [],
+    "registro": "1029804210016"
+   },
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [],
+    "registro": "1029804210024"
+   },
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 14",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [],
+    "registro": "1029804210032"
+   },
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [],
+    "registro": "1029804210040"
+   }
+  ]
+ }
+}

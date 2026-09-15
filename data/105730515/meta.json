@@ -1,0 +1,203 @@
+{
+ "produto": {
+  "idProduto": 1104935,
+  "numeroRegistro": "105730515",
+  "nomeProduto": "ETIRA",
+  "expediente": "0950627267",
+  "razaoSocial": "ACHÉ LABORATÓRIOS FARMACÊUTICOS S.A",
+  "cnpj": "60659463002992",
+  "numeroTransacao": "12329642026",
+  "data": "2026-09-14T08:23:29.000-0300",
+  "numProcesso": "25351785556201524",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "105730515",
+  "nomeProduto": "ETIRA",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35549928,
+     "expediente": "0950627267",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T08:23:29.000-0300",
+     "ultDtSitDocumento": "2026-09-14T08:23:29.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T08:23:22.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T08:23:29.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T08:23:29.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34167224,
+     "expediente": "1177149257",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-09-04T10:01:42.000-0300",
+     "ultDtSitDocumento": "2025-09-04T10:01:42.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-09-04T10:01:40.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-09-04T10:01:42.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-09-04T10:01:42.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 8,
+   "totalPages": 4,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35549928,
+   "expediente": "0950627267",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T08:23:29.000-0300",
+   "ultDtSitDocumento": "2026-09-14T08:23:29.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T08:23:22.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T08:23:29.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T08:23:29.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "levetiracetam",
+  "classesTerapeuticas": [
+   "ANTICONVULSIVANTES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 30/10/2018",
+  "dataVencimentoRegistro": "2028-05-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS ACLAR TRANS  X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150021"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS ACLAR TRANS  X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150031"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS ACLAR TRANS  X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150048"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS ACLAR TRANS  X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150056"
+   },
+   {
+    "apresentacao": "1000 MG COM REV CT BL AL PLAS ACLAR TRANS  X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150072"
+   },
+   {
+    "apresentacao": "1000 MG COM REV CT BL AL PLAS ACLAR TRANS  X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150080"
+   },
+   {
+    "apresentacao": "1000 MG COM REV CT BL AL PLAS ACLAR TRANS  X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150099"
+   },
+   {
+    "apresentacao": "1000 MG COM REV CT BL AL PLAS ACLAR TRANS  X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1057305150102"
+   }
+  ]
+ }
+}

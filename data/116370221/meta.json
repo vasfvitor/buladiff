@@ -1,0 +1,125 @@
+{
+ "produto": {
+  "idProduto": 3728541,
+  "numeroRegistro": "116370221",
+  "nomeProduto": "RYVKA",
+  "expediente": "0953819264",
+  "razaoSocial": "BLAU FARMACÊUTICA S.A.",
+  "cnpj": "58430828000160",
+  "numeroTransacao": "12369992026",
+  "data": "2026-09-14T16:12:36.000-0300",
+  "numProcesso": "25351314227202466",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "116370221",
+  "nomeProduto": "RYVKA",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35553048,
+     "expediente": "0953819264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T16:12:36.000-0300",
+     "ultDtSitDocumento": "2026-09-14T16:12:36.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T16:12:33.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T16:12:36.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T16:12:36.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 34880743,
+     "expediente": "0265682266",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-03-18T11:59:48.000-0300",
+     "ultDtSitDocumento": "2026-03-18T11:59:48.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-03-18T11:59:46.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-03-18T11:59:48.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-03-18T11:59:48.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "last": true,
+   "totalElements": 2,
+   "totalPages": 1,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35553048,
+   "expediente": "0953819264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T16:12:36.000-0300",
+   "ultDtSitDocumento": "2026-09-14T16:12:36.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T16:12:33.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T16:12:36.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T16:12:36.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "ácido tranexâmico",
+  "classesTerapeuticas": [
+   "ANTIFIBRINOLITICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "TRANSAMIN",
+  "dataVencimentoRegistro": "2034-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "50 MG/ML SOL INJ IV CX 5 AMP VD TRANS X 5 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1163702210013"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ IV CX 50 AMP VD TRANS X 5 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1163702210021"
+   }
+  ]
+ }
+}

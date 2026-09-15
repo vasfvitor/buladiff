@@ -1,0 +1,125 @@
+{
+ "produto": {
+  "idProduto": 3880588,
+  "numeroRegistro": "189770013",
+  "nomeProduto": "GEMZAR",
+  "expediente": "0950970263",
+  "razaoSocial": "BIOPAS BRASIL PRODUTOS FARMACEUTICOS LTDA",
+  "cnpj": "31327287000192",
+  "numeroTransacao": "12335582026",
+  "data": "2026-09-14T09:48:34.000-0300",
+  "numProcesso": "25351175231202583",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "189770013",
+  "nomeProduto": "GEMZAR",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35550311,
+     "expediente": "0950970263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T09:48:34.000-0300",
+     "ultDtSitDocumento": "2026-09-14T09:48:34.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T09:48:25.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T09:48:34.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T09:48:34.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34834242,
+     "expediente": "0217883265",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-03-05T11:35:13.000-0300",
+     "ultDtSitDocumento": "2026-03-05T11:35:13.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-03-05T11:35:09.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-03-05T11:35:13.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-03-05T11:35:13.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 2,
+   "totalPages": 1,
+   "last": true,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35550311,
+   "expediente": "0950970263",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T09:48:34.000-0300",
+   "ultDtSitDocumento": "2026-09-14T09:48:34.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T09:48:25.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T09:48:34.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T09:48:34.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de gencitabina",
+  "classesTerapeuticas": [
+   "ANTINEOPLASICO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2036-05-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "200 MG PO LIOF SOL INJ CT FA VD TRANS X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1897700130011"
+   },
+   {
+    "apresentacao": "1 G PO LIOF SOL INJ CT FA VD TRANS X 50 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1897700130021"
+   }
+  ]
+ }
+}

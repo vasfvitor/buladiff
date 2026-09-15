@@ -1,0 +1,184 @@
+{
+ "produto": {
+  "idProduto": 3688447,
+  "numeroRegistro": "100330234",
+  "nomeProduto": "EMPATIQ",
+  "expediente": "0953100260",
+  "razaoSocial": "LIBBS FARMACÊUTICA LTDA",
+  "cnpj": "61230314000175",
+  "numeroTransacao": "12361922026",
+  "data": "2026-09-14T14:58:56.000-0300",
+  "numProcesso": "25351023350202471",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100330234",
+  "nomeProduto": "EMPATIQ",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552346,
+     "expediente": "0953100260",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T14:58:56.000-0300",
+     "ultDtSitDocumento": "2026-09-14T14:58:56.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T14:58:53.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T14:58:56.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T14:58:56.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 1,
+   "totalPages": 1,
+   "last": true,
+   "numberOfElements": 1,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552346,
+   "expediente": "0953100260",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T14:58:56.000-0300",
+   "ultDtSitDocumento": "2026-09-14T14:58:56.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T14:58:53.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T14:58:56.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T14:58:56.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "empagliflozina",
+  "classesTerapeuticas": [
+   "ANTIDIABETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "JARDIANCE",
+  "dataVencimentoRegistro": "2036-07-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340017"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340025"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340033"
+   },
+   {
+    "apresentacao": "10 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 90",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340041"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340051"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340068"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340076"
+   },
+   {
+    "apresentacao": "25 MG COM REV CT BL AL PLAS PVC/PVDC TRANS X 90",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1003302340084"
+   }
+  ]
+ }
+}

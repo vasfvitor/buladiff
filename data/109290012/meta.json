@@ -1,0 +1,115 @@
+{
+ "produto": {
+  "idProduto": 2837578,
+  "numeroRegistro": "109290012",
+  "nomeProduto": "Trodelvy",
+  "expediente": "0953918262",
+  "razaoSocial": "GILEAD SCIENCES FARMACEUTICA DO BRASIL LTDA",
+  "cnpj": "15670288000189",
+  "numeroTransacao": "12372272026",
+  "data": "2026-09-14T16:40:48.000-0300",
+  "numProcesso": "25351885399202177",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "109290012",
+  "nomeProduto": "Trodelvy",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35553149,
+     "expediente": "0953918262",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T16:40:48.000-0300",
+     "ultDtSitDocumento": "2026-09-14T16:40:48.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T16:40:45.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T16:40:48.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T16:40:48.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34080588,
+     "expediente": "1084510251",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-08-15T10:15:07.000-0300",
+     "ultDtSitDocumento": "2025-08-15T10:15:07.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-08-15T10:15:05.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-08-15T10:15:07.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T16:40:48.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 11,
+   "totalPages": 6,
+   "last": false,
+   "sort": null,
+   "numberOfElements": 2,
+   "first": true,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35553149,
+   "expediente": "0953918262",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T16:40:48.000-0300",
+   "ultDtSitDocumento": "2026-09-14T16:40:48.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T16:40:45.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T16:40:48.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T16:40:48.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "sacituzumabe govitecana",
+  "classesTerapeuticas": [
+   "ANTICORPOS MONOCLONAIS",
+   "ANTINEOPLASICOS CITOTOXICOS"
+  ],
+  "atcs": [
+   "L01XC"
+  ],
+  "categoriaRegulatoria": "Biológico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2032-10-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "200 MG PO LIOF SOL INJ IV CT FA VD TRANS",
+    "formasFarmaceuticas": [
+     "Pó Liofilizado para Solução Injetável"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1092900120018"
+   }
+  ]
+ }
+}

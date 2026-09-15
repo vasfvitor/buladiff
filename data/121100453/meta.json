@@ -1,0 +1,121 @@
+{
+ "produto": {
+  "idProduto": 1327704,
+  "numeroRegistro": "121100453",
+  "nomeProduto": "RAPAMUNE",
+  "expediente": "0954473264",
+  "razaoSocial": "PFIZER BRASIL LTDA",
+  "cnpj": "61072393000133",
+  "numeroTransacao": "12378102026",
+  "data": "2026-09-14T17:37:47.000-0300",
+  "numProcesso": "25351190262201916",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "121100453",
+  "nomeProduto": "RAPAMUNE",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35553683,
+     "expediente": "0954473264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T17:37:47.000-0300",
+     "ultDtSitDocumento": "2026-09-14T17:37:47.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T17:37:44.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T17:37:47.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T17:37:47.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34443275,
+     "expediente": "1470108259",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-11-06T15:35:16.000-0200",
+     "ultDtSitDocumento": "2025-11-06T15:35:16.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-11-06T15:35:14.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-11-06T15:35:16.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-11-06T15:35:16.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 9,
+   "totalPages": 5,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35553683,
+   "expediente": "0954473264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T17:37:47.000-0300",
+   "ultDtSitDocumento": "2026-09-14T17:37:47.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T17:37:44.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T17:37:47.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T17:37:47.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "sirolimo",
+  "classesTerapeuticas": [
+   "AGENTE IMUNOSUPRESSOR"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA 1 MG, 2 MG DESDE 12/11/2012",
+  "dataVencimentoRegistro": "2035-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "1 MG DRG CT BL AL PLAS TRANS X 60",
+    "formasFarmaceuticas": [
+     "DRAGEA SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1211004530016"
+   },
+   {
+    "apresentacao": "2 MG DRG CT BL AL PLAS TRANS  X 30",
+    "formasFarmaceuticas": [
+     "DRAGEA SIMPLES"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1211004530024"
+   }
+  ]
+ }
+}

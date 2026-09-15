@@ -9,7 +9,7 @@
   "numeroTransacao": "3636372024",
   "data": "2024-04-11T15:26:12.000-0300",
   "numProcesso": "25351464826202349",
-  "dataAtualizacao": "2026-09-14T00:00:00.000-0300"
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
  },
  "historico": {
   "registroProduto": "157211214",
@@ -150,12 +150,12 @@
      "ultimaSitVal": true
     }
    ],
-   "last": true,
    "totalElements": 7,
    "totalPages": 1,
-   "sort": null,
+   "last": true,
    "numberOfElements": 7,
    "first": true,
+   "sort": null,
    "number": 0,
    "size": 500
   },

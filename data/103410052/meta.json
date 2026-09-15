@@ -1,0 +1,149 @@
+{
+ "produto": {
+  "idProduto": 125473,
+  "numeroRegistro": "103410052",
+  "nomeProduto": "ARTRODAR",
+  "expediente": "0951711261",
+  "razaoSocial": "TRB PHARMA INDÚSTRIA QUÍMICA E FARMACÊUTICA LTDA",
+  "cnpj": "61455192000115",
+  "numeroTransacao": "12348962026",
+  "data": "2026-09-14T11:55:42.000-0300",
+  "numProcesso": "250000208159354",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "103410052",
+  "nomeProduto": "ARTRODAR",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35550982,
+     "expediente": "0951711261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T11:55:42.000-0300",
+     "ultDtSitDocumento": "2026-09-14T11:55:42.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T11:55:38.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T11:55:42.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T11:55:42.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 35368967,
+     "expediente": "0766088260",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-07-30T15:47:44.000-0300",
+     "ultDtSitDocumento": "2026-07-30T15:47:44.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-07-30T15:47:41.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-07-30T15:47:44.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-07-30T15:47:44.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 14,
+   "totalPages": 7,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35550982,
+   "expediente": "0951711261",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T11:55:42.000-0300",
+   "ultDtSitDocumento": "2026-09-14T11:55:42.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T11:55:38.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T11:55:42.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T11:55:42.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "diacereína",
+  "classesTerapeuticas": [
+   "ANTINFLAMATORIOS ANTIREUMATICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 05/04/2024",
+  "dataVencimentoRegistro": "2035-12-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1034100520022"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1034100520030"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1034100520049"
+   },
+   {
+    "apresentacao": "50 MG CAP GEL CT FR VD AMB X 30",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1034100520014"
+   }
+  ]
+ }
+}

@@ -1,0 +1,168 @@
+{
+ "produto": {
+  "idProduto": 137673,
+  "numeroRegistro": "101860012",
+  "nomeProduto": "SANTIDOR",
+  "expediente": "0951017268",
+  "razaoSocial": "SANTISA LABORATÓRIO FARMACÊUTICO S/A",
+  "cnpj": "04099395000182",
+  "numeroTransacao": "12335202026",
+  "data": "2026-09-14T09:44:52.000-0300",
+  "numProcesso": "259910049077931",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "101860012",
+  "nomeProduto": "SANTIDOR",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35550300,
+     "expediente": "0951017268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T09:44:52.000-0300",
+     "ultDtSitDocumento": "2026-09-14T09:44:52.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T09:44:48.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T09:44:52.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T09:44:52.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 35096769,
+     "expediente": "0487494261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-05-19T14:50:06.000-0300",
+     "ultDtSitDocumento": "2026-05-19T14:50:06.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-05-19T14:50:04.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-05-19T14:50:06.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-05-19T14:50:06.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 17,
+   "totalPages": 9,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35550300,
+   "expediente": "0951017268",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T09:44:52.000-0300",
+   "ultDtSitDocumento": "2026-09-14T09:44:52.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T09:44:48.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T09:44:52.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T09:44:52.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "dipirona, dipirona monoidratada",
+  "classesTerapeuticas": [
+   "ANALGESICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "NOVALGINA",
+  "dataVencimentoRegistro": "2035-01-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "500 MG/ML SOL INJ CX 100 AMP VD AMB X 2 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA",
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018600120021"
+   },
+   {
+    "apresentacao": "500 MG/ML SOL INJ CX 100 AMP VD AMB X 1 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA",
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018600120048"
+   },
+   {
+    "apresentacao": "500 MG/ML SOL INJ CX 100 AMP VD AMB X 5 ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA",
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018600120056"
+   },
+   {
+    "apresentacao": "500 MG COM CX 50 ENV AL POLIET X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO SIMPLES"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018600120013"
+   },
+   {
+    "apresentacao": "500 MG/ML SOL OR CX 100 FR PLAS GOT X 10 ML (EMB HOSP)",
+    "formasFarmaceuticas": [
+     "SOLUÇAO ORAL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA",
+     "INTRAMUSCULAR"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1018600120031"
+   }
+  ]
+ }
+}

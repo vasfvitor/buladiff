@@ -1,0 +1,151 @@
+{
+ "produto": {
+  "idProduto": 3747844,
+  "numeroRegistro": "188300113",
+  "nomeProduto": "dexlansoprazol",
+  "expediente": "0953647269",
+  "razaoSocial": "VIATRIS FARMACEUTICA DO BRASIL LTDA",
+  "cnpj": "11643096000122",
+  "numeroTransacao": "12366882026",
+  "data": "2026-09-14T15:42:17.000-0300",
+  "numProcesso": "25351401097202409",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "188300113",
+  "nomeProduto": "dexlansoprazol",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552885,
+     "expediente": "0953647269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T15:42:17.000-0300",
+     "ultDtSitDocumento": "2026-09-14T15:42:17.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T15:42:14.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T15:42:17.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T15:42:17.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 35089936,
+     "expediente": "0480540268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-05-18T11:30:44.000-0300",
+     "ultDtSitDocumento": "2026-05-18T11:30:44.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-05-18T11:30:42.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-05-18T11:30:44.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-05-18T11:30:44.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": true,
+   "totalElements": 2,
+   "totalPages": 1,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552885,
+   "expediente": "0953647269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T15:42:17.000-0300",
+   "ultDtSitDocumento": "2026-09-14T15:42:17.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T15:42:14.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T15:42:17.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T15:42:17.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "dexlansoprazol sesqui-hidratado",
+  "classesTerapeuticas": [
+   "ANTIACIDOS E ANTIULCEROSOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "DEXILANT",
+  "dataVencimentoRegistro": "2036-01-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "30 MG CAP DURA LIB RETARD CT BL AL AL DESSEC X 30",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1883001130012"
+   },
+   {
+    "apresentacao": "30 MG CAP DURA LIB RETARD CT FR PLAS PEAD OPC X 30",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1883001130020"
+   },
+   {
+    "apresentacao": "60 MG CAP DURA LIB RETARD CT BL AL AL DESSEC X 30",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1883001130039"
+   },
+   {
+    "apresentacao": "60 MG CAP DURA LIB RETARD CT FR PLAS PEAD OPC X 30",
+    "formasFarmaceuticas": [
+     "Cápsula Dura de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1883001130047"
+   }
+  ]
+ }
+}

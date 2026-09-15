@@ -1,0 +1,132 @@
+{
+ "produto": {
+  "idProduto": 3827915,
+  "numeroRegistro": "155840709",
+  "nomeProduto": "eszopiclona",
+  "expediente": "0952845261",
+  "razaoSocial": "BRAINFARMA INDÚSTRIA QUÍMICA E FARMACÊUTICA S.A",
+  "cnpj": "05161069000110",
+  "numeroTransacao": "12358242026",
+  "data": "2026-09-14T14:24:58.000-0300",
+  "numProcesso": "25351007099202588",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "155840709",
+  "nomeProduto": "eszopiclona",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552114,
+     "expediente": "0952845261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T14:24:58.000-0300",
+     "ultDtSitDocumento": "2026-09-14T14:24:58.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T14:24:55.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T14:24:58.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T14:24:58.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": true,
+   "totalElements": 1,
+   "totalPages": 1,
+   "numberOfElements": 1,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552114,
+   "expediente": "0952845261",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T14:24:58.000-0300",
+   "ultDtSitDocumento": "2026-09-14T14:24:58.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T14:24:55.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T14:24:58.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T14:24:58.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "eszopiclona",
+  "classesTerapeuticas": [
+   "HIPNOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "PRYSMA",
+  "dataVencimentoRegistro": "2035-12-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "2 MG COM REV CT FR PLAS PEAD OPC X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1558407090011"
+   },
+   {
+    "apresentacao": "2 MG COM REV CT FR PLAS PEAD OPC X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1558407090028"
+   },
+   {
+    "apresentacao": "3 MG COM REV CT FR PLAS PEAD OPC X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1558407090036"
+   },
+   {
+    "apresentacao": "3 MG COM REV CT FR PLAS PEAD OPC X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido "
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"B\""
+    ],
+    "registro": "1558407090044"
+   }
+  ]
+ }
+}

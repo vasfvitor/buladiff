@@ -1,0 +1,177 @@
+{
+ "produto": {
+  "idProduto": 1254686,
+  "numeroRegistro": "100890404",
+  "nomeProduto": "Glivance XR",
+  "expediente": "0952538261",
+  "razaoSocial": "MERCK S/A",
+  "cnpj": "33069212000184",
+  "numeroTransacao": "12353582026",
+  "data": "2026-09-14T13:15:41.000-0300",
+  "numProcesso": "25351666140201486",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100890404",
+  "nomeProduto": "Glivance XR",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35551793,
+     "expediente": "0952538261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T13:15:41.000-0300",
+     "ultDtSitDocumento": "2026-09-14T13:15:41.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T13:15:37.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T13:15:41.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T13:15:41.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34744095,
+     "expediente": "0126571261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-02-06T09:55:43.000-0200",
+     "ultDtSitDocumento": "2026-02-06T09:55:43.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-02-06T09:55:42.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-02-06T09:55:43.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T13:15:41.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 8,
+   "totalPages": 4,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35551793,
+   "expediente": "0952538261",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T13:15:41.000-0300",
+   "ultDtSitDocumento": "2026-09-14T13:15:41.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T13:15:37.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T13:15:41.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T13:15:41.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de metformina, gliclazida",
+  "classesTerapeuticas": [
+   "ANTIDIABETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "N/A",
+  "dataVencimentoRegistro": "2028-07-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "500 MG + 30 MG COM LIB PROL CT BL AL PLAS PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008904040012"
+   },
+   {
+    "apresentacao": "500 MG + 30 MG COM LIB PROL CT BL AL PLAS PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008904040020"
+   },
+   {
+    "apresentacao": "750 MG + 30 MG COM LIB PROL CT BL AL PLAS PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008904040039"
+   },
+   {
+    "apresentacao": "750 MG + 30 MG COM LIB PROL CT BL AL PLAS PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008904040047"
+   },
+   {
+    "apresentacao": "1000 MG + 30 MG COM LIB PROL CT BL AL PLAS PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008904040055"
+   },
+   {
+    "apresentacao": "1000 MG + 30 MG COM LIB PROL CT BL AL PLAS PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008904040063"
+   }
+  ]
+ }
+}

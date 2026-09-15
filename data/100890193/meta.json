@@ -1,0 +1,294 @@
+{
+ "produto": {
+  "idProduto": 349899,
+  "numeroRegistro": "100890193",
+  "nomeProduto": "GLIFAGE",
+  "expediente": "0953744264",
+  "razaoSocial": "MERCK S/A",
+  "cnpj": "33069212000184",
+  "numeroTransacao": "12368492026",
+  "data": "2026-09-14T15:57:03.000-0300",
+  "numProcesso": "250000121599352",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100890193",
+  "nomeProduto": "GLIFAGE",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552972,
+     "expediente": "0953744264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T15:57:03.000-0300",
+     "ultDtSitDocumento": "2026-09-14T15:57:03.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T15:56:59.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T15:57:03.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T15:57:03.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34728424,
+     "expediente": "0108905268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-02-03T08:24:41.000-0200",
+     "ultDtSitDocumento": "2026-02-03T08:24:41.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-02-03T08:24:39.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-02-03T08:24:41.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T15:57:03.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 16,
+   "totalPages": 8,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552972,
+   "expediente": "0953744264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T15:57:03.000-0300",
+   "ultDtSitDocumento": "2026-09-14T15:57:03.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T15:56:59.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T15:57:03.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T15:57:03.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de metformina",
+  "classesTerapeuticas": [
+   "ANTIDIABETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 12/11/2012",
+  "dataVencimentoRegistro": "2029-03-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "850 MG COM REV CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930017"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930025"
+   },
+   {
+    "apresentacao": "1 G COM REV CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930051"
+   },
+   {
+    "apresentacao": "850 MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930068"
+   },
+   {
+    "apresentacao": "850 MG COM REV CT BL AL PLAS TRANS X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930076"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS  X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930084"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930092"
+   },
+   {
+    "apresentacao": "1 G COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930106"
+   },
+   {
+    "apresentacao": "1 G COM REV CT BL AL PLAS TRANS X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930114"
+   },
+   {
+    "apresentacao": "850 MG COM REV CT BL AL PLAS TRANS X 500",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930122"
+   },
+   {
+    "apresentacao": "850 MG COM REV CT BL AL PLAS TRANS X 1000",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930130"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 500",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930149"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 1000",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930157"
+   },
+   {
+    "apresentacao": "500 MG COM REV EST 3 BL AL PLAS INC X 10",
+    "formasFarmaceuticas": [
+     "*******"
+    ],
+    "viasAdministracao": [
+     "IMPLANTE OSSEO"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930033"
+   },
+   {
+    "apresentacao": "850 MG COM REV EST 3 BL AL PLAS INC X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "IMPLANTE OSSEO"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008901930041"
+   }
+  ]
+ }
+}

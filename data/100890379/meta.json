@@ -1,0 +1,398 @@
+{
+ "produto": {
+  "idProduto": 979026,
+  "numeroRegistro": "100890379",
+  "nomeProduto": "CLORIDRATO DE METFORMINA",
+  "expediente": "0953804267",
+  "razaoSocial": "MERCK S/A",
+  "cnpj": "33069212000184",
+  "numeroTransacao": "12369832026",
+  "data": "2026-09-14T16:10:23.000-0300",
+  "numProcesso": "25351766880201045",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100890379",
+  "nomeProduto": "CLORIDRATO DE METFORMINA",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35553033,
+     "expediente": "0953804267",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T16:10:23.000-0300",
+     "ultDtSitDocumento": "2026-09-14T16:10:23.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T16:10:20.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T16:10:23.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T16:10:23.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34979654,
+     "expediente": "0367629267",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-04-15T14:08:39.000-0300",
+     "ultDtSitDocumento": "2026-04-15T14:08:39.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-04-15T14:08:37.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-04-15T14:08:39.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-04-15T14:08:39.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 14,
+   "totalPages": 7,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35553033,
+   "expediente": "0953804267",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T16:10:23.000-0300",
+   "ultDtSitDocumento": "2026-09-14T16:10:23.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T16:10:20.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T16:10:23.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T16:10:23.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de metformina",
+  "classesTerapeuticas": [
+   "ANTIDIABETICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2029-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790018"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790026"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790034"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 40",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790042"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790050"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790069"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790077"
+   },
+   {
+    "apresentacao": "500 MG COM LIB PROL  CT BL AL PLAS PVDC/PVC TRANS X 45",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790085"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790093"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790107"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790115"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790123"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 40",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790131"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 45",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790141"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 50",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790158"
+   },
+   {
+    "apresentacao": "750 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790166"
+   },
+   {
+    "apresentacao": "1 G COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790174"
+   },
+   {
+    "apresentacao": "1 G COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790182"
+   },
+   {
+    "apresentacao": "1 G COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790190"
+   },
+   {
+    "apresentacao": "1 G COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 150",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790204"
+   },
+   {
+    "apresentacao": "1 G COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 200",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO DE LIBERACAO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790212"
+   },
+   {
+    "apresentacao": "850 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790433"
+   },
+   {
+    "apresentacao": "850 MG COM LIB PROL CT BL AL PLAS PVDC/PVC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1008903790441"
+   }
+  ]
+ }
+}

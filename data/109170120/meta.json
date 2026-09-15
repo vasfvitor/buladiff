@@ -1,0 +1,190 @@
+{
+ "produto": {
+  "idProduto": 960685,
+  "numeroRegistro": "109170120",
+  "nomeProduto": "pantoprazol sódico sesqui-hidratado",
+  "expediente": "0952348268",
+  "razaoSocial": "MEDQUIMICA INDUSTRIA FARMACEUTICA LTDA.",
+  "cnpj": "17875154000120",
+  "numeroTransacao": "12350722026",
+  "data": "2026-09-14T12:21:27.000-0300",
+  "numProcesso": "25351292306201432",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "109170120",
+  "nomeProduto": "pantoprazol sódico sesqui-hidratado",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35551613,
+     "expediente": "0952348268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T12:21:27.000-0300",
+     "ultDtSitDocumento": "2026-09-14T12:21:27.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T12:21:24.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T12:21:27.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T12:21:27.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 35102658,
+     "expediente": "0493554262",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-05-20T16:15:44.000-0300",
+     "ultDtSitDocumento": "2026-05-20T16:15:44.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-05-20T16:15:43.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-05-20T16:15:44.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-05-20T16:15:44.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 10,
+   "totalPages": 5,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35551613,
+   "expediente": "0952348268",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T12:21:27.000-0300",
+   "ultDtSitDocumento": "2026-09-14T12:21:27.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T12:21:24.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T12:21:27.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T12:21:27.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "pantoprazol sódico sesqui-hidratado",
+  "classesTerapeuticas": [
+   "ANTIULCEROSOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "PANTOZOL",
+  "dataVencimentoRegistro": "2030-02-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 7",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200013"
+   },
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 14",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200021"
+   },
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200031"
+   },
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 60 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200048"
+   },
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 300 (EMB FRAC)",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200056"
+   },
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200064"
+   },
+   {
+    "apresentacao": "40 MG COM REV CT BL AL PLAS PVC/PE/PVDC TRANS X 300",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Retardada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1091701200072"
+   }
+  ]
+ }
+}

@@ -1,0 +1,151 @@
+{
+ "produto": {
+  "idProduto": 1020528,
+  "numeroRegistro": "102980452",
+  "nomeProduto": "VORICONAZOL",
+  "expediente": "0952755262",
+  "razaoSocial": "CRISTÁLIA PRODUTOS QUÍMICOS FARMACÊUTICOS LTDA.",
+  "cnpj": "44734671000151",
+  "numeroTransacao": "12356632026",
+  "data": "2026-09-14T14:03:29.000-0300",
+  "numProcesso": "25351015521201524",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "102980452",
+  "nomeProduto": "VORICONAZOL",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552011,
+     "expediente": "0952755262",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T14:03:29.000-0300",
+     "ultDtSitDocumento": "2026-09-14T14:03:29.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T14:03:27.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T14:03:29.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T14:03:29.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34724808,
+     "expediente": "0105187267",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-02-02T10:35:28.000-0200",
+     "ultDtSitDocumento": "2026-02-02T10:35:28.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-02-02T10:35:27.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-02-02T10:35:28.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-02-02T10:35:28.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 18,
+   "totalPages": 9,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552011,
+   "expediente": "0952755262",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T14:03:29.000-0300",
+   "ultDtSitDocumento": "2026-09-14T14:03:29.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T14:03:27.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T14:03:29.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T14:03:29.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "voriconazol",
+  "classesTerapeuticas": [
+   "ANTIMICOTICO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "VFEND",
+  "dataVencimentoRegistro": "2027-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "200 MG PO LIOF SOL INJ INFUS IV CT 1 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804520015"
+   },
+   {
+    "apresentacao": "200 MG PO LIOF SOL INJ INFUS IV CX 10 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804520023"
+   },
+   {
+    "apresentacao": "200 MG PO LIOF SOL INJ INFUS IV CX 14 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804520031"
+   },
+   {
+    "apresentacao": "200 MG PO LIOF SOL INJ INFUS IV CX 28 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804520041"
+   }
+  ]
+ }
+}

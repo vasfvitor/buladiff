@@ -1,0 +1,151 @@
+{
+ "produto": {
+  "idProduto": 939326,
+  "numeroRegistro": "102980417",
+  "nomeProduto": "VORICONAZOL",
+  "expediente": "0953129268",
+  "razaoSocial": "CRISTÁLIA PRODUTOS QUÍMICOS FARMACÊUTICOS LTDA.",
+  "cnpj": "44734671000151",
+  "numeroTransacao": "12362562026",
+  "data": "2026-09-14T15:04:47.000-0300",
+  "numProcesso": "25351012776201403",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "102980417",
+  "nomeProduto": "VORICONAZOL",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35552664,
+     "expediente": "0953129268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T15:04:47.000-0300",
+     "ultDtSitDocumento": "2026-09-14T15:04:47.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T15:04:44.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T15:04:47.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T15:04:47.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34724917,
+     "expediente": "0105292265",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-02-02T10:52:04.000-0200",
+     "ultDtSitDocumento": "2026-02-02T10:52:04.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-02-02T10:52:03.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-02-02T10:52:04.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-02-02T10:52:04.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 17,
+   "totalPages": 9,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35552664,
+   "expediente": "0953129268",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T15:04:47.000-0300",
+   "ultDtSitDocumento": "2026-09-14T15:04:47.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T15:04:44.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T15:04:47.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T15:04:47.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "voriconazol",
+  "classesTerapeuticas": [
+   "ANTIMICOTICOS SISTEMICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "VFEND",
+  "dataVencimentoRegistro": "2035-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 2",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804170014"
+   },
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804170022"
+   },
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 14",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804170030"
+   },
+   {
+    "apresentacao": "200 MG COM REV CT BL AL PLAS TRANS X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029804170049"
+   }
+  ]
+ }
+}

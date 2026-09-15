@@ -1,0 +1,255 @@
+{
+ "produto": {
+  "idProduto": 2187469,
+  "numeroRegistro": "100431333",
+  "nomeProduto": "valsartana",
+  "expediente": "0955147263",
+  "razaoSocial": "EUROFARMA LABORATORIOS S.A.",
+  "cnpj": "61190096000192",
+  "numeroTransacao": "12384912026",
+  "data": "2026-09-14T18:56:05.000-0300",
+  "numProcesso": "25351259545202112",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100431333",
+  "nomeProduto": "valsartana",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35554363,
+     "expediente": "0955147263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T18:56:05.000-0300",
+     "ultDtSitDocumento": "2026-09-14T18:56:05.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T18:56:02.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T18:56:05.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T18:56:05.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34395343,
+     "expediente": "1419447254",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-10-24T09:02:12.000-0300",
+     "ultDtSitDocumento": "2025-10-24T09:02:12.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-10-24T09:02:10.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-10-24T09:02:12.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-10-24T09:02:12.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 9,
+   "totalPages": 5,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35554363,
+   "expediente": "0955147263",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T18:56:05.000-0300",
+   "ultDtSitDocumento": "2026-09-14T18:56:05.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T18:56:02.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T18:56:05.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T18:56:05.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "valsartana",
+  "classesTerapeuticas": [
+   "ANTI-HIPERTENSIVOS SIMPLES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "DIOVAN",
+  "dataVencimentoRegistro": "2031-05-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "80 MG COM REV CT BL AL AL X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330016"
+   },
+   {
+    "apresentacao": "80 MG COM REV CT BL AL  AL X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330024"
+   },
+   {
+    "apresentacao": "80 MG COM REV CT BL AL  AL X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330032"
+   },
+   {
+    "apresentacao": "80 MG COM REV CT BL AL  AL X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330040"
+   },
+   {
+    "apresentacao": "160 MG COM REV CT BL AL AL X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330059"
+   },
+   {
+    "apresentacao": "160 MG COM REV CT BL AL AL X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330067"
+   },
+   {
+    "apresentacao": "160 MG COM REV CT BL AL AL X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330075"
+   },
+   {
+    "apresentacao": "160 MG COM REV CT BL AL AL X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330083"
+   },
+   {
+    "apresentacao": "320 MG COM REV CT BL AL AL X 15",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330091"
+   },
+   {
+    "apresentacao": "320 MG COM REV CT BL AL AL X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330105"
+   },
+   {
+    "apresentacao": "320 MG COM REV CT BL AL AL X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330113"
+   },
+   {
+    "apresentacao": "320 MG COM REV CT BL AL AL X 90",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1004313330121"
+   }
+  ]
+ }
+}

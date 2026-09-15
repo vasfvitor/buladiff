@@ -1,0 +1,203 @@
+{
+ "produto": {
+  "idProduto": 1329308,
+  "numeroRegistro": "186100017",
+  "nomeProduto": "ADORLAN",
+  "expediente": "0952519267",
+  "razaoSocial": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+  "cnpj": "10555143000113",
+  "numeroTransacao": "12353212026",
+  "data": "2026-09-14T13:09:51.000-0300",
+  "numProcesso": "25351559471201609",
+  "dataAtualizacao": "2026-09-15T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "186100017",
+  "nomeProduto": "ADORLAN",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35551774,
+     "expediente": "0952519267",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-14T13:09:51.000-0300",
+     "ultDtSitDocumento": "2026-09-14T13:09:51.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-14T13:09:48.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-14T13:09:51.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T13:09:51.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 32794624,
+     "expediente": "1514128241",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2024-11-04T10:22:23.000-0200",
+     "ultDtSitDocumento": "2024-11-04T10:22:23.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2024-11-04T10:21:10.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2024-11-04T10:22:23.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-14T13:09:51.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 19,
+   "totalPages": 10,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35551774,
+   "expediente": "0952519267",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-14T13:09:51.000-0300",
+   "ultDtSitDocumento": "2026-09-14T13:09:51.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-14T13:09:48.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-14T13:09:51.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-14T13:09:51.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de tramadol, diclofenaco sódico",
+  "classesTerapeuticas": [
+   "ANALGESICOS NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2030-07-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "(25 + 25) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170011"
+   },
+   {
+    "apresentacao": "(25 + 25) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170028"
+   },
+   {
+    "apresentacao": "(25 + 25) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170036"
+   },
+   {
+    "apresentacao": "(25 + 25) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 50",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170044"
+   },
+   {
+    "apresentacao": "(50+ 50) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 10",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170052"
+   },
+   {
+    "apresentacao": "(50 + 50) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 20",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170060"
+   },
+   {
+    "apresentacao": "(50 + 50) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 30",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170079"
+   },
+   {
+    "apresentacao": "(50 + 50) MG COM CT BL AL PLAS PVC/PEBD/PVDC TRANS X 50",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000170087"
+   }
+  ]
+ }
+}
