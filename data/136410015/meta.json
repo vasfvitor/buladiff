@@ -1,0 +1,151 @@
+{
+ "produto": {
+  "idProduto": 1128727,
+  "numeroRegistro": "136410015",
+  "nomeProduto": "Prolastin-C",
+  "expediente": "0958036268",
+  "razaoSocial": "GRIFOLS BRASIL LTDA",
+  "cnpj": "02513899000171",
+  "numeroTransacao": "12419602026",
+  "data": "2026-09-15T11:38:12.000-0300",
+  "numProcesso": "25351380089201655",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "136410015",
+  "nomeProduto": "Prolastin-C",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35557211,
+     "expediente": "0958036268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T11:38:12.000-0300",
+     "ultDtSitDocumento": "2026-09-15T11:38:12.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T11:38:07.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T11:38:12.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T11:38:12.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 34605147,
+     "expediente": "1641461250",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-12-23T11:39:31.000-0200",
+     "ultDtSitDocumento": "2025-12-23T11:39:31.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-12-23T11:39:29.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-12-23T11:39:31.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-23T11:39:31.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 13,
+   "totalPages": 7,
+   "last": false,
+   "sort": null,
+   "numberOfElements": 2,
+   "first": true,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35557211,
+   "expediente": "0958036268",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T11:38:12.000-0300",
+   "ultDtSitDocumento": "2026-09-15T11:38:12.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T11:38:07.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T11:38:12.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T11:38:12.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "alfa1antitripsina",
+  "classesTerapeuticas": [
+   "FRACOES DO SANGUE OU PLASMA EXCETO GAMAGLOBULINA"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Biológico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2028-07-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "1G PÓ LIOF INJ IV CX FA VD TRANS + DIL X 20 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1364100150013"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ IV CX FA VD TRANS X 20 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1364100150031"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ IV CX FA VD TRANS X 80 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1364100150048"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ IV CX FA VD TRANS X 10 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1364100150021"
+   }
+  ]
+ }
+}

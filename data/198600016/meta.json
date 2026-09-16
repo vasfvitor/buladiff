@@ -1,0 +1,177 @@
+{
+ "produto": {
+  "idProduto": 1284217,
+  "numeroRegistro": "198600016",
+  "nomeProduto": "SKYRIZI",
+  "expediente": "0959719261",
+  "razaoSocial": "ABBVIE FARMACÊUTICA LTDA.",
+  "cnpj": "15800545000150",
+  "numeroTransacao": "12442302026",
+  "data": "2026-09-15T16:27:56.000-0300",
+  "numProcesso": "25351679594201864",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "198600016",
+  "nomeProduto": "SKYRIZI",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35558845,
+     "expediente": "0959719261",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T16:27:56.000-0300",
+     "ultDtSitDocumento": "2026-09-15T16:27:56.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T16:27:53.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T16:27:56.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T16:27:56.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 35313339,
+     "expediente": "0709272260",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-07-17T14:08:43.000-0300",
+     "ultDtSitDocumento": "2026-07-17T14:08:43.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-07-17T14:08:41.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-07-17T14:08:43.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T16:27:56.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 23,
+   "totalPages": 12,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35558845,
+   "expediente": "0959719261",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T16:27:56.000-0300",
+   "ultDtSitDocumento": "2026-09-15T16:27:56.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T16:27:53.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T16:27:56.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T16:27:56.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "risanquizumabe",
+  "classesTerapeuticas": [
+   "IMUNOMODULADOR"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Biológico",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2029-05-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "90 MG/ML SOL INJ CT 2 BL X SER PREENC VD TRANS X 0,83ML + 2 ENV LEN ALCOOL",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1986000160016"
+   },
+   {
+    "apresentacao": "60 MG/ML MG SOL DIL INFUS CT FA VD TRANS X 10 ML",
+    "formasFarmaceuticas": [
+     "Solução p/ Diluição p/ Infusão"
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1986000160024"
+   },
+   {
+    "apresentacao": "150 MG/ML SOL INJ CARP PLAS TRANS X 2,4 ML + DISP AUTOINJ",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1986000160032"
+   },
+   {
+    "apresentacao": "150 MG/ML SOL INJ CT BL X SER PREENC VD TRANS + CAN APLIC X 1 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1986000160040"
+   },
+   {
+    "apresentacao": "150 MG/ML SOL INJ CT BL X SER PREENC VD TRANS X 1 ML",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1986000160059"
+   },
+   {
+    "apresentacao": "150 MG/ML SOL INJ CARP PLAS TRANS X 1,2 ML + DISP AUTOINJ",
+    "formasFarmaceuticas": [
+     "Solução Injetável "
+    ],
+    "viasAdministracao": [
+     "SUBCUTÂNEA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1986000160067"
+   }
+  ]
+ }
+}

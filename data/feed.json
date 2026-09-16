@@ -1,5 +1,5 @@
 {
- "ate": "2026-09-15",
+ "ate": "2026-09-16",
  "publicacoes": [
   {
    "registro": "110630163",
@@ -780,6 +780,146 @@
    "expediente": "0955147263",
    "data": "2026-09-14",
    "processo": "25351259545202112"
+  },
+  {
+   "registro": "173590007",
+   "id_produto": 2769449,
+   "nome": "ILLUCCIX",
+   "empresa": "MJM PRODUTOS FARMACEUTICOS E DE RADIOPROTECAO S.A.",
+   "cnpj": "04891262000144",
+   "expediente": "0959885269",
+   "data": "2026-09-15",
+   "processo": "25351527587202183"
+  },
+  {
+   "registro": "105730656",
+   "id_produto": 1303590,
+   "nome": "LEVOFLOXACINO",
+   "empresa": "ACHÉ LABORATÓRIOS FARMACÊUTICOS S.A",
+   "cnpj": "60659463002992",
+   "expediente": "0959522263",
+   "data": "2026-09-15",
+   "processo": "25351856327201817"
+  },
+  {
+   "registro": "105730453",
+   "id_produto": 849250,
+   "nome": "LIVEPAX",
+   "empresa": "ACHÉ LABORATÓRIOS FARMACÊUTICOS S.A",
+   "cnpj": "60659463002992",
+   "expediente": "0959542264",
+   "data": "2026-09-15",
+   "processo": "25351488773201269"
+  },
+  {
+   "registro": "103670173",
+   "id_produto": 1076787,
+   "nome": "OFEV",
+   "empresa": "BOEHRINGER INGELHEIM DO BRASIL QUÍMICA E FARMACÊUTICA LTDA.",
+   "cnpj": "60831658000177",
+   "expediente": "0960645268",
+   "data": "2026-09-15",
+   "processo": "25351456304201563"
+  },
+  {
+   "registro": "102980310",
+   "id_produto": 138364,
+   "nome": "PAMIDROM",
+   "empresa": "CRISTÁLIA PRODUTOS QUÍMICOS FARMACÊUTICOS LTDA.",
+   "cnpj": "44734671000151",
+   "expediente": "0958377260",
+   "data": "2026-09-15",
+   "processo": "25351169148200289"
+  },
+  {
+   "registro": "136410015",
+   "id_produto": 1128727,
+   "nome": "Prolastin-C",
+   "empresa": "GRIFOLS BRASIL LTDA",
+   "cnpj": "02513899000171",
+   "expediente": "0958036268",
+   "data": "2026-09-15",
+   "processo": "25351380089201655"
+  },
+  {
+   "registro": "100681183",
+   "id_produto": 2776188,
+   "nome": "SCEMBLIX",
+   "empresa": "NOVARTIS BIOCIENCIAS S.A",
+   "cnpj": "56994502000130",
+   "expediente": "0959553266",
+   "data": "2026-09-15",
+   "processo": "25351779085202136"
+  },
+  {
+   "registro": "198600016",
+   "id_produto": 1284217,
+   "nome": "SKYRIZI",
+   "empresa": "ABBVIE FARMACÊUTICA LTDA.",
+   "cnpj": "15800545000150",
+   "expediente": "0959719261",
+   "data": "2026-09-15",
+   "processo": "25351679594201864"
+  },
+  {
+   "registro": "186100003",
+   "id_produto": 1040934,
+   "nome": "Tramal",
+   "empresa": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+   "cnpj": "10555143000113",
+   "expediente": "0958020264",
+   "data": "2026-09-15",
+   "processo": "25351294507201479"
+  },
+  {
+   "registro": "186100005",
+   "id_produto": 1040936,
+   "nome": "Tramal",
+   "empresa": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+   "cnpj": "10555143000113",
+   "expediente": "0958946264",
+   "data": "2026-09-15",
+   "processo": "25351294512201481"
+  },
+  {
+   "registro": "186100006",
+   "id_produto": 1040937,
+   "nome": "Tramal",
+   "empresa": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+   "cnpj": "10555143000113",
+   "expediente": "0957987269",
+   "data": "2026-09-15",
+   "processo": "25351294508201413"
+  },
+  {
+   "registro": "186100004",
+   "id_produto": 1040935,
+   "nome": "Tramal Retard",
+   "empresa": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+   "cnpj": "10555143000113",
+   "expediente": "0958927260",
+   "data": "2026-09-15",
+   "processo": "25351294509201468"
+  },
+  {
+   "registro": "100681123",
+   "id_produto": 1039442,
+   "nome": "ULTIBRO",
+   "empresa": "NOVARTIS BIOCIENCIAS S.A",
+   "cnpj": "56994502000130",
+   "expediente": "0959879269",
+   "data": "2026-09-15",
+   "processo": "25351576074201382"
+  },
+  {
+   "registro": "105350251",
+   "id_produto": 3617072,
+   "nome": "ivermectina",
+   "empresa": "LABORATÓRIO GLOBO SA",
+   "cnpj": "17115437000173",
+   "expediente": "0958714266",
+   "data": "2026-09-15",
+   "processo": "25351320474202311"
   }
  ]
 }

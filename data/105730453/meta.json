@@ -1,0 +1,216 @@
+{
+ "produto": {
+  "idProduto": 849250,
+  "numeroRegistro": "105730453",
+  "nomeProduto": "LIVEPAX",
+  "expediente": "0959542264",
+  "razaoSocial": "ACHÉ LABORATÓRIOS FARMACÊUTICOS S.A",
+  "cnpj": "60659463002992",
+  "numeroTransacao": "12437382026",
+  "data": "2026-09-15T15:45:43.000-0300",
+  "numProcesso": "25351488773201269",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "105730453",
+  "nomeProduto": "LIVEPAX",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35558681,
+     "expediente": "0959542264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T15:45:43.000-0300",
+     "ultDtSitDocumento": "2026-09-15T15:45:43.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T15:45:37.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T15:45:43.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T15:45:43.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 35260034,
+     "expediente": "0654447268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-07-02T15:27:47.000-0300",
+     "ultDtSitDocumento": "2026-07-02T15:27:47.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-07-02T15:27:44.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-07-02T15:27:47.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-07-02T15:27:47.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 19,
+   "totalPages": 10,
+   "last": false,
+   "sort": null,
+   "numberOfElements": 2,
+   "first": true,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35558681,
+   "expediente": "0959542264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T15:45:43.000-0300",
+   "ultDtSitDocumento": "2026-09-15T15:45:43.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T15:45:37.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T15:45:43.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T15:45:43.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "levofloxacino",
+  "classesTerapeuticas": [
+   "ANTIBIOTICOS SISTEMICOS SIMPLES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "TAVANIC",
+  "dataVencimentoRegistro": "2028-08-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 3",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530017"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 5",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530025"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 7",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530033"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530041"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 14",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530051"
+   },
+   {
+    "apresentacao": "500 MG COM REV CT BL AL PLAS TRANS X 500 (EMB HOSP)",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530068"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 5",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530084"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 7",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530092"
+   },
+   {
+    "apresentacao": "750 MG COM REV CT BL AL PLAS TRANS X 3",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Prescrição Médica Sujeita a Notificação de Receita \"A\""
+    ],
+    "registro": "1057304530076"
+   }
+  ]
+ }
+}

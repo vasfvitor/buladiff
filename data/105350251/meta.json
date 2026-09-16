@@ -1,0 +1,138 @@
+{
+ "produto": {
+  "idProduto": 3617072,
+  "numeroRegistro": "105350251",
+  "nomeProduto": "ivermectina",
+  "expediente": "0958714266",
+  "razaoSocial": "LABORATÓRIO GLOBO SA",
+  "cnpj": "17115437000173",
+  "numeroTransacao": "12425212026",
+  "data": "2026-09-15T13:07:03.000-0300",
+  "numProcesso": "25351320474202311",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "105350251",
+  "nomeProduto": "ivermectina",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35557870,
+     "expediente": "0958714266",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T13:07:03.000-0300",
+     "ultDtSitDocumento": "2026-09-15T13:07:03.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T13:07:00.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T13:07:03.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T13:07:03.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 35217849,
+     "expediente": "0611464268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-06-22T15:20:05.000-0300",
+     "ultDtSitDocumento": "2026-06-22T15:20:05.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-06-22T15:20:02.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-06-22T15:20:05.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-06-22T15:20:05.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 4,
+   "totalPages": 2,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35557870,
+   "expediente": "0958714266",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T13:07:03.000-0300",
+   "ultDtSitDocumento": "2026-09-15T13:07:03.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T13:07:00.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T13:07:03.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T13:07:03.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "ivermectina",
+  "classesTerapeuticas": [
+   "ANTIPARASITARIOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Genérico",
+  "medicamentoReferencia": "REVECTINA",
+  "dataVencimentoRegistro": "2035-04-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "6 MG COM CT BL AL AL X 2",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1053502510011"
+   },
+   {
+    "apresentacao": "6 MG COM CT BL AL AL X 4",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1053502510028"
+   },
+   {
+    "apresentacao": "6 MG COM CT BL AL AL X 100",
+    "formasFarmaceuticas": [
+     "Comprimido"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1053502510036"
+   }
+  ]
+ }
+}

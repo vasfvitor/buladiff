@@ -1,0 +1,125 @@
+{
+ "produto": {
+  "idProduto": 1076787,
+  "numeroRegistro": "103670173",
+  "nomeProduto": "OFEV",
+  "expediente": "0960645268",
+  "razaoSocial": "BOEHRINGER INGELHEIM DO BRASIL QUÍMICA E FARMACÊUTICA LTDA.",
+  "cnpj": "60831658000177",
+  "numeroTransacao": "12456902026",
+  "data": "2026-09-15T20:15:51.000-0300",
+  "numProcesso": "25351456304201563",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "103670173",
+  "nomeProduto": "OFEV",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35559796,
+     "expediente": "0960645268",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T20:15:51.000-0300",
+     "ultDtSitDocumento": "2026-09-15T20:15:51.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T20:15:49.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T20:15:51.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T20:15:51.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 34524034,
+     "expediente": "1555110258",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-12-02T18:49:12.000-0200",
+     "ultDtSitDocumento": "2025-12-02T18:49:12.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-12-02T18:49:11.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-12-02T18:49:12.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-02T18:49:12.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "last": false,
+   "totalPages": 18,
+   "totalElements": 35,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35559796,
+   "expediente": "0960645268",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T20:15:51.000-0300",
+   "ultDtSitDocumento": "2026-09-15T20:15:51.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T20:15:49.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T20:15:51.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T20:15:51.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "esilato de nintedanibe",
+  "classesTerapeuticas": [
+   "ANTINEOPLASICO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 28/09/2016 CAP MOLE 100MG; 25/11/2016 CAP MOLE 150MG",
+  "dataVencimentoRegistro": "2035-10-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "100 MG CAP MOLE CT BL AL AL X 60",
+    "formasFarmaceuticas": [
+     "Cápsula Mole"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1036701730011"
+   },
+   {
+    "apresentacao": "150 MG CAP MOLE CT BL AL AL X 60",
+    "formasFarmaceuticas": [
+     "Cápsula Mole"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1036701730028"
+   }
+  ]
+ }
+}

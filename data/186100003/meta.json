@@ -1,0 +1,177 @@
+{
+ "produto": {
+  "idProduto": 1040934,
+  "numeroRegistro": "186100003",
+  "nomeProduto": "Tramal",
+  "expediente": "0958020264",
+  "razaoSocial": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+  "cnpj": "10555143000113",
+  "numeroTransacao": "12419062026",
+  "data": "2026-09-15T11:33:13.000-0300",
+  "numProcesso": "25351294507201479",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "186100003",
+  "nomeProduto": "Tramal",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35557190,
+     "expediente": "0958020264",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T11:33:13.000-0300",
+     "ultDtSitDocumento": "2026-09-15T11:33:13.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T11:33:11.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T11:33:13.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T11:33:13.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 34580315,
+     "expediente": "1614676259",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-12-17T14:45:27.000-0200",
+     "ultDtSitDocumento": "2025-12-17T14:45:27.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-12-17T14:45:25.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-12-17T14:45:27.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T11:33:13.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 10,
+   "totalPages": 5,
+   "last": false,
+   "first": true,
+   "numberOfElements": 2,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35557190,
+   "expediente": "0958020264",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T11:33:13.000-0300",
+   "ultDtSitDocumento": "2026-09-15T11:33:13.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T11:33:11.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T11:33:13.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T11:33:13.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de tramadol",
+  "classesTerapeuticas": [
+   "ANALGESICOS NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 12/11/2012",
+  "dataVencimentoRegistro": "2035-06-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "50 MG/ML SOL INJ CT 5 AMP VD INC X 1ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000030013"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ CT 50 AMP VD INC X 1ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000030021"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ CT 100 AMP VD INC X 1ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000030031"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ CT 5 AMP VD INC X 2ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000030048"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ CT 50 AMP VD INC X 2ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000030056"
+   },
+   {
+    "apresentacao": "50 MG/ML SOL INJ CT 100 AMP VD INC X 2ML",
+    "formasFarmaceuticas": [
+     "SOLUÇAO INJETAVEL"
+    ],
+    "viasAdministracao": [
+     "INTRAMUSCULAR/INTRAVENOSO"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000030064"
+   }
+  ]
+ }
+}

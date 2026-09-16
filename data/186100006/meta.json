@@ -1,0 +1,219 @@
+{
+ "produto": {
+  "idProduto": 1040937,
+  "numeroRegistro": "186100006",
+  "nomeProduto": "Tramal",
+  "expediente": "0957987269",
+  "razaoSocial": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+  "cnpj": "10555143000113",
+  "numeroTransacao": "12418302026",
+  "data": "2026-09-15T11:25:54.000-0300",
+  "numProcesso": "25351294508201413",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "186100006",
+  "nomeProduto": "Tramal",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35557153,
+     "expediente": "0957987269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T11:25:54.000-0300",
+     "ultDtSitDocumento": "2026-09-15T11:25:54.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T11:25:51.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T11:25:54.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T11:25:54.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 32654700,
+     "expediente": "1368192246",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2024-10-04T14:54:11.000-0300",
+     "ultDtSitDocumento": "2024-10-04T14:54:11.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2024-10-04T14:53:51.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2024-10-04T14:54:11.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T11:25:54.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "last": false,
+   "totalElements": 12,
+   "totalPages": 6,
+   "first": true,
+   "sort": null,
+   "numberOfElements": 2,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35557153,
+   "expediente": "0957987269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T11:25:54.000-0300",
+   "ultDtSitDocumento": "2026-09-15T11:25:54.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T11:25:51.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T11:25:54.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T11:25:54.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de tramadol",
+  "classesTerapeuticas": [
+   "ANALGESICOS NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 12/11/2012",
+  "dataVencimentoRegistro": "2035-06-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PVDC OPC X 10",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060011"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PVDC OPC X 20",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060028"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PVDC OPC X 30",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060036"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PVDC OPC X 50",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060044"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PVDC OPC X 100",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060052"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PE/PVDC OPC X 10",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060060"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PE/PVDC OPC X 20",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060079"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PE/PVDC OPC X 30",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060087"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PE/PVDC OPC X 50",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060095"
+   },
+   {
+    "apresentacao": "50 MG CAP DURA CT BL AL PLAS PVC/PE/PVDC OPC X 100",
+    "formasFarmaceuticas": [
+     "CAPSULA GELATINOSA DURA"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000060109"
+   }
+  ]
+ }
+}

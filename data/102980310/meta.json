@@ -1,0 +1,247 @@
+{
+ "produto": {
+  "idProduto": 138364,
+  "numeroRegistro": "102980310",
+  "nomeProduto": "PAMIDROM",
+  "expediente": "0958377260",
+  "razaoSocial": "CRISTÁLIA PRODUTOS QUÍMICOS FARMACÊUTICOS LTDA.",
+  "cnpj": "44734671000151",
+  "numeroTransacao": "12422022026",
+  "data": "2026-09-15T12:04:17.000-0300",
+  "numProcesso": "25351169148200289",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "102980310",
+  "nomeProduto": "PAMIDROM",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35557714,
+     "expediente": "0958377260",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T12:04:17.000-0300",
+     "ultDtSitDocumento": "2026-09-15T12:04:17.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T12:04:14.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T12:04:17.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T12:04:17.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 35130356,
+     "expediente": "0521871263",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-05-27T16:22:05.000-0300",
+     "ultDtSitDocumento": "2026-05-27T16:22:05.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-05-27T16:22:03.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-05-27T16:22:05.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-05-27T16:22:05.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 12,
+   "totalPages": 6,
+   "last": false,
+   "sort": null,
+   "numberOfElements": 2,
+   "first": true,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35557714,
+   "expediente": "0958377260",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T12:04:17.000-0300",
+   "ultDtSitDocumento": "2026-09-15T12:04:17.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T12:04:14.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T12:04:17.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T12:04:17.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "pamidronato dissódico",
+  "classesTerapeuticas": [
+   "ANTINEOPLASICO"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Similar",
+  "medicamentoReferencia": "AREDIA 90MG/ML; MEDICAMENTO DE REFERÊNCIA DESDE 29/12/2015 PO LIOF SOL INJ 60MG/ML",
+  "dataVencimentoRegistro": "2027-10-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "60 MG PO LIOF SOL INJ CX 5 FA VD TRANS+ 5 AMP DIL X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100055"
+   },
+   {
+    "apresentacao": "60 MG PO LIOF SOL INJ CX 10 FA VD TRANS+ 10 AMP DIL X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100063"
+   },
+   {
+    "apresentacao": "90 MG PO LIOF SOL INJ CX 5 FA VD TRANS+ 5 AMP DIL X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100071"
+   },
+   {
+    "apresentacao": "90 MG PO LIOF SOL INJ CX 10 FA VD TRANS+ 10 AMP DIL X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100081"
+   },
+   {
+    "apresentacao": "60 MG PO LIOF SOL INJ CX 5 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "Pó Liofilizado para Solução Injetável"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100098"
+   },
+   {
+    "apresentacao": "60 MG PO LIOF SOL INJ CX 10 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "Pó Liofilizado para Solução Injetável"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100101"
+   },
+   {
+    "apresentacao": "90 MG PO LIOF SOL INJ CX 5 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "Pó Liofilizado para Solução Injetável"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100111"
+   },
+   {
+    "apresentacao": "90 MG PO LIOF SOL INJ CX 10 FA VD TRANS",
+    "formasFarmaceuticas": [
+     "Pó Liofilizado para Solução Injetável"
+    ],
+    "viasAdministracao": [],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100128"
+   },
+   {
+    "apresentacao": "15 MG PO LIOF INJ CX 5 FA VD INC+ 5 AMP DIL X 5 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100012"
+   },
+   {
+    "apresentacao": "15 MG PO LIOF INJ CX 10 FA VD INC + 10 AMP DIL X 5 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100020"
+   },
+   {
+    "apresentacao": "30 MG PO LIOF INJ CX 10 FA VD INC + 10 AMP DIL X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100039"
+   },
+   {
+    "apresentacao": "30 MG PO LIOF INJ CX 5 FA VD INC + 5 AMP DIL X 10 ML",
+    "formasFarmaceuticas": [
+     "PO LIOFILO INJETAVEL + SOLUÇAO DILUENTE"
+    ],
+    "viasAdministracao": [
+     "INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1029803100047"
+   }
+  ]
+ }
+}

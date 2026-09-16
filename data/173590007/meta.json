@@ -1,0 +1,113 @@
+{
+ "produto": {
+  "idProduto": 2769449,
+  "numeroRegistro": "173590007",
+  "nomeProduto": "ILLUCCIX",
+  "expediente": "0959885269",
+  "razaoSocial": "MJM PRODUTOS FARMACEUTICOS E DE RADIOPROTECAO S.A.",
+  "cnpj": "04891262000144",
+  "numeroTransacao": "12447642026",
+  "data": "2026-09-15T17:27:24.000-0300",
+  "numProcesso": "25351527587202183",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "173590007",
+  "nomeProduto": "ILLUCCIX",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35559017,
+     "expediente": "0959885269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T17:27:24.000-0300",
+     "ultDtSitDocumento": "2026-09-15T17:27:24.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T17:27:21.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T17:27:24.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T17:27:24.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    },
+    {
+     "idDocumento": 33910188,
+     "expediente": "0906405254",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-07-10T15:53:46.000-0300",
+     "ultDtSitDocumento": "2025-07-10T15:53:46.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-07-10T15:53:44.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-07-10T15:53:46.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-07-10T15:53:46.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "histSitVal": true,
+     "ultimaSitVal": true
+    }
+   ],
+   "totalElements": 2,
+   "totalPages": 1,
+   "last": true,
+   "sort": null,
+   "numberOfElements": 2,
+   "first": true,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35559017,
+   "expediente": "0959885269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T17:27:24.000-0300",
+   "ultDtSitDocumento": "2026-09-15T17:27:24.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T17:27:21.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T17:27:24.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T17:27:24.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "histSitVal": true,
+   "ultimaSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "gozetotida",
+  "classesTerapeuticas": [
+   "AGENTES DIAGNOSTICOS NAO RADIOATIVOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Radiofármaco",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "",
+  "apresentacoes": [
+   {
+    "apresentacao": "25 MCG PO LIOF SOL INJ CT 1 FA VD TRANS + 2 FA VD TRANS AUXILIARES",
+    "formasFarmaceuticas": [
+     "Pó Liofilizado para Solução Injetável",
+     "Solução "
+    ],
+    "viasAdministracao": [
+     "ENDOVENOSA/INTRAVENOSA"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1735900070016"
+   }
+  ]
+ }
+}

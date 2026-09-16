@@ -1,0 +1,294 @@
+{
+ "produto": {
+  "idProduto": 1040935,
+  "numeroRegistro": "186100004",
+  "nomeProduto": "Tramal Retard",
+  "expediente": "0958927260",
+  "razaoSocial": "GRÜNENTHAL DO BRASIL FARMACÊUTICA LTDA.",
+  "cnpj": "10555143000113",
+  "numeroTransacao": "12430582026",
+  "data": "2026-09-15T14:32:03.000-0300",
+  "numProcesso": "25351294509201468",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "186100004",
+  "nomeProduto": "Tramal Retard",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35558088,
+     "expediente": "0958927260",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T14:32:03.000-0300",
+     "ultDtSitDocumento": "2026-09-15T14:32:03.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T14:31:59.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T14:32:03.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T14:32:03.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 34580382,
+     "expediente": "1614748250",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-12-17T14:57:35.000-0200",
+     "ultDtSitDocumento": "2025-12-17T14:57:35.000-0200",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-12-17T14:57:34.000-0200",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-12-17T14:57:35.000-0200",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2025-12-17T14:57:35.000-0200",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 13,
+   "totalPages": 7,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35558088,
+   "expediente": "0958927260",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T14:32:03.000-0300",
+   "ultDtSitDocumento": "2026-09-15T14:32:03.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T14:31:59.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T14:32:03.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T14:32:03.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "cloridrato de tramadol",
+  "classesTerapeuticas": [
+   "ANALGESICOS NARCOTICOS"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "MEDICAMENTO DE REFERÊNCIA DESDE 13/08/2021",
+  "dataVencimentoRegistro": "2035-06-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "100 MG COM REV LIB PROL CT BL AL PLAS OPC X 10",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO DE LIBERAÇÃO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000040019"
+   },
+   {
+    "apresentacao": "100 MG COM REV LIB PROL CT BL AL PLAS OPC X 20",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO DE LIBERAÇÃO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000040027"
+   },
+   {
+    "apresentacao": "100 MG COM REV LIB PROL CT BL AL PLAS OPC X 30",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO DE LIBERAÇÃO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000040035"
+   },
+   {
+    "apresentacao": "100 MG COM REV LIB PROL CT BL AL PLAS OPC X 60",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO DE LIBERAÇÃO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000040043"
+   },
+   {
+    "apresentacao": "100 MG COM REV LIB PROL CT BL AL PLAS OPC X 100",
+    "formasFarmaceuticas": [
+     "COMPRIMIDO REVESTIDO DE LIBERAÇÃO PROLONGADA"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda Sob Receita de Controle Especial"
+    ],
+    "registro": "1861000040051"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PVDC OPC X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040061"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS  PVC PVDC OPC X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040078"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PVDC OPC X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040086"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PVDC OPC X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040094"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PVDC OPC X 100",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040108"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PE PVDC OPC X 10",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040116"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PE PVDC OPC X 20",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040124"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS  PVC PE PVDC OPC X 30",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040132"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PE PVDC OPC X 60",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040140"
+   },
+   {
+    "apresentacao": "50 MG COM REV LIB PROL CT BL AL PLAS PVC PE PVDC OPC X 100",
+    "formasFarmaceuticas": [
+     "Comprimido Revestido de Liberação Prolongada"
+    ],
+    "viasAdministracao": [
+     "ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob prescrição médica com retenção de receita"
+    ],
+    "registro": "1861000040159"
+   }
+  ]
+ }
+}

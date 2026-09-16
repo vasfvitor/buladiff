@@ -1,0 +1,164 @@
+{
+ "produto": {
+  "idProduto": 1039442,
+  "numeroRegistro": "100681123",
+  "nomeProduto": "ULTIBRO",
+  "expediente": "0959879269",
+  "razaoSocial": "NOVARTIS BIOCIENCIAS S.A",
+  "cnpj": "56994502000130",
+  "numeroTransacao": "12447112026",
+  "data": "2026-09-15T17:23:23.000-0300",
+  "numProcesso": "25351576074201382",
+  "dataAtualizacao": "2026-09-16T00:00:00.000-0300"
+ },
+ "historico": {
+  "registroProduto": "100681123",
+  "nomeProduto": "ULTIBRO",
+  "historico": {
+   "content": [
+    {
+     "idDocumento": 35559011,
+     "expediente": "0959879269",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2026-09-15T17:23:23.000-0300",
+     "ultDtSitDocumento": "2026-09-15T17:23:23.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2026-09-15T17:23:20.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2026-09-15T17:23:23.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T17:23:23.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    },
+    {
+     "idDocumento": 34217645,
+     "expediente": "1232270253",
+     "idSituacao": 43,
+     "numeroRegistro": null,
+     "descSituacao": "Aditado ao processo",
+     "priDtSitValDocumento": "2025-09-17T14:17:46.000-0300",
+     "ultDtSitDocumento": "2025-09-17T14:17:46.000-0300",
+     "ultimaSituacaoDocumento": 43,
+     "nuTransacao": null,
+     "dtTransacao": "2025-09-17T14:17:45.000-0300",
+     "historicoCod": 43,
+     "historicoDtSit": "2025-09-17T14:17:46.000-0300",
+     "descHistSituacao": "Aditado ao processo",
+     "dataPublicacao": "2026-09-15T17:23:23.000-0300",
+     "situacaoAtual": "Aditado ao processo",
+     "ultimaSitVal": true,
+     "histSitVal": true
+    }
+   ],
+   "totalElements": 17,
+   "totalPages": 9,
+   "last": false,
+   "numberOfElements": 2,
+   "first": true,
+   "sort": null,
+   "number": 0,
+   "size": 2
+  },
+  "bulaAtual": {
+   "idDocumento": 35559011,
+   "expediente": "0959879269",
+   "idSituacao": 43,
+   "numeroRegistro": null,
+   "descSituacao": "Aditado ao processo",
+   "priDtSitValDocumento": "2026-09-15T17:23:23.000-0300",
+   "ultDtSitDocumento": "2026-09-15T17:23:23.000-0300",
+   "ultimaSituacaoDocumento": 43,
+   "nuTransacao": null,
+   "dtTransacao": "2026-09-15T17:23:20.000-0300",
+   "historicoCod": 43,
+   "historicoDtSit": "2026-09-15T17:23:23.000-0300",
+   "descHistSituacao": "Aditado ao processo",
+   "dataPublicacao": "2026-09-15T17:23:23.000-0300",
+   "situacaoAtual": "Aditado ao processo",
+   "ultimaSitVal": true,
+   "histSitVal": true
+  }
+ },
+ "detalhe": {
+  "principioAtivo": "maleato de indacaterol, brometo de glicopirrônio",
+  "classesTerapeuticas": [
+   "BRONCODILATADORES"
+  ],
+  "atcs": [],
+  "categoriaRegulatoria": "Novo",
+  "medicamentoReferencia": "",
+  "dataVencimentoRegistro": "2036-03-01",
+  "apresentacoes": [
+   {
+    "apresentacao": "(110 + 50) MCG CAP DURA INAL OR CT BL AL AL X 12 + 1 INAL",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "INALATÓRIA POR VIA ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1006811230011"
+   },
+   {
+    "apresentacao": "(110 + 50) MCG CAP DURA INAL OR CT BL AL AL X 30 + 1 INAL",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "INALATÓRIA POR VIA ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1006811230028"
+   },
+   {
+    "apresentacao": "(110 + 50) MCG CAP DURA INAL OR CT BL AL AL X 90 + 1 INAL",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "INALATÓRIA POR VIA ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1006811230036"
+   },
+   {
+    "apresentacao": "(110 + 50) MCG CAP DURA INAL OR CT BL AL AL X 90 + 3 INAL",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "INALATÓRIA POR VIA ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1006811230044"
+   },
+   {
+    "apresentacao": "(110 + 50) MCG CAP DURA INAL OR CT BL AL AL X 10 + 1 INAL",
+    "formasFarmaceuticas": [
+     "Cápsula dura"
+    ],
+    "viasAdministracao": [
+     "INALATÓRIA POR VIA ORAL"
+    ],
+    "restricaoPrescricao": [
+     "Venda sob Prescrição Médica"
+    ],
+    "registro": "1006811230052"
+   }
+  ]
+ }
+}
