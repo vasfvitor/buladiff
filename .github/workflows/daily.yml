@@ -159,6 +159,9 @@ jobs:
 
       - run: uv run bulario export --out site/src/data
 
+      # Os mesmos JSON saem publicados em /data/ (o Astro copia public/ sem tocar); o dbulario os lê de lá.
+      - run: rm -rf site/public/data && cp -r site/src/data site/public/data
+
       - name: Build
         env:
           # configure-pages já sabe origem e subcaminho (inclusive domínio próprio);

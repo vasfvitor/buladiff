@@ -1,5 +1,7 @@
 # build output
 dist/
+# cópia dos JSON de src/data, publicada em /data/ (gerada pelo export)
+public/data/
 # generated types
 .astro/
 

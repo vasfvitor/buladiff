@@ -56,13 +56,18 @@ Desenvolvimento: `uv run pytest`, `uv run ruff check`, `uv run scripts/validate.
 produto, a linha do tempo de versões e o diff por seção entre versões consecutivas, com busca (Pagefind).
 
 ```sh
-uv run bulario export --out site/src/data   # gera os dados do site a partir de data/
+pnpm export                                 # gera os dados do site a partir de data/ (e a cópia em site/public/data)
 pnpm install
 pnpm site:dev                               # http://localhost:4321/buladiff/
 pnpm site:build                             # site/dist/
 ```
 
 O site é publicado no GitHub Pages pelo workflow `.github/workflows/daily.yml` a cada push em `main`.
+Os JSON do export também saem publicados, sem alteração, em
+`https://vasfvitor.github.io/buladiff/data/` (`produtos.json`, `recentes.json`, `feed.json`,
+`catalogo.json` e `produtos/<registro>.json`). É uma API estática, com CORS aberto: o
+[dbulario](https://github.com/vasfvitor/dbulario) lê os dados de lá, e qualquer outro cliente pode
+fazer o mesmo.
 O Cloudflare da ANVISA bloqueia os runners do GitHub (regra de origem: a mesma requisição passa de uma
 conexão doméstica), então a coleta roda na sua máquina: `scripts/coleta-local.sh` (para o cron) faz
 `feed --baixar` e `fetch --curados`, commita `data/` e dá push, o que dispara o deploy. O cron diário
