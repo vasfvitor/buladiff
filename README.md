@@ -146,3 +146,7 @@ Janssen não inclui a tabela.
   (`/medicamento/{registro}/{5|9}/anexo`) e não têm histórico.
 - Não avisa ninguém. A ANVISA tem monitoramento oficial por email (`PUT /api/monitoramento`,
   semanal ou mensal), sem diff.
+
+## Licença
+
+Distribuído sob a licença [MIT](LICENSE).
