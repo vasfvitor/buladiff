@@ -2,7 +2,7 @@
   "name": "buladiff",
   "private": true,
   "scripts": {
-    "export": "uv run bulario export --out site/src/data",
+    "export": "uv run bulario export --out site/src/data && rm -rf site/public/data && cp -r site/src/data site/public/data",
     "site:dev": "pnpm -C site dev",
     "site:build": "pnpm -C site build",
     "site:preview": "pnpm -C site preview"
