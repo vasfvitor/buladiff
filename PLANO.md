@@ -76,3 +76,25 @@ e o site mostra parágrafos; tabelas param de inflar o diff.
 - Monitoramento oficial por email (`PUT /api/monitoramento`) com o email do Vitor.
 - Testar outras nuvens contra o Cloudflare (Worker, Oracle, Fly).
 - Lighthouse/axe no site.
+
+## Integração com o dbulario (combinada em 2026-09-12, decidida em 2026-09-16)
+
+O dono do `Diorgerb/dbulario` (React + Vite + tRPC na Vercel, MIT) aceitou integrar o buladiff
+no projeto dele. O dbulario só tem o catálogo (`data/StatusBulasANVISA.csv`, ~8.800 produtos,
+commitado diariamente por um script na máquina dele); não baixa PDF, não extrai texto, não faz
+diff. A extração (pdfplumber + árvore de estrutura) e o diff ficam aqui, em Python; não
+reescrever em TypeScript.
+
+Contrato: os JSON do `bulario export` publicados em `https://vasfvitor.github.io/buladiff/data/`
+(ver README). O dbulario lê `produtos.json` e `recentes.json` no servidor com cache de 1 h e
+busca `produtos/<registro>.json` direto no navegador, porque o maior tem 5,3 MB e a Vercel
+limita a resposta a 4,5 MB. A URL base vem de `VITE_BULADIFF_DATA_URL` nos dois lados; para
+testar local, servir o export com `python3 -m http.server` e apontar a variável. Escopo de
+registros: o que o buladiff já arquiva (feed diário mais lista curada). A coleta continua numa
+máquina local, como ele já faz com o CSV.
+
+Pilha de PRs, cada branch sobre o anterior: aqui `feat/publicar-json`; no fork
+`vasfvitor/dbulario` (remote `upstream` = Diorgerb), `cleanup/manus-leftovers` →
+`feat/bulas-dados` → `feat/bulas-diff` → `feat/bulas-home` (→ `docs/bulas-textos`). Os dados só
+existem em produção depois que o PR do buladiff for mergeado e o workflow rodar. O usuário faz
+push e abre os PRs.
