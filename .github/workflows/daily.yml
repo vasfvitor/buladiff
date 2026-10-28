@@ -58,13 +58,15 @@ jobs:
             echo "::error::BULARIO_PROXY_URL definido sem BULARIO_PROXY_KEY"
             exit 1
           fi
+          corpo="$RUNNER_TEMP/api.body"
+          cabecalhos="$RUNNER_TEMP/api.headers"
           if [ -n "$BULARIO_PROXY_URL" ]; then
             origem="proxy"
-            code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
+            code=$(curl -s -o "$corpo" -D "$cabecalhos" -w '%{http_code}' -m 30 \
               -H "X-Proxy-Key: $BULARIO_PROXY_KEY" "${BULARIO_PROXY_URL%/}$API_PATH" || true)
           else
             origem="runner"
-            code=$(curl -s -o /dev/null -w '%{http_code}' -m 30 \
+            code=$(curl -s -o "$corpo" -D "$cabecalhos" -w '%{http_code}' -m 30 \
               -H 'Authorization: Guest' -H 'Referer: https://consultas.anvisa.gov.br/' \
               -H 'User-Agent: Mozilla/5.0 (X11; Linux x86_64) Chrome/128.0' \
               "https://consultas.anvisa.gov.br$API_PATH" || true)
@@ -72,12 +74,20 @@ jobs:
           echo "HTTP $code ($origem)"
           if [ "$code" = "200" ]; then
             echo "ok=true" >> "$GITHUB_OUTPUT"
-          elif [ "$origem" = "proxy" ]; then
-            echo "ok=false" >> "$GITHUB_OUTPUT"
-            echo "::warning::O proxy respondeu '$code'; coleta pulada. Confira o Worker e os segredos BULARIO_PROXY_*."
-          else
-            echo "ok=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          echo "ok=false" >> "$GITHUB_OUTPUT"
+          # Só a resposta (a chave vai na requisição): diz de quem é a recusa sem rodar de novo à mão.
+          tipo=$(grep -i '^content-type:' "$cabecalhos" 2>/dev/null | tail -1 | cut -d' ' -f2- | tr -d '\r')
+          echo "content-type: ${tipo:-?}"
+          echo "corpo: $(head -c 200 "$corpo" 2>/dev/null | tr -s '[:space:]' ' ' | tr -cd '[:print:]')"
+          if [ "$origem" = "runner" ]; then
             echo "::warning::A API da ANVISA respondeu '$code' a partir do runner; coleta pulada. Configure o proxy (worker/) ou rode scripts/coleta-local.sh."
+          elif [ "$code" = "403" ] && [ "$(cat "$corpo" 2>/dev/null)" = "forbidden" ]; then
+            # o 403 do próprio Worker (worker/src/index.js); o cf-ray não distingue, todo workers.dev o tem
+            echo "::warning::O Worker recusou a chave: BULARIO_PROXY_KEY não é o PROXY_KEY do Worker; coleta pulada."
+          else
+            echo "::warning::A ANVISA respondeu '$code' ao Worker (content-type ${tipo:-?}); coleta pulada. Confira se o Cloudflare dela passou a bloquear o Worker."
           fi
 
       - name: Instalar uv
@@ -176,3 +186,15 @@ jobs:
 
       - id: deploy
         uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
+
+      # Depois do deploy, para não segurar o site: a coleta pulada é só aviso, mas parada há mais de
+      # uma semana vira falha (de 2026-09-16 a 2026-10-28 ela foi pulada todo dia com o run verde).
+      - name: Conferir idade dos dados
+        run: |
+          ate=$(jq -r .ate data/feed.json)
+          dias=$(( ( $(date -u +%s) - $(date -u -d "$ate" +%s) ) / 86400 ))
+          echo "data/feed.json cobre até $ate ($dias dias)"
+          if [ "$dias" -gt 7 ]; then
+            echo "::error::Sem coleta há $dias dias (data/feed.json cobre até $ate). Veja o aviso do passo 'Testar acesso à API da ANVISA'."
+            exit 1
+          fi
